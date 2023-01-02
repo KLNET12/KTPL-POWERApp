@@ -658,7 +658,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =170
             X: =888
-            Y: =277
+            Y: =275
             ZIndex: =12
 
         Decoded_CB As checkbox:
@@ -779,8 +779,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =897
-            Y: =266
+            X: =890
+            Y: =260
             ZIndex: =25
 
         Decoded_Lbl As label:
