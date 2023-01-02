@@ -338,7 +338,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: ="Option"
             Width: =29
-            X: =980
+            X: =973
             Y: =2
             ZIndex: =13
 
@@ -351,7 +351,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: ="Option"
             Width: =29
-            X: =1040
+            X: =1035
             Y: =2
             ZIndex: =14
 
