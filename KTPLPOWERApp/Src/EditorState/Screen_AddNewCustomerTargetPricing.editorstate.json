@@ -7634,7 +7634,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10116,7 +10123,14 @@
         "PressedFill",
         "HoverFill",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -24695,7 +24709,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput13",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25006,7 +25020,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput14",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25317,7 +25331,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput15",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

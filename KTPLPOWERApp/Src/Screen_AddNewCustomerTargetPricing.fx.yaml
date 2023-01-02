@@ -325,8 +325,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =Set(fieldedit,true)
             Tooltip: ="Edit "
             Width: =53
-            X: =1099
-            Y: =40
+            X: =1090
+            Y: =36
             ZIndex: =12
 
         Checkbox2 As checkbox:
@@ -373,8 +373,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =53
-            X: =1184
-            Y: =40
+            X: =1180
+            Y: =36
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
