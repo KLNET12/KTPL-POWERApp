@@ -252,7 +252,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =110
+            Width: =150
             X: =662
             Y: =14
             ZIndex: =4
@@ -265,7 +265,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =774
+            X: =814
             Y: =14
             ZIndex: =5
 
@@ -276,9 +276,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =341
-            X: =16
-            Y: =35
+            Width: =150
+            X: =357
+            Y: =36
             ZIndex: =8
 
         TextInput13 As text:
@@ -289,8 +289,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =360
-            Y: =35
+            X: =510
+            Y: =34
             ZIndex: =9
 
         TextInput14 As text:
@@ -301,8 +301,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =513
-            Y: =35
+            X: =662
+            Y: =34
             ZIndex: =10
 
         TextInput15 As text:
@@ -313,8 +313,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =665
-            Y: =35
+            X: =814
+            Y: =34
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -338,7 +338,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: ="Option"
             Width: =29
-            X: =973
+            X: =1050
             Y: =2
             ZIndex: =13
 
@@ -351,7 +351,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: ="Option"
             Width: =29
-            X: =1035
+            X: =1150
             Y: =2
             ZIndex: =14
 
@@ -362,9 +362,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =118
-            X: =1119
-            Y: =14
+            Width: =339
+            X: =16
+            Y: =34
             ZIndex: =15
 
         Icon3 As icon.Trash:
