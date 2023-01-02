@@ -778,8 +778,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =890
-            Y: =247
+            X: =888
+            Y: =251
             ZIndex: =25
 
         Decoded_Lbl As label:
