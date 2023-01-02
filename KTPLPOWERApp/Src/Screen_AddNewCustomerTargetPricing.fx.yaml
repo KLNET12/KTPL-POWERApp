@@ -106,7 +106,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Text: =Parent.DisplayName
                 Width: =300
                 Wrap: =false
-                X: =19
+                X: =32
                 Y: =25
                 ZIndex: =1
 
@@ -366,11 +366,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =15
 
         Icon3 As icon.Trash:
-            Height: =28
+            Height: =22
             Icon: =Icon.Trash
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
-            Width: =50
+            Width: =53
             X: =1080
             Y: =47
             ZIndex: =16
@@ -853,7 +853,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =524
+            X: =537
             Y: =210
             ZIndex: =33
 

@@ -16398,7 +16398,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Maxprice_lbl",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17883,7 +17883,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Non-refill_lbl",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
