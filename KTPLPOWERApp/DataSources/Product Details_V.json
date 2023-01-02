@@ -1,0 +1,39 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sql",
+    "CdpRevision": {
+      "BaseUrl": "/v2",
+      "LastChangedTimeString": "2022-12-16T21:24:37.5590000Z",
+      "RevisionNumber": 2
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Barcode": "Barcode",
+      "Bottle": "Bottle",
+      "Brand_Name": "Brand_Name",
+      "Decoded": "Decoded",
+      "DW_Batch": "DW_Batch",
+      "DW_Id": "DW_Id",
+      "DW_SourceCode": "DW_SourceCode",
+      "DW_TimeStamp": "DW_TimeStamp",
+      "Key": "Key",
+      "NRF": "NRF",
+      "Product_Alc": "Product_Alc",
+      "Product_Category": "Product_Category",
+      "Product_Code": "Product_Code",
+      "Product_Country_of_Origin": "Product_Country_of_Origin",
+      "Product_Description": "Product_Description",
+      "Product_Id": "Product_Id",
+      "Product_Net_Volume": "Product_Net_Volume",
+      "Product_Type": "Product_Type",
+      "Product_UOM_Qty": "Product_UOM_Qty",
+      "Product_Variant": "Product_Variant",
+      "Sub_Brand_Name": "Sub_Brand_Name"
+    },
+    "DatasetName": "KAZANS01,JetBCDwhDEV",
+    "EncodeDataset": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Product Details_V",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

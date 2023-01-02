@@ -1,0 +1,24 @@
+[
+  {
+    "Data": "[{\"(Do Not Modify) Customer Target Pricing\":\"9219561f-f184-ed11-81ad-00224818aa3c\",\"(Do Not Modify) Modified On\":1672040746000,\"(Do Not Modify) Row Checksum\":\"YRBH7Owq/1EuGEhAiXIvBFTIjiA1ZcIhF\\u002BsoXWa\\u002BWwuM/fr6dd49nXRB8/wyIpDf3et\\u002Bqq7O6R5t9bVTOABM6w==\",\"Contact\":\"Anmol Kumar\",\"Description\":\"ARDBEG 10YO 1000MLT\",\"Item No\":\"KOLL000080\",\"Max Price\":20,\"Min Price\":10,\"Quantity\":2},{\"(Do Not Modify) Customer Target Pricing\":\"56721c86-f184-ed11-81ad-00224818a002\",\"(Do Not Modify) Modified On\":1672040904000,\"(Do Not Modify) Row Checksum\":\"9v8IAKjwIBjh730tdhLjoylyBxrWveebDLtyYzbcPW3U\\u002BOJcsEzoQgCCSm2X4Td6fPg\\u002BBoc3usQ56pcPjcQCTA==\",\"Contact\":\"Anmol Kumar\",\"Description\":\"GOSSET BRUT EXCELLENCE 750MLT\",\"Item No\":\"KOLES005170\",\"Max Price\":3,\"Min Price\":2,\"Quantity\":5},{\"(Do Not Modify) Customer Target Pricing\":\"4243ba5b-f284-ed11-81ad-00224818aa3c\",\"(Do Not Modify) Modified On\":1672041202000,\"(Do Not Modify) Row Checksum\":\"eTZ1ZCM8M6rn37w0rVSnrurkMmicE4GtrmsMjKZ\\u002BdcJXKsnFcmZoo7uw1xIS6SRcoM\\u002BGUB7p5abDcv5Njk0l2Q==\",\"Contact\":\"aaaksh sharma\",\"Description\":\"POIT DHUBH 21YO 700MLT\",\"Item No\":\"KOLES005723\",\"Max Price\":2,\"Min Price\":1,\"Quantity\":2},{\"(Do Not Modify) Customer Target Pricing\":\"c8f7f839-f084-ed11-81ad-00224818a002\",\"(Do Not Modify) Modified On\":1672040475000,\"(Do Not Modify) Row Checksum\":\"VSX6CUiDFUiAa0zWIh7CFIFOZN9zzX1jeMVQoF\\u002BlauShrozNtwalZM4eiyv5teJAwtSzGTLmaY6Z6nob1hLeGQ==\",\"Contact\":\"ALFRED Nobel\",\"Description\":\"PORTON PISCO 750MLT\",\"Item No\":\"KOLES005092\",\"Max Price\":3,\"Min Price\":2,\"Quantity\":23},{\"(Do Not Modify) Customer Target Pricing\":\"ae9b4a79-f184-ed11-81ad-00224818a002\",\"(Do Not Modify) Modified On\":1672040824000,\"(Do Not Modify) Row Checksum\":\"H4SFp2F5hnqFd6mUYTij79nYHcBw33Ip4lcgcQ\\u002Bvy4IXyIU6A0YkOeouTGSb3J/ruxT0rygj4eEecoWlYnl/qA==\",\"Contact\":\"Anmol Kumar\",\"Description\":\"PORTON PISCO 750MLT\",\"Item No\":\"KOLES005092\",\"Max Price\":2,\"Min Price\":1,\"Quantity\":1},{\"(Do Not Modify) Customer Target Pricing\":\"a5a23cbf-da84-ed11-81ad-00224818aa3c\",\"(Do Not Modify) Modified On\":1672041247000,\"(Do Not Modify) Row Checksum\":\"ubnZwqPmApE5iH1N/yMUlcioEYtcOni/EalOOPCOjnYAM9mFK4e1QvVmcf8ffaKnBwe8EMFJ9QXcmhmMmTsaQA==\",\"Contact\":\"aaaksh sharma\",\"Description\":\"PORTON PISCO 750MLT\",\"Item No\":\"KOLES005092\",\"Max Price\":13,\"Min Price\":12,\"Quantity\":2}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table1",
+    "OrderedColumnNames": [
+      "(Do Not Modify) Customer Target Pricing",
+      "(Do Not Modify) Row Checksum",
+      "(Do Not Modify) Modified On",
+      "Contact",
+      "Description",
+      "Item No",
+      "Min Price",
+      "Max Price",
+      "Quantity"
+    ],
+    "OriginalName": "Table1",
+    "OriginalSchema": "*['(Do Not Modify) Customer Target Pricing':s, '(Do Not Modify) Modified On':d, '(Do Not Modify) Row Checksum':s, Contact:s, Description:s, 'Item No':s, 'Max Price':n, 'Min Price':n, Quantity:n]",
+    "Schema": "*['(Do Not Modify) Customer Target Pricing':s, '(Do Not Modify) Modified On':d, '(Do Not Modify) Row Checksum':s, Contact:s, Description:s, 'Item No':s, 'Max Price':n, 'Min Price':n, Quantity:n]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

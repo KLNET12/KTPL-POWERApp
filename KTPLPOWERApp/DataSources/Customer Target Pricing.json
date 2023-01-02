@@ -1,0 +1,158 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "ntz_customertargetpricings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "ntz_customertargetpricing",
+    "MaxGetRowsCount": 500,
+    "Name": "Customer Target Pricing",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "ntz_alc": "ABV",
+      "ntz_cartonquantity": "Btl/Ctn",
+      "ntz_comments": "Comments",
+      "ntz_Contact": "Contact",
+      "ntz_createdate": "Create Date",
+      "ntz_Customer": "Customer",
+      "ntz_customercurrency": "Currency",
+      "ntz_CustomerLeadId": "Customer Lead Id",
+      "ntz_customermaxprice": "Max Price (ntz_customermaxprice)",
+      "ntz_customerminprice": "Min Price (ntz_customerminprice)",
+      "ntz_customertargetpricing_AsyncOperations": "System Jobs",
+      "ntz_customertargetpricing_BulkDeleteFailures": "Bulk Delete Failures",
+      "ntz_customertargetpricing_DuplicateBaseRecord": "Duplicate Records (ntz_customertargetpricing_DuplicateBaseRecord)",
+      "ntz_customertargetpricing_DuplicateMatchingRecord": "Duplicate Records (ntz_customertargetpricing_DuplicateMatchingRecord)",
+      "ntz_customertargetpricing_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "ntz_customertargetpricing_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "ntz_customertargetpricing_ProcessSession": "Process Sessions",
+      "ntz_customertargetpricing_SyncErrors": "Sync Errors",
+      "ntz_customertargetpricingid": "Customer Target Pricing",
+      "ntz_decoded": "Barcode",
+      "ntz_expirydate": "Expiry Date",
+      "ntz_litres": "Lt/Btl",
+      "ntz_maxprice": "Max Price (ntz_maxprice)",
+      "ntz_minprice": "Min Price (ntz_minprice)",
+      "ntz_name": "Name",
+      "ntz_nonrefill": "Bottle",
+      "ntz_product": "Description",
+      "ntz_productcode": "Item No",
+      "ntz_quantity": "Quantity",
+      "ntz_quantityrequired": "Qty old",
+      "ntz_variant": "Variant",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Customer Target Pricing",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Customer Target Pricing (Views)",
+    "Name": "_ntz_customertargetpricing_views",
+    "RelatedEntityName": "Customer Target Pricing",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "277fa8c2-3d10-4627-820a-8c7b6b88e437": "Customer Target Pricing Advanced Find View",
+      "5e8b174b-f7d6-4380-8e0a-ea1a38745b42": "Inactive Customer Target Pricing",
+      "61e0d36b-faae-4060-803e-30d830b5294c": "Active Customer Target Pricing",
+      "9e98e686-6b06-4c93-bf75-0403eedd34cc": "Customer Target Pricing Associated View",
+      "feb2b8dd-0062-4d62-a316-599a912acf8c": "Customer Target Pricing Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Barcode (Customer Target Pricing)",
+    "Name": "ntz_customertargetpricing_ntz_decoded",
+    "OptionSetInfoNameMapping": {
+      "0": "DeCoded",
+      "1": "Coded"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ntz_decoded",
+        "OptionSetReferenceEntityName": "Customer Target Pricing"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ntz_decoded",
+    "RelatedEntityName": "Customer Target Pricing",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Bottle (Customer Target Pricing)",
+    "Name": "ntz_customertargetpricing_ntz_nonrefill",
+    "OptionSetInfoNameMapping": {
+      "0": "Non Refill",
+      "1": "Refill"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ntz_nonrefill",
+        "OptionSetReferenceEntityName": "Customer Target Pricing"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ntz_nonrefill",
+    "RelatedEntityName": "Customer Target Pricing",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Customer Target Pricing)",
+    "Name": "ntz_customertargetpricing_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Customer Target Pricing"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Customer Target Pricing",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Customer Target Pricing)",
+    "Name": "ntz_customertargetpricing_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Customer Target Pricing"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Customer Target Pricing",
+    "Type": "OptionSetInfo"
+  }
+]

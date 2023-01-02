@@ -1,0 +1,100 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_ntz_customertargetpricing_forms",
+      "Namespace": "Customer Target Pricing (Forms)",
+      "Values": {
+        "Information": "896c85bb-eb29-4a6f-b789-f49ebb4affe2"
+      }
+    },
+    {
+      "Kind": "default.cds_account_forms",
+      "Namespace": "Accounts (Forms)",
+      "Values": {
+        "Account": "8448b78f-8f42-454e-8e2a-f8196b0419af",
+        "account card": "b028db32-3619-48a5-ac51-cf3f947b0ef3",
+        "Account Card form": "cccff382-2b92-467e-bf1b-3db179512af8",
+        "Account for Interactive experience": "a72c7955-442b-4ea4-9499-b10cd18b4256",
+        "Account for Multisession experience": "ff49442f-8c60-4877-bdae-8fe51e6f4636",
+        "Account Hierarchy Tile Form": "69cff312-cfb6-4289-9631-249ab85d2c62",
+        "Account Quick Create": "c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+        "Account Reference Panel": "098ae145-1567-41ec-8398-86dbaac70c9b",
+        "Accounts Dashboard": "15915835-b87c-49ec-9ffc-bfac3ac44ef1",
+        "App for Outlook Account Card": "fb65cc73-181c-468b-9bb3-82ecde306991",
+        "App for Outlook Account Quick View": "76b81f10-2a08-4f1a-9454-ee38bea94eb5",
+        "Customer profile": "e9a9c8a9-e94d-47a9-a6c3-ec37ddb83b99",
+        "In Context Form": "face3aa6-99c4-4b7e-af07-55f121cdca86",
+        "Information": "b053a39a-041a-4356-acef-ddf00182762b",
+        "Recent Cases and Entitlements": "43300723-f867-420b-ab28-976a4d12e6c4",
+        "Sales Insights": "cb430327-bcc1-416d-959d-db7592e685af",
+        "Sales Professional": "524e6e7f-0256-4cff-a836-740e10dffc7d",
+        "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e",
+        "TimelineWallControl - Account- Main": "6df8e8ce-7655-468c-925e-660d59aa7f4c"
+      }
+    },
+    {
+      "Kind": "default.cds_lead_forms",
+      "Namespace": "Leads (Forms)",
+      "Values": {
+        "App for Outlook Lead Card": "d228d73e-e56e-48b3-ab95-0a06b1397b03",
+        "App for Outlook Lead Quick View": "95192c4e-f96e-4771-b10a-e6421c908533",
+        "ClickDimensions": "d62c3c48-7aee-4ab7-8550-b6a0f922987e",
+        "In Context Form": "e7d96c74-2d77-47b7-9a55-c5d26eb7074c",
+        "Information": "9886ead0-4fcc-4747-9a18-08e7a9a6de71",
+        "Lead": "e3b6ddb7-8df0-4410-ac7b-fd32e5053d38",
+        "Lead Insights": "e160d172-172b-4619-9799-81bb007ecc54",
+        "Lead Quick Create": "aa7c154f-e2f8-45db-b780-a9a8a96332fe",
+        "Leads Dashboard": "9a14ebb4-143e-e711-80e1-00155d871bb4",
+        "Sales Insights": "e1ec2c0c-1744-42fa-a346-fb8237357d0f",
+        "Sales Professional": "b2d9c7bf-cb13-4638-89dd-c155b8024986"
+      }
+    },
+    {
+      "Kind": "default.cds_contact_forms",
+      "Namespace": "Contacts (Forms)",
+      "Values": {
+        "account contact card": "29de27bc-a257-4f29-99cf-bab4a84e688f",
+        "App for Outlook Contact Card": "cdbb9298-3b2e-41f3-8f4a-0168d6b09fc4",
+        "App for Outlook Contact Quick View": "3d22ab88-96c8-4b3f-a533-d4827e2925c9",
+        "ClickDimensions": "ec6a06d0-d3e3-4085-b231-c2e20dac64ac",
+        "Contact": "1fed44d1-ae68-4a41-bd2b-f13acac4acfa",
+        "contact card": "707fc57b-c5e6-471b-a180-e37ed28a38e2",
+        "Contact Card form": "bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf",
+        "Contact for Interactive experience": "cc760212-3eab-4009-b5c3-ea9cf6f3e141",
+        "Contact for Multisession experience": "e06af4d1-2812-45c7-a9c2-9fb73fee7bec",
+        "Contact Quick Create": "661157fe-2fc9-4eaa-835f-5bfa2f7b64f7",
+        "Contact Quick Form": "bdb0ae1c-32fa-4374-b637-8dafe107bc44",
+        "Contact Reference Panel": "d880c3cf-80e2-42f3-82f9-24d040d09f17",
+        "Contacts Dashboard": "70ad8b15-e3f3-4d7d-9e4b-16cb4e51b484",
+        "Customer profile": "05ea391a-d034-43fe-849b-b4fa3213a2b2",
+        "In Context Form": "4c9c89b9-f909-4b34-8f63-b87d7ff2f0c4",
+        "Information": "894cc46a-b0cb-4ab0-8bf6-200544e46a2d",
+        "Live Persona Card Form": "449faa0e-f471-48ec-87d0-4719909546d2",
+        "Recent Cases and Entitlements": "f3b707fb-3b5f-45f9-9c6b-5e573bb5d19e",
+        "Sales Insights": "293c878f-f068-40a0-ae48-4297e060871c",
+        "Sales Professional": "27e18734-9b62-416b-9b76-a858dde457c4",
+        "Social Profiles": "7bb87dfd-ec3e-4ed9-8e3e-5725d3067295",
+        "TimelineWallControl - Contact - Main": "986258b5-2985-4ae0-970a-5e1d108ab793",
+        "Update Contact": "26843818-6508-4afe-9342-5fae2ebf15ca"
+      }
+    },
+    {
+      "Kind": "default.cds_transactioncurrency_forms",
+      "Namespace": "Currencies (Forms)",
+      "Values": {
+        "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
+    },
+    {
+      "Kind": "default.cds_product_forms",
+      "Namespace": "Products (Forms)",
+      "Values": {
+        "Information": "42805efb-1f65-4ae8-91bc-618967a55c6e",
+        "Product": "1053c0b5-2c5f-41b9-8075-c7f29cc90bda",
+        "Product family Quick Create": "fd57aeed-ab95-4a32-9c6c-61ae92d2a296",
+        "Product Hierarchy Tile Form": "44c9f1ee-9bce-4c6f-9a7f-6568be05c41c",
+        "Product Quick Create": "672e520b-6bbc-47f8-977f-228bfc6d8faf"
+      }
+    }
+  ]
+}

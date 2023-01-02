@@ -1,0 +1,62 @@
+"'Home Screen' As screen":
+    Fill: =
+
+    Image1 As image:
+        Height: =56
+        Image: =OIP
+        ImagePosition: =ImagePosition.Stretch
+        Width: =450
+        Y: =17
+        ZIndex: =1
+
+    Image2 As image:
+        Height: =324
+        Image: ='OIP (5)'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =1366
+        Y: =102
+        ZIndex: =2
+
+    Button2 As button:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        OnSelect: |-
+            =NewForm(Form1);Reset(ComboBox1);Reset(TextInput1);Reset(TextInput1_1);Reset(TextInput1_2);Reset(TextInput1_3);Reset(TextInput1_4);Reset(TextInput1_5);Reset(TextInput1_6);Reset(TextInput1_7);Reset(Checkbox1);Reset(Checkbox1_1);Set(Decoded,false);Set(NonRefill,false);Navigate(Screen_AddNewCustomerTargetPricing);
+            Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))))
+        Size: =18
+        Text: ="New Customer Target Pricing"
+        Width: =606
+        X: =702
+        Y: =170
+        ZIndex: =3
+
+    Button3 As button:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        OnSelect: =Navigate(Screen_ViewCustomerTargetPricing)
+        Size: =18
+        Text: ="View Past Customer Target Pricing"
+        Width: =606
+        X: =702
+        Y: =258
+        ZIndex: =4
+
+    Label1 As label:
+        Fill: =RGBA(50, 86, 160, 1)
+        Height: =32
+        Text: =""
+        Width: =1366
+        Y: =736
+        ZIndex: =5
+
+    Image3 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =32
+        Image: =OIP
+        Width: =227
+        X: =527
+        Y: =736
+        ZIndex: =6
+

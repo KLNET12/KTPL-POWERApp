@@ -1,0 +1,1030 @@
+Screen_AddNewCustomerTargetPricing As screen:
+    BackgroundImage: =
+    OnVisible: |-
+        =ClearCollect(Products,{'Product Description':"",'Product Code':"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",'Customer Min Price':"",'Customer Max Price':"",'Customer Currency':"",'Qty Required':"",'Lt/Btl':""});
+        Clear(Products);
+        NewForm(Form1);Set(fieldedit,false)
+
+    Form1 As form:
+        DataSource: ='Customer Target Pricing'
+        Height: =105
+        SnapToColumns: =false
+        Width: =1364
+        X: =2
+        Y: =92
+        ZIndex: =3
+
+        "'Customer Lead Id_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_CustomerLeadId"
+            Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead)))
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =91
+            Required: =true
+            Update: =
+            Width: =452
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey4 As label:
+                Height: =25
+                Text: |-
+                    ="Lead:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =42
+                Y: =20
+                ZIndex: =1
+
+            TextInput3 As text:
+                Default: |
+                    =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
+                DisplayMode: =DisplayMode.Disabled
+                Height: =21
+                Width: =399
+                X: =35
+                Y: =45
+                ZIndex: =5
+
+        Contact_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_Contact"
+            Default: =First(Filter(Contacts,Contact=GUID(LeadDataStore.'Parent Contact for lead'.'Full Name')))
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =
+            Width: =454
+            X: =452
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: |-
+                    ="Contact :"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =42
+                Y: =20
+                ZIndex: =1
+
+            TextInput4 As text:
+                Default: =First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)).'Full Name'
+                DisplayMode: =DisplayMode.Disabled
+                Height: =20
+                Width: =381
+                X: =37
+                Y: =48
+                ZIndex: =2
+
+        "'Expiry Date_DataCard1' As typedDataCard.dateTimeEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_expirydate"
+            Default: =ThisItem.'Expiry Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_expirydate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =71
+            Required: =false
+            Update: =DateValue1.SelectedDate
+            Width: =339
+            X: =791
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                Height: =26
+                Text: =Parent.DisplayName
+                Width: =247
+                Wrap: =false
+                X: =20
+                Y: =15
+                ZIndex: =1
+
+            DateValue1 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+1
+                Height: =20
+                InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =10
+                StartYear: =Year(Today())
+                Tooltip: =Parent.DisplayName
+                Width: =311
+                X: =28
+                Y: =50
+                ZIndex: =2
+
+            Separator1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: |-
+                    =":"
+                Width: =10
+                Wrap: =false
+                X: =
+                Y: =
+                ZIndex: =4
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =6
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =7
+
+    Header_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+        Logo_1 As image:
+            Height: =90
+            Image: =Kollaras_and_Co
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =290
+            X: =2
+            Y: =2
+            ZIndex: =1
+
+        "'Header Label_1' As label":
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =90
+            PaddingRight: =5.00
+            PaddingTop: =5.00
+            Size: =24
+            Text: ="                   Customer Target Pricing"
+            Width: =1366
+            X: =0.00
+            Y: =2
+            ZIndex: =2
+
+    Gallery1 As gallery.variableTemplateHeightGallery:
+        Height: =124
+        Items: =Products
+        Layout: =Layout.Vertical
+        TemplatePadding: =1
+        TemplateSize: =99
+        Width: =1366
+        Y: =348
+        ZIndex: =4
+
+        TextInput2 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Product Description'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =339
+            X: =16
+            Y: =14
+            ZIndex: =1
+
+        TextInput5 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Product Code'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =150
+            X: =357
+            Y: =14
+            ZIndex: =2
+
+        TextInput6 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Alc %'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =150
+            X: =510
+            Y: =14
+            ZIndex: =3
+
+        TextInput7 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Carton Quantity'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =110
+            X: =662
+            Y: =14
+            ZIndex: =4
+
+        TextInput8 As text:
+            BorderThickness: =1
+            Default: =ThisItem.Varient
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =150
+            X: =774
+            Y: =14
+            ZIndex: =5
+
+        TextInput12 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Customer Min Price'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =188
+            X: =16
+            Y: =49
+            ZIndex: =8
+
+        TextInput13 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Customer Max Price'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =188
+            X: =340
+            Y: =47
+            ZIndex: =9
+
+        TextInput14 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Customer Currency'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =188
+            X: =541
+            Y: =47
+            ZIndex: =10
+
+        TextInput15 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Qty Required'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =293
+            X: =742
+            Y: =47
+            ZIndex: =11
+
+        Edit_icon As icon.Edit:
+            DisplayMode: =
+            Height: =22
+            Icon: =Icon.Edit
+            OnSelect: |
+                =Set(fieldedit,true)
+            Tooltip: ="Edit "
+            Width: =53
+            X: =1045
+            Y: =47
+            ZIndex: =12
+
+        Checkbox2 As checkbox:
+            CheckboxSize: =25
+            Default: =ThisItem.'De-Coded'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =40
+            OnSelect: =Select(Parent)
+            Size: =0
+            Text: ="Option"
+            Width: =29
+            X: =953
+            ZIndex: =13
+
+        Checkbox2_1 As checkbox:
+            CheckboxSize: =25
+            Default: =ThisItem.'Non-Refill'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =40
+            OnSelect: =Select(Parent)
+            Size: =0
+            Text: ="Option"
+            Width: =42
+            X: =1035
+            ZIndex: =14
+
+        TextInput12_1 As text:
+            BorderThickness: =1
+            Default: =ThisItem.'Lt/Btl'
+            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            Height: =20
+            OnSelect: =Select(Parent)
+            Size: =10
+            Width: =118
+            X: =1119
+            Y: =10
+            ZIndex: =15
+
+        Icon3 As icon.Trash:
+            Height: =28
+            Icon: =Icon.Trash
+            OnSelect: =Remove(Products,ThisItem)
+            Tooltip: ="Delete"
+            Width: =50
+            X: =1102
+            Y: =40
+            ZIndex: =16
+
+    Container3 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =53
+        LayoutMode: =LayoutMode.Auto
+        Visible: =false
+        Width: =1364
+        Y: =182
+        ZIndex: =5
+
+        ComboBox1 As combobox:
+            DisplayFields: =["Description"]
+            Height: =50
+            IsSearchable: =false
+            SearchFields: =["Description"]
+            SearchItems: =[]
+            SelectMultiple: =false
+            Width: =240
+            Y: =2
+            ZIndex: =1
+
+        Label2 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =2
+
+        TextInput1 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =
+            DisplayMode: =DisplayMode.Disabled
+            LayoutMinHeight: =20
+            Width: =90
+            ZIndex: =3
+
+        Label2_1 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =4
+
+        TextInput1_1 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            LayoutMinHeight: =20
+            Width: =40
+            ZIndex: =5
+
+        Label2_2 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =6
+
+        TextInput1_2 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =""
+            DisplayMode: =DisplayMode.Disabled
+            LayoutMinHeight: =20
+            Width: =70
+            ZIndex: =7
+
+        Label2_3 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =8
+
+        TextInput1_3 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =
+            DisplayMode: =DisplayMode.Disabled
+            LayoutMinHeight: =20
+            Width: =90
+            ZIndex: =9
+
+        Label2_4 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =10
+
+        Checkbox1 As checkbox:
+            AlignInContainer: =AlignInContainer.Stretch
+            LayoutMinHeight: =20
+            OnCheck: =Set(Decoded,true)
+            OnUncheck: =Set(Decoded,false)
+            Size: =0
+            Text: =Decoded
+            Width: =60
+            ZIndex: =11
+
+        Label2_5 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =12
+
+        Checkbox1_1 As checkbox:
+            AlignInContainer: =AlignInContainer.Stretch
+            LayoutMinHeight: =20
+            OnCheck: =Set(NonRefill,true)
+            OnUncheck: =Set(NonRefill,false)
+            Size: =0
+            Text: =NonRefill
+            Width: =60
+            ZIndex: =13
+
+        Label2_6 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =14
+
+        TextInput1_4 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =""
+            LayoutMinHeight: =20
+            Width: =60
+            ZIndex: =15
+
+        Label2_7 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =16
+
+        TextInput1_5 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =""
+            LayoutMinHeight: =20
+            Width: =60
+            ZIndex: =17
+
+        Label2_8 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =18
+
+        TextInput1_6 As text:
+            AlignInContainer: =AlignInContainer.Stretch
+            Default: =""
+            LayoutMinHeight: =15
+            Width: =100
+            ZIndex: =19
+
+        Label2_9 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =20
+
+        Label2_10 As label:
+            Text: =""
+            Width: =10
+            ZIndex: =21
+
+        TextInput1_7 As text:
+            Default: =""
+            Width: =90
+            ZIndex: =22
+
+        Icon1 As icon.Add:
+            AlignInContainer: =AlignInContainer.Stretch
+            Height: =40
+            Icon: =Icon.Add
+            LayoutMinHeight: =20
+            OnSelect: |-
+                =Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text});
+            Width: =45
+            ZIndex: =23
+
+    SaveButton As button:
+        Height: =26
+        OnSelect: |-
+            =If(IsBlank(ProductList_CB),Notify("Product is Required",NotificationType.Error),
+            
+            If(MinPrice_value.Text="",Notify("Min price is Required",NotificationType.Error),If(IsBlank(MaxPrice_value.Text),Notify("Max price is Required",NotificationType.Error),
+            If(Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),
+            
+            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue1.SelectedDate,Description:Last(FirstN(Products,Value)).'Product Description','Item No':Last(FirstN(Products,Value)).'Product Code','Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).'Customer Min Price'),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).'Customer Max Price'),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).'Qty Required'),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record submision sucessfull",NotificationType.Success)))));
+            
+            
+            Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false );
+        Text: ="Save"
+        Width: =292
+        X: =1026
+        Y: =566
+        ZIndex: =6
+
+    Home_Icon As icon.ArrowLeft:
+        Height: =54
+        Icon: =Icon.Home
+        OnSelect: =Navigate('Home Screen')
+        Width: =57
+        X: =1278
+        Y: =2
+        ZIndex: =7
+
+    Label3 As label:
+        Color: =RGBA(172, 62, 11, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Text: ="Max Price can't be less than Min Price"
+        Visible: =If(Value(Text(MaxPrice_value))> Value(Text(MinPrice_value))||IsBlank(MaxPrice_value),false,true)
+        Width: =166
+        X: =449
+        Y: =312
+        ZIndex: =36
+
+    Label4 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =27
+        Text: ="*"
+        Width: =42
+        X: =690
+        Y: =210
+        ZIndex: =37
+
+    Label8 As label:
+        Text: =
+        X: =38
+        Y: =72
+        ZIndex: =38
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =38
+
+        ProductList_CB As combobox:
+            DisplayFields: =["Product_Description"]
+            Height: =22
+            IsSearchable: =false
+            Items: ='Product Details_V'
+            OnChange: |-
+                =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
+                If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+            OnSelect: |-
+                =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
+                If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+            SearchFields: =["Barcode"]
+            SearchItems: =[]
+            SelectMultiple: =false
+            Size: =10
+            Width: =394
+            X: =32
+            Y: =239
+            ZIndex: =8
+
+        "'Product _Code' As text":
+            Default: =ProductList_CB.Selected.Product_Code
+            DisplayMode: =DisplayMode.Disabled
+            Height: =22
+            Size: =10
+            Width: =270
+            X: =32
+            Y: =293
+            ZIndex: =9
+
+        ALC_value As text:
+            Default: =ProductList_CB.Selected.Product_Alc
+            DisplayMode: =DisplayMode.Disabled
+            Height: =22
+            Size: =10
+            Width: =129
+            X: =517
+            Y: =290
+            ZIndex: =10
+
+        Carton_Quantity_vlaue As text:
+            Default: =ProductList_CB.Selected.Product_UOM_Qty
+            DisplayMode: =DisplayMode.Disabled
+            Height: =22
+            Size: =10
+            Width: =188
+            X: =672
+            Y: =290
+            ZIndex: =11
+
+        Variant_value As text:
+            Default: =ProductList_CB.Selected.Product_Variant
+            DisplayMode: =DisplayMode.Disabled
+            Height: =22
+            Size: =10
+            Width: =170
+            X: =880
+            Y: =287
+            ZIndex: =12
+
+        Decoded_CB As checkbox:
+            Default: =Decoded
+            OnCheck: =Set(Decoded,true)
+            OnUncheck: =Set(Decoded,false)
+            Size: =0
+            Text: =Decoded
+            Width: =78
+            X: =1149
+            Y: =222
+            ZIndex: =13
+
+        NonRefiil_CB As checkbox:
+            Default: =NonRefill
+            OnCheck: =Set(NonRefill,true)
+            OnUncheck: =Set(NonRefill,false)
+            Size: =0
+            Text: =NonRefill
+            Width: =78
+            X: =1240
+            Y: =222
+            ZIndex: =14
+
+        MinPrice_value As text:
+            Default: =""
+            Height: =22
+            Width: =180
+            X: =439
+            Y: =239
+            ZIndex: =15
+
+        MaxPrice_value As text:
+            Default: =
+            Height: =22
+            OnChange: =
+            Width: =188
+            X: =628
+            Y: =239
+            ZIndex: =16
+
+        Currency_value As text:
+            Default: |
+                =First(Filter(Currencies,'Transaction Currency'= LeadDataStore.Currency.'Transaction Currency')).'Currency Name'
+            FontWeight: =FontWeight.Lighter
+            Height: =22
+            Width: =150
+            X: =829
+            Y: =238
+            ZIndex: =17
+
+        Quantity_value As text:
+            Default: =""
+            Height: =22
+            Width: =150
+            X: =994
+            Y: =238
+            ZIndex: =18
+
+        Add_Icon As icon.Add:
+            Height: =21
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);
+            Width: =53
+            X: =1080
+            Y: =285
+            ZIndex: =19
+
+        Prodcut_lbl As label:
+            Height: =26
+            Size: =10
+            Text: ="Product"
+            Width: =430
+            X: =27
+            Y: =216
+            ZIndex: =20
+
+        Label4_26 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =32
+            Text: ="*"
+            Width: =37
+            X: =80
+            Y: =210
+            ZIndex: =21
+
+        Productcode_lbl As label:
+            Height: =23
+            Size: =10
+            Text: ="Product Code"
+            Width: =170
+            X: =30
+            Y: =268
+            ZIndex: =22
+
+        ALC_lbl As label:
+            Height: =32
+            Size: =10
+            Text: ="Alc %"
+            Width: =94
+            X: =556
+            Y: =266
+            ZIndex: =23
+
+        CQ_Label As label:
+            Height: =27
+            Size: =10
+            Text: ="Carton Quantity"
+            Width: =198
+            X: =694
+            Y: =266
+            ZIndex: =24
+
+        Varient_label As label:
+            Height: =23
+            Size: =10
+            Text: ="Varient"
+            Width: =174
+            X: =897
+            Y: =261
+            ZIndex: =25
+
+        Decoded_Lbl As label:
+            Height: =20
+            Size: =10
+            Text: ="De-Coded"
+            Width: =123
+            X: =1137
+            Y: =221
+            ZIndex: =26
+
+        "'Non-refill_lbl' As label":
+            Height: =28
+            Size: =10
+            Text: ="Non-Refill"
+            Width: =120
+            X: =1233
+            Y: =218
+            ZIndex: =27
+
+        MinPrice_lbl As label:
+            Height: =19
+            Size: =10
+            Text: ="Min Price"
+            Width: =188
+            X: =438
+            Y: =222
+            ZIndex: =28
+
+        Maxprice_lbl As label:
+            Height: =25
+            Size: =10
+            Text: =" Max Price"
+            Width: =187
+            X: =622
+            Y: =220
+            ZIndex: =29
+
+        Currency_lbl As label:
+            Height: =19
+            Size: =10
+            Text: ="Currency"
+            Width: =188
+            X: =826
+            Y: =222
+            ZIndex: =30
+
+        Label4_36 As label:
+            Color: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =33
+            Text: ="*"
+            Width: =32
+            X: =885
+            Y: =210
+            ZIndex: =31
+
+        Quantity_lbl As label:
+            Height: =19
+            Size: =10
+            Text: ="Quantity"
+            Width: =142
+            X: =990
+            Y: =222
+            ZIndex: =32
+
+        Label4_38 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =20
+            PaddingBottom: =3
+            PaddingLeft: =4
+            PaddingRight: =4
+            PaddingTop: =3
+            Text: ="*"
+            Width: =50
+            X: =502
+            Y: =210
+            ZIndex: =33
+
+        Litres_Value As text:
+            Default: =ProductList_CB.Selected.Product_Net_Volume
+            DisplayMode: =DisplayMode.Disabled
+            Height: =22
+            Width: =188
+            X: =310
+            Y: =290
+            ZIndex: =34
+
+        Litres_lbl As label:
+            Height: =14
+            Size: =10
+            Text: ="Lt/Btl"
+            Width: =140
+            X: =310
+            Y: =273
+            ZIndex: =35
+
+    Form5 As form:
+        DataSource: ='Customer Target Pricing Deploy List'
+        DefaultMode: =FormMode.New
+        Height: =296
+        OnSuccess: =ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
+        Width: =762
+        X: =8
+        Y: =472
+        ZIndex: =39
+
+        Title_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing Deploy List'], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue32.Text
+            Visible: =false
+            Width: =254
+            X: =0
+            Y: =0
+            ZIndex: =48
+
+            DataCardKey37 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: ="Customer_Target_Pricing_" & Now()
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                ZIndex: =2
+
+            ErrorMessage34 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue32.Y + DataCardValue32.Height
+                ZIndex: =3
+
+            StarVisible34 As label:
+                Align: =Align.Center
+                Height: =DataCardKey37.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey37.Y
+                ZIndex: =4
+
+        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =246
+            Required: =false
+            Update: =DataCardValue33.Attachments
+            Width: =254
+            X: =1
+            Y: =0
+            ZIndex: =48
+
+            DataCardKey38 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue33 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                Height: =126
+                IsInDataCard: =true
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey38.Y + DataCardKey38.Height + 5
+                ZIndex: =2
+
+            ErrorMessage35 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue33.Y + DataCardValue33.Height
+                ZIndex: =3
+
+            StarVisible35 As label:
+                Align: =Align.Center
+                Height: =DataCardKey38.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey38.Y
+                ZIndex: =4
+
+    Button4 As button:
+        OnSelect: =SubmitForm(Form5);
+        Text: ="Upload"
+        X: =357
+        Y: =566
+        ZIndex: =40
+

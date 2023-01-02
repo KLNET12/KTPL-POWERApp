@@ -1,0 +1,12 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: =Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))))
+
+    ModelDrivenFormIntegration As hostControl.ModelDrivenFormHostControlVariant:
+        DataSource: =Leads
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

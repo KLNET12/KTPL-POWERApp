@@ -1,0 +1,1148 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "leads",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "lead",
+    "MaxGetRowsCount": 500,
+    "Name": "Leads",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_customerid_value": "Customer",
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "account_originating_lead": "Accounts (account_originating_lead)",
+      "accountleads_association": "Accounts (accountleads_association)",
+      "address1_addresstypecode": "Address 1: Address Type",
+      "address1_city": "City",
+      "address1_composite": "Address 1",
+      "address1_country": "Country/Region",
+      "address1_county": "Address 1: County",
+      "address1_fax": "Address 1: Fax",
+      "address1_latitude": "Address 1: Latitude",
+      "address1_line1": "Street 1",
+      "address1_line2": "Street 2",
+      "address1_line3": "Street 3",
+      "address1_longitude": "Address 1: Longitude",
+      "address1_name": "Address 1: Name",
+      "address1_postalcode": "ZIP/Postal Code",
+      "address1_postofficebox": "Address 1: Post Office Box",
+      "address1_shippingmethodcode": "Address 1: Shipping Method",
+      "address1_stateorprovince": "State/Province",
+      "address1_telephone1": "Address 1: Telephone 1",
+      "address1_telephone2": "Address 1: Telephone 2",
+      "address1_telephone3": "Address 1: Telephone 3",
+      "address1_upszone": "Address 1: UPS Zone",
+      "address1_utcoffset": "Address 1: UTC Offset",
+      "address2_addresstypecode": "Address 2: Address Type",
+      "address2_city": "Address 2: City",
+      "address2_composite": "Address 2",
+      "address2_country": "Address 2: Country/Region",
+      "address2_county": "Address 2: County",
+      "address2_fax": "Address 2: Fax",
+      "address2_latitude": "Address 2: Latitude",
+      "address2_line1": "Address 2: Street 1",
+      "address2_line2": "Address 2: Street 2",
+      "address2_line3": "Address 2: Street 3",
+      "address2_longitude": "Address 2: Longitude",
+      "address2_name": "Address 2: Name",
+      "address2_postalcode": "Address 2: ZIP/Postal Code",
+      "address2_postofficebox": "Address 2: Post Office Box",
+      "address2_shippingmethodcode": "Address 2: Shipping Method",
+      "address2_stateorprovince": "Address 2: State/Province",
+      "address2_telephone1": "Address 2: Telephone 1",
+      "address2_telephone2": "Address 2: Telephone 2",
+      "address2_telephone3": "Address 2: Telephone 3",
+      "address2_upszone": "Address 2: UPS Zone",
+      "address2_utcoffset": "Address 2: UTC Offset",
+      "budgetamount": "Budget Amount",
+      "budgetamount_base": "Budget Amount (Base)",
+      "budgetstatus": "Budget",
+      "BulkOperation_Logs_Leads": "Quick Campaigns (BulkOperation_Logs_Leads)",
+      "businesscard": "Business Card",
+      "businesscardattributes": "BusinessCardAttributes",
+      "CampaignActivity_Logs_Leads": "Campaign Activities",
+      "campaignid": "Source Campaign",
+      "cdi_age": "Age",
+      "cdi_allowtextmessages": "Allow Text Messages",
+      "cdi_emailsend_lead": "Email Sends",
+      "cdi_facebook": "Facebook",
+      "cdi_grade": "Grade",
+      "cdi_identifiedon": "Identified On",
+      "cdi_image": "Image",
+      "cdi_importlog_Lead": "Import Logs",
+      "cdi_ip": "IP",
+      "cdi_latitude": "Latitude",
+      "cdi_lead_cdi_anonymousvisitor": "Anonymous Visitors",
+      "cdi_lead_cdi_emailevent": "Email Events",
+      "cdi_lead_cdi_eventparticipation_Lead": "Event Participations",
+      "cdi_lead_cdi_excludedemail": "Excluded Recipients",
+      "cdi_lead_cdi_pageview": "Page Views",
+      "cdi_lead_cdi_postedfield": "Posted Fields",
+      "cdi_lead_cdi_postedform": "Posted Forms",
+      "cdi_lead_cdi_postedsubscription": "Posted Subscriptions",
+      "cdi_lead_cdi_postedsurvey": "Posted Surveys",
+      "cdi_lead_cdi_sendemail": "Send ClickDimensions Emails",
+      "cdi_lead_cdi_sentemail": "Sent Emails",
+      "cdi_lead_cdi_socialclick_lead": "Social Clicks",
+      "cdi_lead_cdi_subscriptionpreference": "Posted Preferences",
+      "cdi_lead_cdi_surveyanswer": "Survey Answers",
+      "cdi_lead_cdi_transactionalemail_leadid": "Transactional Emails",
+      "cdi_lead_cdi_unsubscribe": "Unsubscribes",
+      "cdi_lead_cdi_visit": "Visits",
+      "cdi_lead_cdi_visitorscorepermodel": "Scores",
+      "cdi_lead_product": "Products (cdi_lead_product)",
+      "cdi_linkedin": "LinkedIn",
+      "cdi_longitude": "Longitude",
+      "cdi_partitionkey": "Partition Key",
+      "cdi_rowkey": "Row Key",
+      "cdi_score": "Score",
+      "cdi_social": "Social",
+      "cdi_timezones": "Time Zone",
+      "cdi_totalscore": "Legacy Total Score",
+      "cdi_twitter": "Twitter",
+      "cdi_visitorkey": "Visitor Key",
+      "companyname": "Company Name",
+      "confirminterest": "Confirm Interest",
+      "contact_originating_lead": "Contacts (contact_originating_lead)",
+      "contactleads_association": "Contacts (contactleads_association)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "decisionmaker": "Decision Maker?",
+      "description": "Description",
+      "donotbulkemail": "Do not allow Bulk Emails",
+      "donotemail": "Do not allow Emails",
+      "donotfax": "Do not allow Faxes",
+      "donotphone": "Do not allow Phone Calls",
+      "donotpostalmail": "Do not allow Mails",
+      "donotsendmm": "Marketing Material",
+      "emailaddress1": "Email",
+      "emailaddress2": "Email Address 2",
+      "emailaddress3": "Email Address 3",
+      "entityimage": "Entity Image",
+      "entityimageid": "EntityImageId",
+      "estimatedamount": "Est. Value",
+      "estimatedamount_base": "Est. Value (Base)",
+      "estimatedclosedate": "Est. Close Date",
+      "estimatedvalue": "Est. Value (deprecated)",
+      "evaluatefit": "Evaluate Fit",
+      "exchangerate": "Exchange Rate",
+      "fax": "Fax",
+      "firstname": "First Name",
+      "followemail": "Follow Email Activity",
+      "fullname": "Name",
+      "importsequencenumber": "Import Sequence Number",
+      "industrycode": "Industry",
+      "initialcommunication": "Initial Communication",
+      "jobtitle": "Job Title",
+      "kol_leadstatus": "Lead Status",
+      "kol_leadstatusdate": "Lead Status Date",
+      "kol_segment": "Segment",
+      "kol_territorycode": "Territory Code",
+      "lastname": "Last Name",
+      "lastonholdtime": "Last On Hold Time",
+      "lastusedincampaign": "Last Campaign Date",
+      "Lead_actioncard": "Action Cards",
+      "Lead_ActivityPointers": "Activities",
+      "lead_addresses": "Lead Addresses",
+      "Lead_Annotation": "Notes",
+      "Lead_Appointments": "Appointments",
+      "Lead_AsyncOperations": "System Jobs",
+      "Lead_BulkDeleteFailures": "Bulk Delete Failures",
+      "lead_BulkOperations": "Quick Campaigns (lead_BulkOperations)",
+      "lead_CampaignResponses": "Campaign Responses",
+      "lead_cdi_txtmessages": "Text Messages",
+      "lead_chats": "Teams chats",
+      "lead_connections1": "Connections (lead_connections1)",
+      "lead_connections2": "Connections (lead_connections2)",
+      "Lead_DuplicateBaseRecord": "Duplicate Records (Lead_DuplicateBaseRecord)",
+      "Lead_DuplicateMatchingRecord": "Duplicate Records (Lead_DuplicateMatchingRecord)",
+      "Lead_Email_EmailSender": "Email Messages (Lead_Email_EmailSender)",
+      "Lead_Emails": "Email Messages (Lead_Emails)",
+      "Lead_Faxes": "Faxes",
+      "lead_IncidentResolutions": "Case Resolutions",
+      "lead_leadtoopportunitysalesprocess": "Lead To Opportunity Sales Process",
+      "Lead_Letters": "Letters",
+      "Lead_MailboxTrackingFolder": "Mailbox Auto Tracking Folders",
+      "lead_master_lead": "Leads",
+      "lead_msdyn_ocliveworkitems": "Conversations",
+      "lead_msdyn_ocsessions": "Sessions",
+      "lead_msfp_alerts": "Customer Voice alert",
+      "lead_msfp_surveyinvites": "Customer Voice survey invites",
+      "lead_msfp_surveyresponses": "Customer Voice survey responses",
+      "lead_OpportunityCloses": "Opportunity Close Activities",
+      "lead_OrderCloses": "Order Close Activities",
+      "Lead_Phonecalls": "Phone Calls",
+      "lead_PostFollows": "Follows",
+      "lead_PostRegardings": "Post Regarding",
+      "lead_Posts": "Posts",
+      "lead_principalobjectattributeaccess": "Field Sharing",
+      "Lead_ProcessSessions": "Process Sessions",
+      "lead_QuoteCloses": "Quote Close Activities",
+      "Lead_RecurringAppointmentMasters": "Recurring Appointments",
+      "Lead_ServiceAppointments": "Service Activities",
+      "Lead_SharepointDocumentLocation": "Document Locations",
+      "Lead_SocialActivities": "Social Activities",
+      "Lead_SyncErrors": "Sync Errors",
+      "Lead_Tasks": "Tasks",
+      "leadcompetitors_association": "Competitors",
+      "leadid": "Lead",
+      "leadproduct_association": "Products (leadproduct_association)",
+      "leadqualitycode": "Rating",
+      "leadsourcecode": "Lead Source",
+      "listlead_association": "Marketing Lists",
+      "masterid": "Master ID",
+      "merged": "Merged",
+      "middlename": "Middle Name",
+      "mobilephone": "Mobile Phone",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_gdproptout": "GDPR Optout",
+      "msdyn_lead_msdyn_duplicatedetectionpluginrun_baserecordid": "Duplicate Detection Plugin Runs",
+      "msdyn_lead_msdyn_duplicateleadmapping": "Duplicate Lead Mappings (msdyn_lead_msdyn_duplicateleadmapping)",
+      "msdyn_lead_msdyn_duplicateleadmapping_BaseLeadRecord": "Duplicate Lead Mappings (msdyn_lead_msdyn_duplicateleadmapping_BaseLeadRecord)",
+      "msdyn_lead_msdyn_salesroutingrun_targetobject": "Sales routing runs",
+      "msdyn_lead_msdyn_timespent_leadlookup": "timespents",
+      "msdyn_leadgrade": "(Deprecated) Lead Grade",
+      "msdyn_leadscore": "(Deprecated) Lead Score",
+      "msdyn_leadscoretrend": "(Deprecated) Lead Score Trend",
+      "msdyn_linkeditemvalidity_polymorphic_leadid": "Linked Entity Attribute Validations",
+      "msdyn_msdyn_taggedrecord_lead_msdyn_dynamicsrecordid": "Tagged Records",
+      "msdyn_playbookinstance_lead": "Playbooks",
+      "msdyn_PredictiveScoreId": "Predictive Score",
+      "msdyn_sabackupdiagnostic_lead_msdyn_target": "sabackupdiagnostics",
+      "msdyn_salesassignmentresult": "Assignment Rule Result",
+      "msdyn_salesroutingdiagnostic_lead_msdyn_target": "salesroutingdiagnostics",
+      "msdyn_scorehistory": "(Deprecated) Score History",
+      "msdyn_scorereasons": "(Deprecated) Score Reasons",
+      "msdyn_segmentid": "Segment Id",
+      "msdyn_sequencetarget_lead_msdyn_target": "Sequence Targets",
+      "need": "Need",
+      "ntz_customertargetpricingapp": "Customer Target Pricing app",
+      "ntz_lead_ntz_customertargetpricing_CustomerLeadId": "Customer Target Pricing",
+      "numberofemployees": "No. of Employees",
+      "onholdtime": "On Hold Time (Minutes)",
+      "opportunity_originating_lead": "Opportunities",
+      "originatingcaseid": "Originating Case",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "pager": "Pager",
+      "parentaccountid": "Parent Account for lead",
+      "parentcontactid": "Parent Contact for lead",
+      "participatesinworkflow": "Participates in Workflow",
+      "preferredcontactmethodcode": "Preferred Method of Contact",
+      "prioritycode": "Priority",
+      "processid": "Process Id",
+      "purchaseprocess": "Purchase Process",
+      "purchasetimeframe": "Purchase Timeframe",
+      "qualificationcomments": "Qualification Comments",
+      "qualifyingopportunityid": "Qualifying Opportunity",
+      "relatedobjectid": "Related Campaign Response",
+      "revenue": "Annual Revenue",
+      "revenue_base": "Annual Revenue (Base)",
+      "salesstage": "Sales Stage",
+      "salesstagecode": "Sales Stage Code",
+      "salutation": "Salutation",
+      "schedulefollowup_prospect": "Schedule Follow Up (Prospect)",
+      "schedulefollowup_qualify": "Schedule Follow Up (Qualify)",
+      "sic": "SIC Code",
+      "sla_lead_sla": "SLA",
+      "slainvokedid_lead_sla": "Last SLA applied",
+      "slakpiinstance_lead": "SLA KPI Instances",
+      "stageid": "(Deprecated) Stage Id",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "subject": "Topic",
+      "teamsfollowed": "TeamsFollowed",
+      "telephone1": "Business Phone",
+      "telephone2": "Home Phone",
+      "telephone3": "Other Phone",
+      "timespentbymeonemailandmeetings": "Time Spent by me",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "websiteurl": "Website",
+      "yomicompanyname": "Yomi Company Name",
+      "yomifirstname": "Yomi First Name",
+      "yomifullname": "Yomi Full Name",
+      "yomilastname": "Yomi Last Name",
+      "yomimiddlename": "Yomi Middle Name"
+    },
+    "PreferredName": "Leads",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Leads (Views)",
+    "Name": "_lead_views",
+    "RelatedEntityName": "Leads",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666700": "Lead Advanced Find View",
+      "00000000-0000-0000-00aa-000010001005": "My Open Leads",
+      "00000000-0000-0000-00aa-000010001006": "Open Leads",
+      "00000000-0000-0000-00aa-000010001007": "Leads Opened This Week",
+      "00000000-0000-0000-00aa-000010001008": "Leads Opened Last Week",
+      "00000000-0000-0000-00aa-000010001009": "Closed Leads",
+      "0cc3ebe5-428c-4bf4-8019-0d1371bf42ef": "Open leads without sequences",
+      "2ed4a79b-1db9-454d-96ea-5718ffb98fd6": "Leads: Influenced Deals That We Won",
+      "333b0ce1-c380-e211-90f7-00155d89bb01": "Campaign Leads",
+      "42051953-0b19-4c1f-9398-d3ab897b124a": "All leads in current fiscal year",
+      "5a926b99-3a5f-df11-ae90-00155d2e3002": "All Leads",
+      "7c17132b-cda1-497a-b4c2-50da36bc0d4a": "Excluded Leads Campaigns",
+      "7f3b423d-0ba1-42b6-a561-ef4554b10e37": "My open leads without sequences",
+      "afe23d8a-6651-474d-b8ee-90210a8231f6": "Leads: Older Than 6 Months",
+      "c8f256c6-f809-4951-b286-3cbd9f99f80b": "Selected Leads Campaigns",
+      "d603107c-5e90-e011-95ae-00155d9cfa02": "Leads I Follow",
+      "d603107c-5e90-e011-95ae-00155d9cfa03": "Leads Being Followed",
+      "ecbac1a3-f8d8-4423-8f7e-10b11119739a": "Lead Lookup View",
+      "ef3cdb5b-71ed-4e73-92b2-ed6d47156521": "My Connections",
+      "f7ba26ee-3f8e-4cf2-8e02-0b4bbcd16da8": "Lead Associated View",
+      "fe961bbb-e5ea-44ba-aff3-db1d8bbba18b": "Leads: No campaign Activities Sent"
+    }
+  },
+  {
+    "DisplayName": "Budget",
+    "Name": "budgetstatus",
+    "OptionSetInfoNameMapping": {
+      "0": "No Committed Budget",
+      "1": "May Buy",
+      "2": "Can Buy",
+      "3": "Will Buy"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "budgetstatus",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "budgetstatus",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Allow Text Messages (Leads)",
+    "Name": "cdi_lead_cdi_allowtextmessages",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cdi_allowtextmessages",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cdi_allowtextmessages",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Confirm Interest",
+    "Name": "confirminterest",
+    "OptionSetInfoNameMapping": {
+      "0": "Yes",
+      "1": "No"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "confirminterest",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "confirminterest",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Decision Maker?",
+    "Name": "decisionmaker",
+    "OptionSetInfoNameMapping": {
+      "0": "mark complete",
+      "1": "completed"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "decisionmaker",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "decisionmaker",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Description",
+    "Name": "evaluatefit",
+    "OptionSetInfoNameMapping": {
+      "0": "Yes",
+      "1": "No"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "evaluatefit",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "evaluatefit",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Initial Communication",
+    "Name": "initialcommunication",
+    "OptionSetInfoNameMapping": {
+      "0": "Contacted",
+      "1": "Not Contacted"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "initialcommunication",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "initialcommunication",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Lead Status (Leads)",
+    "Name": "kol_lead_kol_leadstatus",
+    "OptionSetInfoNameMapping": {
+      "1": "New",
+      "2": "Qualified",
+      "3": "Existing"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "kol_leadstatus",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "kol_leadstatus",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Territory Code (Leads)",
+    "Name": "kol_lead_kol_territorycode",
+    "OptionSetInfoNameMapping": {
+      "183880000": "ABABCO",
+      "183880001": "SOUTHPAC",
+      "183880002": "AUSTCONS",
+      "183880003": "DOMWSALE"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "kol_territorycode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "kol_territorycode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Address 1: Address Type (Leads)",
+    "Name": "lead_address1_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_addresstypecode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_addresstypecode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Address 1: Shipping Method (Leads)",
+    "Name": "lead_address1_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_shippingmethodcode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Address 2: Address Type (Leads)",
+    "Name": "lead_address2_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_addresstypecode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_addresstypecode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Address 2: Shipping Method (Leads)",
+    "Name": "lead_address2_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_shippingmethodcode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do not allow Bulk Emails (Leads)",
+    "Name": "lead_donotbulkemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Allow",
+      "1": "Do Not Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotbulkemail",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotbulkemail",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do not allow Emails (Leads)",
+    "Name": "lead_donotemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Allow",
+      "1": "Do Not Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotemail",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotemail",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do not allow Faxes (Leads)",
+    "Name": "lead_donotfax",
+    "OptionSetInfoNameMapping": {
+      "0": "Allow",
+      "1": "Do Not Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotfax",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotfax",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do not allow Phone Calls (Leads)",
+    "Name": "lead_donotphone",
+    "OptionSetInfoNameMapping": {
+      "0": "Allow",
+      "1": "Do Not Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotphone",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotphone",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do not allow Mails (Leads)",
+    "Name": "lead_donotpostalmail",
+    "OptionSetInfoNameMapping": {
+      "0": "Allow",
+      "1": "Do Not Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotpostalmail",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotpostalmail",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Marketing Material (Leads)",
+    "Name": "lead_donotsendmm",
+    "OptionSetInfoNameMapping": {
+      "0": "Send",
+      "1": "Do Not Send"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotsendmm",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotsendmm",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Follow Email Activity (Leads)",
+    "Name": "lead_followemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "followemail",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "followemail",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Industry (Leads)",
+    "Name": "lead_industrycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Accounting",
+      "10": "Distributors, Dispatchers and Processors",
+      "11": "Doctor's Offices and Clinics",
+      "12": "Durable Manufacturing",
+      "13": "Eating and Drinking Places",
+      "14": "Entertainment Retail",
+      "15": "Equipment Rental and Leasing",
+      "16": "Financial",
+      "17": "Food and Tobacco Processing",
+      "18": "Inbound Capital Intensive Processing",
+      "19": "Inbound Repair and Services",
+      "2": "Agriculture and Non-petrol Natural Resource Extraction",
+      "20": "Insurance",
+      "21": "Legal Services",
+      "22": "Non-Durable Merchandise Retail",
+      "23": "Outbound Consumer Service",
+      "24": "Petrochemical Extraction and Distribution",
+      "25": "Service Retail",
+      "26": "SIG Affiliations",
+      "27": "Social Services",
+      "28": "Special Outbound Trade Contractors",
+      "29": "Specialty Realty",
+      "3": "Broadcasting Printing and Publishing",
+      "30": "Transportation",
+      "31": "Utility Creation and Distribution",
+      "32": "Vehicle Retail",
+      "33": "Wholesale",
+      "4": "Brokers",
+      "5": "Building Supply Retail",
+      "6": "Business Services",
+      "7": "Consulting",
+      "8": "Consumer Services",
+      "9": "Design, Direction and Creative Management"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "industrycode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "industrycode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Auto-created (Leads)",
+    "Name": "lead_isautocreate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isautocreate",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isautocreate",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Private (Leads)",
+    "Name": "lead_isprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isprivate",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isprivate",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Rating (Leads)",
+    "Name": "lead_leadqualitycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Hot",
+      "2": "Warm",
+      "3": "Cold"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leadqualitycode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "leadqualitycode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Lead Source (Leads)",
+    "Name": "lead_leadsourcecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Advertisement",
+      "10": "Other",
+      "2": "Employee Referral",
+      "3": "External Referral",
+      "4": "Partner",
+      "5": "Public Relations",
+      "6": "Seminar",
+      "7": "Trade Show",
+      "8": "Web",
+      "9": "Word of Mouth"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leadsourcecode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "leadsourcecode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Merged (Leads)",
+    "Name": "lead_merged",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "merged",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "merged",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Participates in Workflow (Leads)",
+    "Name": "lead_participatesinworkflow",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "participatesinworkflow",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "participatesinworkflow",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Preferred Method of Contact (Leads)",
+    "Name": "lead_preferredcontactmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Any",
+      "2": "Email",
+      "3": "Phone",
+      "4": "Fax",
+      "5": "Mail"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredcontactmethodcode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredcontactmethodcode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Leads)",
+    "Name": "lead_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Lead Sales Stage",
+    "Name": "lead_salesstage",
+    "OptionSetInfoNameMapping": {
+      "0": "Qualify"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "salesstage",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "salesstage",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Sales Stage Code (Leads)",
+    "Name": "lead_salesstagecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "salesstagecode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "salesstagecode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Leads)",
+    "Name": "lead_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Open",
+      "1": "Qualified",
+      "2": "Disqualified"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Leads)",
+    "Name": "lead_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "New",
+      "2": "Contacted",
+      "3": "Qualified",
+      "4": "Lost",
+      "5": "Cannot Contact",
+      "6": "No Longer Interested",
+      "7": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "GDPR Optout (Leads)",
+    "Name": "msdyn_lead_msdyn_gdproptout",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_gdproptout",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_gdproptout",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Assignment Rule Result (Leads)",
+    "Name": "msdyn_lead_msdyn_salesassignmentresult",
+    "OptionSetInfoNameMapping": {
+      "0": "Succeeded",
+      "1": "Failed"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_salesassignmentresult",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_salesassignmentresult",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Lead Grade",
+    "Name": "msdyn_leadgradeoptset",
+    "OptionSetInfoNameMapping": {
+      "0": "Grade A",
+      "1": "Grade B",
+      "2": "Grade C",
+      "3": "Grade D"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_leadgrade",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_leadgrade",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Lead Score Trend",
+    "Name": "msdyn_leadscoretrendoptset",
+    "OptionSetInfoNameMapping": {
+      "0": "Improving",
+      "1": "Steady",
+      "2": "Declining",
+      "3": "Not enough info"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_leadscoretrend",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_leadscoretrend",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Need",
+    "Name": "need",
+    "OptionSetInfoNameMapping": {
+      "0": "Must have",
+      "1": "Should have",
+      "2": "Good to have",
+      "3": "No need"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "need",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "need",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Purchase Process",
+    "Name": "purchaseprocess",
+    "OptionSetInfoNameMapping": {
+      "0": "Individual",
+      "1": "Committee",
+      "2": "Unknown"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "purchaseprocess",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "purchaseprocess",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Purchase Timeframe",
+    "Name": "purchasetimeframe",
+    "OptionSetInfoNameMapping": {
+      "0": "Immediate",
+      "1": "This Quarter",
+      "2": "Next Quarter",
+      "3": "This Year",
+      "4": "Unknown"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "purchasetimeframe",
+        "OptionSetReferenceEntityName": "Leads"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "purchasetimeframe",
+    "RelatedEntityName": "Leads",
+    "Type": "OptionSetInfo"
+  }
+]
