@@ -9095,7 +9095,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "5",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "TemplatePadding",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
