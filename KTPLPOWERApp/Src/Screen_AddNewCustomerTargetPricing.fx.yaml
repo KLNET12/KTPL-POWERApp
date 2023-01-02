@@ -278,7 +278,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =357
-            Y: =36
+            Y: =35
             ZIndex: =8
 
         TextInput13 As text:
@@ -333,11 +333,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             CheckboxSize: =25
             Default: =ThisItem.'De-Coded'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =40
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =0
             Text: ="Option"
-            Width: =29
+            Width: =52
             X: =1050
             Y: =2
             ZIndex: =13
@@ -346,11 +346,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             CheckboxSize: =25
             Default: =ThisItem.'Non-Refill'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =40
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =0
             Text: ="Option"
-            Width: =29
+            Width: =52
             X: =1150
             Y: =2
             ZIndex: =14
