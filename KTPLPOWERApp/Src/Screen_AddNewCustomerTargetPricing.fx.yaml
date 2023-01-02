@@ -576,10 +576,10 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label4 As label:
         Color: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
-        Height: =27
+        Height: =11
         Text: ="*"
-        Width: =42
-        X: =729
+        Width: =41
+        X: =742
         Y: =210
         ZIndex: =37
 
@@ -778,20 +778,20 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =25
 
         Decoded_Lbl As label:
-            Height: =20
+            Height: =16
             Size: =10
             Text: ="De-Coded"
-            Width: =123
+            Width: =96
             X: =1137
             Y: =221
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =28
+            Height: =17
             Size: =10
             Text: ="Non-Refill"
-            Width: =120
-            X: =1233
+            Width: =102
+            X: =1240
             Y: =218
             ZIndex: =27
 
@@ -851,8 +851,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =537
-            Y: =197
+            X: =511
+            Y: =210
             ZIndex: =33
 
         Litres_Value As text:
