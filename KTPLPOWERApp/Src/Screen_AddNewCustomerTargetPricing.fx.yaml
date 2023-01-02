@@ -369,8 +369,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =50
-            X: =1102
-            Y: =40
+            X: =1080
+            Y: =47
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
@@ -765,8 +765,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Carton Quantity"
             Width: =198
-            X: =694
-            Y: =266
+            X: =682
+            Y: =267
             ZIndex: =24
 
         Varient_label As label:
@@ -774,8 +774,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =897
-            Y: =261
+            X: =880
+            Y: =267
             ZIndex: =25
 
         Decoded_Lbl As label:
