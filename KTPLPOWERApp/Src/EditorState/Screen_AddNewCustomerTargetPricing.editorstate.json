@@ -73,7 +73,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Add_Icon",
-      "ParentIndex": 29,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -295,7 +295,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ALC_lbl",
-      "ParentIndex": 25,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -591,7 +591,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ALC_value",
-      "ParentIndex": 33,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1280,7 +1280,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Carton_Quantity_vlaue",
-      "ParentIndex": 30,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3564,7 +3564,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CQ_Label",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7635,7 +7635,14 @@
           "NameMapSourceSchema": "?"
         },
         "X",
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -7688,7 +7695,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Edit_icon",
-      "ParentIndex": 9,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10103,7 +10110,14 @@
         "HoverFill",
         "DisplayMode",
         "X",
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -15580,7 +15594,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Litres_lbl",
-      "ParentIndex": 27,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15876,7 +15890,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Litres_Value",
-      "ParentIndex": 32,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18455,7 +18469,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Product _Code",
-      "ParentIndex": 31,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18747,7 +18761,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Productcode_lbl",
-      "ParentIndex": 24,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24045,7 +24059,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput12",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24667,7 +24681,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput13",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24978,7 +24992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput14",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25289,7 +25303,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput15",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27853,7 +27867,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Variant_value",
-      "ParentIndex": 34,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28152,7 +28166,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Varient_label",
-      "ParentIndex": 28,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
