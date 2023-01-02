@@ -579,7 +579,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =27
         Text: ="*"
         Width: =42
-        X: =690
+        X: =716
         Y: =210
         ZIndex: =37
 
@@ -607,7 +607,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-            SearchFields: =["Barcode"]
+            SearchFields: =["Product_Description","Product_Code"]
             SearchItems: =[]
             SelectMultiple: =false
             Size: =10
@@ -739,7 +739,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Text: ="*"
             Width: =37
-            X: =80
+            X: =132
             Y: =210
             ZIndex: =21
 
@@ -830,7 +830,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =33
             Text: ="*"
             Width: =32
-            X: =885
+            X: =924
             Y: =210
             ZIndex: =31
 
@@ -854,7 +854,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =50
-            X: =502
+            X: =528
             Y: =210
             ZIndex: =33
 
