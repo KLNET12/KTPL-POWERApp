@@ -579,7 +579,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =27
         Text: ="*"
         Width: =42
-        X: =729
+        X: =742
         Y: =210
         ZIndex: =37
 
@@ -739,7 +739,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =37
             X: =132
-            Y: =210
+            Y: =223
             ZIndex: =21
 
         Productcode_lbl As label:
@@ -853,8 +853,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =50
-            X: =541
-            Y: =210
+            X: =554
+            Y: =223
             ZIndex: =33
 
         Litres_Value As text:
