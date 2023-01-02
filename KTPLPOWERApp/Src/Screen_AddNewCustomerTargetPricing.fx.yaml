@@ -278,7 +278,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =341
             X: =16
-            Y: =49
+            Y: =35
             ZIndex: =8
 
         TextInput13 As text:
@@ -290,7 +290,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =360
-            Y: =49
+            Y: =35
             ZIndex: =9
 
         TextInput14 As text:
@@ -302,7 +302,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =513
-            Y: =49
+            Y: =35
             ZIndex: =10
 
         TextInput15 As text:
@@ -314,7 +314,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =665
-            Y: =49
+            Y: =35
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -326,7 +326,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Edit "
             Width: =53
             X: =1099
-            Y: =48
+            Y: =40
             ZIndex: =12
 
         Checkbox2 As checkbox:
@@ -374,7 +374,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Delete"
             Width: =53
             X: =1184
-            Y: =48
+            Y: =40
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
