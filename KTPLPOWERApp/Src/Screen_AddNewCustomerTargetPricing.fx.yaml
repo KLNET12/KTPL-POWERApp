@@ -31,6 +31,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             DataCardKey4 As label:
                 Height: =25
+                Size: =12
                 Text: |-
                     ="Lead:"
                 Width: =Parent.Width - 60
@@ -65,11 +66,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey1 As label:
-                AutoHeight: =true
-                Height: =34
+                Height: =28
+                Size: =12
                 Text: |-
                     ="Contact :"
-                Width: =Parent.Width - 60
+                Width: =376
                 Wrap: =false
                 X: =42
                 Y: =20
@@ -100,12 +101,13 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey5 As label:
-                Height: =26
+                Height: =25
+                Size: =12
                 Text: =Parent.DisplayName
-                Width: =247
+                Width: =300
                 Wrap: =false
-                X: =20
-                Y: =15
+                X: =19
+                Y: =25
                 ZIndex: =1
 
             DateValue1 As datepicker:
@@ -579,7 +581,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =11
         Text: ="*"
         Width: =41
-        X: =703
+        X: =729
         Y: =223
         ZIndex: =37
 
@@ -760,10 +762,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =23
 
         CQ_Label As label:
-            Height: =27
+            Height: =25
             Size: =10
             Text: ="Carton Quantity"
-            Width: =175
+            Width: =188
             X: =654
             Y: =273
             ZIndex: =24
@@ -791,8 +793,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Non-Refill"
             Width: =115
-            X: =1227
-            Y: =218
+            X: =1238
+            Y: =220
             ZIndex: =27
 
         MinPrice_lbl As label:
