@@ -290,7 +290,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =510
-            Y: =35
+            Y: =34
             ZIndex: =9
 
         TextInput14 As text:
@@ -302,7 +302,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =662
-            Y: =35
+            Y: =34
             ZIndex: =10
 
         TextInput15 As text:
