@@ -766,8 +766,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Carton Quantity"
             Width: =188
-            X: =654
-            Y: =273
+            X: =650
+            Y: =275
             ZIndex: =24
 
         Varient_label As label:
@@ -853,7 +853,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =550
+            X: =533
             Y: =210
             ZIndex: =33
 
