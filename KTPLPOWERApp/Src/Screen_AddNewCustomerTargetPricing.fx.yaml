@@ -203,8 +203,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =154
         Items: =Products
         Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =153
+        TemplatePadding: =6
+        TemplateSize: =100
         Width: =1366
         Y: =318
         ZIndex: =4
@@ -278,7 +278,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =341
             X: =16
-            Y: =49
+            Y: =35
             ZIndex: =8
 
         TextInput13 As text:
@@ -290,7 +290,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =360
-            Y: =49
+            Y: =35
             ZIndex: =9
 
         TextInput14 As text:
@@ -302,7 +302,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =513
-            Y: =49
+            Y: =35
             ZIndex: =10
 
         TextInput15 As text:
@@ -314,7 +314,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =665
-            Y: =49
+            Y: =35
             ZIndex: =11
 
         Edit_icon As icon.Edit:
