@@ -783,21 +783,21 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =25
 
         Decoded_Lbl As label:
-            Height: =14
+            Height: =26
             Size: =10
             Text: ="De-Coded"
-            Width: =103
-            X: =1124
-            Y: =208
+            Width: =121
+            X: =1127
+            Y: =202
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =17
+            Height: =42
             Size: =10
             Text: ="Non-Refill"
             Width: =115
-            X: =1227
-            Y: =207
+            X: =1225
+            Y: =194
             ZIndex: =27
 
         MinPrice_lbl As label:
@@ -964,7 +964,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =246
+            Height: =112
             Required: =false
             Update: =DataCardValue33.Attachments
             Width: =254
@@ -995,7 +995,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey38.Y + DataCardKey38.Height + 5
+                Y: =21
                 ZIndex: =2
 
             ErrorMessage35 As label:
