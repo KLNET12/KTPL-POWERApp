@@ -252,7 +252,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =110
+            Width: =150
             X: =662
             Y: =14
             ZIndex: =4
@@ -265,7 +265,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =774
+            X: =814
             Y: =14
             ZIndex: =5
 
@@ -276,9 +276,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =341
-            X: =16
-            Y: =35
+            Width: =150
+            X: =357
+            Y: =34
             ZIndex: =8
 
         TextInput13 As text:
@@ -289,8 +289,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =360
-            Y: =35
+            X: =510
+            Y: =34
             ZIndex: =9
 
         TextInput14 As text:
@@ -301,8 +301,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =513
-            Y: =35
+            X: =662
+            Y: =34
             ZIndex: =10
 
         TextInput15 As text:
@@ -313,8 +313,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =665
-            Y: =35
+            X: =814
+            Y: =34
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -325,20 +325,20 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =Set(fieldedit,true)
             Tooltip: ="Edit "
             Width: =53
-            X: =1099
-            Y: =40
+            X: =1040
+            Y: =36
             ZIndex: =12
 
         Checkbox2 As checkbox:
             CheckboxSize: =25
             Default: =ThisItem.'De-Coded'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =40
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =0
             Text: ="Option"
-            Width: =29
-            X: =980
+            Width: =52
+            X: =1050
             Y: =2
             ZIndex: =13
 
@@ -346,12 +346,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             CheckboxSize: =25
             Default: =ThisItem.'Non-Refill'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =40
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =0
             Text: ="Option"
-            Width: =29
-            X: =1040
+            Width: =52
+            X: =1150
             Y: =2
             ZIndex: =14
 
@@ -362,9 +362,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =118
-            X: =1119
-            Y: =14
+            Width: =339
+            X: =16
+            Y: =34
             ZIndex: =15
 
         Icon3 As icon.Trash:
@@ -373,8 +373,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =53
-            X: =1184
-            Y: =40
+            X: =1140
+            Y: =36
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
@@ -723,8 +723,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);
             Width: =53
-            X: =1225
-            Y: =275
+            X: =1195
+            Y: =262
             ZIndex: =19
 
         Prodcut_lbl As label:
