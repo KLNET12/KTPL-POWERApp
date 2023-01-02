@@ -204,7 +204,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =10
-        TemplateSize: =80
+        TemplateSize: =70
         Width: =1366
         Y: =318
         ZIndex: =4
@@ -326,7 +326,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Edit "
             Width: =53
             X: =1099
-            Y: =40
+            Y: =48
             ZIndex: =12
 
         Checkbox2 As checkbox:
@@ -374,7 +374,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Delete"
             Width: =53
             X: =1184
-            Y: =40
+            Y: =48
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
