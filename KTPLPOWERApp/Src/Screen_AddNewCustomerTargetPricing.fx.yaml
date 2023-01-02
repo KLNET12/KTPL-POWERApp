@@ -627,7 +627,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =270
             X: =32
-            Y: =277
+            Y: =264
             ZIndex: =9
 
         ALC_value As text:
@@ -637,7 +637,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =188
             X: =500
-            Y: =277
+            Y: =264
             ZIndex: =10
 
         Carton_Quantity_vlaue As text:
@@ -647,7 +647,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =188
             X: =695
-            Y: =276
+            Y: =263
             ZIndex: =11
 
         Variant_value As text:
@@ -657,7 +657,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =170
             X: =888
-            Y: =275
+            Y: =262
             ZIndex: =12
 
         Decoded_CB As checkbox:
@@ -752,7 +752,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Product Code"
             Width: =170
             X: =32
-            Y: =261
+            Y: =248
             ZIndex: =22
 
         ALC_lbl As label:
@@ -761,7 +761,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Alc %"
             Width: =94
             X: =500
-            Y: =262
+            Y: =249
             ZIndex: =23
 
         CQ_Label As label:
@@ -770,7 +770,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Carton Quantity"
             Width: =188
             X: =688
-            Y: =264
+            Y: =251
             ZIndex: =24
 
         Varient_label As label:
@@ -778,8 +778,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =890
-            Y: =260
+            X: =888
+            Y: =251
             ZIndex: =25
 
         Decoded_Lbl As label:
@@ -792,12 +792,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =30
+            Height: =45
             Size: =10
             Text: ="Non-Refill"
             Width: =117
-            X: =1248
-            Y: =199
+            X: =1231
+            Y: =194
             ZIndex: =27
 
         MinPrice_lbl As label:
@@ -866,7 +866,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Width: =188
             X: =306
-            Y: =277
+            Y: =264
             ZIndex: =34
 
         Litres_lbl As label:
@@ -875,17 +875,17 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Lt/Btl"
             Width: =140
             X: =309
-            Y: =265
+            Y: =252
             ZIndex: =35
 
     Form5 As form:
         DataSource: ='Customer Target Pricing Deploy List'
         DefaultMode: =FormMode.New
-        Height: =143
+        Height: =202
         OnSuccess: =ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
         Width: =762
         X: =8
-        Y: =624
+        Y: =564
         ZIndex: =39
 
         Title_DataCard1 As typedDataCard.textualEditCard:
