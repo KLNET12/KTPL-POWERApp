@@ -792,12 +792,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =45
+            Height: =28
             Size: =10
             Text: ="Non-Refill"
             Width: =117
-            X: =1231
-            Y: =194
+            X: =1236
+            Y: =200
             ZIndex: =27
 
         MinPrice_lbl As label:
