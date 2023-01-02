@@ -7,7 +7,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Form1 As form:
         DataSource: ='Customer Target Pricing'
-        Height: =72
+        Height: =94
         SnapToColumns: =false
         Width: =1364
         X: =2
@@ -585,7 +585,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="*"
         Width: =41
         X: =729
-        Y: =223
+        Y: =197
         ZIndex: =37
 
     Label8 As label:
@@ -604,6 +604,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
             Height: =22
+            IsSearchable: =false
             Items: ='Product Details_V'
             OnChange: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
@@ -612,7 +613,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
+            SearchItems: =[]
             SelectMultiple: =false
             Size: =10
             Width: =394
