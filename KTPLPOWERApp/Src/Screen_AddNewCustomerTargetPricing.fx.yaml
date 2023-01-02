@@ -30,14 +30,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey4 As label:
-                Height: =25
+                Height: =13
                 Size: =12
                 Text: |-
                     ="Lead:"
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =42
-                Y: =20
+                X: =35
+                Y: =32
                 ZIndex: =1
 
             TextInput3 As text:
@@ -66,14 +66,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey1 As label:
-                Height: =28
+                Height: =14
                 Size: =12
                 Text: |-
                     ="Contact :"
                 Width: =376
                 Wrap: =false
-                X: =42
-                Y: =20
+                X: =37
+                Y: =34
                 ZIndex: =1
 
             TextInput4 As text:
@@ -101,13 +101,13 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey5 As label:
-                Height: =25
+                Height: =15
                 Size: =12
                 Text: =Parent.DisplayName
                 Width: =300
                 Wrap: =false
-                X: =32
-                Y: =25
+                X: =19
+                Y: =35
                 ZIndex: =1
 
             DateValue1 As datepicker:
@@ -731,8 +731,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Product"
             Width: =430
-            X: =27
-            Y: =216
+            X: =37
+            Y: =219
             ZIndex: =20
 
         Label4_26 As label:
@@ -746,48 +746,48 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =21
 
         Productcode_lbl As label:
-            Height: =23
+            Height: =19
             Size: =10
             Text: ="Product Code"
             Width: =170
-            X: =37
-            Y: =270
+            X: =32
+            Y: =277
             ZIndex: =22
 
         ALC_lbl As label:
-            Height: =23
+            Height: =17
             Size: =10
             Text: ="Alc %"
             Width: =94
-            X: =508
-            Y: =277
+            X: =500
+            Y: =278
             ZIndex: =23
 
         CQ_Label As label:
-            Height: =25
+            Height: =12
             Size: =10
             Text: ="Carton Quantity"
             Width: =188
-            X: =693
-            Y: =269
+            X: =688
+            Y: =280
             ZIndex: =24
 
         Varient_label As label:
-            Height: =23
+            Height: =11
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =890
-            Y: =270
+            X: =897
+            Y: =282
             ZIndex: =25
 
         Decoded_Lbl As label:
-            Height: =16
+            Height: =14
             Size: =10
             Text: ="De-Coded"
             Width: =88
-            X: =1137
-            Y: =218
+            X: =1124
+            Y: =224
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
@@ -795,8 +795,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Non-Refill"
             Width: =115
-            X: =1238
-            Y: =215
+            X: =1227
+            Y: =223
             ZIndex: =27
 
         MinPrice_lbl As label:
@@ -804,8 +804,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Min Price"
             Width: =188
-            X: =438
-            Y: =219
+            X: =439
+            Y: =224
             ZIndex: =28
 
         Maxprice_lbl As label:
@@ -813,17 +813,17 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: =" Max Price"
             Width: =187
-            X: =622
-            Y: =218
+            X: =628
+            Y: =220
             ZIndex: =29
 
         Currency_lbl As label:
-            Height: =19
+            Height: =11
             Size: =10
             Text: ="Currency"
             Width: =188
-            X: =826
-            Y: =220
+            X: =823
+            Y: =227
             ZIndex: =30
 
         Label4_36 As label:
@@ -837,12 +837,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =31
 
         Quantity_lbl As label:
-            Height: =19
+            Height: =12
             Size: =10
             Text: ="Quantity"
             Width: =142
-            X: =990
-            Y: =220
+            X: =989
+            Y: =226
             ZIndex: =32
 
         Label4_38 As label:
@@ -873,8 +873,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Lt/Btl"
             Width: =140
-            X: =312
-            Y: =275
+            X: =309
+            Y: =281
             ZIndex: =35
 
     Form5 As form:

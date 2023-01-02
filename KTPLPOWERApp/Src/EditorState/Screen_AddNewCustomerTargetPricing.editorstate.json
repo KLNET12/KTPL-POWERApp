@@ -591,7 +591,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ALC_value",
-      "ParentIndex": 32,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1280,7 +1280,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Carton_Quantity_vlaue",
-      "ParentIndex": 33,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3868,7 +3868,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_lbl",
-      "ParentIndex": 15,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5695,7 +5695,14 @@
           "NameMapSourceSchema": "?"
         },
         "Width",
-        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisplayMode",
         "ZIndex",
         "AutoHeight",
@@ -7103,7 +7110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Decoded_CB",
-      "ParentIndex": 17,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7405,7 +7412,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Decoded_Lbl",
-      "ParentIndex": 13,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7681,7 +7688,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Edit_icon",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10149,7 +10156,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
-      "ParentIndex": 9,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14035,7 +14042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4",
-      "ParentIndex": 8,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14657,7 +14664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_36",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15002,7 +15009,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_38",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15573,7 +15580,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Litres_lbl",
-      "ParentIndex": 28,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15869,7 +15876,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Litres_Value",
-      "ParentIndex": 31,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16377,7 +16384,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Maxprice_lbl",
-      "ParentIndex": 12,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16964,7 +16971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MinPrice_lbl",
-      "ParentIndex": 14,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17553,7 +17560,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "NonRefiil_CB",
-      "ParentIndex": 18,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17862,7 +17869,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Non-refill_lbl",
-      "ParentIndex": 11,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18159,7 +18166,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Prodcut_lbl",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18448,7 +18455,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Product _Code",
-      "ParentIndex": 34,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18740,7 +18747,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Productcode_lbl",
-      "ParentIndex": 27,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19418,7 +19425,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Quantity_lbl",
-      "ParentIndex": 16,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24038,7 +24045,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput12",
-      "ParentIndex": 14,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24349,7 +24356,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput12_1",
-      "ParentIndex": 3,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25586,7 +25593,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput2",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26458,7 +26465,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput5",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26762,7 +26769,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput6",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27066,7 +27073,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput7",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27370,7 +27377,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput8",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27846,7 +27853,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Variant_value",
-      "ParentIndex": 30,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28138,7 +28145,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Varient_label",
-      "ParentIndex": 24,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
