@@ -274,7 +274,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =188
+            Width: =341
             X: =16
             Y: =49
             ZIndex: =8
@@ -286,9 +286,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =188
-            X: =340
-            Y: =47
+            Width: =150
+            X: =360
+            Y: =49
             ZIndex: =9
 
         TextInput14 As text:
@@ -298,9 +298,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =188
-            X: =541
-            Y: =47
+            Width: =150
+            X: =513
+            Y: =49
             ZIndex: =10
 
         TextInput15 As text:
@@ -310,21 +310,21 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
-            Width: =293
-            X: =742
-            Y: =47
+            Width: =150
+            X: =665
+            Y: =49
             ZIndex: =11
 
         Edit_icon As icon.Edit:
             DisplayMode: =
-            Height: =22
+            Height: =28
             Icon: =Icon.Edit
             OnSelect: |
                 =Set(fieldedit,true)
             Tooltip: ="Edit "
-            Width: =53
-            X: =1045
-            Y: =47
+            Width: =50
+            X: =950
+            Y: =53
             ZIndex: =12
 
         Checkbox2 As checkbox:
@@ -336,7 +336,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: ="Option"
             Width: =29
-            X: =953
+            X: =960
+            Y: =2
             ZIndex: =13
 
         Checkbox2_1 As checkbox:
@@ -347,8 +348,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =0
             Text: ="Option"
-            Width: =42
+            Width: =29
             X: =1035
+            Y: =2
             ZIndex: =14
 
         TextInput12_1 As text:
@@ -360,7 +362,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =118
             X: =1119
-            Y: =10
+            Y: =14
             ZIndex: =15
 
         Icon3 As icon.Trash:
@@ -369,8 +371,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =50
-            X: =1102
-            Y: =40
+            X: =1025
+            Y: =51
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
@@ -631,9 +633,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =129
-            X: =517
-            Y: =290
+            Width: =188
+            X: =500
+            Y: =293
             ZIndex: =10
 
         Carton_Quantity_vlaue As text:
@@ -642,8 +644,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Size: =10
             Width: =188
-            X: =672
-            Y: =290
+            X: =695
+            Y: =292
             ZIndex: =11
 
         Variant_value As text:
@@ -652,8 +654,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Size: =10
             Width: =170
-            X: =880
-            Y: =287
+            X: =888
+            Y: =293
             ZIndex: =12
 
         Decoded_CB As checkbox:
@@ -719,8 +721,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);
             Width: =53
-            X: =1080
-            Y: =285
+            X: =1225
+            Y: =291
             ZIndex: =19
 
         Prodcut_lbl As label:
@@ -749,7 +751,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Product Code"
             Width: =170
             X: =30
-            Y: =268
+            Y: =270
             ZIndex: =22
 
         ALC_lbl As label:
@@ -757,7 +759,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Alc %"
             Width: =94
-            X: =556
+            X: =508
             Y: =266
             ZIndex: =23
 
@@ -766,8 +768,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Carton Quantity"
             Width: =198
-            X: =694
-            Y: =266
+            X: =693
+            Y: =269
             ZIndex: =24
 
         Varient_label As label:
@@ -775,17 +777,17 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =897
-            Y: =261
+            X: =890
+            Y: =270
             ZIndex: =25
 
         Decoded_Lbl As label:
             Height: =20
             Size: =10
             Text: ="De-Coded"
-            Width: =123
+            Width: =88
             X: =1137
-            Y: =221
+            Y: =218
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
@@ -794,7 +796,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Non-Refill"
             Width: =120
             X: =1233
-            Y: =218
+            Y: =215
             ZIndex: =27
 
         MinPrice_lbl As label:
@@ -803,7 +805,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Min Price"
             Width: =188
             X: =438
-            Y: =222
+            Y: =219
             ZIndex: =28
 
         Maxprice_lbl As label:
@@ -812,7 +814,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: =" Max Price"
             Width: =187
             X: =622
-            Y: =220
+            Y: =218
             ZIndex: =29
 
         Currency_lbl As label:
@@ -821,7 +823,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             Width: =188
             X: =826
-            Y: =222
+            Y: =220
             ZIndex: =30
 
         Label4_36 As label:
@@ -840,7 +842,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Quantity"
             Width: =142
             X: =990
-            Y: =222
+            Y: =220
             ZIndex: =32
 
         Label4_38 As label:
@@ -863,8 +865,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Width: =188
-            X: =310
-            Y: =290
+            X: =306
+            Y: =293
             ZIndex: =34
 
         Litres_lbl As label:
@@ -873,7 +875,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Lt/Btl"
             Width: =140
             X: =310
-            Y: =273
+            Y: =275
             ZIndex: =35
 
     Form5 As form:
