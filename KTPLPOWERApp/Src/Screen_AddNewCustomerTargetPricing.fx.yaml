@@ -775,7 +775,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =842
+            X: =855
             Y: =275
             ZIndex: =25
 
@@ -853,8 +853,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =533
-            Y: =210
+            X: =519
+            Y: =212
             ZIndex: =33
 
         Litres_Value As text:
