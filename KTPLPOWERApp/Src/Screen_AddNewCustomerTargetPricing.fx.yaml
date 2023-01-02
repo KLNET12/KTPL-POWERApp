@@ -579,8 +579,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =11
         Text: ="*"
         Width: =41
-        X: =742
-        Y: =210
+        X: =703
+        Y: =223
         ZIndex: =37
 
     Label8 As label:
@@ -790,8 +790,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =17
             Size: =10
             Text: ="Non-Refill"
-            Width: =102
-            X: =1240
+            Width: =115
+            X: =1227
             Y: =218
             ZIndex: =27
 
@@ -851,7 +851,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =511
+            X: =524
             Y: =210
             ZIndex: =33
 
