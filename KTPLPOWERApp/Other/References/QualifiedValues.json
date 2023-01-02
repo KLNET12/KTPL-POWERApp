@@ -1,13 +1,6 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_ntz_customertargetpricing_forms",
-      "Namespace": "Customer Target Pricing (Forms)",
-      "Values": {
-        "Information": "896c85bb-eb29-4a6f-b789-f49ebb4affe2"
-      }
-    },
-    {
       "Kind": "default.cds_account_forms",
       "Namespace": "Accounts (Forms)",
       "Values": {
@@ -30,23 +23,6 @@
         "Sales Professional": "524e6e7f-0256-4cff-a836-740e10dffc7d",
         "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e",
         "TimelineWallControl - Account- Main": "6df8e8ce-7655-468c-925e-660d59aa7f4c"
-      }
-    },
-    {
-      "Kind": "default.cds_lead_forms",
-      "Namespace": "Leads (Forms)",
-      "Values": {
-        "App for Outlook Lead Card": "d228d73e-e56e-48b3-ab95-0a06b1397b03",
-        "App for Outlook Lead Quick View": "95192c4e-f96e-4771-b10a-e6421c908533",
-        "ClickDimensions": "d62c3c48-7aee-4ab7-8550-b6a0f922987e",
-        "In Context Form": "e7d96c74-2d77-47b7-9a55-c5d26eb7074c",
-        "Information": "9886ead0-4fcc-4747-9a18-08e7a9a6de71",
-        "Lead": "e3b6ddb7-8df0-4410-ac7b-fd32e5053d38",
-        "Lead Insights": "e160d172-172b-4619-9799-81bb007ecc54",
-        "Lead Quick Create": "aa7c154f-e2f8-45db-b780-a9a8a96332fe",
-        "Leads Dashboard": "9a14ebb4-143e-e711-80e1-00155d871bb4",
-        "Sales Insights": "e1ec2c0c-1744-42fa-a346-fb8237357d0f",
-        "Sales Professional": "b2d9c7bf-cb13-4638-89dd-c155b8024986"
       }
     },
     {
@@ -83,6 +59,30 @@
       "Namespace": "Currencies (Forms)",
       "Values": {
         "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
+    },
+    {
+      "Kind": "default.cds_ntz_customertargetpricing_forms",
+      "Namespace": "Customer Target Pricing (Forms)",
+      "Values": {
+        "Information": "896c85bb-eb29-4a6f-b789-f49ebb4affe2"
+      }
+    },
+    {
+      "Kind": "default.cds_lead_forms",
+      "Namespace": "Leads (Forms)",
+      "Values": {
+        "App for Outlook Lead Card": "d228d73e-e56e-48b3-ab95-0a06b1397b03",
+        "App for Outlook Lead Quick View": "95192c4e-f96e-4771-b10a-e6421c908533",
+        "ClickDimensions": "d62c3c48-7aee-4ab7-8550-b6a0f922987e",
+        "In Context Form": "e7d96c74-2d77-47b7-9a55-c5d26eb7074c",
+        "Information": "9886ead0-4fcc-4747-9a18-08e7a9a6de71",
+        "Lead": "e3b6ddb7-8df0-4410-ac7b-fd32e5053d38",
+        "Lead Insights": "e160d172-172b-4619-9799-81bb007ecc54",
+        "Lead Quick Create": "aa7c154f-e2f8-45db-b780-a9a8a96332fe",
+        "Leads Dashboard": "9a14ebb4-143e-e711-80e1-00155d871bb4",
+        "Sales Insights": "e1ec2c0c-1744-42fa-a346-fb8237357d0f",
+        "Sales Professional": "b2d9c7bf-cb13-4638-89dd-c155b8024986"
       }
     },
     {
