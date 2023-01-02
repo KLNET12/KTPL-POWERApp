@@ -203,7 +203,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =154
         Items: =Products
         Layout: =Layout.Vertical
-        TemplatePadding: =3
+        TemplatePadding: =6
         TemplateSize: =100
         Width: =1366
         Y: =318
