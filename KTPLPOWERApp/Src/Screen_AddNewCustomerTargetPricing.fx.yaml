@@ -325,7 +325,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =Set(fieldedit,true)
             Tooltip: ="Edit "
             Width: =53
-            X: =1090
+            X: =1070
             Y: =36
             ZIndex: =12
 
@@ -373,7 +373,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =53
-            X: =1180
+            X: =1170
             Y: =36
             ZIndex: =16
 
