@@ -584,7 +584,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         Text: ="*"
         Width: =56
-        X: =714
+        X: =727
         Y: =197
         ZIndex: =37
 
@@ -743,7 +743,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =25
             Text: ="*"
             Width: =33
-            X: =119
+            X: =132
             Y: =194
             ZIndex: =21
 
@@ -793,11 +793,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =35
+            Height: =30
             Size: =10
             Text: ="Non-Refill"
-            Width: =135
-            X: =1230
+            Width: =117
+            X: =1248
             Y: =199
             ZIndex: =27
 
@@ -857,7 +857,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =532
+            X: =545
             Y: =196
             ZIndex: =33
 
