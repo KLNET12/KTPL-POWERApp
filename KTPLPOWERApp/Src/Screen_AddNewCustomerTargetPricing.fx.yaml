@@ -746,26 +746,26 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Product Code"
             Width: =170
-            X: =30
-            Y: =268
+            X: =37
+            Y: =274
             ZIndex: =22
 
         ALC_lbl As label:
-            Height: =32
+            Height: =23
             Size: =10
             Text: ="Alc %"
             Width: =94
-            X: =556
-            Y: =266
+            X: =514
+            Y: =277
             ZIndex: =23
 
         CQ_Label As label:
             Height: =27
             Size: =10
             Text: ="Carton Quantity"
-            Width: =198
-            X: =656
-            Y: =271
+            Width: =175
+            X: =654
+            Y: =273
             ZIndex: =24
 
         Varient_label As label:
@@ -773,8 +773,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =174
-            X: =854
-            Y: =268
+            X: =842
+            Y: =275
             ZIndex: =25
 
         Decoded_Lbl As label:
@@ -869,8 +869,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Lt/Btl"
             Width: =140
-            X: =310
-            Y: =273
+            X: =312
+            Y: =277
             ZIndex: =35
 
     Form5 As form:
