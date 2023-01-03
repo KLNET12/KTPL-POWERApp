@@ -69,7 +69,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =14
                 Size: =12
                 Text: |-
-                    ="Contact :"
+                    ="Contact:"
                 Width: =376
                 Wrap: =false
                 X: =37
