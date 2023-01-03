@@ -107,7 +107,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Text: =Parent.DisplayName
                 Width: =300
                 Wrap: =false
-                X: =37
+                X: =17
                 Y: =9
                 ZIndex: =1
 
@@ -157,7 +157,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =22
                 OnSelect: =Set(showDate,true)
                 Width: =275
-                X: =37
+                X: =17
                 Y: =24
                 ZIndex: =8
 
@@ -669,7 +669,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =38
             X: =112
-            Y: =255
+            Y: =245
             ZIndex: =21
 
         Productcode_lbl As label:
@@ -993,7 +993,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =147
         Visible: =showDate
         Width: =403
-        X: =947
+        X: =911
         Y: =118
         ZIndex: =49
 
