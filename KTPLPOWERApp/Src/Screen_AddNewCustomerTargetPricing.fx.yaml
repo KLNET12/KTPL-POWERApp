@@ -508,7 +508,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =25
         Text: ="*"
         Width: =40
-        X: =779
+        X: =799
         Y: =257
         ZIndex: =37
 
@@ -668,7 +668,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Text: ="*"
             Width: =38
-            X: =82
+            X: =112
             Y: =255
             ZIndex: =21
 
@@ -759,7 +759,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             Text: ="*"
             Width: =26
-            X: =998
+            X: =1028
             Y: =261
             ZIndex: =31
 
@@ -782,7 +782,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =22
-            X: =579
+            X: =599
             Y: =255
             ZIndex: =33
 
