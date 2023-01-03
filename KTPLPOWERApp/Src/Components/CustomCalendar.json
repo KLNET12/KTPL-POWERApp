@@ -2732,7 +2732,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\n",
+                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false)\r\n",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -5895,7 +5895,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638083443675527664",
+    "LastModifiedTimestamp": "638083446232226348",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -5991,7 +5991,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638083443675527664",
+  "LastModifiedTimestamp": "638083446232226348",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
