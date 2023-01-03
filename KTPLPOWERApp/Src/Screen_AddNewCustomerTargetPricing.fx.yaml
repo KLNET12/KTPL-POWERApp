@@ -179,25 +179,23 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =3
 
         Logo_1 As image:
-            Height: =77
+            Height: =94
             Image: =Kollaras_and_Co
             PaddingRight: =0.00
             PaddingTop: =0.00
             Width: =287
             X: =12
-            Y: =15
             ZIndex: =1
 
         "'Header Label_1' As label":
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Height: =77
+            Height: =94
             PaddingRight: =5.00
             PaddingTop: =5.00
             Size: =24
             Text: ="                   Customer Target Pricing"
             Width: =1350
-            Y: =15
             ZIndex: =2
 
     Gallery1 As gallery.variableTemplateHeightGallery:
@@ -594,7 +592,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =38
+            Width: =73
             X: =78
             Y: =205
             ZIndex: =13
@@ -607,8 +605,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(NonRefill,false)
             Size: =0
             Text: =NonRefill
-            Width: =51
-            X: =197
+            Width: =69
+            X: =179
             Y: =209
             ZIndex: =14
 
