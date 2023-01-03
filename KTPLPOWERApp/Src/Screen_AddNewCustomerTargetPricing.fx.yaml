@@ -975,7 +975,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =134
         ZIndex: =41
 
-    Rectangle1 As rectangle:
+    Topborder As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =2
         Width: =1366
