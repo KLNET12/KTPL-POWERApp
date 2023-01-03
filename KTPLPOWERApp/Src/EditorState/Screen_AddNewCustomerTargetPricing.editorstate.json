@@ -1218,7 +1218,14 @@
         "Font",
         "FontWeight",
         "Align",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -1280,7 +1287,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Carton_Quantity_vlaue",
-      "ParentIndex": 34,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3868,7 +3875,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_lbl",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4164,7 +4171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_value",
-      "ParentIndex": 16,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14684,7 +14691,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_36",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16679,7 +16686,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Maxprice_lbl",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16969,7 +16976,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MaxPrice_value",
-      "ParentIndex": 20,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17555,7 +17562,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MinPrice_value",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17791,7 +17798,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -19402,7 +19416,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ProductList_CB",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19741,7 +19755,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Quantity_lbl",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19975,7 +19989,14 @@
         "Font",
         "FontWeight",
         "Align",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -20023,7 +20044,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Quantity_value",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28169,7 +28190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Variant_value",
-      "ParentIndex": 33,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
