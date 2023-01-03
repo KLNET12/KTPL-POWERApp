@@ -627,7 +627,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =163
             X: =298
-            Y: =289
+            Y: =288
             ZIndex: =9
 
         ALC_value As text:
@@ -636,7 +636,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =28
             Size: =10
             Width: =163
-            X: =662
+            X: =632
             Y: =288
             ZIndex: =10
 
@@ -646,7 +646,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =28
             Size: =10
             Width: =163
-            X: =827
+            X: =799
             Y: =289
             ZIndex: =11
 
@@ -656,8 +656,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =28
             Size: =10
             Width: =163
-            X: =992
-            Y: =289
+            X: =965
+            Y: =288
             ZIndex: =12
 
         Decoded_CB As checkbox:
@@ -763,7 +763,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Alc %"
             Width: =101
-            X: =663
+            X: =629
             Y: =268
             ZIndex: =23
 
@@ -772,8 +772,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Carton Quantity"
             Width: =162
-            X: =828
-            Y: =270
+            X: =795
+            Y: =271
             ZIndex: =24
 
         Varient_label As label:
@@ -781,7 +781,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Varient"
             Width: =186
-            X: =992
+            X: =962
             Y: =271
             ZIndex: =25
 
@@ -868,15 +868,15 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =28
             Width: =163
-            X: =498
-            Y: =289
+            X: =465
+            Y: =288
             ZIndex: =34
 
         Litres_lbl As label:
             Height: =18
             Size: =10
             Text: ="Lt/Btl"
-            X: =498
+            X: =465
             Y: =270
             ZIndex: =35
 
