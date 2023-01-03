@@ -16,7 +16,7 @@ CustomCalendar As CanvasComponent:
         Height: =27
         Width: =300
         X: =27
-        Y: =22
+        Y: =18
         ZIndex: =1
 
     LblMonthSelected As label:
@@ -45,7 +45,7 @@ CustomCalendar As CanvasComponent:
         DisabledBorderColor: =WeekdayGallery.BorderColor
         DisabledFill: =WeekdayGallery.Fill
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =27
+        Height: =20
         HoverBorderColor: =WeekdayGallery.BorderColor
         HoverFill: =WeekdayGallery.Fill
         Items: =Calendar.WeekdaysShort()
@@ -56,26 +56,30 @@ CustomCalendar As CanvasComponent:
         TemplateSize: =36
         Width: =300
         X: =27
-        Y: =50
+        Y: =45
         ZIndex: =3
 
         Title1_1 As label:
             Align: =Align.Center
             FocusedBorderColor: =Title1_1.BorderColor
-            Height: =WeekdayGallery.TemplateHeight
+            Height: =18
             HoverBorderColor: =Title1_1.BorderColor
             HoverColor: =Title1_1.Color
             HoverFill: =Title1_1.Fill
             OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            PaddingRight: =0
             PressedBorderColor: =Title1_1.BorderColor
             PressedColor: =Title1_1.Color
             PressedFill: =Title1_1.Fill
             Size: =7
             Text: =ThisItem.Value
             VerticalAlign: =Middle
-            Width: =WeekdayGallery.TemplateWidth
+            Width: =80
             Wrap: =false
-            X: =WeekdayGallery.TemplateWidth / 2 - Title1_1.Width / 2
+            X: |-
+                =//WeekdayGallery.TemplateWidth / 2 - Title1_1.Width / 2
+                0
             Y: =WeekdayGallery.TemplateHeight / 2 - Title1_1.Height / 2
             ZIndex: =1
 
@@ -98,7 +102,7 @@ CustomCalendar As CanvasComponent:
         Width: =300
         WrapCount: =7
         X: =27
-        Y: =77
+        Y: =65
         ZIndex: =4
 
         Subcircle1_1 As circle:
@@ -111,7 +115,8 @@ CustomCalendar As CanvasComponent:
             PressedFill: =Subcircle1_1.Fill
             Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title2_4.Visible)
             Width: =Subcircle1_1.Height
-            X: =MonthDayGallery.TemplateWidth/2 - Subcircle1_1.Width/2
+            X: |
+                =MonthDayGallery.TemplateWidth/2 - Subcircle1_1.Width/2
             Y: =MonthDayGallery.TemplateHeight / 2 - Subcircle1_1.Height / 2
             ZIndex: =2
 
@@ -130,7 +135,9 @@ CustomCalendar As CanvasComponent:
                     Abs(Title2_4.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
             FocusedBorderColor: =Title2_4.Color
             FocusedBorderThickness: =2
-            Height: =MonthDayGallery.TemplateHeight
+            Height: |-
+                =//MonthDayGallery.TemplateHeight
+                17
             HoverBorderColor: =Title2_4.BorderColor
             HoverColor: =Title2_4.Color
             HoverFill: =Title2_4.Fill
@@ -151,7 +158,7 @@ CustomCalendar As CanvasComponent:
             Visible: |-
                 =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
                  !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
-            Width: =MonthDayGallery.TemplateWidth
+            Width: =80
             Wrap: =false
             ZIndex: =3
 
