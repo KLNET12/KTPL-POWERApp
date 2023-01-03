@@ -563,7 +563,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Size: =10
             Width: =175
-            X: =634
+            X: =644
             Y: =248
             ZIndex: =10
 
@@ -590,14 +590,13 @@ Screen_AddNewCustomerTargetPricing As screen:
         Decoded_CB As checkbox:
             Default: =Decoded
             DisplayMode: =DisplayMode.Disabled
-            Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =46
-            X: =67
-            Y: =233
+            Width: =38
+            X: =78
+            Y: =231
             ZIndex: =13
 
         NonRefiil_CB As checkbox:
@@ -609,8 +608,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: =NonRefill
             Width: =51
-            X: =192
-            Y: =232
+            X: =197
+            Y: =235
             ZIndex: =14
 
         MinPrice_value As text:
