@@ -118,7 +118,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
                 IsEditable: =true
-                OnSelect: =If(DateValue1.SelectedDate<MyDate,Notify("You Cannot Choose Date Less Than Today",NotificationType.Error))
+                OnSelect: =If(DateValue1.SelectedDate<MyDate,Disabled,Edit)
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =10
