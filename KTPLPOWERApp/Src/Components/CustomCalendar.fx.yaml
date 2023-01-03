@@ -4,7 +4,7 @@ CustomCalendar As CanvasComponent:
     Height: =640
     OnReset: =
     SelectedDate: =_dateSelected
-    Width: =480
+    Width: =500
     X: =0
     Y: =0
     ZIndex: =1
@@ -14,7 +14,7 @@ CustomCalendar As CanvasComponent:
         BorderThickness: =2
         Fill: =RGBA(255, 255, 255, 1)
         Height: =27
-        Width: =250
+        Width: =300
         X: =27
         Y: =22
         ZIndex: =1
@@ -54,7 +54,7 @@ CustomCalendar As CanvasComponent:
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =36
-        Width: =250
+        Width: =300
         X: =27
         Y: =50
         ZIndex: =3
@@ -95,7 +95,7 @@ CustomCalendar As CanvasComponent:
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =20
-        Width: =250
+        Width: =300
         WrapCount: =7
         X: =27
         Y: =77
