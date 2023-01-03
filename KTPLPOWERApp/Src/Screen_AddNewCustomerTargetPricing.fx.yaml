@@ -118,7 +118,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
                 IsEditable: =true
-                OnSelect: =If (DateValue1.SelectedDate < MyDate,Reset(DateValue1))
+                OnSelect: =If (DateValue1.SelectedDate < MyDate,Label7)
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =10
@@ -1033,4 +1033,13 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =360
         Y: =696
         ZIndex: =40
+
+    Label7 As label:
+        Color: =Red
+        Height: =39
+        Text: ="Expiry date should be future date"
+        Width: =410
+        X: =940
+        Y: =160
+        ZIndex: =41
 
