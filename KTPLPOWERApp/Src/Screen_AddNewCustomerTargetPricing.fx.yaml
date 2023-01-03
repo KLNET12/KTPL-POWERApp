@@ -584,8 +584,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         Text: ="*"
         Width: =56
-        X: =740
-        Y: =197
+        X: =691
+        Y: =205
         ZIndex: =37
 
     Label8 As label:
@@ -667,8 +667,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =0
             Text: =Decoded
             Width: =78
-            X: =1149
-            Y: =206
+            X: =1062
+            Y: =245
             ZIndex: =13
 
         NonRefiil_CB As checkbox:
@@ -742,8 +742,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =25
             Text: ="*"
             Width: =33
-            X: =145
-            Y: =194
+            X: =85
+            Y: =198
             ZIndex: =21
 
         Productcode_lbl As label:
@@ -833,8 +833,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =33
             Text: ="*"
             Width: =32
-            X: =924
-            Y: =194
+            X: =883
+            Y: =204
             ZIndex: =31
 
         Quantity_lbl As label:
@@ -856,7 +856,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =19
-            X: =558
+            X: =501
             Y: =196
             ZIndex: =33
 
