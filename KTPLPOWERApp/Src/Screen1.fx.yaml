@@ -3,6 +3,7 @@ Screen1 As screen:
     Form3 As form:
         DataSource: ='Customer Target Pricing'
         DefaultMode: =FormMode.New
+        Item: =Gallery3.Selected
         X: =40
         Y: =40
         ZIndex: =1
@@ -1033,7 +1034,7 @@ Screen1 As screen:
                 ZIndex: =4
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Items: ='Customer Target Pricing'
+        Items: =Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
