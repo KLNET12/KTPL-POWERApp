@@ -7081,7 +7081,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Edit_icon",
-      "ParentIndex": 13,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8798,7 +8798,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Header Label_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9549,7 +9549,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
-      "ParentIndex": 14,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10031,7 +10031,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24852,7 +24852,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput12",
-      "ParentIndex": 9,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25163,7 +25163,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput13",
-      "ParentIndex": 10,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25474,7 +25474,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput14",
-      "ParentIndex": 11,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25785,7 +25785,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput15",
-      "ParentIndex": 12,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
