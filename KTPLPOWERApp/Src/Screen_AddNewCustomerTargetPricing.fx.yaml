@@ -196,7 +196,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TemplatePadding: =6
         TemplateSize: =84
         Width: =1366
-        Y: =339
+        Y: =383
         ZIndex: =4
 
         TextInput2 As text:
@@ -499,7 +499,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =25
         Text: ="*"
         Width: =40
-        X: =769
+        X: =749
         Y: =257
         ZIndex: =37
 
@@ -659,8 +659,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Text: ="*"
             Width: =38
-            X: =112
-            Y: =235
+            X: =62
+            Y: =255
             ZIndex: =21
 
         Productcode_lbl As label:
@@ -750,8 +750,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =20
             Text: ="*"
             Width: =26
-            X: =987
-            Y: =254
+            X: =968
+            Y: =261
             ZIndex: =31
 
         Quantity_lbl As label:
@@ -774,7 +774,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =22
             X: =539
-            Y: =245
+            Y: =255
             ZIndex: =33
 
         Litres_Value As text:
@@ -967,17 +967,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =1366
         Y: =767
         ZIndex: =44
-
-    Label9 As label:
-        Color: =RGBA(255, 0, 0, 1)
-        Height: =23
-        Size: =10
-        Text: ="Fill required fields"
-        Visible: =If(IsBlank(ProductList_CB)||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
-        Width: =371
-        X: =593
-        Y: =266
-        ZIndex: =46
 
     Leftborder As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
