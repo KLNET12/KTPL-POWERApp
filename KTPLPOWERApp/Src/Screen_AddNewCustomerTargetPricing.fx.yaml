@@ -785,17 +785,17 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =26
             Size: =10
             Text: ="De-Coded"
-            Width: =121
+            Width: =100
             X: =1127
             Y: =202
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =28
+            Height: =29
             Size: =10
             Text: ="Non-Refill"
-            Width: =117
-            X: =1236
+            Width: =137
+            X: =1216
             Y: =200
             ZIndex: =27
 
