@@ -957,7 +957,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Y: =DataCardKey38.Y
                 ZIndex: =4
 
-    Button4 As button:
+    Upload_button As button:
         OnSelect: =SubmitForm(Form5);
         Text: ="Upload"
         X: =264
