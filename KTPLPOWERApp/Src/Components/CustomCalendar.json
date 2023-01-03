@@ -1,0 +1,46 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "CustomCalendar",
+    "TemplateGuid": "839baf53ea1543f795c43431334252fa"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "default date",
+      "Hidden": false,
+      "Name": "DefaultDate",
+      "PropertyDataTypeKey": "DateTime",
+      "Tooltip": "DefaultSelected Date",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "selected date",
+      "Hidden": true,
+      "Name": "SelectedDate",
+      "PropertyDataTypeKey": "DateTime",
+      "Tooltip": "selected date",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638083379508437756",
+  "Name": "839baf53ea1543f795c43431334252fa",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
+  "Version": "636862706207693982"
+}

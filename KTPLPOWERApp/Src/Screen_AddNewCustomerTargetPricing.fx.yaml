@@ -38,7 +38,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =35
-                Y: =32
+                Y: =6
                 ZIndex: =1
 
             TextInput3 As text:
@@ -48,7 +48,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =21
                 Width: =399
                 X: =35
-                Y: =45
+                Y: =19
                 ZIndex: =5
 
         Contact_DataCard1 As typedDataCard.comboBoxEditCard:
@@ -74,7 +74,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =376
                 Wrap: =false
                 X: =37
-                Y: =34
+                Y: =8
                 ZIndex: =1
 
             TextInput4 As text:
@@ -83,7 +83,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 Width: =381
                 X: =37
-                Y: =48
+                Y: =22
                 ZIndex: =2
 
         "'Expiry Date_DataCard1' As typedDataCard.dateTimeEditCard":
@@ -108,7 +108,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =300
                 Wrap: =false
                 X: =19
-                Y: =35
+                Y: =9
                 ZIndex: =1
 
             DateValue1 As datepicker:
@@ -127,7 +127,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =311
                 X: =28
-                Y: =50
+                Y: =24
                 ZIndex: =2
 
             Separator1 As label:
