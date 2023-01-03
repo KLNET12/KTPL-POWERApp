@@ -58,10 +58,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =60
             Required: =false
             Update: =
-            Width: =454
+            Width: =452
             X: =452
             Y: =0
             ZIndex: =1
@@ -107,7 +107,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Text: =Parent.DisplayName
                 Width: =300
                 Wrap: =false
-                X: =19
+                X: =37
                 Y: =9
                 ZIndex: =1
 
@@ -154,10 +154,10 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             TextInput7 As text:
                 Default: =DateValue(_dateSelected)
-                Height: =25
+                Height: =22
                 OnSelect: =Set(showDate,true)
                 Width: =275
-                X: =10
+                X: =37
                 Y: =24
                 ZIndex: =8
 
@@ -995,7 +995,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =147
         Visible: =showDate
         Width: =403
-        X: =920
-        Y: =113
+        X: =947
+        Y: =118
         ZIndex: =49
 
