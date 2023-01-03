@@ -490,7 +490,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSelect: =Navigate('Home Screen')
         Width: =57
         X: =1278
-        Y: =2
+        Y: =21
         ZIndex: =7
 
     Label3 As label:
@@ -507,10 +507,10 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label4 As label:
         Color: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
-        Height: =22
+        Height: =25
         Text: ="*"
-        Width: =56
-        X: =691
+        Width: =40
+        X: =730
         Y: =205
         ZIndex: =37
 
@@ -588,7 +588,6 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         Decoded_CB As checkbox:
             Default: =Decoded
-            DisplayMode: =DisplayMode.View
             Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
@@ -601,7 +600,6 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         NonRefiil_CB As checkbox:
             Default: =NonRefill
-            DisplayMode: =DisplayMode.View
             Height: =46
             OnCheck: =Set(NonRefill,true)
             OnUncheck: =Set(NonRefill,false)
@@ -759,11 +757,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         Label4_36 As label:
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
-            Height: =43
+            Height: =20
             Text: ="*"
-            Width: =34
-            X: =943
-            Y: =206
+            Width: =24
+            X: =940
+            Y: =205
             ZIndex: =31
 
         Quantity_lbl As label:
