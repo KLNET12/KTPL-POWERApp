@@ -2732,7 +2732,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n\r\n//If(DateAdd(_firstDayInView, ThisItem.Value, Days) <(Today()) && DateAdd(_firstDayInView, ThisItem.Value, Days) >\r\n//(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\n//Set(showDate,false))",
+                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n\r\nIf(_dateSelected> DateAdd(Today(),182.5),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n//If(DateAdd(_firstDayInView, ThisItem.Value, Days) <(Today()) && DateAdd(_firstDayInView, ThisItem.Value, Days) >\r\n//(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\n//Set(showDate,false))",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -5895,7 +5895,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638083485534004973",
+    "LastModifiedTimestamp": "638083486944733879",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -5991,7 +5991,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638083485534004973",
+  "LastModifiedTimestamp": "638083486944733879",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
