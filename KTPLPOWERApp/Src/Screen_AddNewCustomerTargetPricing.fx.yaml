@@ -626,7 +626,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =28
             Size: =10
             Width: =163
-            X: =279
+            X: =298
             Y: =289
             ZIndex: =9
 
@@ -754,7 +754,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Product Code"
             Width: =182
-            X: =279
+            X: =292
             Y: =271
             ZIndex: =22
 
