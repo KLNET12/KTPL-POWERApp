@@ -179,25 +179,25 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =3
 
         Logo_1 As image:
-            Height: =90
+            Height: =77
             Image: =Kollaras_and_Co
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =290
+            Width: =287
             X: =12
-            Y: =2
+            Y: =15
             ZIndex: =1
 
         "'Header Label_1' As label":
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Height: =90
+            Height: =77
             PaddingRight: =5.00
             PaddingTop: =5.00
             Size: =24
             Text: ="                   Customer Target Pricing"
-            Width: =1366
-            Y: =2
+            Width: =1350
+            Y: =15
             ZIndex: =2
 
     Gallery1 As gallery.variableTemplateHeightGallery:
@@ -485,12 +485,12 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =6
 
     Home_Icon As icon.ArrowLeft:
-        Height: =54
+        Height: =73
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
-        Width: =57
-        X: =1278
-        Y: =21
+        Width: =79
+        X: =1256
+        Y: =2
         ZIndex: =7
 
     Label3 As label:
@@ -510,8 +510,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =25
         Text: ="*"
         Width: =40
-        X: =730
-        Y: =205
+        X: =769
+        Y: =179
         ZIndex: =37
 
     Label8 As label:
@@ -542,7 +542,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             SearchItems: =[]
             SelectMultiple: =false
             Size: =10
-            Width: =443
+            Width: =454
             X: =32
             Y: =204
             ZIndex: =8
@@ -552,8 +552,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =171
-            X: =272
+            Width: =175
+            X: =278
             Y: =248
             ZIndex: =9
 
@@ -562,8 +562,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =171
-            X: =620
+            Width: =175
+            X: =634
             Y: =248
             ZIndex: =10
 
@@ -572,8 +572,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =171
-            X: =804
+            Width: =175
+            X: =823
             Y: =248
             ZIndex: =11
 
@@ -582,8 +582,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =171
-            X: =984
+            Width: =175
+            X: =1007
             Y: =248
             ZIndex: =12
 
@@ -595,8 +595,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =45
-            X: =66
+            Width: =46
+            X: =67
             Y: =233
             ZIndex: =13
 
@@ -608,8 +608,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(NonRefill,false)
             Size: =0
             Text: =NonRefill
-            Width: =50
-            X: =188
+            Width: =51
+            X: =192
             Y: =232
             ZIndex: =14
 
@@ -617,8 +617,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =""
             Height: =22
             Size: =10
-            Width: =202
-            X: =489
+            Width: =207
+            X: =500
             Y: =204
             ZIndex: =15
 
@@ -627,8 +627,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             OnChange: =
             Size: =10
-            Width: =211
-            X: =697
+            Width: =216
+            X: =713
             Y: =204
             ZIndex: =16
 
@@ -638,8 +638,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Lighter
             Height: =22
             Size: =10
-            Width: =169
-            X: =913
+            Width: =173
+            X: =934
             Y: =204
             ZIndex: =17
 
@@ -647,8 +647,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =""
             Height: =22
             Size: =10
-            Width: =169
-            X: =1087
+            Width: =173
+            X: =1112
             Y: =203
             ZIndex: =18
 
@@ -657,8 +657,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =If(DateValue1.SelectedDate>=MyDate,If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text})));
-            Width: =67
-            X: =1211
+            Width: =69
+            X: =1239
             Y: =249
             ZIndex: =19
 
@@ -666,7 +666,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =30
             Size: =10
             Text: ="Product"
-            Width: =443
+            Width: =454
             X: =32
             Y: =178
             ZIndex: =20
@@ -676,8 +676,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =32
             Text: ="*"
-            Width: =37
-            X: =92
+            Width: =38
+            X: =93
             Y: =172
             ZIndex: =21
 
@@ -685,8 +685,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Product Code"
-            Width: =191
-            X: =305
+            Width: =196
+            X: =312
             Y: =231
             ZIndex: =22
 
@@ -694,8 +694,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Alc %"
-            Width: =106
-            X: =619
+            Width: =109
+            X: =633
             Y: =228
             ZIndex: =23
 
@@ -703,8 +703,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Carton Quantity"
-            Width: =203
-            X: =806
+            Width: =208
+            X: =825
             Y: =231
             ZIndex: =24
 
@@ -712,8 +712,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Varient"
-            Width: =195
-            X: =1020
+            Width: =200
+            X: =1044
             Y: =231
             ZIndex: =25
 
@@ -721,8 +721,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="De-Coded"
-            Width: =112
-            X: =63
+            Width: =115
+            X: =64
             Y: =230
             ZIndex: =26
 
@@ -730,8 +730,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Non-Refill"
-            Width: =154
-            X: =176
+            Width: =158
+            X: =179
             Y: =231
             ZIndex: =27
 
@@ -739,8 +739,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =24
             Size: =10
             Text: ="Min Price"
-            Width: =211
-            X: =489
+            Width: =216
+            X: =500
             Y: =184
             ZIndex: =28
 
@@ -748,8 +748,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Size: =10
             Text: =" Max Price"
-            Width: =210
-            X: =690
+            Width: =215
+            X: =706
             Y: =180
             ZIndex: =29
 
@@ -757,8 +757,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =14
             Size: =10
             Text: ="Currency"
-            Width: =211
-            X: =910
+            Width: =216
+            X: =931
             Y: =189
             ZIndex: =30
 
@@ -767,8 +767,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =20
             Text: ="*"
-            Width: =25
-            X: =984
+            Width: =26
+            X: =1007
             Y: =178
             ZIndex: =31
 
@@ -776,8 +776,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =10
             Text: ="Quantity"
-            Width: =159
-            X: =1082
+            Width: =163
+            X: =1107
             Y: =189
             ZIndex: =32
 
@@ -790,7 +790,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingRight: =4
             PaddingTop: =3
             Text: ="*"
-            Width: =21
+            Width: =22
             X: =559
             Y: =169
             ZIndex: =33
@@ -799,8 +799,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =ProductList_CB.Selected.Product_Net_Volume
             DisplayMode: =DisplayMode.Disabled
             Height: =22
-            Width: =171
-            X: =446
+            Width: =175
+            X: =456
             Y: =248
             ZIndex: =34
 
@@ -808,8 +808,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =18
             Size: =10
             Text: ="Lt/Btl"
-            Width: =157
-            X: =460
+            Width: =161
+            X: =470
             Y: =230
             ZIndex: =35
 
@@ -978,7 +978,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =0
+        Height: =2
         Width: =1366
         ZIndex: =42
 
