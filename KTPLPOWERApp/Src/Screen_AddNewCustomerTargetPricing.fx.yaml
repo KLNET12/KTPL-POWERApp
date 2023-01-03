@@ -970,11 +970,13 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =1
+        Height: =0
         Width: =1366
         ZIndex: =42
 
     Rectangle2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =
         Fill: =RGBA(0, 0, 0, 1)
         Height: =768
         Width: =9
@@ -983,7 +985,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Rectangle3 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =1
+        Height: =0
         Width: =1366
         Y: =767
         ZIndex: =44
@@ -991,16 +993,16 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label9 As label:
         Color: =RGBA(255, 0, 0, 1)
         Height: =33
-        Text: ="Please fill the required fields"
+        Text: ="Fill required fields"
         Visible: =If(IsBlank(ProductList_CB)||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
-        Width: =277
-        X: =516
-        Y: =326
+        Width: =259
+        X: =774
+        Y: =327
         ZIndex: =46
 
     Rectangle5 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =768
-        Width: =3
+        Width: =1
         ZIndex: =47
 
