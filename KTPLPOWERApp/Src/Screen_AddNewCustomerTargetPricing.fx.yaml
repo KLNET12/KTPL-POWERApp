@@ -588,6 +588,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         Decoded_CB As checkbox:
             Default: =Decoded
+            DisplayMode: =DisplayMode.Disabled
             Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
@@ -600,6 +601,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         NonRefiil_CB As checkbox:
             Default: =NonRefill
+            DisplayMode: =DisplayMode.Disabled
             Height: =46
             OnCheck: =Set(NonRefill,true)
             OnUncheck: =Set(NonRefill,false)
@@ -649,7 +651,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(DateValue1.SelectedDate>=MyDate,If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value)));
+                =If(DateValue1.SelectedDate>=MyDate,If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text})));
             X: =1156
             Y: =289
             ZIndex: =19

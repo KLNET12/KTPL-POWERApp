@@ -27,7 +27,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
         Height: =667
-        Items: ='Customer Target Pricing'
+        Items: =Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead)
         Layout: =Layout.Vertical
         TemplateSize: =45
         Width: =466
@@ -47,7 +47,8 @@ Screen_ViewCustomerTargetPricing As screen:
         Icon2 As icon.ArrowRight:
             Height: =20
             Icon: =Icon.ArrowRight
-            OnSelect: =Set(IsEdit,false)
+            OnSelect: |
+                =Select(Parent);Set(IsEdit,false);
             Width: =25
             X: =348
             Y: =25
@@ -76,13 +77,13 @@ Screen_ViewCustomerTargetPricing As screen:
         "'Customer Lead Id_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_CustomerLeadId"
-            Default: =ThisItem.'Customer Lead Id'
+            Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead)))
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =82
             Required: =false
-            Update: =DataCardValue14.Selected
+            Update: =
             Width: =289
             X: =0
             Y: =0
@@ -99,28 +100,6 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue14 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |
-                    =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead)))
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["fullname"]
-                DisplayMode: =Disabled
-                Height: =20
-                IsSearchable: =false
-                Items: |
-                    =Choices([@'Customer Target Pricing'].ntz_CustomerLeadId)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["fullname"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Size: =10
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =28
-                Y: =28
-                ZIndex: =2
-
             ErrorMessage13 As label:
                 AutoHeight: =true
                 Height: =10
@@ -133,7 +112,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue14.Y + DataCardValue14.Height
+                Y: =
                 ZIndex: =3
 
             StarVisible13 As label:
@@ -145,6 +124,14 @@ Screen_ViewCustomerTargetPricing As screen:
                 Wrap: =false
                 Y: =DataCardKey15.Y
                 ZIndex: =4
+
+            TextInput6 As text:
+                Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
+                Height: =22
+                Size: =10
+                Width: =280
+                Y: =31
+                ZIndex: =5
 
         Description_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -178,7 +165,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -188,8 +175,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Size: =10
                 Tooltip: =Parent.DisplayName
                 Width: =257
-                X: =6
-                Y: =28
+                Y: =31
                 ZIndex: =2
 
             ErrorMessage15 As label:
