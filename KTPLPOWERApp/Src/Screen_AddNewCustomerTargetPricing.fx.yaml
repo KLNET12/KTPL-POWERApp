@@ -455,6 +455,15 @@ Screen_AddNewCustomerTargetPricing As screen:
             Width: =45
             ZIndex: =23
 
+        TextInput7_1 As text:
+            Default: =DateValue(_dateSelected)
+            Height: =22
+            OnSelect: =Set(showDate,true)
+            Width: =275
+            X: =37
+            Y: =24
+            ZIndex: =24
+
     SaveButton As button:
         Height: =26
         OnSelect: |-
