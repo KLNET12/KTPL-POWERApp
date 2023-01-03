@@ -5895,7 +5895,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638083434585663944",
+    "LastModifiedTimestamp": "638083442333612806",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -5991,7 +5991,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638083434585663944",
+  "LastModifiedTimestamp": "638083442333612806",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
