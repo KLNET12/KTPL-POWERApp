@@ -118,7 +118,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
                 IsEditable: =true
-                OnSelect: =If( DateValue1.SelectedDate < Weekday(Today(), StartOfWeek.Monday), DisplayMode.Disabled, DisplayMode.Edit)
+                OnSelect: =If(DateValue1.SelectedDate<MyDate,Notify("You Cannot Choose Date Less Than Today",NotificationType.Error))
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =10
@@ -603,7 +603,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
-            Height: =22
+            Height: =28
             Items: ='Product Details_V'
             OnChange: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
@@ -617,23 +617,23 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =394
             X: =32
-            Y: =223
+            Y: =231
             ZIndex: =8
 
         "'Product _Code' As text":
             Default: =ProductList_CB.Selected.Product_Code
             DisplayMode: =DisplayMode.Disabled
-            Height: =22
+            Height: =28
             Size: =10
             Width: =270
             X: =143
-            Y: =264
+            Y: =284
             ZIndex: =9
 
         ALC_value As text:
             Default: =ProductList_CB.Selected.Product_Alc
             DisplayMode: =DisplayMode.Disabled
-            Height: =22
+            Height: =28
             Size: =10
             Width: =188
             X: =619
@@ -643,31 +643,32 @@ Screen_AddNewCustomerTargetPricing As screen:
         Carton_Quantity_vlaue As text:
             Default: =ProductList_CB.Selected.Product_UOM_Qty
             DisplayMode: =DisplayMode.Disabled
-            Height: =22
+            Height: =28
             Size: =10
             Width: =188
             X: =817
-            Y: =263
+            Y: =282
             ZIndex: =11
 
         Variant_value As text:
             Default: =ProductList_CB.Selected.Product_Variant
             DisplayMode: =DisplayMode.Disabled
-            Height: =22
+            Height: =28
             Size: =10
-            Width: =170
+            Width: =152
             X: =1018
-            Y: =262
+            Y: =281
             ZIndex: =12
 
         Decoded_CB As checkbox:
             Default: =Decoded
             DisplayMode: =DisplayMode.Disabled
+            Height: =37
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =78
+            Width: =40
             X: =32
             Y: =250
             ZIndex: =13
@@ -675,6 +676,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         NonRefiil_CB As checkbox:
             Default: =NonRefill
             DisplayMode: =DisplayMode.Disabled
+            Height: =64
             OnCheck: =Set(NonRefill,true)
             OnUncheck: =Set(NonRefill,false)
             Size: =0
@@ -686,41 +688,41 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         MinPrice_value As text:
             Default: =""
-            Height: =22
+            Height: =28
             Width: =180
             X: =439
-            Y: =223
+            Y: =231
             ZIndex: =15
 
         MaxPrice_value As text:
             Default: =
-            Height: =22
+            Height: =28
             OnChange: =
             Width: =188
             X: =628
-            Y: =223
+            Y: =231
             ZIndex: =16
 
         Currency_value As text:
             Default: |
                 =First(Filter(Currencies,'Transaction Currency'= LeadDataStore.Currency.'Transaction Currency')).'Currency Name'
             FontWeight: =FontWeight.Lighter
-            Height: =22
+            Height: =28
             Width: =150
             X: =829
-            Y: =222
+            Y: =230
             ZIndex: =17
 
         Quantity_value As text:
             Default: =""
-            Height: =22
+            Height: =28
             Width: =150
             X: =994
-            Y: =222
+            Y: =230
             ZIndex: =18
 
         Add_Icon As icon.Add:
-            Height: =22
+            Height: =28
             Icon: =Icon.Add
             OnSelect: |-
                 =Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);
@@ -730,26 +732,26 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =19
 
         Prodcut_lbl As label:
-            Height: =26
+            Height: =34
             Size: =10
             Text: ="Product"
             Width: =430
             X: =37
-            Y: =203
+            Y: =205
             ZIndex: =20
 
         Label4_26 As label:
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
-            Height: =25
+            Height: =32
             Text: ="*"
             Width: =33
             X: =85
-            Y: =198
+            Y: =199
             ZIndex: =21
 
         Productcode_lbl As label:
-            Height: =19
+            Height: =24
             Size: =10
             Text: ="Product Code"
             Width: =170
@@ -767,7 +769,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =23
 
         CQ_Label As label:
-            Height: =12
+            Height: =15
             Size: =10
             Text: ="Carton Quantity"
             Width: =188
@@ -776,7 +778,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =24
 
         Varient_label As label:
-            Height: =11
+            Height: =14
             Size: =10
             Text: ="Varient"
             Width: =174
@@ -785,7 +787,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =25
 
         Decoded_Lbl As label:
-            Height: =26
+            Height: =24
             Size: =10
             Text: ="De-Coded"
             Width: =100
@@ -794,7 +796,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
-            Height: =29
+            Height: =37
             Size: =10
             Text: ="Non-Refill"
             Width: =137
@@ -803,55 +805,55 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =27
 
         MinPrice_lbl As label:
-            Height: =19
+            Height: =24
             Size: =10
             Text: ="Min Price"
             Width: =188
             X: =439
-            Y: =208
+            Y: =211
             ZIndex: =28
 
         Maxprice_lbl As label:
-            Height: =25
+            Height: =32
             Size: =10
             Text: =" Max Price"
             Width: =187
             X: =628
-            Y: =204
+            Y: =206
             ZIndex: =29
 
         Currency_lbl As label:
-            Height: =11
+            Height: =14
             Size: =10
             Text: ="Currency"
             Width: =188
             X: =823
-            Y: =211
+            Y: =215
             ZIndex: =30
 
         Label4_36 As label:
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
-            Height: =33
+            Height: =43
             Text: ="*"
             Width: =32
             X: =883
-            Y: =204
+            Y: =206
             ZIndex: =31
 
         Quantity_lbl As label:
-            Height: =12
+            Height: =15
             Size: =10
             Text: ="Quantity"
             Width: =142
             X: =989
-            Y: =210
+            Y: =214
             ZIndex: =32
 
         Label4_38 As label:
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
-            Height: =25
+            Height: =32
             PaddingBottom: =3
             PaddingLeft: =4
             PaddingRight: =4
@@ -865,14 +867,14 @@ Screen_AddNewCustomerTargetPricing As screen:
         Litres_Value As text:
             Default: =ProductList_CB.Selected.Product_Net_Volume
             DisplayMode: =DisplayMode.Disabled
-            Height: =22
+            Height: =28
             Width: =188
             X: =421
-            Y: =264
+            Y: =284
             ZIndex: =34
 
         Litres_lbl As label:
-            Height: =14
+            Height: =18
             Size: =10
             Text: ="Lt/Btl"
             Width: =140
@@ -1031,10 +1033,4 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =360
         Y: =696
         ZIndex: =40
-
-    Label7 As label:
-        Text: =MyDate
-        X: =890
-        Y: =660
-        ZIndex: =41
 
