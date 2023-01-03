@@ -15,12 +15,13 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =2
 
     Home_Icon_1 As icon.ArrowLeft:
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =54
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
         Width: =57
-        X: =1278
-        Y: =2
+        X: =1288
+        Y: =25
         ZIndex: =4
 
     Gallery2 As gallery.variableTemplateHeightGallery:
@@ -101,10 +102,10 @@ Screen_ViewCustomerTargetPricing As screen:
             DataCardValue14 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |
-                    =
+                    =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead)))
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["fullname"]
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =20
                 IsSearchable: =false
                 Items: |
