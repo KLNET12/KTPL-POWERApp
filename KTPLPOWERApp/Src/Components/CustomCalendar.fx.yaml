@@ -135,9 +135,14 @@ CustomCalendar As CanvasComponent:
             HoverColor: =Title2_4.Color
             HoverFill: =Title2_4.Fill
             OnSelect: |-
-                =If(DateAdd(_firstDayInView, ThisItem.Value, Days) <(Today()) &&DateAdd(_firstDayInView, ThisItem.Value, Days) >
-                (DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                Set(showDate,false))
+                =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
+                Set(showDate,false);
+                If(_dateSelected< Today(),Notify("You can not selected this date as its been already passed",NotificationType.Error);
+                Set(_dateSelected,Blank()));
+                
+                //If(DateAdd(_firstDayInView, ThisItem.Value, Days) <(Today()) && DateAdd(_firstDayInView, ThisItem.Value, Days) >
+                //(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
+                //Set(showDate,false))
             PressedBorderColor: =Title2_4.BorderColor
             PressedColor: =Title2_4.Color
             PressedFill: =Title2_4.Fill
