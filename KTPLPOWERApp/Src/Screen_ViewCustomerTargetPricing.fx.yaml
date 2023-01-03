@@ -91,7 +91,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =13
                 Size: =10
-                Text: =Parent.DisplayName
+                Text: ="Lead"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
