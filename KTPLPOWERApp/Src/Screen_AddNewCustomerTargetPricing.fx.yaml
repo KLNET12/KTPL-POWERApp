@@ -1,5 +1,6 @@
 Screen_AddNewCustomerTargetPricing As screen:
     BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
         =ClearCollect(Products,{'Product Description':"",'Product Code':"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",'Customer Min Price':"",'Customer Max Price':"",'Customer Currency':"",'Qty Required':"",'Lt/Btl':""});
         Clear(Products);
@@ -587,7 +588,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         Decoded_CB As checkbox:
             Default: =Decoded
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =DisplayMode.View
             Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
@@ -600,7 +601,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         NonRefiil_CB As checkbox:
             Default: =NonRefill
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =DisplayMode.View
             Height: =46
             OnCheck: =Set(NonRefill,true)
             OnUncheck: =Set(NonRefill,false)
@@ -650,7 +651,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(DateValue1.SelectedDate>=MyDate,Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value));
+                =If(DateValue1.SelectedDate>=MyDate,If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text});Reset(ProductList_CB);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Reset(Litres_Value);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value)));
             X: =1156
             Y: =289
             ZIndex: =19
@@ -969,27 +970,37 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =4
-        Width: =1364
+        Height: =1
+        Width: =1366
         ZIndex: =42
 
     Rectangle2 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =766
-        Width: =4
+        Height: =768
+        Width: =9
+        X: =1362
         ZIndex: =43
 
     Rectangle3 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =4
+        Height: =1
         Width: =1366
-        Y: =764
+        Y: =767
         ZIndex: =44
 
-    Rectangle4 As rectangle:
+    Label9 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =33
+        Text: ="Please fill the required fields"
+        Visible: =If(IsBlank(ProductList_CB)||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
+        Width: =277
+        X: =516
+        Y: =326
+        ZIndex: =46
+
+    Rectangle5 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =768
-        Width: =4
-        X: =1362
-        ZIndex: =45
+        Width: =3
+        ZIndex: =47
 
