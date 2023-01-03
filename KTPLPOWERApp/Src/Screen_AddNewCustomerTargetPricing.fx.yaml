@@ -172,7 +172,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =7
 
             TextInput7 As text:
-                Default: ="Text input"
+                Default: =DateValue(_dateSelected)
                 OnSelect: =Set(showDate,true)
                 Width: =155
                 X: =184

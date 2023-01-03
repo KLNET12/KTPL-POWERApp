@@ -26536,7 +26536,14 @@
     "TextInput7": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Default",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Text input\"",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Mode",
         "Format",
         "VirtualKeyboardMode",
