@@ -134,15 +134,8 @@ CustomCalendar As CanvasComponent:
             HoverBorderColor: =Title2_4.BorderColor
             HoverColor: =Title2_4.Color
             HoverFill: =Title2_4.Fill
-            OnSelect: |-
+            OnSelect: |
                 =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                If(StartDate,Patch(Studies ,First(StudyRecord), {'Study Start Date': _dateSelected} );Set(StartDate,false));
-                If(EndDate,Patch(Studies ,First(StudyRecord), {'Study End Date': _dateSelected} );Set(EndDate,false));
-                If(IRBDate,Patch(Studies ,First(StudyRecord), {'IRB Submission Date': _dateSelected} );Set(IRBDate,false));
-                If(EstDate,Patch(Studies ,First(StudyRecord), {'Est Start Date': _dateSelected} );Set(EstDate,false));
-                If(PatientFirstDate,Patch(Studies ,First(StudyRecord), {'Est First Patient in Date': _dateSelected} );Set(PatientFirstDate,false));
-                If(LastPatientDate,Patch(Studies ,First(StudyRecord), {'Last Patient Scored Date': _dateSelected} );Set(LastPatientDate,false));
-                If(ProtocalDate,Patch(Studies ,First(StudyRecord), {'Protocol Finalized date': _dateSelected} );Set(ProtocalDate,false));
             PressedBorderColor: =Title2_4.BorderColor
             PressedColor: =Title2_4.Color
             PressedFill: =Title2_4.Fill

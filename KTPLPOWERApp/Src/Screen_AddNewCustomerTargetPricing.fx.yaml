@@ -116,7 +116,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+1
-                Height: =20
+                Height: =27
                 InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
                 IsEditable: =true
                 OnSelect: =If (DateValue1.SelectedDate < MyDate,Label7)
@@ -125,7 +125,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Size: =10
                 StartYear: =Year(Today())
                 Tooltip: =Parent.DisplayName
-                Width: =311
+                Width: =101
                 X: =28
                 Y: =24
                 ZIndex: =2
@@ -171,6 +171,14 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Y: =DataCardKey5.Y
                 ZIndex: =7
 
+            TextInput7 As text:
+                Default: ="Text input"
+                OnSelect: =Set(showDate,true)
+                Width: =155
+                X: =184
+                Y: =11
+                ZIndex: =8
+
     Header_1 As group:
         Height: =5
         Width: =5
@@ -179,11 +187,12 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =3
 
         Logo_1 As image:
+            DisplayMode: =DisplayMode.View
             Height: =94
             Image: =Kollaras_and_Co
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =287
+            Width: =325
             X: =12
             ZIndex: =1
 
@@ -193,7 +202,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =94
             PaddingRight: =5.00
             PaddingTop: =5.00
-            Size: =24
+            Size: =26
             Text: ="                   Customer Target Pricing"
             Width: =1350
             ZIndex: =2
@@ -511,12 +520,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =769
         Y: =140
         ZIndex: =37
-
-    Label8 As label:
-        Text: =
-        X: =38
-        Y: =72
-        ZIndex: =38
 
     Group1 As group:
         Height: =5
@@ -969,7 +972,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="Expiry date should be future date"
         Visible: =If(DateValue1.SelectedDate<MyDate,true,false)
         Width: =410
-        X: =940
+        X: =771
         Y: =134
         ZIndex: =41
 
