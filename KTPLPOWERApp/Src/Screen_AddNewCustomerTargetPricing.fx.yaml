@@ -511,7 +511,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="*"
         Width: =40
         X: =769
-        Y: =179
+        Y: =140
         ZIndex: =37
 
     Label8 As label:
@@ -544,7 +544,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =454
             X: =32
-            Y: =204
+            Y: =178
             ZIndex: =8
 
         "'Product _Code' As text":
@@ -618,7 +618,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =207
             X: =500
-            Y: =204
+            Y: =178
             ZIndex: =15
 
         MaxPrice_value As text:
@@ -628,7 +628,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =216
             X: =713
-            Y: =204
+            Y: =178
             ZIndex: =16
 
         Currency_value As text:
@@ -639,7 +639,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =173
             X: =934
-            Y: =204
+            Y: =178
             ZIndex: =17
 
         Quantity_value As text:
@@ -648,7 +648,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =173
             X: =1112
-            Y: =203
+            Y: =177
             ZIndex: =18
 
         Add_Icon As icon.Add:
@@ -667,7 +667,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Product"
             Width: =454
             X: =32
-            Y: =178
+            Y: =152
             ZIndex: =20
 
         Label4_26 As label:
@@ -676,8 +676,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Text: ="*"
             Width: =38
-            X: =93
-            Y: =172
+            X: =132
+            Y: =133
             ZIndex: =21
 
         Productcode_lbl As label:
@@ -740,7 +740,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Min Price"
             Width: =216
             X: =500
-            Y: =184
+            Y: =158
             ZIndex: =28
 
         Maxprice_lbl As label:
@@ -749,7 +749,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: =" Max Price"
             Width: =215
             X: =706
-            Y: =180
+            Y: =154
             ZIndex: =29
 
         Currency_lbl As label:
@@ -758,7 +758,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             Width: =216
             X: =931
-            Y: =189
+            Y: =163
             ZIndex: =30
 
         Label4_36 As label:
@@ -768,7 +768,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =26
             X: =1007
-            Y: =178
+            Y: =152
             ZIndex: =31
 
         Quantity_lbl As label:
@@ -777,7 +777,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Quantity"
             Width: =163
             X: =1107
-            Y: =189
+            Y: =163
             ZIndex: =32
 
         Label4_38 As label:
@@ -791,7 +791,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =22
             X: =559
-            Y: =169
+            Y: =143
             ZIndex: =33
 
         Litres_Value As text:
