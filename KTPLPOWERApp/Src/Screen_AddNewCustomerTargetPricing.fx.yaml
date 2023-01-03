@@ -994,7 +994,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     CustomCalendar_1 As CustomCalendar:
         Height: =161
         Visible: =showDate
-        Width: =292
+        Width: =403
         X: =920
         Y: =113
         ZIndex: =49
