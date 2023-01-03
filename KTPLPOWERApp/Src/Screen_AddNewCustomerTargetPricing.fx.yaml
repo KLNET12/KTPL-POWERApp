@@ -992,7 +992,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =48
 
     CustomCalendar_1 As CustomCalendar:
-        Height: =161
+        Height: =147
         Visible: =showDate
         Width: =403
         X: =920
