@@ -100,8 +100,6 @@ Screen_ViewCustomerTargetPricing As screen:
 
             DataCardValue14 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |
-                    =
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["fullname"]
                 DisplayMode: =Parent.DisplayMode
