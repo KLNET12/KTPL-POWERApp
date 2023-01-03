@@ -38,7 +38,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =35
-                Y: =32
+                Y: =6
                 ZIndex: =1
 
             TextInput3 As text:
@@ -48,7 +48,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =21
                 Width: =399
                 X: =35
-                Y: =45
+                Y: =19
                 ZIndex: =5
 
         Contact_DataCard1 As typedDataCard.comboBoxEditCard:
@@ -74,7 +74,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =376
                 Wrap: =false
                 X: =37
-                Y: =34
+                Y: =8
                 ZIndex: =1
 
             TextInput4 As text:
@@ -83,7 +83,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 Width: =381
                 X: =37
-                Y: =48
+                Y: =22
                 ZIndex: =2
 
         "'Expiry Date_DataCard1' As typedDataCard.dateTimeEditCard":
@@ -108,7 +108,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Width: =300
                 Wrap: =false
                 X: =19
-                Y: =35
+                Y: =9
                 ZIndex: =1
 
             DateValue1 As datepicker:
@@ -116,7 +116,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+1
-                Height: =20
+                Height: =27
                 InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Today(), Self.Format, Self.Language))
                 IsEditable: =true
                 OnSelect: =If (DateValue1.SelectedDate < MyDate,Label7)
@@ -125,9 +125,9 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Size: =10
                 StartYear: =Year(Today())
                 Tooltip: =Parent.DisplayName
-                Width: =311
+                Width: =101
                 X: =28
-                Y: =50
+                Y: =24
                 ZIndex: =2
 
             Separator1 As label:
@@ -171,6 +171,14 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Y: =DataCardKey5.Y
                 ZIndex: =7
 
+            TextInput7 As text:
+                Default: =DateValue(_dateSelected)
+                OnSelect: =Set(showDate,true)
+                Width: =155
+                X: =184
+                Y: =11
+                ZIndex: =8
+
     Header_1 As group:
         Height: =5
         Width: =5
@@ -179,35 +187,34 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =3
 
         Logo_1 As image:
-            Height: =90
+            DisplayMode: =DisplayMode.View
+            Height: =94
             Image: =Kollaras_and_Co
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =290
+            Width: =325
             X: =12
-            Y: =2
             ZIndex: =1
 
         "'Header Label_1' As label":
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Height: =90
+            Height: =94
             PaddingRight: =5.00
             PaddingTop: =5.00
-            Size: =24
+            Size: =26
             Text: ="                   Customer Target Pricing"
-            Width: =1366
-            Y: =2
+            Width: =1350
             ZIndex: =2
 
     Gallery1 As gallery.variableTemplateHeightGallery:
-        Height: =117
+        Height: =252
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =6
         TemplateSize: =84
         Width: =1366
-        Y: =355
+        Y: =272
         ZIndex: =4
 
         TextInput2 As text:
@@ -485,12 +492,12 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =6
 
     Home_Icon As icon.ArrowLeft:
-        Height: =54
+        Height: =73
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
-        Width: =57
-        X: =1278
-        Y: =21
+        Width: =79
+        X: =1256
+        Y: =2
         ZIndex: =7
 
     Label3 As label:
@@ -510,15 +517,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =25
         Text: ="*"
         Width: =40
-        X: =730
-        Y: =205
+        X: =769
+        Y: =140
         ZIndex: =37
-
-    Label8 As label:
-        Text: =
-        X: =38
-        Y: =72
-        ZIndex: =38
 
     Group1 As group:
         Height: =5
@@ -529,7 +530,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
-            Height: =28
+            Height: =22
             IsSearchable: =false
             Items: ='Product Details_V'
             OnChange: |-
@@ -542,62 +543,61 @@ Screen_AddNewCustomerTargetPricing As screen:
             SearchItems: =[]
             SelectMultiple: =false
             Size: =10
-            Width: =422
+            Width: =454
             X: =32
-            Y: =231
+            Y: =178
             ZIndex: =8
 
         "'Product _Code' As text":
             Default: =ProductList_CB.Selected.Product_Code
             DisplayMode: =DisplayMode.Disabled
-            Height: =28
+            Height: =22
             Size: =10
-            Width: =163
-            X: =298
-            Y: =288
+            Width: =175
+            X: =278
+            Y: =222
             ZIndex: =9
 
         ALC_value As text:
             Default: =ProductList_CB.Selected.Product_Alc
             DisplayMode: =DisplayMode.Disabled
-            Height: =28
+            Height: =22
             Size: =10
-            Width: =163
-            X: =630
-            Y: =288
+            Width: =175
+            X: =644
+            Y: =222
             ZIndex: =10
 
         Carton_Quantity_vlaue As text:
             Default: =ProductList_CB.Selected.Product_UOM_Qty
             DisplayMode: =DisplayMode.Disabled
-            Height: =28
+            Height: =22
             Size: =10
-            Width: =163
-            X: =797
-            Y: =288
+            Width: =175
+            X: =823
+            Y: =222
             ZIndex: =11
 
         Variant_value As text:
             Default: =ProductList_CB.Selected.Product_Variant
             DisplayMode: =DisplayMode.Disabled
-            Height: =28
+            Height: =22
             Size: =10
-            Width: =163
-            X: =964
-            Y: =288
+            Width: =175
+            X: =1007
+            Y: =222
             ZIndex: =12
 
         Decoded_CB As checkbox:
             Default: =Decoded
             DisplayMode: =DisplayMode.Disabled
-            Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =88
-            X: =81
-            Y: =280
+            Width: =73
+            X: =78
+            Y: =205
             ZIndex: =13
 
         NonRefiil_CB As checkbox:
@@ -608,44 +608,48 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(NonRefill,false)
             Size: =0
             Text: =NonRefill
-            Width: =63
-            X: =181
-            Y: =279
+            Width: =69
+            X: =179
+            Y: =209
             ZIndex: =14
 
         MinPrice_value As text:
             Default: =""
-            Height: =28
-            Width: =193
-            X: =468
-            Y: =231
+            Height: =22
+            Size: =10
+            Width: =207
+            X: =500
+            Y: =178
             ZIndex: =15
 
         MaxPrice_value As text:
             Default: =
-            Height: =28
+            Height: =22
             OnChange: =
-            Width: =201
-            X: =666
-            Y: =231
+            Size: =10
+            Width: =216
+            X: =713
+            Y: =178
             ZIndex: =16
 
         Currency_value As text:
             Default: |
                 =First(Filter(Currencies,'Transaction Currency'= LeadDataStore.Currency.'Transaction Currency')).'Currency Name'
             FontWeight: =FontWeight.Lighter
-            Height: =28
-            Width: =161
-            X: =872
-            Y: =231
+            Height: =22
+            Size: =10
+            Width: =173
+            X: =934
+            Y: =178
             ZIndex: =17
 
         Quantity_value As text:
             Default: =""
-            Height: =28
-            Width: =161
-            X: =1038
-            Y: =230
+            Height: =22
+            Size: =10
+            Width: =173
+            X: =1112
+            Y: =177
             ZIndex: =18
 
         Add_Icon As icon.Add:
@@ -653,17 +657,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =If(DateValue1.SelectedDate>=MyDate,If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text})));
-            X: =1156
-            Y: =289
+            Width: =69
+            X: =1213
+            Y: =223
             ZIndex: =19
 
         Prodcut_lbl As label:
             Height: =30
             Size: =10
             Text: ="Product"
-            Width: =422
+            Width: =454
             X: =32
-            Y: =205
+            Y: =152
             ZIndex: =20
 
         Label4_26 As label:
@@ -671,90 +676,90 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =32
             Text: ="*"
-            Width: =35
-            X: =89
-            Y: =199
+            Width: =38
+            X: =132
+            Y: =133
             ZIndex: =21
 
         Productcode_lbl As label:
             Height: =18
             Size: =10
             Text: ="Product Code"
-            Width: =182
-            X: =292
-            Y: =271
+            Width: =196
+            X: =312
+            Y: =205
             ZIndex: =22
 
         ALC_lbl As label:
             Height: =18
             Size: =10
             Text: ="Alc %"
-            Width: =101
-            X: =629
-            Y: =268
+            Width: =109
+            X: =633
+            Y: =202
             ZIndex: =23
 
         CQ_Label As label:
             Height: =18
             Size: =10
             Text: ="Carton Quantity"
-            Width: =243
-            X: =795
-            Y: =271
+            Width: =208
+            X: =825
+            Y: =205
             ZIndex: =24
 
         Varient_label As label:
             Height: =18
             Size: =10
             Text: ="Varient"
-            Width: =186
-            X: =962
-            Y: =271
+            Width: =200
+            X: =1044
+            Y: =205
             ZIndex: =25
 
         Decoded_Lbl As label:
             Height: =18
             Size: =10
             Text: ="De-Coded"
-            Width: =107
-            X: =62
-            Y: =270
+            Width: =115
+            X: =64
+            Y: =204
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
             Height: =18
             Size: =10
             Text: ="Non-Refill"
-            Width: =147
-            X: =169
-            Y: =271
+            Width: =158
+            X: =179
+            Y: =205
             ZIndex: =27
 
         MinPrice_lbl As label:
             Height: =24
             Size: =10
             Text: ="Min Price"
-            Width: =201
-            X: =468
-            Y: =211
+            Width: =216
+            X: =500
+            Y: =158
             ZIndex: =28
 
         Maxprice_lbl As label:
             Height: =32
             Size: =10
             Text: =" Max Price"
-            Width: =200
-            X: =659
-            Y: =207
+            Width: =215
+            X: =706
+            Y: =154
             ZIndex: =29
 
         Currency_lbl As label:
             Height: =14
             Size: =10
             Text: ="Currency"
-            Width: =201
-            X: =869
-            Y: =216
+            Width: =216
+            X: =931
+            Y: =163
             ZIndex: =30
 
         Label4_36 As label:
@@ -762,18 +767,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =20
             Text: ="*"
-            Width: =24
-            X: =940
-            Y: =205
+            Width: =26
+            X: =1007
+            Y: =152
             ZIndex: =31
 
         Quantity_lbl As label:
             Height: =15
             Size: =10
             Text: ="Quantity"
-            Width: =152
-            X: =1033
-            Y: =216
+            Width: =163
+            X: =1107
+            Y: =163
             ZIndex: =32
 
         Label4_38 As label:
@@ -785,26 +790,27 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingRight: =4
             PaddingTop: =3
             Text: ="*"
-            Width: =20
-            X: =534
-            Y: =196
+            Width: =22
+            X: =559
+            Y: =143
             ZIndex: =33
 
         Litres_Value As text:
             Default: =ProductList_CB.Selected.Product_Net_Volume
             DisplayMode: =DisplayMode.Disabled
-            Height: =28
-            Width: =163
-            X: =464
-            Y: =288
+            Height: =22
+            Width: =175
+            X: =456
+            Y: =222
             ZIndex: =34
 
         Litres_lbl As label:
             Height: =18
             Size: =10
             Text: ="Lt/Btl"
-            X: =465
-            Y: =270
+            Width: =161
+            X: =470
+            Y: =204
             ZIndex: =35
 
     Form5 As form:
@@ -952,7 +958,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Y: =DataCardKey38.Y
                 ZIndex: =4
 
-    Button4 As button:
+    Upload_button As button:
         OnSelect: =SubmitForm(Form5);
         Text: ="Upload"
         X: =264
@@ -961,26 +967,26 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label7 As label:
         Color: =Red
-        Height: =39
+        Height: =20
+        Size: =10
         Text: ="Expiry date should be future date"
         Visible: =If(DateValue1.SelectedDate<MyDate,true,false)
         Width: =410
-        X: =940
-        Y: =160
+        X: =771
+        Y: =134
         ZIndex: =41
 
-    Rectangle1 As rectangle:
+    Topborder As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =0
+        Height: =1
         Width: =1366
         ZIndex: =42
 
-    Rectangle2 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 1)
+    Rightborder As rectangle:
         BorderThickness: =
         Fill: =RGBA(0, 0, 0, 1)
         Height: =768
-        Width: =9
+        Width: =2
         X: =1362
         ZIndex: =43
 
@@ -993,17 +999,32 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label9 As label:
         Color: =RGBA(255, 0, 0, 1)
-        Height: =33
+        Height: =23
+        Size: =10
         Text: ="Fill required fields"
         Visible: =If(IsBlank(ProductList_CB)||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
-        Width: =259
-        X: =774
-        Y: =327
+        Width: =371
+        X: =661
+        Y: =249
         ZIndex: =46
 
-    Rectangle5 As rectangle:
+    Leftborder As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =768
         Width: =1
         ZIndex: =47
+
+    BottomBorder As rectangle:
+        Height: =0
+        Width: =1360
+        Y: =748
+        ZIndex: =48
+
+    CustomCalendar_1 As CustomCalendar:
+        Height: =161
+        Visible: =showDate
+        Width: =292
+        X: =1074
+        Y: =81
+        ZIndex: =49
 
