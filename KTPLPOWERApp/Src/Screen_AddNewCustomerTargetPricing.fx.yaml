@@ -973,7 +973,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Visible: =If(DateValue1.SelectedDate<MyDate,true,false)
         Width: =410
         X: =940
-        Y: =160
+        Y: =134
         ZIndex: =41
 
     Rectangle1 As rectangle:
