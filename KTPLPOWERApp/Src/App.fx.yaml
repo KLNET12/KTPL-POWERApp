@@ -1,6 +1,7 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))))
+    OnStart: =Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))));Set(MyDate,Today())
+    StartScreen: =
 
     ModelDrivenFormIntegration As hostControl.ModelDrivenFormHostControlVariant:
         DataSource: =Leads
