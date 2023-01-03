@@ -1030,3 +1030,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =696
         ZIndex: =40
 
+    Label7 As label:
+        Text: =MyDate
+        X: =890
+        Y: =660
+        ZIndex: =41
+
