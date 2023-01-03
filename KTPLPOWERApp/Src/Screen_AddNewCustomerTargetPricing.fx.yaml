@@ -1013,3 +1013,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =1
         ZIndex: =47
 
+    BottomBorder As rectangle:
+        Height: =0
+        Width: =1360
+        Y: =766
+        ZIndex: =48
+
