@@ -234,42 +234,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Y: =14
             ZIndex: =2
 
-        TextInput6 As text:
-            BorderThickness: =1
-            Default: =ThisItem.'Alc %'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =20
-            OnSelect: =Select(Parent)
-            Size: =10
-            Width: =150
-            X: =510
-            Y: =14
-            ZIndex: =3
-
-        TextInput7 As text:
-            BorderThickness: =1
-            Default: =ThisItem.'Carton Quantity'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =20
-            OnSelect: =Select(Parent)
-            Size: =10
-            Width: =150
-            X: =662
-            Y: =14
-            ZIndex: =4
-
-        TextInput8 As text:
-            BorderThickness: =1
-            Default: =ThisItem.Varient
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =20
-            OnSelect: =Select(Parent)
-            Size: =10
-            Width: =150
-            X: =814
-            Y: =14
-            ZIndex: =5
-
         TextInput12 As text:
             BorderThickness: =1
             Default: =ThisItem.'Customer Min Price'
@@ -278,8 +242,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =357
-            Y: =34
+            X: =509
+            Y: =14
             ZIndex: =8
 
         TextInput13 As text:
@@ -290,8 +254,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =510
-            Y: =34
+            X: =661
+            Y: =14
             ZIndex: =9
 
         TextInput14 As text:
@@ -302,8 +266,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =662
-            Y: =34
+            X: =965
+            Y: =14
             ZIndex: =10
 
         TextInput15 As text:
@@ -314,8 +278,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
-            X: =814
-            Y: =34
+            X: =813
+            Y: =14
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -326,47 +290,9 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =Set(fieldedit,true)
             Tooltip: ="Edit "
             Width: =53
-            X: =1040
-            Y: =36
+            X: =1130
+            Y: =12
             ZIndex: =12
-
-        Checkbox2 As checkbox:
-            CheckboxSize: =25
-            Default: =ThisItem.'De-Coded'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =0
-            Text: ="Option"
-            Width: =52
-            X: =1050
-            Y: =2
-            ZIndex: =13
-
-        Checkbox2_1 As checkbox:
-            CheckboxSize: =25
-            Default: =ThisItem.'Non-Refill'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =0
-            Text: ="Option"
-            Width: =52
-            X: =1150
-            Y: =2
-            ZIndex: =14
-
-        TextInput12_1 As text:
-            BorderThickness: =1
-            Default: =ThisItem.'Lt/Btl'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
-            Height: =20
-            OnSelect: =Select(Parent)
-            Size: =10
-            Width: =339
-            X: =16
-            Y: =34
-            ZIndex: =15
 
         Icon3 As icon.Trash:
             Height: =22
@@ -374,8 +300,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: =Remove(Products,ThisItem)
             Tooltip: ="Delete"
             Width: =53
-            X: =1140
-            Y: =36
+            X: =1199
+            Y: =12
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
