@@ -139,8 +139,7 @@ CustomCalendar As CanvasComponent:
                 Set(showDate,false);
                 If(_dateSelected< Today(),Notify("You can not selected this date as its been already passed",NotificationType.Error);
                 Set(_dateSelected,Blank()));
-                
-                If(_dateSelected> DateAdd(Today(),182.5),Notify("You can not selected this date as its been already passed",NotificationType.Error);
+                If(_dateSelected> DateAdd(Today(),182.5),Notify("You can only select date within upcoming 6 Months",NotificationType.Error);
                 Set(_dateSelected,Blank()));
                 //If(DateAdd(_firstDayInView, ThisItem.Value, Days) <(Today()) && DateAdd(_firstDayInView, ThisItem.Value, Days) >
                 //(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
