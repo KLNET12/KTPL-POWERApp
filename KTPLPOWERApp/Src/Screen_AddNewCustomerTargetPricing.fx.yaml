@@ -966,7 +966,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label7 As label:
         Color: =Red
-        Height: =22
+        Height: =20
         Size: =10
         Text: ="Expiry date should be future date"
         Visible: =If(DateValue1.SelectedDate<MyDate,true,false)
@@ -999,7 +999,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label9 As label:
         Color: =RGBA(255, 0, 0, 1)
-        Height: =28
+        Height: =20
         Size: =10
         Text: ="Fill required fields"
         Visible: =If(IsBlank(ProductList_CB)||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
