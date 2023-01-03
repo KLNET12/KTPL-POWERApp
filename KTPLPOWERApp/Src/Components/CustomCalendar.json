@@ -1498,7 +1498,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "/*Set(_YMvisible,false);\r\nSet(_dateSelected, Today());\r\nSet(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days))*/\r\nSet(StartDate,false);Set(EndDate,false);Set(IRBDate,false);Set(EstDate,false);Set(PatientFirstDate,false);Set(LastPatientDate,false);Set(ProtocalDate,false);",
+            "InvariantScript": "Set(showDate,false)",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -5895,7 +5895,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638083442333612806",
+    "LastModifiedTimestamp": "638083443675527664",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -5991,7 +5991,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638083442333612806",
+  "LastModifiedTimestamp": "638083443675527664",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

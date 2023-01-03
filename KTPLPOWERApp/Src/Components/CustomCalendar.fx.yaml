@@ -159,13 +159,7 @@ CustomCalendar As CanvasComponent:
         HoverColor: =ColorFade(TodayIcon.Color, 20%)
         HoverFill: =TodayIcon.Fill
         Icon: =Icon.Cancel
-        OnSelect: |-
-            =/*Set(_YMvisible,false);
-            Set(_dateSelected, Today());
-            Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
-            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days))*/
-            Set(StartDate,false);Set(EndDate,false);Set(IRBDate,false);Set(EstDate,false);Set(PatientFirstDate,false);Set(LastPatientDate,false);Set(ProtocalDate,false);
+        OnSelect: =Set(showDate,false)
         PaddingBottom: =5
         PaddingLeft: =5
         PaddingRight: =5
