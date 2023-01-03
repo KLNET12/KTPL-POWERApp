@@ -2732,7 +2732,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "If(ThisItem.Value<Year(Today()) && ThisItem.Value>\r\nYear(DateAdd(Today(),182.5)),Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false),false)",
+                "InvariantScript": "If(ThisItem.Value<Year(Today()) && ThisItem.Value>\r\nYear(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false))",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -5895,7 +5895,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638083468568557496",
+    "LastModifiedTimestamp": "638083470007710997",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -5991,7 +5991,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638083468568557496",
+  "LastModifiedTimestamp": "638083470007710997",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

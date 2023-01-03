@@ -136,8 +136,8 @@ CustomCalendar As CanvasComponent:
             HoverFill: =Title2_4.Fill
             OnSelect: |-
                 =If(ThisItem.Value<Year(Today()) && ThisItem.Value>
-                Year(DateAdd(Today(),182.5)),Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                Set(showDate,false),false)
+                Year(DateAdd(Today(),182.5)),false,Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
+                Set(showDate,false))
             PressedBorderColor: =Title2_4.BorderColor
             PressedColor: =Title2_4.Color
             PressedFill: =Title2_4.Fill
