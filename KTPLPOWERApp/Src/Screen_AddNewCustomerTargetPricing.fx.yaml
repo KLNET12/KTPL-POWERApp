@@ -493,11 +493,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         DefaultMode: =FormMode.New
         Height: =202
         OnSuccess: |-
-            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
-            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            
+            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
+            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID));
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
             ResetForm(Form5);
-            Notify("File Uploaded Sucessfully");
+            Notify("File Uploaded Sucessfully",NotificationType.Error));
         Width: =762
         X: =8
         Y: =564
@@ -661,6 +661,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
             Height: =22
+            IsSearchable: =false
             Items: ='Product Details_V'
             OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
@@ -669,7 +670,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
+            SearchItems: =[]
             SelectMultiple: =false
             Size: =10
             Width: =486
