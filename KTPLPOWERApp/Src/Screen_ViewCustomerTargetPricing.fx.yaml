@@ -4,11 +4,14 @@ Screen_ViewCustomerTargetPricing As screen:
     "'Header Label_2' As label":
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
-        Height: =90
+        Height: =132
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =24
-        Text: ="                   Customer Target Pricing"
+        Text: |-
+            ="                   Customer
+                                 Target 
+                                 Pricing"
         Width: =1366
         X: =0.00
         Y: =2
@@ -20,18 +23,17 @@ Screen_ViewCustomerTargetPricing As screen:
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
         Width: =57
-        X: =1288
-        Y: =25
+        Y: =2
         ZIndex: =4
 
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
-        Height: =667
+        Height: =604
         Items: =Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead)
         Layout: =Layout.Vertical
         TemplateSize: =45
         Width: =466
-        Y: =101
+        Y: =163
         ZIndex: =5
 
         Label5 As label:
@@ -66,12 +68,12 @@ Screen_ViewCustomerTargetPricing As screen:
     Form2 As form:
         DataSource: ='Customer Target Pricing'
         DefaultMode: =If(IsEdit,FormMode.Edit,FormMode.View)
-        Height: =669
+        Height: =594
         Item: =Gallery2.Selected
         OnSuccess: =NewForm(Form2);
         Width: =868
         X: =477
-        Y: =94
+        Y: =169
         ZIndex: =6
 
         "'Customer Lead Id_DataCard2' As typedDataCard.comboBoxEditCard":
@@ -166,7 +168,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -235,7 +237,7 @@ Screen_ViewCustomerTargetPricing As screen:
             DateValue2 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 EndYear: =Year(Today())+100
                 Height: =22
                 IsEditable: =true
@@ -337,7 +339,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -521,7 +523,7 @@ Screen_ViewCustomerTargetPricing As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_alc"
             Default: =ThisItem.ABV
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =Disabled
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =53
@@ -953,8 +955,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Height: =90
         Image: =OIP
         Width: =290
-        X: =19
-        Y: =2
+        Y: =44
         ZIndex: =11
 
     Label6 As label:
@@ -965,6 +966,6 @@ Screen_ViewCustomerTargetPricing As screen:
         Text: ="Name"
         Width: =327
         X: =19
-        Y: =79
+        Y: =147
         ZIndex: =12
 
