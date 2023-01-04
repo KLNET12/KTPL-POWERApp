@@ -484,8 +484,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =20
         Text: ="*"
         Width: =26
-        X: =778
-        Y: =341
+        X: =791
+        Y: =276
         ZIndex: =35
 
     Form5 As form:
