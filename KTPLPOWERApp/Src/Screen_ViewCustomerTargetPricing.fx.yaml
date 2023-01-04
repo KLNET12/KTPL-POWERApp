@@ -1112,8 +1112,8 @@ Screen_ViewCustomerTargetPricing As screen:
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive})
         Text: ="Activate"
         Width: =250
-        X: =499
-        Y: =701
+        X: =490
+        Y: =688
         ZIndex: =13
 
     Button5 As button:
