@@ -7,15 +7,15 @@ Screen_AddNewCustomerTargetPricing As screen:
         NewForm(Form1);Set(fieldedit,false);NewForm(Form5)
 
     "'Header Label_1' As label":
-        Align: =Align.Center
         FontWeight: =FontWeight.Bold
-        Height: =130
+        Height: =66
         PaddingBottom: =50
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =18
-        Text: ="Customer Target Pricing"
-        Width: =1366
+        Text: ="            Customer Target Pricing"
+        Width: =478
+        X: =402
         ZIndex: =1
 
     Form1 As form:
@@ -482,10 +482,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         Color: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
         Height: =20
+        PaddingLeft: =12
         Text: ="*"
         Width: =26
-        X: =804
-        Y: =276
+        X: =800
+        Y: =292
         ZIndex: =35
 
     Form5 As form:
@@ -807,8 +808,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Text: ="*"
             Width: =41
-            X: =120
-            Y: =273
+            X: =70
+            Y: =283
             ZIndex: =19
 
         Productcode_lbl As label:
@@ -896,10 +897,13 @@ Screen_AddNewCustomerTargetPricing As screen:
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =20
+            PaddingLeft: =4
+            PaddingRight: =10
+            PaddingTop: =15
             Text: ="*"
             Width: =28
-            X: =1100
-            Y: =276
+            X: =1040
+            Y: =286
             ZIndex: =29
 
         Quantity_lbl As label:
@@ -912,17 +916,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =30
 
         Label4_38 As label:
+            Align: =Align.Center
             Color: =RGBA(255, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =32
             PaddingBottom: =3
             PaddingLeft: =4
             PaddingRight: =4
-            PaddingTop: =3
+            PaddingTop: =12
             Text: ="*"
             Width: =24
             X: =576
-            Y: =270
+            Y: =280
             ZIndex: =31
 
         Litres_Value As text:
@@ -967,9 +972,9 @@ Screen_AddNewCustomerTargetPricing As screen:
     CustomCalendar_1 As CustomCalendar:
         Height: =148
         Visible: =showDate
-        Width: =327
-        X: =929
-        Y: =63
+        Width: =315
+        X: =1025
+        Y: =66
         ZIndex: =42
 
     Label10 As label:
@@ -984,37 +989,35 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     TextInput8 As text:
         Default: =DateValue(_dateSelected)
-        Height: =35
+        Height: =49
         OnSelect: =Set(showDate,true)
-        Width: =291
-        X: =952
-        Y: =49
+        Width: =272
+        X: =1068
+        Y: =34
         ZIndex: =44
 
     Logo_1 As image:
         DisplayMode: =DisplayMode.View
-        Height: =84
+        Height: =66
         Image: =Kollaras_and_Co
         OnSelect: =Navigate('Home Screen',ScreenTransition.Cover)
         PaddingRight: =0.00
         PaddingTop: =0.00
-        Width: =263
+        Width: =232
         ZIndex: =45
 
     Label9 As label:
-        Height: =83
+        Height: =66
         OnSelect: =Navigate('Home Screen')
+        PaddingTop: =0
         Text: =""
-        Width: =255
-        X: =2
-        Y: =23
+        Width: =244
         ZIndex: =46
 
     Label7 As label:
         Height: =34
         Text: ="Expiry Date"
         Width: =304
-        X: =952
-        Y: =15
+        X: =1056
         ZIndex: =47
 
