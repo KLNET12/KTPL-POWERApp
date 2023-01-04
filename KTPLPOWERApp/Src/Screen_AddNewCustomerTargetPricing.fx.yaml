@@ -12,7 +12,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         SnapToColumns: =false
         Width: =1364
         X: =2
-        Y: =92
+        Y: =141
         ZIndex: =3
 
         "'Customer Lead Id_DataCard1' As typedDataCard.comboBoxEditCard":
