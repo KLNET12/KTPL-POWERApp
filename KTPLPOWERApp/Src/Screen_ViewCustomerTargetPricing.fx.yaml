@@ -17,7 +17,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
         Height: =577
-        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),"createdon",If(Dropdown1.Selected.Value="New To Old",Descending,Ascending))
+        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =92
         Width: =466
@@ -985,7 +985,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Color: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =18
-        Icon: =Icon.Sort
+        Icon: =If(varSortColumn <> "createdon",Icon.Sort,If(varSortDirection=Ascending,Icon.ArrowUp,Icon.ArrowDown))
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =305
