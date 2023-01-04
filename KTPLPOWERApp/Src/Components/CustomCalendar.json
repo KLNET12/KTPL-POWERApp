@@ -143,7 +143,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "283",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 287,
+            "PublishOrderIndex": 288,
             "Rules": [
               {
                 "Category": "Design",
@@ -1661,7 +1661,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 288,
+            "PublishOrderIndex": 289,
             "Rules": [
               {
                 "Category": "Data",
@@ -2001,7 +2001,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 286,
+        "PublishOrderIndex": 287,
         "Rules": [
           {
             "Category": "Data",
@@ -2131,7 +2131,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "283",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2234,7 +2234,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 290,
+            "PublishOrderIndex": 291,
             "Rules": [
               {
                 "Category": "Design",
@@ -2283,14 +2283,7 @@
               "HoverFill",
               "Font",
               "FontWeight",
-              {
-                "AFDDataSourceName": "",
-                "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "",
-                "InvariantPropertyName": "Align",
-                "IsLockable": false,
-                "NameMapSourceSchema": "?"
-              },
+              "Align",
               "VerticalAlign",
               "X",
               "Y",
@@ -2328,14 +2321,7 @@
               "PaddingTop",
               "PaddingRight",
               "PaddingBottom",
-              {
-                "AFDDataSourceName": "",
-                "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "",
-                "InvariantPropertyName": "PaddingLeft",
-                "IsLockable": false,
-                "NameMapSourceSchema": "?"
-              },
+              "PaddingLeft",
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
@@ -2363,7 +2349,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 291,
+            "PublishOrderIndex": 292,
             "Rules": [
               {
                 "Category": "Data",
@@ -2493,7 +2479,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Align.Center",
+                "InvariantScript": "Align.Right",
                 "Property": "Align",
                 "RuleProviderType": "Unknown"
               },
@@ -2583,7 +2569,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "0",
+                "InvariantScript": "5",
                 "Property": "PaddingLeft",
                 "RuleProviderType": "Unknown"
               },
@@ -2619,7 +2605,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "35",
+                "InvariantScript": "26",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -2668,7 +2654,7 @@
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "",
+                "AutoRuleBindingString": "MonthDayGallery.TemplateWidth/2 - Subcircle1_1.Width/2",
                 "InvariantPropertyName": "X",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
@@ -2703,7 +2689,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 292,
+            "PublishOrderIndex": 293,
             "Rules": [
               {
                 "Category": "Data",
@@ -2767,7 +2753,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "20",
+                "InvariantScript": "25",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -2935,7 +2921,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 289,
+        "PublishOrderIndex": 290,
         "Rules": [
           {
             "Category": "Data",
@@ -3071,7 +3057,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "283",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3229,7 +3215,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 293,
+        "PublishOrderIndex": 294,
         "Rules": [
           {
             "Category": "Data",
@@ -5911,7 +5897,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 294,
+        "PublishOrderIndex": 286,
         "Rules": [
           {
             "Category": "Design",
@@ -5993,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638084431709728705",
+    "LastModifiedTimestamp": "638084413948032774",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6089,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638084431709728705",
+  "LastModifiedTimestamp": "638084413948032774",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
