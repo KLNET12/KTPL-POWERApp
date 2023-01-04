@@ -6,11 +6,6 @@
       <object name="ManualTriggerInput">
         <property name="Initializevariable_Value" type="string" />
       </object>
-      <string name="ResponseActionOutput_response_def" />
-      <object name="ResponseActionOutput">
-        <property name="response" type="string" />
-      </object>
-      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://australia-001.azure-apim.net/apim/logicflows">
@@ -26,9 +21,6 @@
             <param style="plain" name="Initializevariable_Value" path="/Initializevariable_Value" type="xs:string" required="true" />
           </representation>
         </request>
-        <response>
-          <representation mediaType="application/json" element="service:ResponseActionOutput" />
-        </response>
       </method>
     </resource>
   </resources>
