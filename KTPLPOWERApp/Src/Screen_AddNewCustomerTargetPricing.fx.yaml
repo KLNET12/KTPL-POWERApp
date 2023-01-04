@@ -4,7 +4,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     OnVisible: |-
         =ClearCollect(Products,{'Product Description':"",'Product Code':"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",'Customer Min Price':"",'Customer Max Price':"",'Customer Currency':"",'Qty Required':"",'Lt/Btl':""});
         Clear(Products);
-        NewForm(Form1);Set(fieldedit,false)
+        NewForm(Form1);Set(fieldedit,false);NewForm(Form5)
 
     "'Header Label_1' As label":
         Align: =Align.Center
@@ -492,7 +492,12 @@ Screen_AddNewCustomerTargetPricing As screen:
         DataSource: ='Customer Target Pricing Deploy List'
         DefaultMode: =FormMode.New
         Height: =202
-        OnSuccess: =ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
+        OnSuccess: |-
+            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
+            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
+            
+            ResetForm(Form5);
+            Notify("File Uploaded Sucessfully");
         Width: =762
         X: =8
         Y: =564
