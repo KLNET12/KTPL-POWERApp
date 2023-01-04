@@ -79,7 +79,7 @@
         "Name": "Rectangle1_1",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 268,
+        "PublishOrderIndex": 269,
         "Rules": [
           {
             "Category": "Design",
@@ -131,25 +131,25 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "27",
+            "InvariantScript": "44",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "18",
+            "InvariantScript": "22",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "300",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "27",
+            "InvariantScript": "23",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -281,7 +281,7 @@
         "Name": "LblMonthSelected",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 269,
+        "PublishOrderIndex": 270,
         "Rules": [
           {
             "Category": "Data",
@@ -632,7 +632,7 @@
         "Name": "iconPrevMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 270,
+        "PublishOrderIndex": 271,
         "Rules": [
           {
             "Category": "Data",
@@ -977,7 +977,7 @@
         "Name": "iconNextMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 271,
+        "PublishOrderIndex": 272,
         "Rules": [
           {
             "Category": "Data",
@@ -1320,7 +1320,7 @@
         "Name": "TodayIcon",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 272,
+        "PublishOrderIndex": 273,
         "Rules": [
           {
             "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 274,
+            "PublishOrderIndex": 275,
             "Rules": [
               {
                 "Category": "Design",
@@ -1590,7 +1590,14 @@
               "HoverFill",
               "Font",
               "FontWeight",
-              "Align",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Align",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "VerticalAlign",
               {
                 "AFDDataSourceName": "",
@@ -1661,7 +1668,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 275,
+            "PublishOrderIndex": 276,
             "Rules": [
               {
                 "Category": "Data",
@@ -2001,7 +2008,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 273,
+        "PublishOrderIndex": 274,
         "Rules": [
           {
             "Category": "Data",
@@ -2119,7 +2126,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "27",
+            "InvariantScript": "44",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -2131,7 +2138,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "300",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2234,7 +2241,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 277,
+            "PublishOrderIndex": 278,
             "Rules": [
               {
                 "Category": "Design",
@@ -2283,7 +2290,14 @@
               "HoverFill",
               "Font",
               "FontWeight",
-              "Align",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Align",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "VerticalAlign",
               "X",
               "Y",
@@ -2318,7 +2332,14 @@
               "Italic",
               "Underline",
               "Strikethrough",
-              "PaddingTop",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "PaddingTop",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "PaddingRight",
               "PaddingBottom",
               "PaddingLeft",
@@ -2349,7 +2370,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 278,
+            "PublishOrderIndex": 279,
             "Rules": [
               {
                 "Category": "Data",
@@ -2479,7 +2500,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Align.Center",
+                "InvariantScript": "Align.Right",
                 "Property": "Align",
                 "RuleProviderType": "Unknown"
               },
@@ -2491,7 +2512,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "0",
+                "InvariantScript": "12",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -2581,7 +2602,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "//MonthDayGallery.TemplateHeight\r\n17",
+                "InvariantScript": "14",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -2605,7 +2626,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "80",
+                "InvariantScript": "26",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -2689,7 +2710,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 279,
+            "PublishOrderIndex": 280,
             "Rules": [
               {
                 "Category": "Data",
@@ -2753,7 +2774,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "MonthDayGallery.TemplateWidth/2 - Subcircle1_1.Width/2\r\n",
+                "InvariantScript": "25",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -2921,7 +2942,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 276,
+        "PublishOrderIndex": 277,
         "Rules": [
           {
             "Category": "Data",
@@ -2949,7 +2970,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "20",
+            "InvariantScript": "15",
             "Property": "TemplateSize",
             "RuleProviderType": "Unknown"
           },
@@ -3045,7 +3066,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "27",
+            "InvariantScript": "44",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -3057,13 +3078,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "300",
+            "InvariantScript": "266",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "101",
+            "InvariantScript": "100",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -3215,7 +3236,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 280,
+        "PublishOrderIndex": 281,
         "Rules": [
           {
             "Category": "Data",
@@ -3406,7 +3427,7 @@
         "Name": "FrameShadow",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 282,
+        "PublishOrderIndex": 283,
         "Rules": [
           {
             "Category": "Data",
@@ -3642,7 +3663,7 @@
         "Name": "lblYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 283,
+        "PublishOrderIndex": 284,
         "Rules": [
           {
             "Category": "Data",
@@ -4022,7 +4043,7 @@
         "Name": "lblMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 284,
+        "PublishOrderIndex": 285,
         "Rules": [
           {
             "Category": "Data",
@@ -4461,7 +4482,7 @@
         "Name": "ddYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 285,
+        "PublishOrderIndex": 286,
         "Rules": [
           {
             "Category": "Data",
@@ -4891,7 +4912,7 @@
         "Name": "ddMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 286,
+        "PublishOrderIndex": 287,
         "Rules": [
           {
             "Category": "Data",
@@ -5308,7 +5329,7 @@
         "Name": "btnSetYearMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 287,
+        "PublishOrderIndex": 288,
         "Rules": [
           {
             "Category": "Data",
@@ -5642,7 +5663,7 @@
         "Name": "SetDefaultTimer",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 288,
+        "PublishOrderIndex": 289,
         "Rules": [
           {
             "Category": "Data",
@@ -5897,7 +5918,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 281,
+        "PublishOrderIndex": 282,
         "Rules": [
           {
             "Category": "Design",
@@ -5979,7 +6000,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638084089797518143",
+    "LastModifiedTimestamp": "638084153572507988",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6075,7 +6096,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638084089797518143",
+  "LastModifiedTimestamp": "638084153572507988",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
