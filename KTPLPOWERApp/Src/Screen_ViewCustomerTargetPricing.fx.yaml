@@ -986,7 +986,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =18
         Icon: =Icon.Sort
-        OnSelect: =
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =305
         Y: =148
