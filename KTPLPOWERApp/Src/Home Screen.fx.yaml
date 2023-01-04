@@ -1,6 +1,6 @@
 "'Home Screen' As screen":
     Fill: =
-    OnVisible: =Set(MyDate,Today())
+    OnVisible: =Set(varLMApprovalDate, Now())
 
     Image1 As image:
         Height: =56

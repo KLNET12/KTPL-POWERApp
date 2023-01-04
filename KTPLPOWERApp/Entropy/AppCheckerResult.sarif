@@ -2863,17 +2863,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.MyDate"
+                  "fullyQualifiedName": "App.varLMApprovalDate"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.MyDate",
+                  "fullyQualifiedName": "App.varLMApprovalDate",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "MyDate",
+                "member": "varLMApprovalDate",
                 "module": "App",
                 "type": "App"
               }
