@@ -1003,6 +1003,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Screen_AddNewCustomerTargetPricing",
+                "type": "Screen_AddNewCustomerTargetPricing.Label9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen_AddNewCustomerTargetPricing",
+                "type": "Screen_AddNewCustomerTargetPricing.Label9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.TextInput8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.TextInput8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen_AddNewCustomerTargetPricing",
+                "type": "Screen_AddNewCustomerTargetPricing.TextInput8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Form1.'Customer Lead Id_DataCard1'.TextInput3.AccessibleLabel"
                 }
               ],
@@ -2323,186 +2413,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Customer Lead Id_DataCard2'.TextInput6.AccessibleLabel"
                 }
               ],
@@ -2893,19 +2803,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.TextInput8.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.TextInput8.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen_AddNewCustomerTargetPricing",
-                "type": "Screen_AddNewCustomerTargetPricing.TextInput8"
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24"
               }
             }
           ],
@@ -2923,19 +2833,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.TabIndex"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.TabIndex",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Screen_AddNewCustomerTargetPricing",
-                "type": "Screen_AddNewCustomerTargetPricing.Label9"
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2"
               }
             }
           ],
@@ -2953,19 +2893,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.FocusedBorderThickness"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Label9.FocusedBorderThickness",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Screen_AddNewCustomerTargetPricing",
-                "type": "Screen_AddNewCustomerTargetPricing.Label9"
+                "member": "AccessibleLabel",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2"
               }
             }
           ],
@@ -2975,8 +2915,98 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Gallery2.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [
