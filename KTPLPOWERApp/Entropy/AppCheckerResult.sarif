@@ -2473,19 +2473,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Bottle_DataCard1.DataCardValue20.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Bottle_DataCard1.DataCardValue20.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.Bottle_DataCard1.DataCardValue20"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1"
               }
             }
           ],
@@ -2503,79 +2503,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard1'.DataCardValue22.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard1'.DataCardValue22.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard1'.DataCardValue22"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Btl/Ctn_DataCard1'.DataCardValue17.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Btl/Ctn_DataCard1'.DataCardValue17.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Btl/Ctn_DataCard1'.DataCardValue17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2"
               }
             }
           ],
@@ -2623,36 +2563,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Quantity_DataCard1.DataCardValue26.AccessibleLabel"
                 }
               ],
@@ -2683,19 +2593,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Min Price_DataCard1'.DataCardValue23.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Min Price_DataCard1'.DataCardValue23.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Min Price_DataCard1'.DataCardValue23"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18"
               }
             }
           ],
@@ -2713,19 +2623,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Lt/Btl_DataCard1'.DataCardValue21.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard6'.DataCardValue35.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Lt/Btl_DataCard1'.DataCardValue21.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard6'.DataCardValue35.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Lt/Btl_DataCard1'.DataCardValue21"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.'Max Price_DataCard6'.DataCardValue35"
               }
             }
           ],
@@ -2743,49 +2653,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.MinuteValue1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.'Expiry Date_DataCard2'.DateValue2"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24"
               }
             }
           ],
@@ -2977,36 +2857,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
         },
         {
           "locations": [
