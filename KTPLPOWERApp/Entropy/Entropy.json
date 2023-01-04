@@ -157,7 +157,6 @@
     "Group1": 220,
     "Header Label_1": 119,
     "Header Label_2": 222,
-    "Header_1": 219,
     "Home Screen": 26,
     "Home_Icon_1": 223,
     "HourValue1": 77,
@@ -200,7 +199,7 @@
     "Leftborder": 121,
     "Litres_lbl": 180,
     "Litres_Value": 189,
-    "Logo_1": 122,
+    "Logo_1": 300,
     "Lt/Btl_DataCard1": 290,
     "Lt/Btl_DataCard2": 81,
     "Max Price (ntz_maxprice)_DataCard1": 86,
@@ -303,7 +302,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/04/2023 06:23:28",
+  "HeaderLastSavedDateTimeUTC": "01/04/2023 06:27:19",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "592d4f51-6b18-4e5e-95a9-c6bfed89113c": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-0ee4e134-c547-4b27-a12b-bdcc348f4d25\"",
@@ -526,10 +525,6 @@
       "Variant_value": 4,
       "Varient_label": 17
     },
-    "Header_1": {
-      "Header Label_1": 1,
-      "Logo_1": 0
-    },
     "YearMonthPicker": {
       "btnSetYearMonth": 2,
       "ddMonth": 5,
@@ -714,7 +709,6 @@
     "Group1": {},
     "Header Label_1": {},
     "Header Label_2": {},
-    "Header_1": {},
     "Home Screen": {},
     "Home_Icon_1": {},
     "HourValue1": {},
@@ -1038,7 +1032,6 @@
     "Group1": 52,
     "Header Label_1": 6,
     "Header Label_2": 108,
-    "Header_1": 11,
     "Home Screen": 25,
     "Home_Icon_1": 109,
     "HourValue1": 227,
@@ -1216,7 +1209,7 @@
       "groupContainer": 1,
       "hostControl": 1,
       "icon": 12,
-      "image": 6,
+      "image": 7,
       "label": 135,
       "rectangle": 8,
       "screen": 4,
