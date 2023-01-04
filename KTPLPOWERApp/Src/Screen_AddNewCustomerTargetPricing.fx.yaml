@@ -493,11 +493,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         DefaultMode: =FormMode.New
         Height: =202
         OnSuccess: |-
-            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));ResetForm(Form5)
-            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            
+            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
+            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID));
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
             ResetForm(Form5);
-            Notify("File Uploaded Sucessfully");
+            Notify("File Uploaded Sucessfully",NotificationType.Error));
         Width: =762
         X: =8
         Y: =564
