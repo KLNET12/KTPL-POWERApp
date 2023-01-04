@@ -19,7 +19,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Height: =577
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
-        TemplateSize: =92
+        TemplateSize: =77
         Width: =466
         Y: =174
         ZIndex: =5
@@ -54,23 +54,14 @@ Screen_ViewCustomerTargetPricing As screen:
             ZIndex: =5
 
         Label8 As label:
-            Height: =45
+            Height: =48
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Created On'
-            Width: =168
+            Width: =143
             X: =202
             Y: =4
             ZIndex: =6
-
-        Label12_2 As label:
-            Height: =30
-            Size: =10
-            Text: =ThisItem.'Status Reason'
-            Width: =155
-            X: =1
-            Y: =52
-            ZIndex: =7
 
     Form2 As form:
         DataSource: ='Customer Target Pricing'
