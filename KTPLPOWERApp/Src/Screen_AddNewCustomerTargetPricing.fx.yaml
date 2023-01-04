@@ -496,9 +496,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSuccess: |-
             =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
             Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID));
-            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
+            //Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
             ResetForm(Form5);
-            Notify("File Uploaded Sucessfully",NotificationType.Error));
+            Notify("File Uploaded Sucessfully"));
         Width: =434
         X: =8
         Y: =601
@@ -599,7 +599,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =126
+                Height: =111
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -1016,6 +1016,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label7 As label:
         Height: =22
+        Size: =12
         Text: ="Expiry Date"
         Width: =280
         X: =1068
