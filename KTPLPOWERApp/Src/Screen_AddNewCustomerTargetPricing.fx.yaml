@@ -990,3 +990,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =263
         ZIndex: =52
 
+    Label8 As label:
+        Height: =62
+        OnSelect: =Navigate('Home Screen')
+        Text: =
+        Width: =264
+        Y: =1
+        ZIndex: =53
+
