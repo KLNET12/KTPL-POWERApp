@@ -8434,7 +8434,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Header Label_1",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14348,7 +14348,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label7",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14595,14 +14595,7 @@
         "Italic",
         "Underline",
         "Strikethrough",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "PaddingTop",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
@@ -14625,7 +14618,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label9",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14882,7 +14875,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Leftborder",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15639,7 +15632,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Logo_1",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19543,7 +19536,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rightborder",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27173,7 +27166,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Topborder",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
