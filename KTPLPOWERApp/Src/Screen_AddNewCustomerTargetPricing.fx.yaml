@@ -893,7 +893,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =28
             X: =1100
-            Y: =289
+            Y: =276
             ZIndex: =29
 
         Quantity_lbl As label:
