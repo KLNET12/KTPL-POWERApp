@@ -14348,7 +14348,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label7",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15632,7 +15632,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Logo_1",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19536,7 +19536,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rightborder",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

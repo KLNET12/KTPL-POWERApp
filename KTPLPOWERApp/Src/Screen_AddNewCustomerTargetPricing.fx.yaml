@@ -484,8 +484,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =20
         Text: ="*"
         Width: =26
-        X: =778
-        Y: =341
+        X: =804
+        Y: =276
         ZIndex: =35
 
     Form5 As form:
@@ -893,7 +893,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="*"
             Width: =28
             X: =1100
-            Y: =289
+            Y: =276
             ZIndex: =29
 
         Quantity_lbl As label:
@@ -915,8 +915,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingTop: =3
             Text: ="*"
             Width: =24
-            X: =641
-            Y: =283
+            X: =576
+            Y: =270
             ZIndex: =31
 
         Litres_Value As text:
