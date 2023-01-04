@@ -12,7 +12,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         SnapToColumns: =false
         Width: =1364
         X: =2
-        Y: =92
+        Y: =141
         ZIndex: =3
 
         "'Customer Lead Id_DataCard1' As typedDataCard.comboBoxEditCard":
@@ -196,7 +196,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TemplatePadding: =6
         TemplateSize: =84
         Width: =1366
-        Y: =396
+        Y: =453
         ZIndex: =4
 
         TextInput2 As text:
@@ -505,11 +505,11 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label4 As label:
         Color: =RGBA(255, 0, 0, 1)
         FontWeight: =FontWeight.Bold
-        Height: =25
+        Height: =20
         Text: ="*"
-        Width: =40
-        X: =799
-        Y: =257
+        Width: =26
+        X: =778
+        Y: =341
         ZIndex: =37
 
     Group1 As group:
@@ -523,19 +523,19 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayFields: =["Product_Description"]
             Height: =22
             Items: ='Product Details_V'
-            OnChange: |-
+            OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-            OnSelect: |-
+            OnSelect: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
             SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
             Size: =10
-            Width: =454
-            X: =12
-            Y: =280
+            Width: =486
+            X: =13
+            Y: =308
             ZIndex: =8
 
         "'Product _Code' As text":
@@ -543,9 +543,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =175
-            X: =258
-            Y: =324
+            Width: =187
+            X: =276
+            Y: =352
             ZIndex: =9
 
         ALC_value As text:
@@ -553,9 +553,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =175
-            X: =624
-            Y: =324
+            Width: =187
+            X: =668
+            Y: =352
             ZIndex: =10
 
         Carton_Quantity_vlaue As text:
@@ -563,9 +563,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =175
-            X: =803
-            Y: =324
+            Width: =187
+            X: =859
+            Y: =352
             ZIndex: =11
 
         Variant_value As text:
@@ -573,9 +573,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Size: =10
-            Width: =175
-            X: =987
-            Y: =324
+            Width: =187
+            X: =1056
+            Y: =352
             ZIndex: =12
 
         Decoded_CB As checkbox:
@@ -585,9 +585,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =73
-            X: =58
-            Y: =307
+            Width: =78
+            X: =62
+            Y: =335
             ZIndex: =13
 
         NonRefiil_CB As checkbox:
@@ -598,18 +598,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =Set(NonRefill,false)
             Size: =0
             Text: =NonRefill
-            Width: =69
-            X: =159
-            Y: =311
+            Width: =74
+            X: =170
+            Y: =339
             ZIndex: =14
 
         MinPrice_value As text:
             Default: =""
             Height: =22
             Size: =10
-            Width: =207
-            X: =480
-            Y: =280
+            Width: =221
+            X: =514
+            Y: =308
             ZIndex: =15
 
         MaxPrice_value As text:
@@ -617,9 +617,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             OnChange: =
             Size: =10
-            Width: =216
-            X: =693
-            Y: =280
+            Width: =231
+            X: =741
+            Y: =308
             ZIndex: =16
 
         Currency_value As text:
@@ -628,18 +628,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Lighter
             Height: =22
             Size: =10
-            Width: =173
-            X: =914
-            Y: =280
+            Width: =185
+            X: =978
+            Y: =308
             ZIndex: =17
 
         Quantity_value As text:
             Default: =""
             Height: =22
             Size: =10
-            Width: =173
-            X: =1092
-            Y: =279
+            Width: =185
+            X: =1166
+            Y: =308
             ZIndex: =18
 
         Add_Icon As icon.Add:
@@ -647,19 +647,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
-            Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),true,false)
-            Width: =69
-            X: =1193
-            Y: =325
+            Width: =74
+            X: =1276
+            Y: =353
             ZIndex: =19
 
         Prodcut_lbl As label:
             Height: =30
             Size: =10
             Text: ="Product"
-            Width: =454
-            X: =12
-            Y: =254
+            Width: =486
+            X: =13
+            Y: =282
             ZIndex: =20
 
         Label4_26 As label:
@@ -667,90 +666,90 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =32
             Text: ="*"
-            Width: =38
-            X: =112
-            Y: =245
+            Width: =41
+            X: =120
+            Y: =273
             ZIndex: =21
 
         Productcode_lbl As label:
             Height: =18
             Size: =10
             Text: ="Product Code"
-            Width: =196
-            X: =292
-            Y: =307
+            Width: =210
+            X: =312
+            Y: =335
             ZIndex: =22
 
         ALC_lbl As label:
             Height: =18
             Size: =10
             Text: ="Alc %"
-            Width: =109
-            X: =613
-            Y: =304
+            Width: =117
+            X: =656
+            Y: =332
             ZIndex: =23
 
         CQ_Label As label:
             Height: =18
             Size: =10
             Text: ="Carton Quantity"
-            Width: =208
-            X: =805
-            Y: =307
+            Width: =222
+            X: =861
+            Y: =335
             ZIndex: =24
 
         Varient_label As label:
             Height: =18
             Size: =10
             Text: ="Varient"
-            Width: =200
-            X: =1024
-            Y: =307
+            Width: =214
+            X: =1095
+            Y: =335
             ZIndex: =25
 
         Decoded_Lbl As label:
             Height: =18
             Size: =10
             Text: ="De-Coded"
-            Width: =115
-            X: =44
-            Y: =306
+            Width: =123
+            X: =47
+            Y: =334
             ZIndex: =26
 
         "'Non-refill_lbl' As label":
             Height: =18
             Size: =10
             Text: ="Non-Refill"
-            Width: =158
-            X: =159
-            Y: =307
+            Width: =169
+            X: =170
+            Y: =335
             ZIndex: =27
 
         MinPrice_lbl As label:
             Height: =24
             Size: =10
             Text: ="Min Price"
-            Width: =216
-            X: =480
-            Y: =260
+            Width: =231
+            X: =514
+            Y: =288
             ZIndex: =28
 
         Maxprice_lbl As label:
             Height: =32
             Size: =10
             Text: =" Max Price"
-            Width: =215
-            X: =686
-            Y: =256
+            Width: =230
+            X: =734
+            Y: =284
             ZIndex: =29
 
         Currency_lbl As label:
             Height: =14
             Size: =10
             Text: ="Currency"
-            Width: =216
-            X: =911
-            Y: =265
+            Width: =231
+            X: =975
+            Y: =293
             ZIndex: =30
 
         Label4_36 As label:
@@ -758,18 +757,18 @@ Screen_AddNewCustomerTargetPricing As screen:
             FontWeight: =FontWeight.Bold
             Height: =20
             Text: ="*"
-            Width: =26
-            X: =1028
-            Y: =261
+            Width: =28
+            X: =1100
+            Y: =289
             ZIndex: =31
 
         Quantity_lbl As label:
             Height: =15
             Size: =10
             Text: ="Quantity"
-            Width: =163
-            X: =1087
-            Y: =265
+            Width: =174
+            X: =1163
+            Y: =293
             ZIndex: =32
 
         Label4_38 As label:
@@ -781,27 +780,27 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingRight: =4
             PaddingTop: =3
             Text: ="*"
-            Width: =22
-            X: =599
-            Y: =255
+            Width: =24
+            X: =641
+            Y: =283
             ZIndex: =33
 
         Litres_Value As text:
             Default: =ProductList_CB.Selected.Product_Net_Volume
             DisplayMode: =DisplayMode.Disabled
             Height: =22
-            Width: =175
-            X: =436
-            Y: =324
+            Width: =187
+            X: =466
+            Y: =352
             ZIndex: =34
 
         Litres_lbl As label:
             Height: =18
             Size: =10
             Text: ="Lt/Btl"
-            Width: =161
-            X: =450
-            Y: =306
+            Width: =172
+            X: =481
+            Y: =334
             ZIndex: =35
 
     Form5 As form:
@@ -993,11 +992,11 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label10 As label:
         Color: =RGBA(255, 0, 0, 1)
-        Height: =46
+        Height: =21
         Text: ="Fill the required fields"
-        Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),false,true)
+        Visible: =If(!IsBlank(ProductList_CB)||!IsBlank(MinPrice_value)|| !IsBlank(MaxPrice_value) || !IsBlank(Currency_value),true,false)
         Width: =272
-        X: =815
-        Y: =346
+        X: =660
+        Y: =380
         ZIndex: =50
 
