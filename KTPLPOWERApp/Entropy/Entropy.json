@@ -306,7 +306,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/04/2023 11:00:43",
+  "HeaderLastSavedDateTimeUTC": "01/04/2023 11:18:02",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "592d4f51-6b18-4e5e-95a9-c6bfed89113c": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-0ee4e134-c547-4b27-a12b-bdcc348f4d25\"",
@@ -1229,7 +1229,7 @@
       "typedDataCard": 32
     },
     "DeserializationLoadTime": 5.6434304,
-    "ErrorCount": 3
+    "ErrorCount": 1
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
