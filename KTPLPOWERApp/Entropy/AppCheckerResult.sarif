@@ -2893,36 +2893,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.errormsg"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.errormsg",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "errormsg",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.Bacardi-hpb"
                 }
               ],

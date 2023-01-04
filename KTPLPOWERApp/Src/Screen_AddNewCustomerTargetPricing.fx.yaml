@@ -523,14 +523,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayFields: =["Product_Description"]
             Height: =22
             Items: ='Product Details_V'
-            OnChange: |-
+            OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-                If(IsBlank(ProductList_CB),Set(errormsg,false),Set(errormsg,true));
-            OnSelect: |-
+            OnSelect: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-                If(IsBlank(ProductList_CB),Set(errormsg,false),Set(errormsg,true));
             SearchFields: =["Product_Description","Product_Code"]
             SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
@@ -996,7 +994,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Color: =RGBA(255, 0, 0, 1)
         Height: =21
         Text: ="Fill the required fields"
-        Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),false,true)
+        Visible: =If(!IsBlank(ProductList_CB)||!IsBlank(MinPrice_value)|| !IsBlank(MaxPrice_value) || !IsBlank(Currency_value),true,false)
         Width: =272
         X: =660
         Y: =380
