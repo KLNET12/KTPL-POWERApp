@@ -2504,19 +2504,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Dropdown1"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.Barcode_DataCard1.DataCardValue19"
               }
             }
           ],
