@@ -765,7 +765,7 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Dropdown1 As dropdown:
         Items: =["New To Old","Old To New"]
-        X: =138
-        Y: =134
+        X: =786
+        Y: =492
         ZIndex: =16
 
