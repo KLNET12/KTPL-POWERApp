@@ -77,7 +77,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ABV_DataCard1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -224,7 +224,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Barcode_DataCard1",
-      "ParentIndex": 1,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -371,7 +371,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Bottle_DataCard1",
-      "ParentIndex": 9,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -526,7 +526,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Btl/Ctn_DataCard1",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9041,7 +9041,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Description_DataCard2",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12847,7 +12847,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Expiry Date_DataCard2",
-      "ParentIndex": 3,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13614,7 +13614,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Icon_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14198,7 +14198,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image5",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14442,7 +14442,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Item No_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15188,7 +15188,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Lt/Btl_DataCard1",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15362,7 +15362,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Max Price_DataCard1",
-      "ParentIndex": 8,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15522,7 +15522,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Min Price_DataCard1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16045,7 +16045,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Quantity_DataCard1",
-      "ParentIndex": 2,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
