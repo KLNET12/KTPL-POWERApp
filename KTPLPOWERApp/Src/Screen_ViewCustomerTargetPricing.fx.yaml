@@ -67,12 +67,12 @@ Screen_ViewCustomerTargetPricing As screen:
     Form2 As form:
         DataSource: ='Customer Target Pricing'
         DefaultMode: =If(IsEdit,FormMode.Edit,FormMode.View)
-        Height: =629
+        Height: =594
         Item: =Gallery2.Selected
         OnSuccess: =NewForm(Form2);
-        Width: =885
-        X: =469
-        Y: =139
+        Width: =868
+        X: =477
+        Y: =169
         ZIndex: =6
 
         "'Customer Lead Id_DataCard2' As typedDataCard.comboBoxEditCard":
@@ -85,7 +85,7 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =82
             Required: =false
             Update: =
-            Width: =299
+            Width: =289
             X: =0
             Y: =0
             ZIndex: =1
@@ -147,7 +147,7 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_product")
             Required: =false
             Update: =DataCardValue15.Text
-            Width: =299
+            Width: =289
             X: =1
             Y: =0
             ZIndex: =1
@@ -217,9 +217,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue20.Selected.Value
-            Width: =299
-            X: =2
-            Y: =1
+            Width: =296
+            X: =0
+            Y: =3
             ZIndex: =1
 
             DataCardKey22 As label:
@@ -288,8 +288,8 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_customermaxprice")
             Required: =false
             Update: =DataCardValue22.Text
-            Width: =299
-            X: =0
+            Width: =289
+            X: =2
             Y: =2
             ZIndex: =1
 
@@ -359,7 +359,7 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_cartonquantity")
             Required: =false
             Update: =DataCardValue17.Text
-            Width: =299
+            Width: =289
             X: =1
             Y: =2
             ZIndex: =1
@@ -429,8 +429,8 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =53
             Required: =false
             Update: =Value(DataCardValue18.Text)
-            Width: =299
-            X: =2
+            Width: =289
+            X: =0
             Y: =2
             ZIndex: =1
 
@@ -500,9 +500,9 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_productcode")
             Required: =false
             Update: =DataCardValue16.Text
-            Width: =299
+            Width: =289
             X: =0
-            Y: =3
+            Y: =1
             ZIndex: =1
 
             DataCardKey18 As label:
@@ -570,9 +570,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =64
             Required: =false
             Update: =DataCardValue19.Selected.Value
-            Width: =299
+            Width: =289
             X: =1
-            Y: =3
+            Y: =1
             ZIndex: =1
 
             DataCardKey21 As label:
@@ -582,8 +582,8 @@ Screen_ViewCustomerTargetPricing As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =21
-                Y: =5
+                X: =9
+                Y: =11
                 ZIndex: =1
 
             DataCardValue19 As combobox:
@@ -640,9 +640,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =56
             Required: =false
             Update: =Value(DataCardValue26.Text)
-            Width: =299
+            Width: =289
             X: =2
-            Y: =3
+            Y: =1
             ZIndex: =1
 
             DataCardKey31 As label:
@@ -711,9 +711,9 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_customerminprice")
             Required: =false
             Update: =DataCardValue23.Text
-            Width: =299
-            X: =2
-            Y: =0
+            Width: =289
+            X: =1
+            Y: =3
             ZIndex: =1
 
             DataCardKey25 As label:
@@ -782,9 +782,9 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_litres")
             Required: =false
             Update: =DataCardValue21.Text
-            Width: =299
-            X: =0
-            Y: =1
+            Width: =283
+            X: =2
+            Y: =3
             ZIndex: =1
 
             DataCardKey23 As label:
@@ -852,9 +852,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =60
             Required: =false
             Update: =DateValue2.SelectedDate
-            Width: =299
-            X: =1
-            Y: =1
+            Width: =289
+            X: =2
+            Y: =0
             ZIndex: =1
 
             DataCardKey16 As label:
