@@ -769,3 +769,10 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =492
         ZIndex: =16
 
+    Icon4 As icon.ArrowsUpDown:
+        Icon: =Icon.Sort
+        OnSelect: =
+        X: =318
+        Y: =122
+        ZIndex: =17
+
