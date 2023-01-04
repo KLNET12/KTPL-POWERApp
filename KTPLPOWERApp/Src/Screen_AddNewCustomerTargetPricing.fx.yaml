@@ -526,11 +526,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnChange: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-                Set(errormsg,true);
+                If(IsBlank(ProductList_CB),Set(errormsg,false),Set(errormsg,true));
             OnSelect: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-                Set(errormsg,true);
+                If(IsBlank(ProductList_CB),Set(errormsg,false),Set(errormsg,true));
             SearchFields: =["Product_Description","Product_Code"]
             SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
@@ -649,7 +649,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
-            Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),true,false)
             Width: =69
             X: =1193
             Y: =325
@@ -996,8 +995,8 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label10 As label:
         Color: =RGBA(255, 0, 0, 1)
         Height: =46
-        Text: ="Fill the required fields"
-        Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),false,true)
+        Text: =If(errormsg=true,"Fill the required fields",false)
+        Visible: =If(errormsg = true,true,false)
         Width: =272
         X: =808
         Y: =346
