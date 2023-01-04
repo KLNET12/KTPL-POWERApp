@@ -8,13 +8,13 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     "'Header Label_1' As label":
         FontWeight: =FontWeight.Bold
-        Height: =84
+        Height: =66
         PaddingBottom: =50
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =18
         Text: ="            Customer Target Pricing"
-        Width: =964
+        Width: =478
         X: =402
         ZIndex: =1
 
@@ -973,8 +973,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =148
         Visible: =showDate
         Width: =315
-        X: =907
-        Y: =63
+        X: =1025
+        Y: =66
         ZIndex: =42
 
     Label10 As label:
@@ -992,33 +992,32 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =49
         OnSelect: =Set(showDate,true)
         Width: =272
-        X: =946
-        Y: =35
+        X: =1068
+        Y: =34
         ZIndex: =44
 
     Logo_1 As image:
         DisplayMode: =DisplayMode.View
-        Height: =106
+        Height: =66
         Image: =Kollaras_and_Co
         OnSelect: =Navigate('Home Screen',ScreenTransition.Cover)
         PaddingRight: =0.00
         PaddingTop: =0.00
-        Width: =276
+        Width: =232
         ZIndex: =45
 
     Label9 As label:
-        Height: =106
+        Height: =66
         OnSelect: =Navigate('Home Screen')
         PaddingTop: =0
         Text: =""
-        Width: =276
+        Width: =244
         ZIndex: =46
 
     Label7 As label:
         Height: =34
         Text: ="Expiry Date"
         Width: =304
-        X: =952
-        Y: =1
+        X: =1056
         ZIndex: =47
 
