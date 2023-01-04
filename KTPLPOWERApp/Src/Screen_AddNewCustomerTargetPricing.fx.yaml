@@ -984,9 +984,10 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =47
 
     BottomBorder As rectangle:
-        Height: =0
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =1
         Width: =1360
-        Y: =748
+        Y: =768
         ZIndex: =48
 
     CustomCalendar_1 As CustomCalendar:
