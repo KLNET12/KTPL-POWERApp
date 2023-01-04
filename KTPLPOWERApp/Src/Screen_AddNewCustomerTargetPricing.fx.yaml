@@ -991,9 +991,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Default: =DateValue(_dateSelected)
         Height: =49
         OnSelect: =Set(showDate,true)
-        Width: =272
-        X: =1068
-        Y: =34
+        Width: =280
+        X: =1071
+        Y: =22
         ZIndex: =44
 
     Logo_1 As image:
@@ -1015,9 +1015,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =46
 
     Label7 As label:
-        Height: =34
+        Height: =22
         Text: ="Expiry Date"
-        Width: =304
-        X: =1056
+        Width: =280
+        X: =1068
         ZIndex: =47
 
