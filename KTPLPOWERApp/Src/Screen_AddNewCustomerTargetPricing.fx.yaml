@@ -170,23 +170,25 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         Logo_1 As image:
             DisplayMode: =DisplayMode.View
-            Height: =94
+            Height: =70
             Image: =Kollaras_and_Co
+            OnSelect: =Navigate('Home Screen')
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =325
-            X: =12
+            Width: =247
+            X: =1
+            Y: =1
             ZIndex: =1
 
         "'Header Label_1' As label":
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Height: =94
+            Height: =130
             PaddingRight: =5.00
             PaddingTop: =5.00
             Size: =26
-            Text: ="                   Customer Target Pricing"
-            Width: =1350
+            Text: ="Customer Target Pricing"
+            Width: =1366
             ZIndex: =2
 
     Gallery1 As gallery.variableTemplateHeightGallery:
@@ -481,15 +483,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =1058
         Y: =540
         ZIndex: =6
-
-    Home_Icon As icon.ArrowLeft:
-        Height: =73
-        Icon: =Icon.Home
-        OnSelect: =Navigate('Home Screen')
-        Width: =79
-        X: =1256
-        Y: =2
-        ZIndex: =7
 
     Label3 As label:
         Color: =RGBA(172, 62, 11, 1)
@@ -999,4 +992,10 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =660
         Y: =380
         ZIndex: =50
+
+    TextInput8 As text:
+        Default: ="Text input"
+        X: =972
+        Y: =45
+        ZIndex: =51
 
