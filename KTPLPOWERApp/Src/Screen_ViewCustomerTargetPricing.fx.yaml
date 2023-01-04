@@ -17,7 +17,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
         Height: =577
-        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),"createdon",If(Dropdown1.Selected.Value="New To Old",Descending,Ascending))
+        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =92
         Width: =466
