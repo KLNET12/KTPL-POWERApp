@@ -40,7 +40,7 @@ Screen_ViewCustomerTargetPricing As screen:
             OnSelect: |
                 =ViewForm(Form2);Set(IsEdit,false);
             Width: =25
-            X: =370
+            X: =345
             Y: =17
             ZIndex: =4
 
@@ -49,21 +49,23 @@ Screen_ViewCustomerTargetPricing As screen:
             Icon: =Icon.Edit
             OnSelect: =Set(IsEdit,true)
             Width: =25
-            X: =405
+            X: =380
             Y: =18
             ZIndex: =5
 
         Label8 As label:
             Height: =45
             OnSelect: =Select(Parent)
+            Size: =10
             Text: =ThisItem.'Created On'
             Width: =168
             X: =202
-            Y: =2
+            Y: =4
             ZIndex: =6
 
         Label12_2 As label:
             Height: =30
+            Size: =10
             Text: =ThisItem.'Status Reason'
             Width: =155
             X: =1
@@ -1110,6 +1112,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Button4 As button:
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive})
+        Size: =10
         Text: ="Activate"
         Width: =250
         X: =490
@@ -1119,6 +1122,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Button5 As button:
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
+        Size: =10
         Text: ="Deactive"
         Width: =250
         X: =765
@@ -1143,7 +1147,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Size: =12
         Text: ="Createdon"
         Width: =134
-        X: =235
+        X: =220
         Y: =143
         ZIndex: =18
 
