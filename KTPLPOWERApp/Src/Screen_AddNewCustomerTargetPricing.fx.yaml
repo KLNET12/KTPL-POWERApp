@@ -186,7 +186,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         TextInput2 As text:
             BorderThickness: =1
-            Default: =ThisItem.'Product Description'
+            Default: =ThisItem.'ProductDescription'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
@@ -198,7 +198,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         TextInput5 As text:
             BorderThickness: =1
-            Default: =ThisItem.'Product Code'
+            Default: =ThisItem.'ProductCode'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
@@ -210,7 +210,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         TextInput12 As text:
             BorderThickness: =1
-            Default: =ThisItem.'Customer Min Price'
+            Default: =ThisItem.'CustomerMinPrice'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
@@ -222,7 +222,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         TextInput13 As text:
             BorderThickness: =1
-            Default: =ThisItem.'Customer Max Price'
+            Default: =ThisItem.'CustomerMaxPrice'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
@@ -246,7 +246,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         TextInput15 As text:
             BorderThickness: =1
-            Default: =ThisItem.'Qty Required'
+            Default: =ThisItem.'QtyRequired'
             DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
@@ -456,15 +456,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             
             If(MinPrice_value.Text="",Notify("Min price is Required",NotificationType.Error),If(IsBlank(MaxPrice_value.Text),Notify("Max price is Required",NotificationType.Error),
             If(Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),
-            
-            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).'Product Description','Item No':Last(FirstN(Products,Value)).'Product Code','Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).'Customer Min Price'),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).'Customer Max Price'),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).'Qty Required'),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record submision sucessfull",NotificationType.Success)))));
+            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).'ProductDescription','Item No':Last(FirstN(Products,Value)).'ProductCode','Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).'CustomerMinPrice'),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).'CustomerMaxPrice'),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).'QtyRequired'),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record submision sucessfull",NotificationType.Success)))));
             
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false );
         Text: ="Save"
         Width: =292
-        X: =1058
-        Y: =540
+        X: =1048
+        Y: =645
         ZIndex: =5
 
     Label3 As label:
@@ -495,10 +494,10 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =151
         OnSuccess: |-
             =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
-            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID));
-            //Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
+            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
             ResetForm(Form5);
-            Notify("File Uploaded Sucessfully"));
+            Notify("File Uploaded Sucessfully");
         Width: =434
         X: =8
         Y: =601
@@ -787,7 +786,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
+                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'ProductDescription':ProductList_CB.Selected.Product_Description,'ProductCode':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'CustomerMinPrice':MinPrice_value.Text,'CustomerMaxPrice':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'QtyRequired':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
             Width: =74
             X: =1276
             Y: =353
