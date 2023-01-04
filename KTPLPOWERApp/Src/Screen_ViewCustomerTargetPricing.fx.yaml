@@ -768,7 +768,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =30
-                Y: =34
+                Y: =36
                 ZIndex: =2
 
             ErrorMessage23 As label:
@@ -906,7 +906,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =28
-                Y: =35
+                Y: =33
                 ZIndex: =2
 
             ErrorMessage39 As label:
@@ -1073,6 +1073,75 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =DataCardKey26.Y
                 ZIndex: =4
 
+        Status_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="statecode"
+            Default: =ThisItem.Status
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"statecode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue20.Selected.Value
+            Width: =292
+            X: =2
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey23 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =33
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue20 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Status (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =25
+                Y: =35
+                ZIndex: =2
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue20.Y + DataCardValue20.Height
+                ZIndex: =3
+
+            StarVisible21 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23.Y
+                ZIndex: =4
+
     Button1 As button:
         OnSelect: =SubmitForm(Form2);
         Text: ="Submit"
@@ -1142,10 +1211,12 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =143
         ZIndex: =18
 
-    Label13 As label:
-        OnSelect: ="createdon"
-        Text: ='Status Reason (Customer Target Pricing)'.Active
-        X: =1195
-        Y: =592
-        ZIndex: =20
+    Label12_2 As label:
+        Height: =30
+        Size: =10
+        Text: =ThisItem.'Status Reason'
+        Width: =155
+        X: =525
+        Y: =560
+        ZIndex: =21
 
