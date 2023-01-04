@@ -993,7 +993,11 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =17
 
     Label11 As label:
+        Color: =RGBA(50, 86, 160, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
         Text: ="CreatedOn"
+        Width: =122
         X: =205
         Y: =137
         ZIndex: =18
