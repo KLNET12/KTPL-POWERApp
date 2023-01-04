@@ -2614,19 +2614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24"
               }
             }
           ],
@@ -2644,19 +2644,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Form2.Variant_DataCard3.DataCardValue24"
+                "type": "Screen_ViewCustomerTargetPricing.Form2.ABV_DataCard1.DataCardValue18"
               }
             }
           ],
