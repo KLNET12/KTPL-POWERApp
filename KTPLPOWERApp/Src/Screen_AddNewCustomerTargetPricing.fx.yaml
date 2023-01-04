@@ -177,7 +177,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =8
 
     Gallery1 As gallery.variableTemplateHeightGallery:
-        Height: =252
+        Height: =199
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =6
@@ -494,16 +494,16 @@ Screen_AddNewCustomerTargetPricing As screen:
     Form5 As form:
         DataSource: ='Customer Target Pricing Deploy List'
         DefaultMode: =FormMode.New
-        Height: =202
+        Height: =151
         OnSuccess: |-
             =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
             Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID));
             Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"))
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully",NotificationType.Error));
-        Width: =762
+        Width: =434
         X: =8
-        Y: =564
+        Y: =601
         ZIndex: =36
 
         Title_DataCard1 As typedDataCard.textualEditCard:
@@ -518,7 +518,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Required: =true
             Update: =DataCardValue32.Text
             Visible: =false
-            Width: =254
+            Width: =144
             X: =0
             Y: =0
             ZIndex: =48
@@ -582,28 +582,26 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =112
+            Height: =194
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =254
+            Width: =288
             X: =1
             Y: =0
             ZIndex: =48
 
             DataCardKey38 As label:
-                AutoHeight: =true
-                Height: =34
+                Height: =24
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =17
                 ZIndex: =1
 
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =126
+                Height: =111
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -611,9 +609,9 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =21
+                Width: =225
+                X: =17
+                Y: =26
                 ZIndex: =2
 
             ErrorMessage35 As label:
@@ -642,10 +640,12 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =4
 
     Upload_button As button:
+        Height: =35
         OnSelect: =SubmitForm(Form5);
         Text: ="Upload"
-        X: =264
-        Y: =631
+        Width: =130
+        X: =276
+        Y: =702
         ZIndex: =37
 
     Topborder As rectangle:

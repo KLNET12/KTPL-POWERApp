@@ -14,20 +14,10 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =2
         ZIndex: =2
 
-    Home_Icon_1 As icon.ArrowLeft:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =54
-        Icon: =Icon.Home
-        OnSelect: =Navigate('Home Screen')
-        Width: =57
-        X: =1192
-        Y: =41
-        ZIndex: =4
-
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
         Height: =577
-        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),"createdon",If(Dropdown1.Selected.Value="New To Old",Descending,Ascending))
+        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =92
         Width: =466
@@ -333,13 +323,13 @@ Screen_ViewCustomerTargetPricing As screen:
 
             DataCardKey18 As label:
                 FontWeight: =FontWeight.Semibold
-                Height: =31
+                Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =5
+                X: =25
+                Y: =11
                 ZIndex: =1
 
             DataCardValue16 As text:
@@ -403,12 +393,13 @@ Screen_ViewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey32 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =20
+                X: =10
                 Y: =10
                 ZIndex: =1
 
@@ -426,8 +417,8 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =20
-                Y: =27
+                X: =14
+                Y: =29
                 ZIndex: =2
 
             ErrorMessage29 As label:
@@ -471,12 +462,13 @@ Screen_ViewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey20 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =17
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =25
                 Y: =10
                 ZIndex: =1
 
@@ -534,18 +526,19 @@ Screen_ViewCustomerTargetPricing As screen:
             Required: =false
             Update: =Value(DataCardValue26.Text)
             Width: =292
-            X: =0
-            Y: =2
+            X: =1
+            Y: =3
             ZIndex: =1
 
             DataCardKey33 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =18
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =13
+                X: =8
+                Y: =18
                 ZIndex: =1
 
             DataCardValue26 As text:
@@ -554,7 +547,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =26
+                Height: =22
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -562,7 +555,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =30
+                X: =14
                 Y: =35
                 ZIndex: =2
 
@@ -602,18 +595,19 @@ Screen_ViewCustomerTargetPricing As screen:
             Required: =false
             Update: =Value(DataCardValue35.Text)
             Width: =292
-            X: =1
-            Y: =2
+            X: =2
+            Y: =3
             ZIndex: =1
 
             DataCardKey42 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =13
+                X: =22
+                Y: =17
                 ZIndex: =1
 
             DataCardValue35 As text:
@@ -630,8 +624,8 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =30
-                Y: =DataCardKey42.Y + DataCardKey42.Height + 5
+                X: =28
+                Y: =35
                 ZIndex: =2
 
             ErrorMessage39 As label:
@@ -670,18 +664,19 @@ Screen_ViewCustomerTargetPricing As screen:
             Required: =false
             Update: =Value(DataCardValue14.Text)
             Width: =292
-            X: =2
-            Y: =2
+            X: =0
+            Y: =4
             ZIndex: =1
 
             DataCardKey19 As label:
                 AutoHeight: =true
-                Height: =34
+                FontWeight: =FontWeight.Semibold
+                Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =25
                 Y: =10
                 ZIndex: =1
 
@@ -700,7 +695,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =30
-                Y: =39
+                Y: =34
                 ZIndex: =2
 
             ErrorMessage17 As label:
@@ -741,17 +736,18 @@ Screen_ViewCustomerTargetPricing As screen:
             Update: =DataCardValue17.Text
             Width: =292
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =1
 
             DataCardKey21 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =24
                 Y: =10
                 ZIndex: =1
 
@@ -759,7 +755,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -770,7 +766,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =30
-                Y: =44
+                Y: =34
                 ZIndex: =2
 
             ErrorMessage19 As label:
@@ -809,18 +805,19 @@ Screen_ViewCustomerTargetPricing As screen:
             Required: =false
             Update: =DataCardValue21.Selected.Value
             Width: =292
-            X: =1
-            Y: =3
+            X: =2
+            Y: =2
             ZIndex: =1
 
             DataCardKey24 As label:
                 AutoHeight: =true
-                Height: =34
+                FontWeight: =FontWeight.Semibold
+                Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =22
                 Y: =10
                 ZIndex: =1
 
@@ -828,7 +825,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =22
                 IsSearchable: =false
                 Items: =Choices('Bottle (Customer Target Pricing)')
@@ -838,8 +835,8 @@ Screen_ViewCustomerTargetPricing As screen:
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =35
-                Y: =42
+                X: =28
+                Y: =34
                 ZIndex: =2
 
             ErrorMessage22 As label:
@@ -879,18 +876,19 @@ Screen_ViewCustomerTargetPricing As screen:
             Required: =false
             Update: =DataCardValue22.Text
             Width: =292
-            X: =2
+            X: =0
             Y: =3
             ZIndex: =1
 
             DataCardKey25 As label:
                 AutoHeight: =true
-                Height: =34
+                FontWeight: =FontWeight.Semibold
+                Height: =18
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =25
                 Y: =10
                 ZIndex: =1
 
@@ -898,7 +896,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -909,7 +907,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =30
-                Y: =40
+                Y: =34
                 ZIndex: =2
 
             ErrorMessage23 As label:
@@ -937,6 +935,74 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =DataCardKey25.Y
                 ZIndex: =4
 
+        Barcode_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_decoded"
+            Default: =ThisItem.Barcode
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_decoded")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue19.Selected.Value
+            Width: =292
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey22 As label:
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =8
+                Y: =14
+                ZIndex: =1
+
+            DataCardValue19 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Disabled
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Barcode (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =13
+                Y: =33
+                ZIndex: =2
+
+            ErrorMessage20 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue19.Y + DataCardValue19.Height
+                ZIndex: =3
+
+            StarVisible20 As label:
+                Align: =Align.Center
+                Height: =DataCardKey22.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey22.Y
+                ZIndex: =4
+
     Button1 As button:
         OnSelect: =SubmitForm(Form2);
         Text: ="Submit"
@@ -948,14 +1014,15 @@ Screen_ViewCustomerTargetPricing As screen:
     Image5 As image:
         Height: =90
         Image: =OIP
+        OnSelect: =Navigate('Home Screen')
         Width: =290
-        Y: =44
+        Y: =2
         ZIndex: =11
 
     Label6 As label:
-        Color: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(109, 49, 162, 1)
         FontWeight: =FontWeight.Semibold
-        Size: =15
+        Size: =12
         Text: ="Name"
         Width: =122
         X: =16
@@ -963,42 +1030,38 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =12
 
     Button4 As button:
-        Text: ="Active"
+        OnSelect: =
+        Text: ="Activate"
         X: =644
-        Y: =625
+        Y: =688
         ZIndex: =13
 
     Button5 As button:
-        OnSelect: =Disabled
+        OnSelect: =Set(IsEdit,false);
         Text: ="Deactive"
-        X: =880
-        Y: =625
+        X: =890
+        Y: =688
         ZIndex: =14
-
-    Dropdown1 As dropdown:
-        Items: =["New To Old","Old To New"]
-        X: =786
-        Y: =492
-        ZIndex: =16
 
     Icon5 As icon.ArrowsUpDown:
         Color: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =34
-        Icon: =Icon.Sort
-        OnSelect: =
+        Height: =18
+        Icon: =If(varSortColumn <> "createdon",Icon.Sort,If(varSortDirection=Ascending,Icon.ArrowUp,Icon.ArrowDown))
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =326
-        Y: =140
+        X: =354
+        Y: =143
         ZIndex: =17
 
     Label11 As label:
-        Color: =RGBA(50, 86, 160, 1)
+        Color: =RGBA(109, 49, 162, 1)
         FontWeight: =FontWeight.Semibold
-        Size: =15
-        Text: ="CreatedOn"
-        Width: =122
-        X: =205
-        Y: =137
+        Height: =44
+        Size: =12
+        Text: ="Createdon"
+        Width: =134
+        X: =232
+        Y: =130
         ZIndex: =18
 
