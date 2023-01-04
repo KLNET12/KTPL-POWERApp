@@ -994,7 +994,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Color: =RGBA(255, 0, 0, 1)
         Height: =21
         Text: ="Fill the required fields"
-        Visible: =If(!IsBlank(ProductList_CB)||!IsBlank(MinPrice_value)|| !IsBlank(MaxPrice_value) || !IsBlank(Currency_value),true,false)
+        Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||!IsBlank(MinPrice_value)|| !IsBlank(MaxPrice_value) || !IsBlank(Currency_value),true,false)
         Width: =272
         X: =660
         Y: =380
