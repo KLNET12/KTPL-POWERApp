@@ -985,15 +985,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =45
         ZIndex: =44
 
-    Label9 As label:
-        Height: =83
-        OnSelect: =Navigate('Home Screen')
-        Text: =""
-        Width: =255
-        X: =2
-        Y: =23
-        ZIndex: =45
-
     Logo_1 As image:
         DisplayMode: =DisplayMode.View
         Height: =84
@@ -1003,6 +994,15 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =0.00
         Width: =263
         Y: =18
+        ZIndex: =45
+
+    Label9 As label:
+        Height: =83
+        OnSelect: =Navigate('Home Screen')
+        Text: =""
+        Width: =255
+        X: =2
+        Y: =23
         ZIndex: =46
 
     Label7 As label:
