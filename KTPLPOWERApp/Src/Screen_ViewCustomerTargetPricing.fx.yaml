@@ -8,10 +8,7 @@ Screen_ViewCustomerTargetPricing As screen:
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =24
-        Text: |-
-            ="                   Customer
-                                 Target 
-                                 Pricing"
+        Text: ="Customer Target Pricing"
         Width: =1366
         X: =0.00
         Y: =2
@@ -23,7 +20,8 @@ Screen_ViewCustomerTargetPricing As screen:
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
         Width: =57
-        Y: =2
+        X: =1192
+        Y: =41
         ZIndex: =4
 
     Gallery2 As gallery.variableTemplateHeightGallery:
@@ -186,7 +184,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Size: =10
                 Tooltip: =Parent.DisplayName
-                Width: =245
+                Width: =250
                 X: =13
                 Y: =30
                 ZIndex: =2
@@ -409,7 +407,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =10
                 Y: =13
                 ZIndex: =1
 
@@ -427,9 +425,9 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Size: =10
                 Tooltip: =Parent.DisplayName
-                Width: =245
-                X: =30
-                Y: =30
+                Width: =250
+                X: =13
+                Y: =29
                 ZIndex: =2
 
             ErrorMessage18 As label:
@@ -475,10 +473,11 @@ Screen_ViewCustomerTargetPricing As screen:
 
             DataCardKey32 As label:
                 Height: =19
+                Size: =12
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =20
                 Y: =10
                 ZIndex: =1
 
@@ -496,8 +495,8 @@ Screen_ViewCustomerTargetPricing As screen:
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =30
-                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
+                X: =20
+                Y: =27
                 ZIndex: =2
 
             ErrorMessage29 As label:
@@ -541,13 +540,12 @@ Screen_ViewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey33 As label:
-                AutoHeight: =true
-                Height: =34
+                Height: =18
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =13
                 ZIndex: =1
 
             DataCardValue26 As text:
@@ -556,15 +554,16 @@ Screen_ViewCustomerTargetPricing As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                Height: =26
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =245
                 X: =30
-                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
+                Y: =35
                 ZIndex: =2
 
             ErrorMessage30 As label:
@@ -608,13 +607,12 @@ Screen_ViewCustomerTargetPricing As screen:
             ZIndex: =1
 
             DataCardKey42 As label:
-                AutoHeight: =true
-                Height: =34
+                Height: =19
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =13
                 ZIndex: =1
 
             DataCardValue35 As text:
@@ -623,13 +621,14 @@ Screen_ViewCustomerTargetPricing As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                Height: =22
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =245
                 X: =30
                 Y: =DataCardKey42.Y + DataCardKey42.Height + 5
                 ZIndex: =2
@@ -690,15 +689,16 @@ Screen_ViewCustomerTargetPricing As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                Height: =22
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =245
                 X: =30
-                Y: =DataCardKey19.Y + DataCardKey19.Height + 5
+                Y: =39
                 ZIndex: =2
 
             ErrorMessage17 As label:
@@ -724,6 +724,212 @@ Screen_ViewCustomerTargetPricing As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey19.Y
+                ZIndex: =4
+
+        "'Lt/Btl_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_litres"
+            Default: =ThisItem.'Lt/Btl'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_litres")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_litres")
+            Required: =false
+            Update: =DataCardValue17.Text
+            Width: =289
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey21 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue17 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =44
+                ZIndex: =2
+
+            ErrorMessage19 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue17.Y + DataCardValue17.Height
+                ZIndex: =3
+
+            StarVisible19 As label:
+                Align: =Align.Center
+                Height: =DataCardKey21.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
+        Bottle_DataCard3 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_nonrefill"
+            Default: =ThisItem.Bottle
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_nonrefill")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue21.Selected.Value
+            Width: =289
+            X: =1
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey24 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Bottle (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =35
+                Y: =42
+                ZIndex: =2
+
+            ErrorMessage22 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible22 As label:
+                Align: =Align.Center
+                Height: =DataCardKey24.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24.Y
+                ZIndex: =4
+
+        "'Btl/Ctn_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_cartonquantity"
+            Default: =ThisItem.'Btl/Ctn'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_cartonquantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_cartonquantity")
+            Required: =false
+            Update: =DataCardValue22.Text
+            Width: =289
+            X: =2
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue22 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =40
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue22.Y + DataCardValue22.Height
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25.Y
                 ZIndex: =4
 
     Button1 As button:
@@ -758,6 +964,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =13
 
     Button5 As button:
+        OnSelect: =Disabled
         Text: ="Deactive"
         X: =880
         Y: =625
@@ -769,10 +976,14 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =492
         ZIndex: =16
 
-    Icon4 As icon.ArrowsUpDown:
+    Icon5 As icon.ArrowsUpDown:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =34
         Icon: =Icon.Sort
         OnSelect: =
-        X: =318
-        Y: =122
+        Width: =49
+        X: =326
+        Y: =140
         ZIndex: =17
 
