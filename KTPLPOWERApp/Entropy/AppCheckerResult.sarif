@@ -2404,19 +2404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Home_Icon_1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Image5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Home_Icon_1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Image5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Home_Icon_1"
+                "type": "Screen_ViewCustomerTargetPricing.Image5"
               }
             }
           ],
@@ -2434,19 +2434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Home_Icon_1.TabIndex"
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Image5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Home_Icon_1.TabIndex",
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Image5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Home_Icon_1"
+                "type": "Screen_ViewCustomerTargetPricing.Image5"
               }
             }
           ],

@@ -962,13 +962,14 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =12
 
     Button4 As button:
-        Text: ="Active"
+        OnSelect: =
+        Text: ="Activate"
         X: =644
         Y: =625
         ZIndex: =13
 
     Button5 As button:
-        OnSelect: =Disabled
+        OnSelect: =Set(IsEdit,false);
         Text: ="Deactive"
         X: =880
         Y: =625
@@ -976,8 +977,8 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Dropdown1 As dropdown:
         Items: =["New To Old","Old To New"]
-        X: =786
-        Y: =492
+        X: =921
+        Y: =48
         ZIndex: =16
 
     Icon5 As icon.ArrowsUpDown:
