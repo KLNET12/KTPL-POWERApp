@@ -639,8 +639,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Size: =10
             Width: =173
-            X: =1092
-            Y: =279
+            X: =1090
+            Y: =280
             ZIndex: =18
 
         Add_Icon As icon.Add:
