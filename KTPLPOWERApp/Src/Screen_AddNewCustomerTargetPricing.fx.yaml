@@ -196,7 +196,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TemplatePadding: =6
         TemplateSize: =84
         Width: =1366
-        Y: =383
+        Y: =396
         ZIndex: =4
 
         TextInput2 As text:
@@ -640,8 +640,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Size: =10
             Width: =173
-            X: =1092
-            Y: =279
+            X: =1090
+            Y: =280
             ZIndex: =18
 
         Add_Icon As icon.Add:
@@ -649,6 +649,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Icon: =Icon.Add
             OnSelect: |-
                 =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
+            Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),true,false)
             Width: =69
             X: =1193
             Y: =325
