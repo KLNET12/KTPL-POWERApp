@@ -13,7 +13,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingBottom: =50
         PaddingRight: =5.00
         PaddingTop: =5.00
-        Size: =26
+        Size: =18
         Text: ="Customer Target Pricing"
         Width: =1366
         ZIndex: =1
@@ -959,11 +959,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =41
 
     CustomCalendar_1 As CustomCalendar:
-        Height: =147
+        Height: =148
         Visible: =showDate
-        Width: =358
-        X: =1008
-        Y: =68
+        Width: =327
+        X: =929
+        Y: =63
         ZIndex: =42
 
     Label10 As label:
@@ -978,11 +978,11 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     TextInput8 As text:
         Default: =DateValue(_dateSelected)
-        Height: =39
+        Height: =35
         OnSelect: =Set(showDate,true)
-        Width: =304
-        X: =1035
-        Y: =45
+        Width: =291
+        X: =952
+        Y: =49
         ZIndex: =44
 
     Logo_1 As image:
@@ -993,7 +993,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingRight: =0.00
         PaddingTop: =0.00
         Width: =263
-        Y: =18
         ZIndex: =45
 
     Label9 As label:
@@ -1009,7 +1008,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =34
         Text: ="Expiry Date"
         Width: =304
-        X: =1035
+        X: =952
         Y: =15
         ZIndex: =47
 
