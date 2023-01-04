@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 9,
-                  "charOffset": 157,
+                  "charLength": 20,
+                  "charOffset": 170,
                   "snippet": {
-                    "text": ".response"
+                    "text": "CollectflowExcelData"
                   }
                 }
               },
@@ -38,12 +38,16 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Text",
+              "Boolean"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidDot",
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
           "ruleIndex": 0
         },
         {
@@ -60,10 +64,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 74,
-                  "charOffset": 93,
+                  "charLength": 290,
+                  "charOffset": 161,
                   "snippet": {
-                    "text": "Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response)"
+                    "text": "MatchAll(CollectflowExcelData,\"(\"\"Contact\"\":\"\"(?<Contact>[^\"\"]*)\"\",\"\"Description\"\":\"\"(?<ProductDescription>[^\"\"]*)\"\",\"\"Item No\"\":\"\"(?<ProductCode>[^\"\"]*)\"\",\"\"Min Price\"\":\"\"(?<CustomerMinPrice>[^\"\"]*)\"\",\"\"Max Price\"\":\"\"(?<CustomerMaxPrice>[^\"\"]*)\"\",\"\"Quantity\"\":\"\"(?<QtyRequired>[^\"\"]*)\"\")\")"
                   }
                 }
               },
@@ -75,12 +79,15 @@
             }
           ],
           "message": {
+            "arguments": [
+              "MatchAll"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 1
         },
         {
@@ -2457,36 +2464,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen_ViewCustomerTargetPricing",
-                "type": "Screen_ViewCustomerTargetPricing.Dropdown1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Form2.'Customer Lead Id_DataCard2'.TextInput6.AccessibleLabel"
                 }
               ],
@@ -3057,6 +3034,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_ViewCustomerTargetPricing.Dropdown1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen_ViewCustomerTargetPricing",
+                "type": "Screen_ViewCustomerTargetPricing.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varLMApprovalDate"
                 }
               ],
@@ -3068,36 +3075,6 @@
               },
               "properties": {
                 "member": "varLMApprovalDate",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.CollectflowExcelData"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.CollectflowExcelData",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "CollectflowExcelData",
                 "module": "App",
                 "type": "App"
               }
@@ -3359,10 +3336,10 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrInvalidDot",
+              "id": "app-ErrBadType-ExpectedType-ProvidedType",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid use of '.'"
+                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
                 }
               },
               "properties": {
@@ -3373,17 +3350,14 @@
               }
             },
             {
-              "id": "app-ErrIncompatibleCtxtVariableTypes",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "Incompatible type. We can't evaluate your formula because the context variable types are incompatible with the types of values in other places in your app."
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "howToFix": [
-                  "Look at places where you use a context variable and make sure that the type (e.g., text, number, date, record, table) is compatible."
-                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
