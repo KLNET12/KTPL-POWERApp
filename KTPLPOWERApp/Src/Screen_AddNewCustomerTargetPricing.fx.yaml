@@ -472,7 +472,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             If(MinPrice_value.Text="",Notify("Min price is Required",NotificationType.Error),If(IsBlank(MaxPrice_value.Text),Notify("Max price is Required",NotificationType.Error),
             If(Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),
             
-            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':TextInput7,Description:Last(FirstN(Products,Value)).'Product Description','Item No':Last(FirstN(Products,Value)).'Product Code','Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).'Customer Min Price'),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).'Customer Max Price'),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).'Qty Required'),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record submision sucessfull",NotificationType.Success)))));
+            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).'Product Description','Item No':Last(FirstN(Products,Value)).'Product Code','Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).'Customer Min Price'),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).'Customer Max Price'),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).'Qty Required'),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record submision sucessfull",NotificationType.Success)))));
             
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false );
@@ -526,9 +526,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnChange: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+                Set(errormsg,true);
             OnSelect: |-
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+                Set(errormsg,true);
             SearchFields: =["Product_Description","Product_Code"]
             SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
@@ -989,4 +991,14 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =911
         Y: =118
         ZIndex: =49
+
+    Label10 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =46
+        Text: ="Fill the required fields"
+        Visible: =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),false,true)
+        Width: =272
+        X: =808
+        Y: =346
+        ZIndex: =50
 
