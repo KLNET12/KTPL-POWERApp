@@ -77,7 +77,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ABV_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20241,7 +20241,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Variant_DataCard3",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
