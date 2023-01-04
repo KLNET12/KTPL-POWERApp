@@ -646,7 +646,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(ProductList_CB)&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
+                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{'Product Description':ProductList_CB.Selected.Product_Description,'Product Code':'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,'Customer Min Price':MinPrice_value.Text,'Customer Max Price':MaxPrice_value.Text,'Customer Currency':Currency_value.Text,'Qty Required':Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
             Width: =74
             X: =1276
             Y: =353
@@ -994,7 +994,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Color: =RGBA(255, 0, 0, 1)
         Height: =21
         Text: ="Fill the required fields"
-        Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||!IsBlank(MinPrice_value)|| !IsBlank(MaxPrice_value) || !IsBlank(Currency_value),true,false)
+        Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||!IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
         Width: =272
         X: =660
         Y: =380
