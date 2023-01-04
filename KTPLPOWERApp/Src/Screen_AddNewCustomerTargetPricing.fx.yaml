@@ -599,7 +599,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =126
+                Height: =111
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -1016,6 +1016,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label7 As label:
         Height: =22
+        Size: =12
         Text: ="Expiry Date"
         Width: =280
         X: =1068
