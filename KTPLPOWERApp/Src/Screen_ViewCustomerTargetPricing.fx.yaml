@@ -28,22 +28,21 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
-        Height: =648
+        Height: =577
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),"createdon",If(Dropdown1.Selected.Value="New To Old",Descending,Ascending))
         Layout: =Layout.Vertical
-        TemplateSize: =90
+        TemplateSize: =60
         Width: =466
-        Y: =119
+        Y: =174
         ZIndex: =5
 
         Label5 As label:
-            Height: =20
+            Height: =60
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Name
             Width: =314
             X: =34
-            Y: =30
             ZIndex: =1
 
         Icon2 As icon.ArrowRight:
@@ -961,12 +960,10 @@ Screen_ViewCustomerTargetPricing As screen:
     Label6 As label:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =22
         Size: =15
-        Text: |-
-            ="Name:"
+        Text: ="Name"
         Width: =122
-        X: =24
+        X: =16
         Y: =134
         ZIndex: =12
 
@@ -982,16 +979,9 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =625
         ZIndex: =14
 
-    Label7 As label:
-        Height: =37
-        Text: ="Date"
-        X: =24
-        Y: =169
-        ZIndex: =15
-
     Dropdown1 As dropdown:
         Items: =["New To Old","Old To New"]
-        X: =149
-        Y: =94
+        X: =138
+        Y: =134
         ZIndex: =16
 
