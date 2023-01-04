@@ -28,22 +28,22 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
-        Height: =604
-        Items: =Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead)
+        Height: =648
+        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),"createdon",If(Dropdown1.Selected.Value="New To Old",Descending,Ascending))
         Layout: =Layout.Vertical
-        TemplateSize: =45
+        TemplateSize: =90
         Width: =466
-        Y: =163
+        Y: =119
         ZIndex: =5
 
         Label5 As label:
-            Height: =25
+            Height: =20
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Name
-            Width: =307
-            X: =13
-            Y: =25
+            Width: =314
+            X: =34
+            Y: =30
             ZIndex: =1
 
         Icon2 As icon.ArrowRight:
@@ -963,9 +963,35 @@ Screen_ViewCustomerTargetPricing As screen:
         FontWeight: =FontWeight.Semibold
         Height: =22
         Size: =15
-        Text: ="Name"
-        Width: =327
-        X: =19
-        Y: =147
+        Text: |-
+            ="Name:"
+        Width: =122
+        X: =24
+        Y: =134
         ZIndex: =12
+
+    Button4 As button:
+        Text: ="Active"
+        X: =644
+        Y: =625
+        ZIndex: =13
+
+    Button5 As button:
+        Text: ="Deactive"
+        X: =880
+        Y: =625
+        ZIndex: =14
+
+    Label7 As label:
+        Height: =37
+        Text: ="Date"
+        X: =24
+        Y: =169
+        ZIndex: =15
+
+    Dropdown1 As dropdown:
+        Items: =["New To Old","Old To New"]
+        X: =149
+        Y: =94
+        ZIndex: =16
 
