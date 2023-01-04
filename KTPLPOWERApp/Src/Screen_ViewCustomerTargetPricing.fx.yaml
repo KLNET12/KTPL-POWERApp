@@ -4,14 +4,11 @@ Screen_ViewCustomerTargetPricing As screen:
     "'Header Label_2' As label":
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
-        Height: =132
+        Height: =109
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =24
-        Text: |-
-            ="                   Customer
-                                 Target 
-                                 Pricing"
+        Text: ="                   Customer Target Pricing"
         Width: =1366
         X: =0.00
         Y: =2
@@ -23,7 +20,8 @@ Screen_ViewCustomerTargetPricing As screen:
         Icon: =Icon.Home
         OnSelect: =Navigate('Home Screen')
         Width: =57
-        Y: =2
+        X: =1172
+        Y: =44
         ZIndex: =4
 
     Gallery2 As gallery.variableTemplateHeightGallery:
@@ -67,12 +65,12 @@ Screen_ViewCustomerTargetPricing As screen:
     Form2 As form:
         DataSource: ='Customer Target Pricing'
         DefaultMode: =If(IsEdit,FormMode.Edit,FormMode.View)
-        Height: =594
+        Height: =629
         Item: =Gallery2.Selected
         OnSuccess: =NewForm(Form2);
-        Width: =868
-        X: =477
-        Y: =169
+        Width: =885
+        X: =469
+        Y: =139
         ZIndex: =6
 
         "'Customer Lead Id_DataCard2' As typedDataCard.comboBoxEditCard":
@@ -85,7 +83,7 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =82
             Required: =false
             Update: =
-            Width: =289
+            Width: =299
             X: =0
             Y: =0
             ZIndex: =1
@@ -136,53 +134,52 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =30
                 ZIndex: =5
 
-        Description_DataCard2 As typedDataCard.textualEditCard:
+        Barcode_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_product"
-            Default: =ThisItem.Description
+            DataField: ="ntz_decoded"
+            Default: =ThisItem.Barcode
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_product")
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_decoded")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =74
-            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_product")
+            Height: =64
             Required: =false
-            Update: =DataCardValue15.Text
-            Width: =289
+            Update: =DataCardValue19.Selected.Value
+            Width: =299
             X: =1
             Y: =0
             ZIndex: =1
 
-            DataCardKey17 As label:
+            DataCardKey21 As label:
                 FontWeight: =FontWeight.Semibold
-                Height: =16
+                Height: =19
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =6
-                Y: =13
+                X: =21
+                Y: =5
                 ZIndex: =1
 
-            DataCardValue15 As text:
+            DataCardValue19 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Disabled
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
                 Height: =22
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                IsSearchable: =false
+                Items: =Choices('Barcode (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
                 Size: =10
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =13
+                X: =15
                 Y: =30
                 ZIndex: =2
 
-            ErrorMessage15 As label:
+            ErrorMessage19 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -193,18 +190,88 @@ Screen_ViewCustomerTargetPricing As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
-                X: =41
-                Y: =21
+                X: =30
+                Y: =DataCardValue19.Y + DataCardValue19.Height
                 ZIndex: =3
 
-            StarVisible15 As label:
+            StarVisible19 As label:
                 Align: =Align.Center
-                Height: =DataCardKey17.Height
+                Height: =DataCardKey21.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey17.Y
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
+        Quantity_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_quantity"
+            Default: =ThisItem.Quantity
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_quantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =56
+            Required: =false
+            Update: =Value(DataCardValue26.Text)
+            Width: =299
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey31 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =189
+                Wrap: =false
+                X: =22
+                Y: =11
+                ZIndex: =1
+
+            DataCardValue26 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =22
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =10
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =30
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue26.Y + DataCardValue26.Height
+                ZIndex: =3
+
+            StarVisible28 As label:
+                Align: =Align.Center
+                Height: =DataCardKey31.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey31.Y
                 ZIndex: =4
 
         "'Expiry Date_DataCard2' As typedDataCard.dateTimeEditCard":
@@ -217,7 +284,7 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =60
             Required: =false
             Update: =DateValue2.SelectedDate
-            Width: =289
+            Width: =299
             X: =2
             Y: =0
             ZIndex: =1
@@ -318,7 +385,7 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_productcode")
             Required: =false
             Update: =DataCardValue16.Text
-            Width: =289
+            Width: =299
             X: =0
             Y: =1
             ZIndex: =1
@@ -378,109 +445,40 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =DataCardKey18.Y
                 ZIndex: =4
 
-        Barcode_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+        Description_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_decoded"
-            Default: =ThisItem.Barcode
+            DataField: ="ntz_product"
+            Default: =ThisItem.Description
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_decoded")
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_product")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =64
+            Height: =74
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_product")
             Required: =false
-            Update: =DataCardValue19.Selected.Value
-            Width: =289
+            Update: =DataCardValue15.Text
+            Width: =299
             X: =1
             Y: =1
             ZIndex: =1
 
-            DataCardKey21 As label:
+            DataCardKey17 As label:
                 FontWeight: =FontWeight.Semibold
-                Height: =19
+                Height: =16
                 Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =9
-                Y: =11
+                X: =6
+                Y: =13
                 ZIndex: =1
 
-            DataCardValue19 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =22
-                IsSearchable: =false
-                Items: =Choices('Barcode (Customer Target Pricing)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Size: =10
-                Tooltip: =Parent.DisplayName
-                Width: =245
-                X: =15
-                Y: =30
-                ZIndex: =2
-
-            ErrorMessage19 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue19.Y + DataCardValue19.Height
-                ZIndex: =3
-
-            StarVisible19 As label:
-                Align: =Align.Center
-                Height: =DataCardKey21.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey21.Y
-                ZIndex: =4
-
-        Quantity_DataCard1 As typedDataCard.numberEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_quantity"
-            Default: =ThisItem.Quantity
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_quantity")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =56
-            Required: =false
-            Update: =Value(DataCardValue26.Text)
-            Width: =289
-            X: =2
-            Y: =1
-            ZIndex: =1
-
-            DataCardKey31 As label:
-                FontWeight: =FontWeight.Semibold
-                Height: =19
-                Size: =10
-                Text: =Parent.DisplayName
-                Width: =189
-                Wrap: =false
-                X: =22
-                Y: =11
-                ZIndex: =1
-
-            DataCardValue26 As text:
+            DataCardValue15 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
+                DisplayMode: =Disabled
                 Height: =22
+                MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -489,11 +487,11 @@ Screen_ViewCustomerTargetPricing As screen:
                 Size: =10
                 Tooltip: =Parent.DisplayName
                 Width: =245
-                X: =30
+                X: =13
                 Y: =30
                 ZIndex: =2
 
-            ErrorMessage28 As label:
+            ErrorMessage15 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -504,18 +502,18 @@ Screen_ViewCustomerTargetPricing As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue26.Y + DataCardValue26.Height
+                X: =41
+                Y: =21
                 ZIndex: =3
 
-            StarVisible28 As label:
+            StarVisible15 As label:
                 Align: =Align.Center
-                Height: =DataCardKey31.Height
+                Height: =DataCardKey17.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey31.Y
+                Y: =DataCardKey17.Y
                 ZIndex: =4
 
         ABV_DataCard1 As typedDataCard.numberEditCard:
@@ -528,9 +526,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =53
             Required: =false
             Update: =Value(DataCardValue18.Text)
-            Width: =289
-            X: =0
-            Y: =2
+            Width: =299
+            X: =2
+            Y: =1
             ZIndex: =1
 
             DataCardKey20 As label:
@@ -599,8 +597,8 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_cartonquantity")
             Required: =false
             Update: =DataCardValue17.Text
-            Width: =289
-            X: =1
+            Width: =299
+            X: =0
             Y: =2
             ZIndex: =1
 
@@ -670,8 +668,8 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_customermaxprice")
             Required: =false
             Update: =DataCardValue22.Text
-            Width: =289
-            X: =2
+            Width: =299
+            X: =1
             Y: =2
             ZIndex: =1
 
@@ -740,9 +738,9 @@ Screen_ViewCustomerTargetPricing As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue20.Selected.Value
-            Width: =296
-            X: =0
-            Y: =3
+            Width: =299
+            X: =2
+            Y: =2
             ZIndex: =1
 
             DataCardKey22 As label:
@@ -811,8 +809,8 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_customerminprice")
             Required: =false
             Update: =DataCardValue23.Text
-            Width: =289
-            X: =1
+            Width: =299
+            X: =0
             Y: =3
             ZIndex: =1
 
@@ -882,8 +880,8 @@ Screen_ViewCustomerTargetPricing As screen:
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_litres")
             Required: =false
             Update: =DataCardValue21.Text
-            Width: =283
-            X: =2
+            Width: =299
+            X: =1
             Y: =3
             ZIndex: =1
 
@@ -954,7 +952,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Height: =90
         Image: =OIP
         Width: =290
-        Y: =44
+        Y: =2
         ZIndex: =11
 
     Label6 As label:
