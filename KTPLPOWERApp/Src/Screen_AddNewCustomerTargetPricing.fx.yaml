@@ -842,8 +842,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Format: =TextFormat.Number
             Height: =22
             Size: =10
-            Width: =185
-            X: =1167
+            Width: =180
+            X: =1180
             Y: =163
             ZIndex: =16
 
