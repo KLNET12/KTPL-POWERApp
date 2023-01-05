@@ -34,10 +34,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =53
+            Height: =62
             Required: =true
             Update: =
-            Width: =410
+            Width: =876
             X: =1
             Y: =0
             ZIndex: =1
@@ -59,8 +59,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Height: =21
                 Width: =399
-                X: =11
-                Y: =19
+                X: =89
+                Y: =6
                 ZIndex: =5
 
         Contact_DataCard1 As typedDataCard.comboBoxEditCard:
