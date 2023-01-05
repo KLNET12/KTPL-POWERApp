@@ -183,7 +183,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TemplatePadding: =6
         TemplateSize: =156
         Width: =1366
-        Y: =280
+        Y: =292
         ZIndex: =3
 
         TextInput2 As text:
@@ -1040,7 +1040,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Container1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
-        Height: =20
+        Height: =15
         Width: =1099
         X: =20
         Y: =265
@@ -1050,8 +1050,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Product"
             Width: =339
             ZIndex: =1
@@ -1060,8 +1060,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Product Code"
             Width: =151
             X: =340
@@ -1071,8 +1071,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Min Price"
             Width: =152
             X: =492
@@ -1082,8 +1082,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Max Price"
             Width: =152
             X: =644
@@ -1093,8 +1093,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Quantity"
             X: =798
             ZIndex: =5
@@ -1103,8 +1103,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             FocusedBorderThickness: =1
             FontWeight: =FontWeight.Semibold
-            Height: =20
-            Size: =10
+            Height: =15
+            Size: =8
             Text: ="Currency"
             X: =949
             ZIndex: =6
