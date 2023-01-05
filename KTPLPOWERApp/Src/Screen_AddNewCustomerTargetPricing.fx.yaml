@@ -1001,8 +1001,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Width: =187
-            X: =467
-            Y: =212
+            X: =480
+            Y: =207
             ZIndex: =32
 
         Litres_lbl As label:
@@ -1011,7 +1011,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Lt/Btl"
             Width: =172
             X: =482
-            Y: =194
+            Y: =190
             ZIndex: =33
 
     Rightborder As rectangle:
