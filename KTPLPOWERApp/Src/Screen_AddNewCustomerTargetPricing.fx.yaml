@@ -97,7 +97,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Size: =10
                 Width: =381
                 X: =115
-                Y: =18
+                Y: =5
                 ZIndex: =2
 
         "'Expiry Date_DataCard1' As typedDataCard.dateTimeEditCard":
