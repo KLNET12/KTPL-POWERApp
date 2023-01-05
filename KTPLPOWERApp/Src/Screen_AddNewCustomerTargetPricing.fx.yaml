@@ -476,8 +476,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="Max Price can't be less than Min Price"
         Visible: =If(Value(Text(MaxPrice_value))> Value(Text(MinPrice_value))||IsBlank(MaxPrice_value),false,true)
         Width: =166
-        X: =449
-        Y: =312
+        X: =609
+        Y: =325
         ZIndex: =34
 
     Label4 As label:
@@ -748,6 +748,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         MinPrice_value As text:
             Default: =""
+            Format: =TextFormat.Number
             Height: =22
             Size: =10
             Width: =221
@@ -757,6 +758,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
         MaxPrice_value As text:
             Default: =
+            Format: =TextFormat.Number
             Height: =22
             OnChange: =
             Size: =10
@@ -790,7 +792,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
+                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&(Int(MinPrice_value)<0 ||!IsBlank(MinPrice_value))&& (Int(MaxPrice_value)<0 ||!IsBlank(MaxPrice_value)) &&(Int(Quantity_value)<0 ||IsBlank(Quantity_value)) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
             Width: =74
             X: =1277
             Y: =208
@@ -1106,4 +1108,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             X: =949
             ZIndex: =6
+
+    Label20 As label:
+        Text: =If(Int(MinPrice_value)<0,false,true)
+        X: =719
+        Y: =611
+        ZIndex: =49
 
