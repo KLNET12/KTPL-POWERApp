@@ -661,7 +661,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
             Height: =22
-            IsSearchable: =false
             Items: ='Product Details_V'
             OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
@@ -670,7 +669,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =[]
+            SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
             Size: =10
             Width: =486

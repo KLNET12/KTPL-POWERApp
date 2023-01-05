@@ -79,7 +79,7 @@
         "Name": "Rectangle1_1",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 281,
+        "PublishOrderIndex": 2,
         "Rules": [
           {
             "Category": "Design",
@@ -143,7 +143,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "266",
+            "InvariantScript": "283",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -281,7 +281,7 @@
         "Name": "LblMonthSelected",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 282,
+        "PublishOrderIndex": 3,
         "Rules": [
           {
             "Category": "Data",
@@ -632,7 +632,7 @@
         "Name": "iconPrevMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 283,
+        "PublishOrderIndex": 4,
         "Rules": [
           {
             "Category": "Data",
@@ -977,7 +977,7 @@
         "Name": "iconNextMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 284,
+        "PublishOrderIndex": 5,
         "Rules": [
           {
             "Category": "Data",
@@ -1320,7 +1320,7 @@
         "Name": "TodayIcon",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 285,
+        "PublishOrderIndex": 6,
         "Rules": [
           {
             "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 288,
+            "PublishOrderIndex": 18,
             "Rules": [
               {
                 "Category": "Design",
@@ -1661,7 +1661,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 289,
+            "PublishOrderIndex": 19,
             "Rules": [
               {
                 "Category": "Data",
@@ -2001,7 +2001,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 287,
+        "PublishOrderIndex": 7,
         "Rules": [
           {
             "Category": "Data",
@@ -2131,7 +2131,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "266",
+            "InvariantScript": "283",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2234,7 +2234,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 291,
+            "PublishOrderIndex": 20,
             "Rules": [
               {
                 "Category": "Design",
@@ -2349,7 +2349,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 292,
+            "PublishOrderIndex": 21,
             "Rules": [
               {
                 "Category": "Data",
@@ -2479,7 +2479,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Align.Right",
+                "InvariantScript": "Align.Center",
                 "Property": "Align",
                 "RuleProviderType": "Unknown"
               },
@@ -2569,7 +2569,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "5",
+                "InvariantScript": "0",
                 "Property": "PaddingLeft",
                 "RuleProviderType": "Unknown"
               },
@@ -2605,7 +2605,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "26",
+                "InvariantScript": "35",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -2689,7 +2689,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 293,
+            "PublishOrderIndex": 22,
             "Rules": [
               {
                 "Category": "Data",
@@ -2753,7 +2753,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "25",
+                "InvariantScript": "20",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -2921,7 +2921,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 290,
+        "PublishOrderIndex": 8,
         "Rules": [
           {
             "Category": "Data",
@@ -3057,7 +3057,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "266",
+            "InvariantScript": "283",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3215,7 +3215,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 294,
+        "PublishOrderIndex": 9,
         "Rules": [
           {
             "Category": "Data",
@@ -3406,7 +3406,7 @@
         "Name": "FrameShadow",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 295,
+        "PublishOrderIndex": 10,
         "Rules": [
           {
             "Category": "Data",
@@ -3642,7 +3642,7 @@
         "Name": "lblYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 296,
+        "PublishOrderIndex": 11,
         "Rules": [
           {
             "Category": "Data",
@@ -4022,7 +4022,7 @@
         "Name": "lblMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 297,
+        "PublishOrderIndex": 12,
         "Rules": [
           {
             "Category": "Data",
@@ -4461,7 +4461,7 @@
         "Name": "ddYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 298,
+        "PublishOrderIndex": 13,
         "Rules": [
           {
             "Category": "Data",
@@ -4891,7 +4891,7 @@
         "Name": "ddMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 299,
+        "PublishOrderIndex": 14,
         "Rules": [
           {
             "Category": "Data",
@@ -5308,7 +5308,7 @@
         "Name": "btnSetYearMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 300,
+        "PublishOrderIndex": 15,
         "Rules": [
           {
             "Category": "Data",
@@ -5642,7 +5642,7 @@
         "Name": "SetDefaultTimer",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 301,
+        "PublishOrderIndex": 16,
         "Rules": [
           {
             "Category": "Data",
@@ -5897,7 +5897,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 286,
+        "PublishOrderIndex": 17,
         "Rules": [
           {
             "Category": "Design",
@@ -5979,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638084413948032774",
+    "LastModifiedTimestamp": "638084811648239225",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6075,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638084413948032774",
+  "LastModifiedTimestamp": "638084811648239225",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",
