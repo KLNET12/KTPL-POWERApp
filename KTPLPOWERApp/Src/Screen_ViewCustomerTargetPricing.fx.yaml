@@ -25,13 +25,13 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =5
 
         Label5 As label:
-            Height: =55
+            Height: =68
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Name
             Width: =151
             X: =1
-            Y: =17
+            Y: =4
             ZIndex: =1
 
         Icon2 As icon.ArrowRight:
@@ -40,7 +40,7 @@ Screen_ViewCustomerTargetPricing As screen:
             OnSelect: |
                 =ViewForm(Form2);Set(IsEdit,false);
             Width: =25
-            X: =285
+            X: =298
             Y: =17
             ZIndex: =4
 
@@ -49,7 +49,7 @@ Screen_ViewCustomerTargetPricing As screen:
             Icon: =Icon.Edit
             OnSelect: =Set(IsEdit,true)
             Width: =25
-            X: =315
+            X: =328
             Y: =18
             ZIndex: =5
 
@@ -58,7 +58,7 @@ Screen_ViewCustomerTargetPricing As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Created On'
-            Width: =125
+            Width: =146
             X: =152
             Y: =4
             ZIndex: =6
