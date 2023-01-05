@@ -34,10 +34,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =42
+            Height: =36
             Required: =true
             Update: =
-            Width: =730
+            Width: =584
             X: =1
             Y: =0
             ZIndex: =1
@@ -70,10 +70,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =48
+            Height: =50
             Required: =false
             Update: =
-            Width: =803
+            Width: =730
             X: =0
             Y: =1
             ZIndex: =1
@@ -95,7 +95,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =20
                 Width: =381
                 X: =115
-                Y: =5
+                Y: =18
                 ZIndex: =2
 
         "'Expiry Date_DataCard1' As typedDataCard.dateTimeEditCard":
@@ -111,7 +111,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Visible: =false
             Width: =339
             X: =2
-            Y: =0
+            Y: =22
             ZIndex: =1
 
             DataCardKey5 As label:
