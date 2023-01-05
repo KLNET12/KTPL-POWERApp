@@ -20,7 +20,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Form1 As form:
         DataSource: ='Customer Target Pricing'
-        Height: =150
+        Height: =112
         SnapToColumns: =false
         Width: =885
         X: =3
@@ -59,7 +59,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Height: =21
                 Width: =399
-                X: =89
+                X: =115
                 Y: =6
                 ZIndex: =5
 
