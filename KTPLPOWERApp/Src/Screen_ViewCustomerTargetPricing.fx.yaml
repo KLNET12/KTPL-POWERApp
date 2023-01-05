@@ -1171,7 +1171,8 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Button4 As button:
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive})
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});
+            Notify("Record has been Activated");
         Size: =10
         Text: ="Activate"
         Width: =250
@@ -1182,6 +1183,7 @@ Screen_ViewCustomerTargetPricing As screen:
     Button5 As button:
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
+            Notify("Record has been Deactivated");
         Size: =10
         Text: ="Deactivate"
         Width: =250
