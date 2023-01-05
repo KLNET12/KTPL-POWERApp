@@ -1001,7 +1001,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.Disabled
             Height: =22
             Width: =187
-            X: =480
+            X: =478
             Y: =207
             ZIndex: =32
 
