@@ -34,10 +34,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =36
+            Height: =39
             Required: =true
             Update: =
-            Width: =584
+            Width: =552
             X: =1
             Y: =0
             ZIndex: =1
@@ -71,10 +71,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =28
+            Height: =25
             Required: =false
             Update: =
-            Width: =644
+            Width: =552
             X: =0
             Y: =1
             ZIndex: =1
@@ -96,7 +96,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =18
                 Size: =10
                 Width: =381
-                X: =167
+                X: =154
                 Y: =5
                 ZIndex: =2
 
