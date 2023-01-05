@@ -179,7 +179,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =6
-        TemplateSize: =84
+        TemplateSize: =156
         Width: =1366
         Y: =308
         ZIndex: =3
@@ -193,7 +193,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =339
             X: =16
-            Y: =14
+            Y: =30
             ZIndex: =1
 
         TextInput5 As text:
@@ -205,7 +205,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =357
-            Y: =14
+            Y: =30
             ZIndex: =2
 
         TextInput12 As text:
@@ -217,7 +217,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =509
-            Y: =14
+            Y: =30
             ZIndex: =8
 
         TextInput13 As text:
@@ -229,7 +229,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =661
-            Y: =13
+            Y: =30
             ZIndex: =9
 
         TextInput14 As text:
@@ -241,7 +241,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =965
-            Y: =14
+            Y: =30
             ZIndex: =10
 
         TextInput15 As text:
@@ -253,7 +253,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =813
-            Y: =14
+            Y: =30
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -265,7 +265,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Edit "
             Width: =53
             X: =1130
-            Y: =12
+            Y: =30
             ZIndex: =12
 
         Icon3 As icon.Trash:
@@ -275,8 +275,71 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Delete"
             Width: =53
             X: =1199
-            Y: =12
+            Y: =30
             ZIndex: =16
+
+        Container1 As groupContainer.manualLayoutContainer:
+            Height: =20
+            Width: =1099
+            X: =16
+            ZIndex: =17
+
+            Label12 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Product"
+                Width: =339
+                ZIndex: =1
+
+            Label13 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Product Code"
+                Width: =151
+                X: =340
+                ZIndex: =2
+
+            Label14 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Min Price"
+                Width: =152
+                X: =492
+                ZIndex: =3
+
+            Label15 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Max Price"
+                Width: =152
+                X: =645
+                ZIndex: =4
+
+            Label16 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Quantity"
+                X: =798
+                ZIndex: =5
+
+            Label17 As label:
+                BorderThickness: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Currency"
+                X: =949
+                ZIndex: =6
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =53
