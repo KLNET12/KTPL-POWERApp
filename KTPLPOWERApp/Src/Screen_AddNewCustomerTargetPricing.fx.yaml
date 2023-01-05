@@ -177,13 +177,13 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =8
 
     Gallery1 As gallery.variableTemplateHeightGallery:
-        Height: =199
+        Height: =303
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =6
         TemplateSize: =156
         Width: =1366
-        Y: =308
+        Y: =280
         ZIndex: =3
 
         TextInput2 As text:
@@ -1050,7 +1050,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
         Width: =272
         X: =660
-        Y: =289
+        Y: =250
         ZIndex: =43
 
     TextInput8 As text:
