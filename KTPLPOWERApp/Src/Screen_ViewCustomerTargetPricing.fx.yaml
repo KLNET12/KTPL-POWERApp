@@ -1185,7 +1185,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =13
 
     BTN_Deactivate As button:
-        DisplayMode: =If(Label18.Text ="Active" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
+        DisplayMode: =If(Label18.Text ="Inactive" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
@@ -1221,6 +1221,7 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Label18 As label:
         Text: =DataCardValue20.Selected.Value
+        Visible: =false
         X: =477
         Y: =725
         ZIndex: =19
