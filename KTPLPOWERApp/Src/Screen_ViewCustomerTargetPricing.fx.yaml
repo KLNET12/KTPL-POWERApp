@@ -4,12 +4,12 @@ Screen_ViewCustomerTargetPricing As screen:
     "'Header Label_2' As label":
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
-        Height: =66
+        Height: =58
         PaddingRight: =5.00
         PaddingTop: =5.00
-        Size: =15
+        Size: =20
         Text: ="Customer Target Pricing"
-        Width: =413
+        Width: =598
         X: =511
         Y: =2
         ZIndex: =2
