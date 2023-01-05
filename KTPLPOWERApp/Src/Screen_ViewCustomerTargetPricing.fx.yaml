@@ -1172,7 +1172,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =12
 
     BTN_Activate As button:
-        DisplayMode: =
+        DisplayMode: =If(Label18.Text ="Active" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});
