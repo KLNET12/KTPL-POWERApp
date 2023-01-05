@@ -229,7 +229,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =661
-            Y: =14
+            Y: =13
             ZIndex: =9
 
         TextInput14 As text:
@@ -984,7 +984,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||!IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
         Width: =272
         X: =660
-        Y: =328
+        Y: =289
         ZIndex: =43
 
     TextInput8 As text:
