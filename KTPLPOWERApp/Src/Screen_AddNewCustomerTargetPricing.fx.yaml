@@ -71,10 +71,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =28
             Required: =false
             Update: =
-            Width: =730
+            Width: =644
             X: =0
             Y: =1
             ZIndex: =1
