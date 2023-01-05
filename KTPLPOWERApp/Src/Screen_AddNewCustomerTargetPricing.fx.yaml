@@ -22,7 +22,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         DataSource: ='Customer Target Pricing'
         Height: =150
         SnapToColumns: =false
-        Width: =990
+        Width: =885
         X: =3
         Y: =78
         ZIndex: =2
@@ -34,10 +34,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =91
+            Height: =53
             Required: =true
             Update: =
-            Width: =452
+            Width: =410
             X: =1
             Y: =0
             ZIndex: =1
@@ -59,7 +59,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Height: =21
                 Width: =399
-                X: =35
+                X: =11
                 Y: =19
                 ZIndex: =5
 
@@ -70,12 +70,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_Contact")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =60
+            Height: =58
             Required: =false
             Update: =
-            Width: =492
-            X: =452
-            Y: =0
+            Width: =410
+            X: =0
+            Y: =1
             ZIndex: =1
 
             DataCardKey1 As label:
@@ -94,7 +94,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Height: =20
                 Width: =381
-                X: =37
+                X: =11
                 Y: =18
                 ZIndex: =2
 
@@ -110,7 +110,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Update: =
             Visible: =false
             Width: =339
-            X: =791
+            X: =2
             Y: =0
             ZIndex: =1
 
