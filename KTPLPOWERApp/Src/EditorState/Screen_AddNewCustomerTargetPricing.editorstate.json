@@ -3245,7 +3245,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_lbl",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6841,7 +6841,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Edit_icon",
-      "ParentIndex": 8,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9103,7 +9103,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
-      "ParentIndex": 9,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15081,7 +15081,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4",
-      "ParentIndex": 12,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15393,7 +15393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_26",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15703,7 +15703,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_36",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17863,7 +17863,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Maxprice_lbl",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18457,7 +18457,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MinPrice_lbl",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20946,7 +20946,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Quantity_lbl",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25733,7 +25733,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput12",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26044,7 +26044,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput13",
-      "ParentIndex": 5,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26355,7 +26355,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput14",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26666,7 +26666,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput15",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26970,7 +26970,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput2",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27863,7 +27863,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput5",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

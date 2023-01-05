@@ -1142,7 +1142,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 Y: =DataCardKey23.Y
                 ZIndex: =4
 
-    Button1 As button:
+    "'submit Button' As button":
         Height: =30
         OnSelect: =SubmitForm(Form2);
         Text: ="Submit"
@@ -1170,7 +1170,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =95
         ZIndex: =12
 
-    Button4 As button:
+    BTN_Activate As button:
         DisplayMode: |
             =
         Height: =30
@@ -1184,7 +1184,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Y: =688
         ZIndex: =13
 
-    Button5 As button:
+    BTN_Deactivate As button:
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
