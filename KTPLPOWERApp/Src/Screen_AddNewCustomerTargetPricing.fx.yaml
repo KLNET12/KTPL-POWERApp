@@ -287,12 +287,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =17
 
             Label12 As label:
-                BorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
                 Text: ="Product"
                 Width: =339
+                X: =3
                 ZIndex: =1
 
             Label13 As label:
