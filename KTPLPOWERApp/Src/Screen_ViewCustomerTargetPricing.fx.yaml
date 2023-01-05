@@ -1183,7 +1183,7 @@ Screen_ViewCustomerTargetPricing As screen:
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
         Size: =10
-        Text: ="Deactive"
+        Text: ="Deactivate"
         Width: =250
         X: =765
         Y: =688
