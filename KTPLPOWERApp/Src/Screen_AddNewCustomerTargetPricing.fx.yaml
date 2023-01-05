@@ -1055,9 +1055,10 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     TextInput8 As text:
         Default: =Text(DateValue(_dateSelected),"dd/mm/yyyy")
-        Height: =24
+        Height: =18
         OnSelect: =Set(showDate,true)
         PaddingBottom: =1
+        Size: =10
         Width: =284
         X: =1066
         Y: =26
