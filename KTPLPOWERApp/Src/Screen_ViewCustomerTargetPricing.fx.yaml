@@ -1172,7 +1172,7 @@ Screen_ViewCustomerTargetPricing As screen:
 
     Button4 As button:
         DisplayMode: |
-            =If(Gallery2.Selected.'Customer Target Pricing'
+            =
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});
@@ -1200,11 +1200,11 @@ Screen_ViewCustomerTargetPricing As screen:
         Color: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =18
-        Icon: =If(varSortColumn <> "createdon",Icon.Sort,If(varSortDirection=Ascending,Icon.ArrowUp,Icon.ArrowDown))
+        Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =280
-        Y: =155
+        Y: =108
         ZIndex: =17
 
     Label11 As label:
