@@ -287,6 +287,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =17
 
             Label12 As label:
+                BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
@@ -297,6 +299,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             Label13 As label:
                 BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
@@ -307,6 +310,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             Label14 As label:
                 BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
@@ -317,6 +321,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             Label15 As label:
                 BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
@@ -327,6 +332,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             Label16 As label:
                 BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
@@ -336,6 +342,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
             Label17 As label:
                 BorderThickness: =1
+                FocusedBorderThickness: =1
                 FontWeight: =FontWeight.Semibold
                 Height: =20
                 Size: =10
