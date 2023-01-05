@@ -2,7 +2,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(Products,{'Product Description':"",'Product Code':"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",'Customer Min Price':"",'Customer Max Price':"",'Customer Currency':"",'Qty Required':"",'Lt/Btl':""});
+        =ClearCollect(Products,{'ProductDescription':"",'ProductCode':"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",'CustomerMinPrice':"",'CustomerMaxPrice':"",'Customer Currency':"",'QtyRequired':"",'Lt/Btl':"",'editfield':false});
         Clear(Products);
         NewForm(Form1);Set(fieldedit,false);NewForm(Form5)
 
@@ -189,7 +189,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput2 As text:
             BorderThickness: =1
             Default: =ThisItem.ProductDescription
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =Disabled
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -201,7 +201,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput5 As text:
             BorderThickness: =1
             Default: =ThisItem.ProductCode
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =Disabled
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -213,7 +213,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput12 As text:
             BorderThickness: =1
             Default: =ThisItem.CustomerMinPrice
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -225,7 +225,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput13 As text:
             BorderThickness: =1
             Default: =ThisItem.CustomerMaxPrice
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -237,7 +237,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput14 As text:
             BorderThickness: =1
             Default: =ThisItem.'Customer Currency'
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -249,7 +249,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TextInput15 As text:
             BorderThickness: =1
             Default: =ThisItem.QtyRequired
-            DisplayMode: =If(fieldedit,DisplayMode.Edit,Disabled)
+            DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
             OnSelect: =Select(Parent)
             Size: =10
@@ -263,7 +263,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =22
             Icon: =Icon.Edit
             OnSelect: |
-                =Set(fieldedit,true)
+                =If(ThisItem.editfield,Update(Products,ThisItem,{editfield:false,ProductDescription:TextInput2.Text,ProductCode:TextInput5.Text,CustomerMinPrice:TextInput12.Text,CustomerMaxPrice:TextInput13.Text,QtyRequired:TextInput15.Text,'Customer Currency':TextInput14.Text}),
+                Update(Products,ThisItem,{editfield:true,ProductDescription:TextInput2.Text,ProductCode:TextInput5.Text,CustomerMinPrice:TextInput12.Text,CustomerMaxPrice:TextInput13.Text,QtyRequired:TextInput15.Text,'Customer Currency':TextInput14.Text}))
             Tooltip: ="Edit "
             Width: =53
             X: =1130
@@ -567,7 +568,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSuccess: |-
             =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
             Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"));
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{'editfield':false});
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully");
         Width: =575
@@ -858,7 +859,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text}));
+                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,'editfield':false}));
             Width: =74
             X: =1277
             Y: =208
