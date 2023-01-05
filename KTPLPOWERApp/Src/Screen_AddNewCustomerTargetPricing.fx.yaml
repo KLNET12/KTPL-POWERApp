@@ -579,12 +579,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =194
+            Height: =121
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =376
-            X: =1
-            Y: =0
+            Width: =564
+            X: =0
+            Y: =1
             ZIndex: =48
 
             DataCardKey38 As label:
@@ -598,7 +598,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =111
+                Height: =81
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -607,7 +607,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
                 Width: =225
-                X: =17
+                X: =4
                 Y: =26
                 ZIndex: =2
 
@@ -637,12 +637,12 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =4
 
     Upload_button As button:
-        Height: =27
+        Height: =22
         OnSelect: =SubmitForm(Form5);
         Text: ="Upload"
-        Width: =225
-        X: =287
-        Y: =671
+        Width: =297
+        X: =257
+        Y: =683
         ZIndex: =37
 
     Topborder As rectangle:
