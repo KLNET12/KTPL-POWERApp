@@ -1144,7 +1144,8 @@ Screen_ViewCustomerTargetPricing As screen:
 
     "'submit Button' As button":
         Height: =30
-        OnSelect: =SubmitForm(Form2);
+        OnSelect: |-
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14),Quantity:Int(DataCardValue26),'Max Price (ntz_maxprice)':Int(DataCardValue35)});Notify("Record updated Successfully");
         Text: ="Submit"
         Visible: =If(IsEdit,true,false)
         Width: =280
@@ -1171,8 +1172,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =12
 
     BTN_Activate As button:
-        DisplayMode: |
-            =
+        DisplayMode: =
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Status Reason':'Status Reason (Customer Target Pricing)'.Inactive});
@@ -1217,4 +1217,10 @@ Screen_ViewCustomerTargetPricing As screen:
         X: =166
         Y: =95
         ZIndex: =18
+
+    Label18 As label:
+        Text: =DataCardValue20.Selected.Value
+        X: =477
+        Y: =725
+        ZIndex: =19
 
