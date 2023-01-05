@@ -214,7 +214,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             BorderThickness: =1
             Default: =ThisItem.CustomerMinPrice
             DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+            Format: =TextFormat.Number
             Height: =20
+            OnChange: =If(Int(TextInput12)<0,Reset(TextInput12),false)
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
@@ -227,6 +229,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =ThisItem.CustomerMaxPrice
             DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
+            OnChange: =If(Int(TextInput13)<0,Reset(TextInput13),false)
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
@@ -251,6 +254,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =ThisItem.QtyRequired
             DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
             Height: =20
+            OnChange: =If(Int(TextInput15)<0,Reset(TextInput15),false)
             OnSelect: =Select(Parent)
             Size: =10
             Width: =150
@@ -792,7 +796,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&(Int(MinPrice_value)<0 ||!IsBlank(MinPrice_value))&& (Int(MaxPrice_value)<0 ||!IsBlank(MaxPrice_value)) &&(Int(Quantity_value)<0 ||IsBlank(Quantity_value)) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
+                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
             Width: =74
             X: =1277
             Y: =208
@@ -1108,10 +1112,4 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             X: =949
             ZIndex: =6
-
-    Label20 As label:
-        Text: =If(Int(MinPrice_value)<0,false,true)
-        X: =719
-        Y: =611
-        ZIndex: =49
 
