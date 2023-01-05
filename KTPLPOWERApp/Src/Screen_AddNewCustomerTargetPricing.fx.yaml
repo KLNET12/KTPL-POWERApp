@@ -57,7 +57,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Default: |
                     =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
                 DisplayMode: =DisplayMode.Disabled
-                Height: =21
+                Height: =18
+                Size: =10
                 Width: =399
                 X: =115
                 Y: =6
@@ -92,7 +93,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             TextInput4 As text:
                 Default: =First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)).'Full Name'
                 DisplayMode: =DisplayMode.Disabled
-                Height: =20
+                Height: =18
+                Size: =10
                 Width: =381
                 X: =115
                 Y: =18
