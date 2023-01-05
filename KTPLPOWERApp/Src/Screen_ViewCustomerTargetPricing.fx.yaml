@@ -1160,7 +1160,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =11
 
     Label6 As label:
-        Color: =RGBA(109, 49, 162, 1)
+        Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Size: =12
         Text: ="Name"
@@ -1201,7 +1201,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =17
 
     Label11 As label:
-        Color: =RGBA(109, 49, 162, 1)
+        Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
         Size: =12
