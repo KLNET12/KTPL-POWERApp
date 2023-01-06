@@ -26,7 +26,7 @@
             =NewForm(Form1);Reset(ComboBox1);Reset(TextInput1);Reset(TextInput1_1);Reset(TextInput1_2);Reset(TextInput1_3);Reset(TextInput1_4);Reset(TextInput1_5);Reset(TextInput1_6);Reset(TextInput1_7);Reset(Checkbox1);Reset(Checkbox1_1);Set(Decoded,false);Set(NonRefill,false);Navigate(Screen_AddNewCustomerTargetPricing);
             Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))))
         Size: =18
-        Text: ="New Customer Target Pricing"
+        Text: ="N E W"
         Width: =606
         X: =702
         Y: =170
@@ -38,7 +38,7 @@
         Height: =42
         OnSelect: =Navigate(Screen_ViewCustomerTargetPricing)
         Size: =18
-        Text: ="View Past Customer Target Pricing"
+        Text: ="V I E W"
         Width: =606
         X: =702
         Y: =258
