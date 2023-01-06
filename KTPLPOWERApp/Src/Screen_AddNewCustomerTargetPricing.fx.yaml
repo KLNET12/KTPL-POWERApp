@@ -490,13 +490,13 @@ Screen_AddNewCustomerTargetPricing As screen:
     Form5 As form:
         DataSource: ='Customer Target Pricing Deploy List'
         DefaultMode: =FormMode.New
-        Height: =120
+        Height: =170
         OnSuccess: |-
             =Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
             Collect(Products,MatchAll(CollectflowExcelData,"(""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully");
-        Width: =575
+        Width: =677
         X: =8
         Y: =598
         ZIndex: =36
@@ -513,7 +513,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Required: =true
             Update: =DataCardValue32.Text
             Visible: =false
-            Width: =188
+            Width: =225
             X: =0
             Y: =0
             ZIndex: =48
@@ -577,16 +577,17 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =152
+            Height: =164
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =573
+            Width: =675
             X: =0
             Y: =1
             ZIndex: =48
 
             DataCardKey38 As label:
                 Height: =18
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -597,7 +598,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =100
+                Height: =97
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -605,7 +606,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =249
+                Width: =251
                 X: =4
                 Y: =26
                 ZIndex: =2
@@ -640,8 +641,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSelect: =SubmitForm(Form5);
         Size: =8
         Text: ="Upload"
-        Width: =300
-        X: =266
+        Width: =250
+        X: =305
         Y: =662
         ZIndex: =37
 
@@ -1107,8 +1108,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Set(ProductJson,JSON(Products));'PowerApp->ParseJSON'.Run(ProductJson)
         Size: =8
         Text: ="Import"
-        Width: =300
-        X: =266
+        Width: =250
+        X: =305
         Y: =690
         ZIndex: =49
 
