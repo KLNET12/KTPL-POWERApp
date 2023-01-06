@@ -650,7 +650,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="Upload"
         Width: =300
         X: =252
-        Y: =623
+        Y: =636
         ZIndex: =37
 
     Topborder As rectangle:
@@ -1112,6 +1112,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="Button"
         Width: =300
         X: =255
-        Y: =671
+        Y: =684
         ZIndex: =49
 
