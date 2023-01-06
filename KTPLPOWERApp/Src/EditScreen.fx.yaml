@@ -45,7 +45,7 @@ EditScreen As screen:
         Size: =20
         Text: ="Customer Target Pricing"
         Width: =628
-        X: =295
+        X: =362
         ZIndex: =14
 
     BTN_Activate_1 As button:
