@@ -496,7 +496,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =120
         OnSuccess: |-
             =Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            Collect(Products,MatchAll(CollectflowExcelData,"(""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"",""Contact"":""(?<Contact>[^""]*)"")"),{editfield:false});
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully");
         Width: =575
@@ -1104,7 +1104,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Import_Btn As button:
         Height: =10
-        OnSelect: =//Patch('Product Details_V',AddColumns(CollectflowExcelData,"ItemNo")
+        OnSelect: =//Patch('Product Details_V',AddColumns(CollectflowExcelData,"Item No")
         Size: =8
         Text: ="Import"
         Width: =300
