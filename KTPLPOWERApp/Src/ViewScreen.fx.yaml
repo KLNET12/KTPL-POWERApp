@@ -1,13 +1,15 @@
-Screen2 As screen:
+ViewScreen As screen:
 
     Gallery2_1 As gallery.variableTemplateHeightGallery:
+        BorderThickness: =02
         Default: ={}
-        Height: =712
+        Height: =592
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =77
-        Width: =1366
-        Y: =56
+        Width: =1304
+        X: =46
+        Y: =136
         ZIndex: =1
 
         Label5_1 As label:
@@ -24,7 +26,7 @@ Screen2 As screen:
             Height: =20
             Icon: =Icon.ArrowRight
             OnSelect: |
-                =ViewForm(Form2);Set(IsEdit,false);Navigate(Screen1)
+                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
             Width: =25
             X: =868
             Y: =17
@@ -33,7 +35,7 @@ Screen2 As screen:
         Icon2_3 As icon.ArrowRight:
             Height: =20
             Icon: =Icon.Edit
-            OnSelect: =Set(IsEdit,true);Navigate(Screen1)
+            OnSelect: =Set(IsEdit,true);Navigate(EditScreen)
             Width: =25
             X: =908
             Y: =18
@@ -54,10 +56,11 @@ Screen2 As screen:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
-        Size: =16
+        Size: =18
         Text: ="Name"
         Width: =200
-        Y: =32
+        X: =58
+        Y: =92
         ZIndex: =2
 
     Icon5_1 As icon.ArrowsUpDown:
@@ -67,18 +70,65 @@ Screen2 As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =610
-        Y: =58
+        X: =652
+        Y: =108
         ZIndex: =3
 
     Label11_1 As label:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
-        Size: =16
+        Size: =18
         Text: ="Createdon"
         Width: =134
-        X: =506
-        Y: =40
+        X: =537
+        Y: =92
         ZIndex: =4
+
+    Label19_2 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Text: =
+        Width: =1366
+        ZIndex: =5
+
+    Label19_3 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Text: =
+        Width: =1366
+        Y: =766
+        ZIndex: =6
+
+    Label20_1 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =768
+        Text: =
+        Width: =2
+        ZIndex: =7
+
+    Label22_1 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =768
+        Text: =
+        Width: =2
+        X: =1364
+        ZIndex: =8
+
+    Image5_2 As image:
+        Height: =80
+        Image: =OIP
+        OnSelect: =Navigate('Home Screen')
+        Width: =262
+        ZIndex: =9
+
+    Label23_1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =54
+        Size: =20
+        Text: ="Customer Target Pricing"
+        Width: =628
+        X: =362
+        ZIndex: =10
 

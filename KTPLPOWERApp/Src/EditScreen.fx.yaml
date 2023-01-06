@@ -1,29 +1,30 @@
-Screen1 As screen:
+EditScreen As screen:
+    OnVisible: =
 
     BTN_Activate_1 As button:
         DisplayMode: =If(Label18_1.Text ="Active" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,Edit)
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Active});
-            Notify("Record has been Activated");Navigate(Screen1)
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Active});
+            Notify("Record has been Activated");Navigate(EditScreen)
         Size: =10
         Text: ="Activate"
         Width: =300
         X: =137
-        Y: =531
+        Y: =613
         ZIndex: =2
 
     BTN_Deactivate_1 As button:
         DisplayMode: =If(Label18_1.Text ="Inactive" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,Edit)
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);Refresh('Customer Target Pricing');
-            Notify("Record has been Deactivated");ResetForm(Form2_1)
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
+            Notify("Record has been Deactivated");
         Size: =10
         Text: ="Deactivate"
         Width: =280
         X: =469
-        Y: =531
+        Y: =613
         ZIndex: =3
 
     Label18_1 As label:
@@ -36,19 +37,13 @@ Screen1 As screen:
     "'submit Button_1' As button":
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
         Text: ="Submit"
         Visible: =If(IsEdit,true,false)
         Width: =280
         X: =822
-        Y: =531
+        Y: =613
         ZIndex: =6
-
-    Arrow1 As arrow.backArrow:
-        OnSelect: =Back();
-        X: =82
-        Y: =38
-        ZIndex: =7
 
     Form2_1 As form:
         DataSource: ='Customer Target Pricing'
@@ -57,8 +52,8 @@ Screen1 As screen:
         Item: =Gallery2_1.Selected
         OnSuccess: =NewForm(Form2_1);
         Width: =952
-        X: =137
-        Y: =41
+        X: =143
+        Y: =123
         ZIndex: =8
 
         "'Customer Lead Id_DataCard2_1' As typedDataCard.comboBoxEditCard":
@@ -1124,4 +1119,51 @@ Screen1 As screen:
                 Wrap: =false
                 Y: =DataCardKey23_1.Y
                 ZIndex: =4
+
+    Image5_1 As image:
+        Height: =80
+        Image: =OIP
+        OnSelect: =Navigate(ViewScreen)
+        Width: =262
+        ZIndex: =9
+
+    Label19 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Text: =
+        Width: =1366
+        ZIndex: =10
+
+    Label19_1 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Text: =
+        Width: =1366
+        Y: =766
+        ZIndex: =11
+
+    Label20 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =768
+        Text: =
+        Width: =2
+        ZIndex: =12
+
+    Label22 As label:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =768
+        Text: =
+        Width: =2
+        X: =1364
+        ZIndex: =13
+
+    Label23 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =54
+        Size: =20
+        Text: ="Customer Target Pricing"
+        Width: =628
+        X: =295
+        ZIndex: =14
 

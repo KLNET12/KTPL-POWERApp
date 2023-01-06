@@ -115,7 +115,7 @@
     "Home Screen",
     "Screen_AddNewCustomerTargetPricing",
     "Screen_ViewCustomerTargetPricing",
-    "Screen1",
-    "Screen2"
+    "EditScreen",
+    "ViewScreen"
   ]
 }
