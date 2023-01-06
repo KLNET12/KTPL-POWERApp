@@ -194,6 +194,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =339
             X: =16
+            Y: =4
             ZIndex: =1
 
         TextInput5 As text:
@@ -205,6 +206,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =357
+            Y: =4
             ZIndex: =2
 
         TextInput12 As text:
@@ -218,6 +220,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =509
+            Y: =4
             ZIndex: =8
 
         TextInput13 As text:
@@ -230,6 +233,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =661
+            Y: =4
             ZIndex: =9
 
         TextInput14 As text:
@@ -241,6 +245,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =965
+            Y: =4
             ZIndex: =10
 
         TextInput15 As text:
@@ -253,6 +258,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =813
+            Y: =4
             ZIndex: =11
 
         Edit_icon As icon.Edit:
