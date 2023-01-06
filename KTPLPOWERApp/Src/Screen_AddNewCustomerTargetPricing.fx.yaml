@@ -1111,6 +1111,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Button1 As button:
         Height: =10
+        OnSelect: =//Patch('Product Details_V',AddColumns(CollectflowExcelData,"ItemNo")
         Size: =8
         Text: ="Import"
         Width: =300
