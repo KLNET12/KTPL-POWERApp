@@ -1,5 +1,45 @@
 {
-  "17854b76-3be2-4d5b-b5b2-2d6515a5aed5": {
+  "1219ebeb-3620-4076-a39d-05b67326a735": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-00.australiasoutheast.logic.azure.com:443/workflows/2dca816e1a7847b9800a39c8f23681eb/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=FeyuJ4i2BADbDHNczkBNzzQGwHOgnRAXQJz3oxWJ_U4",
+      "workflowEndpoint": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/a62a1747bf7f47c4b2b423d18fda3e81-58b65e0cb8d4433ca0573ca1096bcdfc/providers/Microsoft.Logic/workflows/1ad333f2-5d06-48c2-a9ef-5cb605889c78",
+      "workflowName": "1ad333f2-5d06-48c2-a9ef-5cb605889c78",
+      "workflowPath": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/a62a1747bf7f47c4b2b423d18fda3e81-58b65e0cb8d4433ca0573ca1096bcdfc/providers/Microsoft.Logic/workflows/1ad333f2-5d06-48c2-a9ef-5cb605889c78"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "df4281c0-e0a4-49f7-9d94-20b3d42bd4f3": {
+          "value": "shared_sql"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "1ad333f2-5d06-48c2-a9ef-5cb605889c78"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sql": {
+          "value": "df4281c0-e0a4-49f7-9d94-20b3d42bd4f3"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "1ad333f2-5d06-48c2-a9ef-5cb605889c78"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerApp->ParseJSON"
+    ],
+    "dependencies": {
+      "shared_sql": "df4281c0-e0a4-49f7-9d94-20b3d42bd4f3"
+    },
+    "dependents": [],
+    "id": "1219ebeb-3620-4076-a39d-05b67326a735"
+  },
+  "bcd3ebca-db0d-40b6-9841-a1f198613b8f": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-16.australiasoutheast.logic.azure.com:443/workflows/b9d1287eb39e407fa820d71448f13b9b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YymmUIcVsnSlLuDj1NsvYNHfrM1rsZNmcEeeJepLL8A",
       "workflowEndpoint": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/a62a1747bf7f47c4b2b423d18fda3e81-58b65e0cb8d4433ca0573ca1096bcdfc/providers/Microsoft.Logic/workflows/7dae44c6-192b-48c4-ae31-043b2a88d0fe",
@@ -11,7 +51,7 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "7d40307c-ec6b-4321-9d8b-3f160dc1ff32": {
+        "d820eb1e-6f66-4a67-9fee-650ccc50fcaa": {
           "value": "shared_excelonlinebusiness"
         },
         "f3d9070f-381e-4a91-916f-c9ad3af0d19a": {
@@ -24,7 +64,7 @@
       },
       "parameterHintsV2": {
         "shared_excelonlinebusiness": {
-          "value": "7d40307c-ec6b-4321-9d8b-3f160dc1ff32"
+          "value": "d820eb1e-6f66-4a67-9fee-650ccc50fcaa"
         },
         "shared_sharepointonline": {
           "value": "f3d9070f-381e-4a91-916f-c9ad3af0d19a"
@@ -40,13 +80,13 @@
       "GetExcelData"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "7d40307c-ec6b-4321-9d8b-3f160dc1ff32",
+      "shared_excelonlinebusiness": "d820eb1e-6f66-4a67-9fee-650ccc50fcaa",
       "shared_sharepointonline": "f3d9070f-381e-4a91-916f-c9ad3af0d19a"
     },
     "dependents": [],
-    "id": "17854b76-3be2-4d5b-b5b2-2d6515a5aed5"
+    "id": "bcd3ebca-db0d-40b6-9841-a1f198613b8f"
   },
-  "7d40307c-ec6b-4321-9d8b-3f160dc1ff32": {
+  "d820eb1e-6f66-4a67-9fee-650ccc50fcaa": {
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -59,9 +99,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "17854b76-3be2-4d5b-b5b2-2d6515a5aed5"
+      "bcd3ebca-db0d-40b6-9841-a1f198613b8f"
     ],
-    "id": "7d40307c-ec6b-4321-9d8b-3f160dc1ff32"
+    "id": "d820eb1e-6f66-4a67-9fee-650ccc50fcaa"
   },
   "df4281c0-e0a4-49f7-9d94-20b3d42bd4f3": {
     "connectionParameters": {
