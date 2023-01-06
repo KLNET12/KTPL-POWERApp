@@ -587,10 +587,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =121
+            Height: =106
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =564
+            Width: =575
             X: =0
             Y: =1
             ZIndex: =48
