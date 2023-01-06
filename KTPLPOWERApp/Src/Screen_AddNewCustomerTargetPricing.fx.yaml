@@ -502,7 +502,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =120
         OnSuccess: |-
             =Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
+            //Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully");
         Width: =575
@@ -586,10 +586,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =106
+            Height: =152
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =575
+            Width: =573
             X: =0
             Y: =1
             ZIndex: =48
@@ -606,7 +606,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =80
+                Height: =100
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -614,7 +614,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =232
+                Width: =249
                 X: =4
                 Y: =26
                 ZIndex: =2
@@ -1108,7 +1108,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             X: =949
             ZIndex: =6
 
-    Button1 As button:
+    Import_Btn As button:
         Height: =10
         OnSelect: =//Patch('Product Details_V',AddColumns(CollectflowExcelData,"ItemNo")
         Size: =8
