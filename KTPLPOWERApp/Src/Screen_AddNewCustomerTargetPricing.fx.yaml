@@ -265,7 +265,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Edit "
             Width: =53
             X: =1130
-            Y: =3
             ZIndex: =12
 
         Icon3 As icon.Trash:
@@ -275,7 +274,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Delete"
             Width: =53
             X: =1199
-            Y: =3
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
