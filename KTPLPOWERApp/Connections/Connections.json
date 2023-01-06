@@ -134,7 +134,9 @@
       "Product Details_V"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "1219ebeb-3620-4076-a39d-05b67326a735"
+    ],
     "id": "df4281c0-e0a4-49f7-9d94-20b3d42bd4f3"
   },
   "f3d9070f-381e-4a91-916f-c9ad3af0d19a": {
@@ -163,7 +165,7 @@
     ],
     "dependencies": {},
     "dependents": [
-      "17854b76-3be2-4d5b-b5b2-2d6515a5aed5"
+      "bcd3ebca-db0d-40b6-9841-a1f198613b8f"
     ],
     "id": "f3d9070f-381e-4a91-916f-c9ad3af0d19a"
   }
