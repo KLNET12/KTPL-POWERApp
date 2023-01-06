@@ -5,220 +5,89 @@ Screen1 As screen:
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Active});
-            Notify("Record has been Activated");
+            Notify("Record has been Activated");Navigate(Screen1)
         Size: =10
         Text: ="Activate"
         Width: =300
-        X: =477
-        Y: =688
+        X: =137
+        Y: =531
         ZIndex: =2
 
     BTN_Deactivate_1 As button:
         DisplayMode: =If(Label18_1.Text ="Inactive" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,Edit)
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
-            Notify("Record has been Deactivated");
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);Refresh('Customer Target Pricing');
+            Notify("Record has been Deactivated");ResetForm(Form2_1)
         Size: =10
         Text: ="Deactivate"
         Width: =280
-        X: =791
-        Y: =688
+        X: =469
+        Y: =531
         ZIndex: =3
 
     Label18_1 As label:
-        Text: =DataCardValue20.Selected.Value
+        Text: =DataCardValue20_1.Selected.Value
         Visible: =false
         X: =477
         Y: =725
         ZIndex: =4
 
-    Form3 As form:
+    "'submit Button_1' As button":
+        Height: =30
+        OnSelect: |-
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
+        Text: ="Submit"
+        Visible: =If(IsEdit,true,false)
+        Width: =280
+        X: =822
+        Y: =531
+        ZIndex: =6
+
+    Arrow1 As arrow.backArrow:
+        OnSelect: =Back();
+        X: =82
+        Y: =38
+        ZIndex: =7
+
+    Form2_1 As form:
         DataSource: ='Customer Target Pricing'
         DefaultMode: =If(IsEdit,FormMode.Edit,FormMode.View)
-        Height: =576
+        Height: =490
         Item: =Gallery2_1.Selected
-        Width: =1086
-        X: =132
-        Y: =38
-        ZIndex: =5
+        OnSuccess: =NewForm(Form2_1);
+        Width: =952
+        X: =137
+        Y: =41
+        ZIndex: =8
 
-        Bottle_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_nonrefill"
-            Default: =ThisItem.Bottle
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_nonrefill")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue13.Selected.Value
-            Width: =362
-            X: =0
-            Y: =5
-            ZIndex: =1
-
-            DataCardKey29 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue13 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                IsSearchable: =false
-                Items: =Choices('Bottle (Customer Target Pricing)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
-                ZIndex: =2
-
-            ErrorMessage26 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue13.Y + DataCardValue13.Height
-                ZIndex: =3
-
-            StarVisible26 As label:
-                Align: =Align.Center
-                Height: =DataCardKey29.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey29.Y
-                ZIndex: =4
-
-        Status_DataCard2 As typedDataCard.comboBoxOptionSetSingleEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="statecode"
-            Default: =ThisItem.Status
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"statecode")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue6.Selected.Value
-            Width: =362
-            X: =2
-            Y: =4
-            ZIndex: =1
-
-            DataCardKey9 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                IsSearchable: =false
-                Items: =Choices('Status (Customer Target Pricing)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
-                ZIndex: =2
-
-            ErrorMessage7 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
-                ZIndex: =3
-
-            StarVisible7 As label:
-                Align: =Align.Center
-                Height: =DataCardKey9.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey9.Y
-                ZIndex: =4
-
-        "'Customer Lead Id_DataCard3' As typedDataCard.comboBoxEditCard":
+        "'Customer Lead Id_DataCard2_1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_CustomerLeadId"
-            Default: =ThisItem.'Customer Lead Id'
+            Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead)))
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_CustomerLeadId")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =82
             Required: =false
-            Update: =DataCardValue27.Selected
-            Width: =362
+            Update: =
+            Width: =317
             X: =0
             Y: =0
             ZIndex: =1
 
-            DataCardKey31 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
+            DataCardKey15_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =13
+                Size: =10
+                Text: ="Lead"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =13
                 ZIndex: =1
 
-            DataCardValue27 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["fullname"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@'Customer Target Pricing'].ntz_CustomerLeadId)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["fullname"]
-                SearchItems: =Search(Choices([@'Customer Target Pricing'].ntz_CustomerLeadId),DataCardValue27.SearchText,"fullname")
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey31.Y + DataCardKey31.Height + 5
-                ZIndex: =2
-
-            ErrorMessage28 As label:
+            ErrorMessage13_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -230,265 +99,76 @@ Screen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue27.Y + DataCardValue27.Height
+                Y: =
                 ZIndex: =3
 
-            StarVisible28 As label:
+            StarVisible13_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey31.Height
+                Height: =DataCardKey15_1.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey31.Y
+                Y: =DataCardKey15_1.Y
                 ZIndex: =4
 
-        "'Status Reason_DataCard2' As typedDataCard.comboBoxOptionSetSingleEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="statuscode"
-            Default: =ThisItem.'Status Reason'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"statuscode")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue25.Selected.Value
-            Width: =362
-            X: =1
-            Y: =4
-            ZIndex: =1
-
-            DataCardKey30 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
+            TextInput6_1 As text:
+                Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
+                DisplayMode: =Disabled
+                Height: =22
+                Size: =10
+                Width: =245
                 X: =30
-                Y: =10
-                ZIndex: =1
+                Y: =30
+                ZIndex: =5
 
-            DataCardValue25 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                IsSearchable: =false
-                Items: =Choices('Status Reason (Customer Target Pricing)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
-                ZIndex: =2
-
-            ErrorMessage27 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue25.Y + DataCardValue25.Height
-                ZIndex: =3
-
-            StarVisible27 As label:
-                Align: =Align.Center
-                Height: =DataCardKey30.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey30.Y
-                ZIndex: =4
-
-        Quantity_DataCard2 As typedDataCard.numberEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_quantity"
-            Default: =ThisItem.Quantity
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_quantity")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue28.Text)
-            Width: =362
-            X: =1
-            Y: =5
-            ZIndex: =1
-
-            DataCardKey34 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue28 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey34.Y + DataCardKey34.Height + 5
-                ZIndex: =2
-
-            ErrorMessage31 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue28.Y + DataCardValue28.Height
-                ZIndex: =3
-
-            StarVisible31 As label:
-                Align: =Align.Center
-                Height: =DataCardKey34.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey34.Y
-                ZIndex: =4
-
-        Name_DataCard1 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_name"
-            Default: =ThisItem.Name
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_name")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_name")
-            Required: =false
-            Update: =DataCardValue1.Text
-            Width: =362
-            X: =1
-            Y: =0
-            ZIndex: =6
-
-            DataCardKey2 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue1 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
-                ZIndex: =2
-
-            ErrorMessage1 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
-                ZIndex: =3
-
-            StarVisible1 As label:
-                Align: =Align.Center
-                Height: =DataCardKey2.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey2.Y
-                ZIndex: =4
-
-        Description_DataCard1 As typedDataCard.textualEditCard:
+        Description_DataCard2_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_product"
             Default: =ThisItem.Description
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_product")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =74
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_product")
             Required: =false
-            Update: =DataCardValue2.Text
-            Width: =362
-            X: =2
+            Update: =DataCardValue15_1.Text
+            Width: =317
+            X: =1
             Y: =0
-            ZIndex: =6
+            ZIndex: =1
 
-            DataCardKey3 As label:
-                AutoHeight: =true
-                Height: =34
+            DataCardKey17_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =16
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =6
+                Y: =13
                 ZIndex: =1
 
-            DataCardValue2 As text:
+            DataCardValue15_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
+                Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =10
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                Width: =250
+                X: =13
+                Y: =30
                 ZIndex: =2
 
-            ErrorMessage2 As label:
+            ErrorMessage15_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -499,368 +179,64 @@ Screen1 As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue2.Y + DataCardValue2.Height
+                X: =41
+                Y: =21
                 ZIndex: =3
 
-            StarVisible2 As label:
+            StarVisible15_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey3.Height
+                Height: =DataCardKey17_1.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3.Y
+                Y: =DataCardKey17_1.Y
                 ZIndex: =4
 
-        "'Item No_DataCard2' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_productcode"
-            Default: =ThisItem.'Item No'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_productcode")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_productcode")
-            Required: =false
-            Update: =DataCardValue3.Text
-            Width: =362
-            X: =0
-            Y: =1
-            ZIndex: =6
-
-            DataCardKey6 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue3 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                ZIndex: =2
-
-            ErrorMessage3 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue3.Y + DataCardValue3.Height
-                ZIndex: =3
-
-            StarVisible3 As label:
-                Align: =Align.Center
-                Height: =DataCardKey6.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6.Y
-                ZIndex: =4
-
-        ABV_DataCard2 As typedDataCard.numberEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_alc"
-            Default: =ThisItem.ABV
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue4.Text)
-            Width: =362
-            X: =1
-            Y: =1
-            ZIndex: =6
-
-            DataCardKey7 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue4 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
-                ZIndex: =2
-
-            ErrorMessage5 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue4.Y + DataCardValue4.Height
-                ZIndex: =3
-
-            StarVisible5 As label:
-                Align: =Align.Center
-                Height: =DataCardKey7.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =4
-
-        Barcode_DataCard2 As typedDataCard.comboBoxOptionSetSingleEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_decoded"
-            Default: =ThisItem.Barcode
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_decoded")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue5.Selected.Value
-            Width: =362
-            X: =2
-            Y: =1
-            ZIndex: =6
-
-            DataCardKey8 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue5 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                IsSearchable: =false
-                Items: =Choices('Barcode (Customer Target Pricing)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
-                ZIndex: =2
-
-            ErrorMessage6 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
-                ZIndex: =3
-
-            StarVisible6 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =4
-
-        "'Btl/Ctn_DataCard2' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_cartonquantity"
-            Default: =ThisItem.'Btl/Ctn'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_cartonquantity")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_cartonquantity")
-            Required: =false
-            Update: =DataCardValue7.Text
-            Width: =362
-            X: =0
-            Y: =2
-            ZIndex: =6
-
-            DataCardKey10 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue7 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey10.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey10.Y
-                ZIndex: =4
-
-        "'Create Date_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_createdate"
-            Default: =ThisItem.'Create Date'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_createdate")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =362
-            X: =1
-            Y: =2
-            ZIndex: =6
-
-            DataCardKey11 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue8 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =27
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
-                ZIndex: =2
-
-        "'Expiry Date_DataCard3' As typedDataCard.dateTimeEditCard":
+        "'Expiry Date_DataCard2_1' As typedDataCard.dateTimeEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_expirydate"
             Default: =ThisItem.'Expiry Date'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_expirydate")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =60
             Required: =false
-            Update: =DateValue1.SelectedDate
-            Width: =362
+            Update: =DateValue2_1.SelectedDate
+            Width: =317
             X: =2
-            Y: =2
-            ZIndex: =6
+            Y: =0
+            ZIndex: =1
 
-            DataCardKey12 As label:
-                AutoHeight: =true
-                Height: =34
+            DataCardKey16_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =16
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =22
+                Y: =11
                 ZIndex: =1
 
-            DateValue1 As datepicker:
+            DateValue2_1 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
+                DefaultDate: =Text(DateValue(Parent.Default),"dd/mm/yyyy")
+                DisplayMode: =Disabled
                 EndYear: =Year(Today())+100
+                Height: =22
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =10
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) / 2
-                X: =30
-                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                Width: =245
+                X: =28
+                Y: =28
                 ZIndex: =2
 
-            Separator3 As label:
+            Separator2_1 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =
@@ -876,7 +252,7 @@ Screen1 As screen:
                 Y: =
                 ZIndex: =4
 
-            MinuteValue2 As dropdown:
+            MinuteValue1_1 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Text(Minute(Parent.Default),"00")
                 DisplayMode: =Parent.DisplayMode
@@ -888,11 +264,11 @@ Screen1 As screen:
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
                 Width: =
-                X: =
+                X: =Separator2_1.Width
                 Y: =
                 ZIndex: =5
 
-            ErrorMessage9 As label:
+            ErrorMessage14_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -907,60 +283,63 @@ Screen1 As screen:
                 Y: =
                 ZIndex: =6
 
-            StarVisible9 As label:
+            StarVisible14_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey12.Height
+                Height: =DataCardKey16_1.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey12.Y
+                Y: =DataCardKey16_1.Y
                 ZIndex: =7
 
-        "'Lt/Btl_DataCard2' As typedDataCard.textualEditCard":
+        "'Item No_DataCard1_1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_litres"
-            Default: =ThisItem.'Lt/Btl'
+            DataField: ="ntz_productcode"
+            Default: =ThisItem.'Item No'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_litres")
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_productcode")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_litres")
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_productcode")
             Required: =false
-            Update: =DataCardValue9.Text
-            Width: =362
+            Update: =DataCardValue16_1.Text
+            Width: =317
             X: =0
-            Y: =3
-            ZIndex: =6
+            Y: =1
+            ZIndex: =1
 
-            DataCardKey13 As label:
-                AutoHeight: =true
-                Height: =34
+            DataCardKey18_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =25
+                Y: =11
                 ZIndex: =1
 
-            DataCardValue9 As text:
+            DataCardValue16_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
+                Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =10
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =245
                 X: =30
-                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                Y: =30
                 ZIndex: =2
 
-            ErrorMessage10 As label:
+            ErrorMessage16_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -972,154 +351,20 @@ Screen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
+                Y: =DataCardValue16_1.Y + DataCardValue16_1.Height
                 ZIndex: =3
 
-            StarVisible10 As label:
+            StarVisible16_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey13.Height
+                Height: =DataCardKey18_1.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey13.Y
+                Y: =DataCardKey18_1.Y
                 ZIndex: =4
 
-        "'Max Price (ntz_maxprice)_DataCard1' As typedDataCard.numberEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_maxprice"
-            Default: =ThisItem.'Max Price (ntz_maxprice)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_maxprice")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue10.Text)
-            Width: =362
-            X: =1
-            Y: =3
-            ZIndex: =6
-
-            DataCardKey14 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue10 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
-                ZIndex: =2
-
-            ErrorMessage11 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue10.Y + DataCardValue10.Height
-                ZIndex: =3
-
-            StarVisible11 As label:
-                Align: =Align.Center
-                Height: =DataCardKey14.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey14.Y
-                ZIndex: =4
-
-        "'Min Price (ntz_minprice)_DataCard1' As typedDataCard.numberEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="ntz_minprice"
-            Default: =ThisItem.'Min Price (ntz_minprice)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_minprice")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue11.Text)
-            Width: =362
-            X: =2
-            Y: =3
-            ZIndex: =6
-
-            DataCardKey27 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue11 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
-                ZIndex: =2
-
-            ErrorMessage12 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue11.Y + DataCardValue11.Height
-                ZIndex: =3
-
-            StarVisible12 As label:
-                Align: =Align.Center
-                Height: =DataCardKey27.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey27.Y
-                ZIndex: =4
-
-        Variant_DataCard1 As typedDataCard.textualEditCard:
+        Variant_DataCard3_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_variant"
             Default: =ThisItem.Variant
@@ -1129,27 +374,29 @@ Screen1 As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_variant")
             Required: =false
-            Update: =DataCardValue12.Text
-            Width: =362
-            X: =0
-            Y: =4
-            ZIndex: =6
+            Update: =DataCardValue24_1.Text
+            Width: =317
+            X: =1
+            Y: =1
+            ZIndex: =1
 
-            DataCardKey28 As label:
-                AutoHeight: =true
-                Height: =34
+            DataCardKey32_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
+                X: =10
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue12 As text:
+            DataCardValue24_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Disabled
+                Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -1157,12 +404,12 @@ Screen1 As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                Width: =245
+                X: =14
+                Y: =29
                 ZIndex: =2
 
-            ErrorMessage25 As label:
+            ErrorMessage29_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -1174,33 +421,707 @@ Screen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue12.Y + DataCardValue12.Height
+                Y: =DataCardValue24_1.Y + DataCardValue24_1.Height
                 ZIndex: =3
 
-            StarVisible25 As label:
+            StarVisible29_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey28.Height
+                Height: =DataCardKey32_1.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey28.Y
+                Y: =DataCardKey32_1.Y
                 ZIndex: =4
 
-    "'submit Button_1' As button":
-        Height: =30
-        OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue11),Quantity:Int(DataCardValue28),'Max Price (ntz_maxprice)':Int(DataCardValue10)});Notify("Record Updated Successfully!");
-        Text: ="Submit"
-        Visible: =If(IsEdit,true,false)
-        Width: =280
-        X: =1086
-        Y: =688
-        ZIndex: =6
+        ABV_DataCard1_1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_alc"
+            Default: =ThisItem.ABV
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue18_1.Text)
+            Width: =317
+            X: =2
+            Y: =1
+            ZIndex: =1
 
-    Arrow1 As arrow.backArrow:
-        OnSelect: =Back();
-        X: =82
-        Y: =38
-        ZIndex: =7
+            DataCardKey20_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =17
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue18_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Disabled
+                Format: =TextFormat.Number
+                Height: =22
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =27
+                ZIndex: =2
+
+            ErrorMessage18_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue18_1.Y + DataCardValue18_1.Height
+                ZIndex: =3
+
+            StarVisible18_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey20_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey20_1.Y
+                ZIndex: =4
+
+        "'Lt/Btl_DataCard1_1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_litres"
+            Default: =ThisItem.'Lt/Btl'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_litres")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_litres")
+            Required: =false
+            Update: =DataCardValue17_1.Text
+            Width: =317
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey21_1 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue17_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Disabled
+                Height: =22
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =34
+                ZIndex: =2
+
+            ErrorMessage19_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue17_1.Y + DataCardValue17_1.Height
+                ZIndex: =3
+
+            StarVisible19_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey21_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey21_1.Y
+                ZIndex: =4
+
+        Barcode_DataCard1_1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_decoded"
+            Default: =ThisItem.Barcode
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_decoded")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue19_1.Selected.Value
+            Width: =317
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey22_1 As label:
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =8
+                Y: =14
+                ZIndex: =1
+
+            DataCardValue19_1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Disabled
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Barcode (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =13
+                Y: =33
+                ZIndex: =2
+
+            ErrorMessage20_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue19_1.Y + DataCardValue19_1.Height
+                ZIndex: =3
+
+            StarVisible20_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey22_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey22_1.Y
+                ZIndex: =4
+
+        Bottle_DataCard3_1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_nonrefill"
+            Default: =ThisItem.Bottle
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_nonrefill")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue21_1.Selected.Value
+            Width: =317
+            X: =2
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey24_1 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =22
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21_1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Disabled
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Bottle (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =34
+                ZIndex: =2
+
+            ErrorMessage22_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21_1.Y + DataCardValue21_1.Height
+                ZIndex: =3
+
+            StarVisible22_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey24_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24_1.Y
+                ZIndex: =4
+
+        "'Btl/Ctn_DataCard1_1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_cartonquantity"
+            Default: =ThisItem.'Btl/Ctn'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_cartonquantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =72
+            MaxLength: =DataSourceInfo([@'Customer Target Pricing'], DataSourceInfo.MaxLength, "ntz_cartonquantity")
+            Required: =false
+            Update: =DataCardValue22_1.Text
+            Width: =317
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey25_1 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =18
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue22_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Disabled
+                Height: =22
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =36
+                ZIndex: =2
+
+            ErrorMessage23_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue22_1.Y + DataCardValue22_1.Height
+                ZIndex: =3
+
+            StarVisible23_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25_1.Y
+                ZIndex: =4
+
+        Quantity_DataCard1_1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_quantity"
+            Default: =ThisItem.Quantity
+            DisplayMode: =DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_quantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue26_1.Text)
+            Width: =317
+            X: =1
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey33_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =18
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =8
+                Y: =18
+                ZIndex: =1
+
+            DataCardValue26_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =22
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =14
+                Y: =35
+                ZIndex: =2
+
+            ErrorMessage30_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue26_1.Y + DataCardValue26_1.Height
+                ZIndex: =3
+
+            StarVisible30_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey33_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey33_1.Y
+                ZIndex: =4
+
+        "'Max Price_DataCard6_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_maxprice"
+            Default: =ThisItem.'Max Price (ntz_maxprice)'
+            DisplayMode: =DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_maxprice")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue35_1.Text)
+            Width: =317
+            X: =2
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey42_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =22
+                Y: =15
+                ZIndex: =1
+
+            DataCardValue35_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =22
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =33
+                ZIndex: =2
+
+            ErrorMessage39_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue35_1.Y + DataCardValue35_1.Height
+                ZIndex: =3
+
+            StarVisible39_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey42_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey42_1.Y
+                ZIndex: =4
+
+        "'Min Price_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_minprice"
+            Default: =ThisItem.'Min Price (ntz_minprice)'
+            DisplayMode: =DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_minprice")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =Value(DataCardValue14_1.Text)
+            Width: =317
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey19_1 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =22
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =34
+                ZIndex: =2
+
+            ErrorMessage17_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                ZIndex: =3
+
+            StarVisible17_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey19_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey19_1.Y
+                ZIndex: =4
+
+        "'Status Reason_DataCard1_1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="statuscode"
+            Default: =ThisItem.'Status Reason'
+            DisplayMode: =DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"statuscode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue23_1.Selected.Value
+            Width: =317
+            X: =1
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey26_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =19
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =8
+                Y: =15
+                ZIndex: =1
+
+            DataCardValue23_1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Status Reason (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =14
+                Y: =34
+                ZIndex: =2
+
+            ErrorMessage24_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue23_1.Y + DataCardValue23_1.Height
+                ZIndex: =3
+
+            StarVisible24_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey26_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey26_1.Y
+                ZIndex: =4
+
+        Status_DataCard1_1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="statecode"
+            Default: =ThisItem.Status
+            DisplayMode: =DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"statecode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue20_1.Selected.Value
+            Width: =317
+            X: =2
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey23_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =10
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =9
+                ZIndex: =1
+
+            DataCardValue20_1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =22
+                IsSearchable: =false
+                Items: =Choices('Status (Customer Target Pricing)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =245
+                X: =30
+                Y: =33
+                ZIndex: =2
+
+            ErrorMessage21_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue20_1.Y + DataCardValue20_1.Height
+                ZIndex: =3
+
+            StarVisible21_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23_1.Y
+                ZIndex: =4
 

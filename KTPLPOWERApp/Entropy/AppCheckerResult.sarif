@@ -483,19 +483,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Name_DataCard1.DataCardValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Status_DataCard1_1.DataCardValue20_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Name_DataCard1.DataCardValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Status_DataCard1_1.DataCardValue20_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.Name_DataCard1.DataCardValue1"
+                "type": "Screen1.Form2_1.Status_DataCard1_1.DataCardValue20_1"
               }
             }
           ],
@@ -513,19 +513,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Description_DataCard1.DataCardValue2.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Status Reason_DataCard1_1'.DataCardValue23_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Description_DataCard1.DataCardValue2.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Status Reason_DataCard1_1'.DataCardValue23_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.Description_DataCard1.DataCardValue2"
+                "type": "Screen1.Form2_1.'Status Reason_DataCard1_1'.DataCardValue23_1"
               }
             }
           ],
@@ -543,19 +543,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Item No_DataCard2'.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Min Price_DataCard1_1'.DataCardValue14_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Item No_DataCard2'.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Min Price_DataCard1_1'.DataCardValue14_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Item No_DataCard2'.DataCardValue3"
+                "type": "Screen1.Form2_1.'Min Price_DataCard1_1'.DataCardValue14_1"
               }
             }
           ],
@@ -573,19 +573,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.ABV_DataCard2.DataCardValue4.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Max Price_DataCard6_1'.DataCardValue35_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.ABV_DataCard2.DataCardValue4.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Max Price_DataCard6_1'.DataCardValue35_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.ABV_DataCard2.DataCardValue4"
+                "type": "Screen1.Form2_1.'Max Price_DataCard6_1'.DataCardValue35_1"
               }
             }
           ],
@@ -603,19 +603,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Barcode_DataCard2.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Quantity_DataCard1_1.DataCardValue26_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Barcode_DataCard2.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Quantity_DataCard1_1.DataCardValue26_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.Barcode_DataCard2.DataCardValue5"
+                "type": "Screen1.Form2_1.Quantity_DataCard1_1.DataCardValue26_1"
               }
             }
           ],
@@ -633,19 +633,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Btl/Ctn_DataCard2'.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Btl/Ctn_DataCard1_1'.DataCardValue22_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Btl/Ctn_DataCard2'.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Btl/Ctn_DataCard1_1'.DataCardValue22_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Btl/Ctn_DataCard2'.DataCardValue7"
+                "type": "Screen1.Form2_1.'Btl/Ctn_DataCard1_1'.DataCardValue22_1"
               }
             }
           ],
@@ -663,19 +663,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.DateValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Bottle_DataCard3_1.DataCardValue21_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.DateValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Bottle_DataCard3_1.DataCardValue21_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Expiry Date_DataCard3'.DateValue1"
+                "type": "Screen1.Form2_1.Bottle_DataCard3_1.DataCardValue21_1"
               }
             }
           ],
@@ -693,19 +693,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.HourValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Barcode_DataCard1_1.DataCardValue19_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.HourValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Barcode_DataCard1_1.DataCardValue19_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Expiry Date_DataCard3'.HourValue1"
+                "type": "Screen1.Form2_1.Barcode_DataCard1_1.DataCardValue19_1"
               }
             }
           ],
@@ -723,19 +723,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.MinuteValue2.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Lt/Btl_DataCard1_1'.DataCardValue17_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Expiry Date_DataCard3'.MinuteValue2.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Lt/Btl_DataCard1_1'.DataCardValue17_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Expiry Date_DataCard3'.MinuteValue2"
+                "type": "Screen1.Form2_1.'Lt/Btl_DataCard1_1'.DataCardValue17_1"
               }
             }
           ],
@@ -753,19 +753,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Lt/Btl_DataCard2'.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.ABV_DataCard1_1.DataCardValue18_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Lt/Btl_DataCard2'.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.ABV_DataCard1_1.DataCardValue18_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Lt/Btl_DataCard2'.DataCardValue9"
+                "type": "Screen1.Form2_1.ABV_DataCard1_1.DataCardValue18_1"
               }
             }
           ],
@@ -783,19 +783,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Max Price (ntz_maxprice)_DataCard1'.DataCardValue10.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Variant_DataCard3_1.DataCardValue24_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Max Price (ntz_maxprice)_DataCard1'.DataCardValue10.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Variant_DataCard3_1.DataCardValue24_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Max Price (ntz_maxprice)_DataCard1'.DataCardValue10"
+                "type": "Screen1.Form2_1.Variant_DataCard3_1.DataCardValue24_1"
               }
             }
           ],
@@ -813,19 +813,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Min Price (ntz_minprice)_DataCard1'.DataCardValue11.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Item No_DataCard1_1'.DataCardValue16_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Min Price (ntz_minprice)_DataCard1'.DataCardValue11.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Item No_DataCard1_1'.DataCardValue16_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Min Price (ntz_minprice)_DataCard1'.DataCardValue11"
+                "type": "Screen1.Form2_1.'Item No_DataCard1_1'.DataCardValue16_1"
               }
             }
           ],
@@ -843,19 +843,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Variant_DataCard1.DataCardValue12.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.DateValue2_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Variant_DataCard1.DataCardValue12.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.DateValue2_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.Variant_DataCard1.DataCardValue12"
+                "type": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.DateValue2_1"
               }
             }
           ],
@@ -873,19 +873,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Customer Lead Id_DataCard3'.DataCardValue27.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.MinuteValue1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Customer Lead Id_DataCard3'.DataCardValue27.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.MinuteValue1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Customer Lead Id_DataCard3'.DataCardValue27"
+                "type": "Screen1.Form2_1.'Expiry Date_DataCard2_1'.MinuteValue1_1"
               }
             }
           ],
@@ -903,19 +903,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.'Status Reason_DataCard2'.DataCardValue25.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Form2_1.Description_DataCard2_1.DataCardValue15_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.'Status Reason_DataCard2'.DataCardValue25.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Form2_1.Description_DataCard2_1.DataCardValue15_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Form3.'Status Reason_DataCard2'.DataCardValue25"
+                "type": "Screen1.Form2_1.Description_DataCard2_1.DataCardValue15_1"
               }
             }
           ],
@@ -927,6 +927,96 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.Form2_1.'Customer Lead Id_DataCard2_1'.TextInput6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.Form2_1.'Customer Lead Id_DataCard2_1'.TextInput6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen1",
+                "type": "Screen1.Form2_1.'Customer Lead Id_DataCard2_1'.TextInput6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.Arrow1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.Arrow1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen1",
+                "type": "Screen1.Arrow1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.Arrow1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.Arrow1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen1",
+                "type": "Screen1.Arrow1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3362,66 +3452,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Status_DataCard2.DataCardValue6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Status_DataCard2.DataCardValue6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form3.Status_DataCard2.DataCardValue6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Form3.Bottle_DataCard1.DataCardValue13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Bottle_DataCard1.DataCardValue13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form3.Bottle_DataCard1.DataCardValue13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.varLMApprovalDate"
                 }
               ],
@@ -3722,49 +3752,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form3.Item"
+                  "fullyQualifiedName": "Screen1.Form2_1.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form3.Item",
+                  "fullyQualifiedName": "Screen1.Form2_1.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
                 "module": "Screen1",
-                "type": "Screen1.Form3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Label18_1.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Label18_1.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Screen1",
-                "type": "Screen1.Label18_1"
+                "type": "Screen1.Form2_1"
               }
             }
           ],
