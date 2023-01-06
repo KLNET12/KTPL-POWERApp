@@ -1,0 +1,84 @@
+Screen2 As screen:
+
+    Gallery2_1 As gallery.variableTemplateHeightGallery:
+        Default: ={}
+        Height: =712
+        Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
+        Layout: =Layout.Vertical
+        TemplateSize: =77
+        Width: =1366
+        Y: =56
+        ZIndex: =1
+
+        Label5_1 As label:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Name
+            Width: =427
+            X: =1
+            Y: =4
+            ZIndex: =1
+
+        Icon2_2 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.ArrowRight
+            OnSelect: |
+                =ViewForm(Form2);Set(IsEdit,false);Navigate(Screen1)
+            Width: =25
+            X: =868
+            Y: =17
+            ZIndex: =4
+
+        Icon2_3 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.Edit
+            OnSelect: =Set(IsEdit,true);Navigate(Screen1)
+            Width: =25
+            X: =908
+            Y: =18
+            ZIndex: =5
+
+        Label8_1 As label:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
+            Width: =146
+            X: =502
+            Y: =4
+            ZIndex: =6
+
+    Label6_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        Size: =16
+        Text: ="Name"
+        Width: =200
+        Y: =32
+        ZIndex: =2
+
+    Icon5_1 As icon.ArrowsUpDown:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =18
+        Icon: =Icon.Sort
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
+        Width: =49
+        X: =610
+        Y: =58
+        ZIndex: =3
+
+    Label11_1 As label:
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        Size: =16
+        Text: ="Createdon"
+        Width: =134
+        X: =506
+        Y: =40
+        ZIndex: =4
+
