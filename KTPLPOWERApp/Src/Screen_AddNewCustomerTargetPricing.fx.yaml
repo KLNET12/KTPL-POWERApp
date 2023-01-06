@@ -606,7 +606,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =81
+                Height: =80
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -614,7 +614,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =225
+                Width: =232
                 X: =4
                 Y: =26
                 ZIndex: =2
