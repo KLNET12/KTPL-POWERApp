@@ -1046,7 +1046,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         BorderThickness: =1
         Height: =15
         Width: =1099
-        X: =22
+        X: =30
         Y: =286
         ZIndex: =48
 
