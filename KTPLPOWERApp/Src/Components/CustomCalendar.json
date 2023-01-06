@@ -79,7 +79,7 @@
         "Name": "Rectangle1_1",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 309,
+        "PublishOrderIndex": 294,
         "Rules": [
           {
             "Category": "Design",
@@ -281,7 +281,7 @@
         "Name": "LblMonthSelected",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 310,
+        "PublishOrderIndex": 295,
         "Rules": [
           {
             "Category": "Data",
@@ -632,7 +632,7 @@
         "Name": "iconPrevMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 311,
+        "PublishOrderIndex": 296,
         "Rules": [
           {
             "Category": "Data",
@@ -977,7 +977,7 @@
         "Name": "iconNextMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 312,
+        "PublishOrderIndex": 297,
         "Rules": [
           {
             "Category": "Data",
@@ -1320,7 +1320,7 @@
         "Name": "TodayIcon",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 313,
+        "PublishOrderIndex": 298,
         "Rules": [
           {
             "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 316,
+            "PublishOrderIndex": 301,
             "Rules": [
               {
                 "Category": "Design",
@@ -1661,7 +1661,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 317,
+            "PublishOrderIndex": 302,
             "Rules": [
               {
                 "Category": "Data",
@@ -2001,7 +2001,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 315,
+        "PublishOrderIndex": 300,
         "Rules": [
           {
             "Category": "Data",
@@ -2234,7 +2234,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 319,
+            "PublishOrderIndex": 304,
             "Rules": [
               {
                 "Category": "Design",
@@ -2349,7 +2349,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 320,
+            "PublishOrderIndex": 305,
             "Rules": [
               {
                 "Category": "Data",
@@ -2689,7 +2689,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 321,
+            "PublishOrderIndex": 306,
             "Rules": [
               {
                 "Category": "Data",
@@ -2921,7 +2921,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 318,
+        "PublishOrderIndex": 303,
         "Rules": [
           {
             "Category": "Data",
@@ -3215,7 +3215,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 322,
+        "PublishOrderIndex": 307,
         "Rules": [
           {
             "Category": "Data",
@@ -3406,7 +3406,7 @@
         "Name": "FrameShadow",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 323,
+        "PublishOrderIndex": 308,
         "Rules": [
           {
             "Category": "Data",
@@ -3642,7 +3642,7 @@
         "Name": "lblYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 324,
+        "PublishOrderIndex": 309,
         "Rules": [
           {
             "Category": "Data",
@@ -4022,7 +4022,7 @@
         "Name": "lblMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 325,
+        "PublishOrderIndex": 310,
         "Rules": [
           {
             "Category": "Data",
@@ -4461,7 +4461,7 @@
         "Name": "ddYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 326,
+        "PublishOrderIndex": 311,
         "Rules": [
           {
             "Category": "Data",
@@ -4891,7 +4891,7 @@
         "Name": "ddMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 327,
+        "PublishOrderIndex": 312,
         "Rules": [
           {
             "Category": "Data",
@@ -5308,7 +5308,7 @@
         "Name": "btnSetYearMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 328,
+        "PublishOrderIndex": 313,
         "Rules": [
           {
             "Category": "Data",
@@ -5642,7 +5642,7 @@
         "Name": "SetDefaultTimer",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 329,
+        "PublishOrderIndex": 314,
         "Rules": [
           {
             "Category": "Data",
@@ -5897,7 +5897,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 314,
+        "PublishOrderIndex": 299,
         "Rules": [
           {
             "Category": "Design",
@@ -5979,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638085737675156023",
+    "LastModifiedTimestamp": "638085692255648279",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6075,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638085737675156023",
+  "LastModifiedTimestamp": "638085692255648279",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

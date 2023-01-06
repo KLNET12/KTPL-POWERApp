@@ -2,8 +2,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(Products,{ProductDescription:"",ProductCode:"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",CustomerMinPrice:"",CustomerMaxPrice:"",'Customer Currency':"",QtyRequired:"",'Lt/Btl':"",editfield:false});
-        Clear(Products);
+        =Clear(Products);
         NewForm(Form1);Set(fieldedit,false);NewForm(Form5)
 
     "'Header Label_1' As label":
@@ -183,7 +182,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         TemplatePadding: =6
         TemplateSize: =156
         Width: =1366
-        Y: =292
+        Y: =308
         ZIndex: =3
 
         TextInput2 As text:
@@ -195,7 +194,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =339
             X: =16
-            Y: =10
+            Y: =4
             ZIndex: =1
 
         TextInput5 As text:
@@ -207,7 +206,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =357
-            Y: =10
+            Y: =4
             ZIndex: =2
 
         TextInput12 As text:
@@ -221,7 +220,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =509
-            Y: =10
+            Y: =4
             ZIndex: =8
 
         TextInput13 As text:
@@ -234,7 +233,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =661
-            Y: =10
+            Y: =4
             ZIndex: =9
 
         TextInput14 As text:
@@ -246,7 +245,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =965
-            Y: =10
+            Y: =4
             ZIndex: =10
 
         TextInput15 As text:
@@ -259,7 +258,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Width: =150
             X: =813
-            Y: =10
+            Y: =4
             ZIndex: =11
 
         Edit_icon As icon.Edit:
@@ -272,7 +271,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Edit "
             Width: =53
             X: =1130
-            Y: =10
             ZIndex: =12
 
         Icon3 As icon.Trash:
@@ -282,7 +280,6 @@ Screen_AddNewCustomerTargetPricing As screen:
             Tooltip: ="Delete"
             Width: =53
             X: =1199
-            Y: =10
             ZIndex: =16
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
@@ -499,14 +496,13 @@ Screen_AddNewCustomerTargetPricing As screen:
     Form5 As form:
         DataSource: ='Customer Target Pricing Deploy List'
         DefaultMode: =FormMode.New
-        Height: =120
+        Height: =170
         OnSuccess: |-
-            =//ClearCollect(flowExcelData,GetExcelData.Run(Value(Form5.LastSubmit.ID)));
-            Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
-            Collect(Products,MatchAll(CollectflowExcelData,"(""Contact"":""(?<Contact>[^""]*)"",""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
+            =Set(CollectflowExcelData,GetExcelData.Run((Form5.LastSubmit.ID)).response);
+            Collect(Products,MatchAll(CollectflowExcelData,"(""Description"":""(?<ProductDescription>[^""]*)"",""Item No"":""(?<ProductCode>[^""]*)"",""Min Price"":""(?<CustomerMinPrice>[^""]*)"",""Max Price"":""(?<CustomerMaxPrice>[^""]*)"",""Quantity"":""(?<QtyRequired>[^""]*)"")"),{editfield:false});
             ResetForm(Form5);
             Notify("File Uploaded Sucessfully");
-        Width: =575
+        Width: =677
         X: =8
         Y: =598
         ZIndex: =36
@@ -523,7 +519,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Required: =true
             Update: =DataCardValue32.Text
             Visible: =false
-            Width: =188
+            Width: =225
             X: =0
             Y: =0
             ZIndex: =48
@@ -587,26 +583,28 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing Deploy List'],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =121
+            Height: =164
             Required: =false
             Update: =DataCardValue33.Attachments
-            Width: =564
+            Width: =675
             X: =0
             Y: =1
             ZIndex: =48
 
             DataCardKey38 As label:
-                Height: =24
+                Height: =18
+                Size: =10
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =17
+                X: =11
+                Y: =8
                 ZIndex: =1
 
             DataCardValue33 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =81
+                Height: =97
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -614,7 +612,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =225
+                Width: =251
                 X: =4
                 Y: =26
                 ZIndex: =2
@@ -649,8 +647,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSelect: =SubmitForm(Form5);
         Size: =8
         Text: ="Upload"
-        Width: =300
-        X: =240
+        Width: =250
+        X: =305
         Y: =662
         ZIndex: =37
 
@@ -670,6 +668,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
             Height: =22
+            IsSearchable: =false
             Items: ='Product Details_V'
             OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
@@ -678,7 +677,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
+            SearchItems: =[]
             SelectMultiple: =false
             Size: =10
             Width: =486
@@ -1047,8 +1046,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         BorderThickness: =1
         Height: =15
         Width: =1099
-        X: =30
-        Y: =286
+        X: =33
+        Y: =282
         ZIndex: =48
 
         Label12 As label:
@@ -1108,12 +1107,15 @@ Screen_AddNewCustomerTargetPricing As screen:
             X: =949
             ZIndex: =6
 
-    Button1 As button:
+    Import_Btn As button:
         Height: =10
+        OnSelect: |-
+            =//ForAll(Sequence(CountRows(Products)),Collect(Varsa,{ProductCode:First(First(Filter('Product Details_V',Product_Code)).Product_Code =First(FirstN(Products,Value)).ProductCode)}))
+            Set(ProductJson,JSON(Products));'PowerApp->ParseJSON'.Run(ProductJson)
         Size: =8
         Text: ="Import"
-        Width: =300
-        X: =240
+        Width: =250
+        X: =305
         Y: =690
         ZIndex: =49
 
