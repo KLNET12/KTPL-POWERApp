@@ -650,7 +650,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =8
         Text: ="Upload"
         Width: =300
-        X: =240
+        X: =266
         Y: =662
         ZIndex: =37
 
@@ -1113,7 +1113,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =8
         Text: ="Import"
         Width: =300
-        X: =240
+        X: =266
         Y: =690
         ZIndex: =49
 
