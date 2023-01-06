@@ -648,9 +648,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         OnSelect: =SubmitForm(Form5);
         Text: ="Upload"
-        Width: =297
-        X: =257
-        Y: =680
+        Width: =300
+        X: =252
+        Y: =623
         ZIndex: =37
 
     Topborder As rectangle:
@@ -1106,4 +1106,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             X: =949
             ZIndex: =6
+
+    Button1 As button:
+        Height: =22
+        Text: ="Button"
+        Width: =300
+        X: =255
+        Y: =671
+        ZIndex: =49
 
