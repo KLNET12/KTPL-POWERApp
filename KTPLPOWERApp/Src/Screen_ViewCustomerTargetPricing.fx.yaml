@@ -21,7 +21,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Layout: =Layout.Vertical
         TemplateSize: =77
         Width: =466
-        Y: =139
+        Y: =156
         ZIndex: =5
 
         Label5 As label:
@@ -1225,4 +1225,10 @@ Screen_ViewCustomerTargetPricing As screen:
         X: =477
         Y: =725
         ZIndex: =19
+
+    Button4 As button:
+        OnSelect: =Navigate(ViewScreen)
+        Text: ="Button"
+        X: =1206
+        ZIndex: =20
 
