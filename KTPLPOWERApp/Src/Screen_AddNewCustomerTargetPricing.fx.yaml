@@ -596,11 +596,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =48
 
             DataCardKey38 As label:
-                Height: =24
+                Height: =18
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =17
+                X: =11
+                Y: =8
                 ZIndex: =1
 
             DataCardValue33 As attachments:
