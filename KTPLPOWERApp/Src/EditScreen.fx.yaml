@@ -829,7 +829,7 @@ EditScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_quantity"
             Default: =ThisItem.Quantity
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =DisplayMode.Edit
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_quantity")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -855,7 +855,6 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
                 Height: =22
                 PaddingLeft: =5
@@ -1001,7 +1000,7 @@ EditScreen As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =245
                 X: =30
-                Y: =34
+                Y: =38
                 ZIndex: =2
 
             ErrorMessage17_1 As label:

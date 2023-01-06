@@ -82,7 +82,7 @@ ViewScreen As screen:
         Icon2_3 As icon.ArrowRight:
             Height: =20
             Icon: =Icon.Edit
-            OnSelect: =Set(IsEdit,true);Navigate(EditScreen)
+            OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
             Width: =25
             X: =908
             Y: =18
