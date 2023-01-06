@@ -2,8 +2,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(Products,{ProductDescription:"",ProductCode:"",'Alc %':"",'Carton Quantity':"",Varient:"",'De-Coded':"",'Non-Refill':"",CustomerMinPrice:"",CustomerMaxPrice:"",'Customer Currency':"",QtyRequired:"",'Lt/Btl':"",editfield:false});
-        Clear(Products);
+        =Clear(Products);
         NewForm(Form1);Set(fieldedit,false);NewForm(Form5)
 
     "'Header Label_1' As label":
@@ -1104,7 +1103,9 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Import_Btn As button:
         Height: =10
-        OnSelect: =//Patch('Product Details_V',AddColumns(CollectflowExcelData,"Item No")
+        OnSelect: |-
+            =//ForAll(Sequence(CountRows(Products)),Collect(Varsa,{ProductCode:First(First(Filter('Product Details_V',Product_Code)).Product_Code =First(FirstN(Products,Value)).ProductCode)}))
+            Set(ProductJson,JSON(Products));'PowerApp->ParseJSON'.Run(ProductJson)
         Size: =8
         Text: ="Import"
         Width: =300
