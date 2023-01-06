@@ -855,6 +855,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
                 Height: =22
                 PaddingLeft: =5
@@ -897,7 +898,7 @@ EditScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_maxprice"
             Default: =ThisItem.'Max Price (ntz_maxprice)'
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =DisplayMode.Edit
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_maxprice")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -966,7 +967,7 @@ EditScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_minprice"
             Default: =ThisItem.'Min Price (ntz_minprice)'
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =DisplayMode.Edit
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_minprice")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
