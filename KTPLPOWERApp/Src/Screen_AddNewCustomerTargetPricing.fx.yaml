@@ -645,12 +645,13 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =4
 
     Upload_button As button:
-        Height: =22
+        Height: =15
         OnSelect: =SubmitForm(Form5);
+        Size: =10
         Text: ="Upload"
         Width: =300
-        X: =252
-        Y: =636
+        X: =240
+        Y: =662
         ZIndex: =37
 
     Topborder As rectangle:
@@ -1108,10 +1109,11 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =6
 
     Button1 As button:
-        Height: =22
-        Text: ="Button"
+        Height: =15
+        Size: =10
+        Text: ="Sync"
         Width: =300
-        X: =255
-        Y: =684
+        X: =240
+        Y: =690
         ZIndex: =49
 
