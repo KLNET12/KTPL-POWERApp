@@ -754,6 +754,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =""
             Format: =TextFormat.Number
             Height: =22
+            OnChange: =If(Int(MinPrice_value)<0,Reset(MinPrice_value),false)
             Size: =10
             Width: =221
             X: =515
@@ -764,7 +765,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =
             Format: =TextFormat.Number
             Height: =22
-            OnChange: =
+            OnChange: =If(Int(MaxPrice_value)<0,Reset(MaxPrice_value),false)
             Size: =10
             Width: =231
             X: =742
@@ -786,6 +787,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Default: =""
             Format: =TextFormat.Number
             Height: =22
+            OnChange: =If(Int(Quantity_value)<0,Reset(Quantity_value),false)
             Size: =10
             Width: =180
             X: =1180
