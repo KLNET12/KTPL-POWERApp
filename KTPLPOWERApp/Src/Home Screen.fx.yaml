@@ -36,7 +36,7 @@
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =42
-        OnSelect: =Navigate(Screen_ViewCustomerTargetPricing)
+        OnSelect: =Navigate(ViewScreen)
         Size: =18
         Text: ="V I E W"
         Width: =606

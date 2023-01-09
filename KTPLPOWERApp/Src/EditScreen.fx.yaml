@@ -84,7 +84,7 @@ EditScreen As screen:
     "'submit Button_1' As button":
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
         Text: ="Submit"
         Visible: =If(IsEdit,true,false)
         Width: =280

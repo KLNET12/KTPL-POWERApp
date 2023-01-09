@@ -103,7 +103,7 @@ ViewScreen As screen:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
-        Size: =20
+        Size: =12
         Text: ="Name"
         Width: =200
         X: =48
@@ -125,8 +125,8 @@ ViewScreen As screen:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
-        Size: =20
-        Text: ="Createdon"
+        Size: =12
+        Text: ="         Createdon"
         Width: =182
         X: =486
         Y: =98
