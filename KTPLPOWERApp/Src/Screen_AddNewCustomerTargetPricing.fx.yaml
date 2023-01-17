@@ -683,7 +683,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ProductList_CB As combobox:
             DisplayFields: =["Product_Description"]
             Height: =22
-            Items: ='Product Details_V'
+            Items: ='D365-Product Details_V'
             OnChange: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
@@ -691,7 +691,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =Search('Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
+            SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
             SelectMultiple: =false
             Size: =10
             Width: =486
@@ -812,7 +812,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
+                =If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
             Width: =74
             X: =1277
             Y: =208
@@ -1009,7 +1009,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =13
         Size: =10
         Text: ="Fill the required fields"
-        Visible: =If(IsBlank(LookUp('Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
+        Visible: =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||IsBlank(MinPrice_value)|| IsBlank(MaxPrice_value) || IsBlank(Currency_value),true,false)
         Width: =362
         X: =660
         Y: =250
@@ -1134,4 +1134,14 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =305
         Y: =690
         ZIndex: =49
+
+    Label21 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        Size: =12
+        Text: ="Bulk Import Data to Sql"
+        Width: =368
+        X: =11
+        Y: =546
+        ZIndex: =50
 

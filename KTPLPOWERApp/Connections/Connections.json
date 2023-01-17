@@ -124,6 +124,9 @@
     "datasets": {
       "KAZANS01,JetBCDwhDEV": {
         "dataSources": {
+          "D365-Product Details_V": {
+            "tableName": "[dbo].[D365-Product Details_V]"
+          },
           "Product Details_V": {
             "tableName": "[dbo].[Product Details_V]"
           }
@@ -131,7 +134,8 @@
       }
     },
     "dataSources": [
-      "Product Details_V"
+      "Product Details_V",
+      "D365-Product Details_V"
     ],
     "dependencies": {},
     "dependents": [
