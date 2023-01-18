@@ -124,6 +124,9 @@
     "datasets": {
       "KAZANS01,JetBCDwhDEV": {
         "dataSources": {
+          "D365-Currency Code_V": {
+            "tableName": "[dbo].[D365-Currency Code_V]"
+          },
           "D365-Product Details_V": {
             "tableName": "[dbo].[D365-Product Details_V]"
           },
@@ -135,7 +138,8 @@
     },
     "dataSources": [
       "Product Details_V",
-      "D365-Product Details_V"
+      "D365-Product Details_V",
+      "D365-Currency Code_V"
     ],
     "dependencies": {},
     "dependents": [

@@ -90,7 +90,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 ZIndex: =1
 
             TextInput4 As text:
-                Default: =First(Filter(Contacts,Contact=GUID(LeadDataStore.'Parent Contact for lead'.Contact))).'Full Name'
+                Default: |
+                    =If(!IsBlank(First(Filter(Contacts,Contact=GUID(LeadDataStore.'Parent Contact for lead'.Contact))).'Full Name'),First(Filter(Contacts,Contact=GUID(LeadDataStore.'Parent Contact for lead'.Contact))).'Full Name',First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))).'Full Name')
                 DisplayMode: =DisplayMode.Disabled
                 Height: =18
                 Size: =10
@@ -475,10 +476,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             
             If(MinPrice_value.Text="",Notify("Min price is Required",NotificationType.Error),If(IsBlank(MaxPrice_value.Text),Notify("Max price is Required",NotificationType.Error),
             If(Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),
-            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Last(FirstN(Products,Value)).'Customer Currency',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record Saved Sucessfully!",NotificationType.Success)))));
+            ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=LeadDataStore.'Parent Contact for lead'.Contact)),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If( true  in Last(FirstN(Products,Value)).'De-Coded','Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If( true  in Last(FirstN(Products,Value)).'Non-Refill','Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record Saved Sucessfully!",NotificationType.Success)))));
             
             
-            Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Currency_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false );
+            Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false );
         Text: ="Save"
         Width: =292
         X: =1048
@@ -681,7 +682,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =38
 
         ProductList_CB As combobox:
-            DisplayFields: =["Product_Description"]
+            DisplayFields: =["Search_Description"]
             Height: =22
             Items: ='D365-Product Details_V'
             OnChange: |
@@ -690,8 +691,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-            SearchFields: =["Product_Description","Product_Code"]
-            SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Product_Code")
+            SearchFields: =["Product_Description","Search_Description","Product_Code"]
+            SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Search_Description","Product_Code")
             SelectMultiple: =false
             Size: =10
             Width: =486
@@ -812,7 +813,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Currency_value.Text,QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
+                =If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&&!IsBlank(MinPrice_value)&& !IsBlank(MaxPrice_value) && !IsBlank(Currency_value),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}));
             Width: =74
             X: =1277
             Y: =208
@@ -1127,7 +1128,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =10
         OnSelect: |-
             =//ForAll(Sequence(CountRows(Products)),Collect(Varsa,{ProductCode:First(First(Filter('Product Details_V',Product_Code)).Product_Code =First(FirstN(Products,Value)).ProductCode)}))
-            Set(ProductJson,JSON(Products));'PowerApp->ParseJSON'.Run(ProductJson)
+            Set(ProductJson,JSON(Products));'PowerApp->ParseJSON'.Run(ProductJson);Notify("Record is successfully imported in SQL")
         Size: =8
         Text: ="Import"
         Width: =250
@@ -1144,4 +1145,16 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =11
         Y: =546
         ZIndex: =50
+
+    Dropdown1 As dropdown:
+        Height: =22
+        Items: ='D365-Currency Code_V'
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Width: =185
+        X: =979
+        Y: =163
+        ZIndex: =51
 
