@@ -1160,15 +1160,15 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =51
 
     Checkbox2 As checkbox:
-        Height: =44
+        Height: =46
         OnCheck: =
         PaddingBottom: =9
         PaddingLeft: =3
         PaddingRight: =3
         PaddingTop: =6
         Text: =""
-        Width: =58
+        Width: =90
         X: =902
-        Y: =152
+        Y: =150
         ZIndex: =52
 
