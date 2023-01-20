@@ -1172,3 +1172,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =150
         ZIndex: =52
 
+    Label24 As label:
+        Height: =36
+        Text: ="flag"
+        Width: =63
+        X: =916
+        Y: =128
+        ZIndex: =53
+
