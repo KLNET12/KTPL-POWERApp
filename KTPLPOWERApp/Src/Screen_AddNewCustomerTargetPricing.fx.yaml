@@ -477,9 +477,9 @@ Screen_AddNewCustomerTargetPricing As screen:
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false ));
         Text: ="Save"
-        Width: =292
-        X: =1048
-        Y: =495
+        Width: =200
+        X: =1162
+        Y: =276
         ZIndex: =5
 
     Label3 As label:
@@ -487,7 +487,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =37
         Text: ="Max Price can't be less than or equal to Min Price"
-        Visible: =If(Value(Text(MaxPrice_value))> Value(Text(MinPrice_value)) || MaxPrice_value= MinPrice_value,false,true)
+        Visible: =If(Value(Text(MaxPrice_value))> Value(Text(MinPrice_value)) || (MaxPrice_value=MinPrice_value && (!IsBlank(MaxPrice_value)||!IsBlank(MinPrice_value)) ),false,true)
         Width: =462
         X: =313
         Y: =335
@@ -740,26 +740,26 @@ Screen_AddNewCustomerTargetPricing As screen:
         Decoded_CB As checkbox:
             Default: =Decoded
             DisplayMode: =DisplayMode.Disabled
+            Height: =46
             OnCheck: =Set(Decoded,true)
             OnUncheck: =Set(Decoded,false)
             Size: =0
             Text: =Decoded
-            Width: =78
-            X: =63
-            Y: =192
+            Width: =74
+            X: =171
+            Y: =194
             ZIndex: =11
 
         NonRefiil_CB As checkbox:
             Default: =NonRefill
             DisplayMode: =DisplayMode.Disabled
-            Height: =46
             OnCheck: =Set(NonRefill,true)
             OnUncheck: =Set(NonRefill,false)
             Size: =0
             Text: =NonRefill
-            Width: =74
-            X: =171
-            Y: =194
+            Width: =78
+            X: =63
+            Y: =192
             ZIndex: =12
 
         MinPrice_value As text:
@@ -879,7 +879,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Decoded_Lbl As label:
             Height: =18
             Size: =10
-            Text: ="De-Coded"
+            Text: ="Non-Refill"
             Width: =123
             X: =48
             Y: =189
@@ -888,9 +888,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         "'Non-refill_lbl' As label":
             Height: =18
             Size: =10
-            Text: ="Non-Refill"
+            Text: ="De-Coded"
             Width: =169
-            X: =171
+            X: =161
             Y: =190
             ZIndex: =25
 
@@ -1168,7 +1168,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =6
         Text: =""
         Width: =90
-        X: =902
+        X: =912
         Y: =150
         ZIndex: =52
 
