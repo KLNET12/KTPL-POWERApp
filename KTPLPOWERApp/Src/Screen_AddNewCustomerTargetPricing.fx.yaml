@@ -769,7 +769,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnChange: =If(Int(MinPrice_value)<0,Reset(MinPrice_value),false)
             Size: =10
             Width: =200
-            X: =515
+            X: =505
             Y: =163
             ZIndex: =13
 
@@ -780,7 +780,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnChange: =If(Int(MaxPrice_value)<0,Reset(MaxPrice_value),false)
             Size: =10
             Width: =200
-            X: =722
+            X: =712
             Y: =163
             ZIndex: =14
 
@@ -1168,7 +1168,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =6
         Text: =""
         Width: =47
-        X: =922
+        X: =912
         Y: =152
         ZIndex: =52
 
