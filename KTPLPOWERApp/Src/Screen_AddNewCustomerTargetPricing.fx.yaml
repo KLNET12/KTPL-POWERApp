@@ -939,7 +939,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Quantity"
             Width: =174
-            X: =1164
+            X: =1174
             Y: =149
             ZIndex: =30
 
