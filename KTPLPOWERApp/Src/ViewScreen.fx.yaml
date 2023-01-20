@@ -4,30 +4,30 @@ ViewScreen As screen:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =2
         Text: =
-        Width: =1366
+        Width: =1344
         ZIndex: =5
 
     Label19_3 As label:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =2
         Text: =
-        Width: =1366
-        Y: =766
+        Width: =1344
+        Y: =746
         ZIndex: =6
 
     Label20_1 As label:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =768
+        Height: =746
         Text: =
         Width: =2
         ZIndex: =7
 
     Label22_1 As label:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =768
+        Height: =746
         Text: =
         Width: =2
-        X: =1364
+        X: =1344
         ZIndex: =8
 
     Image5_2 As image:
@@ -35,6 +35,7 @@ ViewScreen As screen:
         Image: =OIP
         OnSelect: =Navigate('Home Screen')
         Width: =262
+        X: =10
         ZIndex: =9
 
     Label23_1 As label:
@@ -50,11 +51,11 @@ ViewScreen As screen:
     Gallery2_1 As gallery.variableTemplateHeightGallery:
         BorderThickness: =2
         Default: ={}
-        Height: =602
+        Height: =560
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =77
-        Width: =1314
+        Width: =1296
         X: =26
         Y: =142
         ZIndex: =11
@@ -113,12 +114,12 @@ ViewScreen As screen:
     Icon5_1 As icon.ArrowsUpDown:
         Color: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =18
+        Height: =22
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =608
-        Y: =116
+        X: =628
+        Y: =114
         ZIndex: =13
 
     Label11_1 As label:

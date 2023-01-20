@@ -1284,7 +1284,9 @@
       "183880004": "Unknown",
       "183880005": "Africa",
       "183880006": "Americas",
-      "183880007": "South Pacific"
+      "183880007": "South Pacific",
+      "183880008": "Validate",
+      "183880009": "North Asia"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": true,

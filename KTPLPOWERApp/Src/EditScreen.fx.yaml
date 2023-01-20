@@ -12,30 +12,30 @@ EditScreen As screen:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =2
         Text: =
-        Width: =1366
+        Width: =1344
         ZIndex: =10
 
     Label19_1 As label:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =2
         Text: =
-        Width: =1366
-        Y: =766
+        Width: =1344
+        Y: =746
         ZIndex: =11
 
     Label20 As label:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =768
+        Height: =746
         Text: =
         Width: =2
         ZIndex: =12
 
     Label22 As label:
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =768
+        Height: =746
         Text: =
         Width: =2
-        X: =1364
+        X: =1344
         ZIndex: =13
 
     Label23 As label:
