@@ -483,11 +483,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =5
 
     Label3 As label:
-        Color: =RGBA(172, 62, 11, 1)
+        Color: =RGBA(255, 0, 0, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =37
         Text: ="Max Price can't be less than or equal to Min Price"
-        Visible: =If(Value(Text(MaxPrice_value))> Value(Text(MinPrice_value)) || (MaxPrice_value=MinPrice_value && (!IsBlank(MaxPrice_value)||!IsBlank(MinPrice_value)) ),false,true)
+        Visible: =If((Value(Text(MaxPrice_value))< Value(Text(MinPrice_value)) && !IsBlank(MaxPrice_value)) || (Value(Text(MaxPrice_value))= Value(Text(MinPrice_value)) && (!IsBlank(MaxPrice_value) && !IsBlank(MinPrice_value))),true,false)
         Width: =462
         X: =313
         Y: =335
