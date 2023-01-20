@@ -1167,7 +1167,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingRight: =3
         PaddingTop: =6
         Text: =""
-        Width: =47
+        Width: =52
         X: =912
         Y: =152
         ZIndex: =52
