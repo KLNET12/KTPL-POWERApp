@@ -1174,6 +1174,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label24 As label:
         Height: =36
+        PaddingBottom: =10
         Text: ="flag"
         Width: =63
         X: =916
