@@ -845,7 +845,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Product Code"
             Width: =210
-            X: =313
+            X: =303
             Y: =190
             ZIndex: =20
 
@@ -881,7 +881,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Non-Refill"
             Width: =123
-            X: =48
+            X: =38
             Y: =189
             ZIndex: =24
 
@@ -890,7 +890,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="De-Coded"
             Width: =169
-            X: =161
+            X: =151
             Y: =190
             ZIndex: =25
 
