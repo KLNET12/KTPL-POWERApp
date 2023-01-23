@@ -143,7 +143,7 @@ ViewScreen As screen:
 
     Label28 As label:
         Height: =52
-        Text: ="Show/Edit"
+        Text: ="        Show/Edit"
         Width: =188
         X: =902
         Y: =106
