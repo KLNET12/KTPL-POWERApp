@@ -111,16 +111,14 @@ ViewScreen As screen:
             ZIndex: =5
 
     Label6_1 As label:
-        Align: =Align.Center
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =44
         PaddingTop: =10
         Size: =12
-        Text: ="Name"
-        Width: =200
-        X: =48
-        Y: =108
+        Text: ="Name                                                                                           Createdon                                                                                     Show/Edit"
+        Width: =1010
+        X: =41
+        Y: =102
         ZIndex: =8
 
     Label11_1 As label:
@@ -129,9 +127,9 @@ ViewScreen As screen:
         Height: =44
         Size: =12
         Text: ="         Createdon"
+        Visible: =false
         Width: =182
-        X: =426
-        Y: =108
+        X: =316
         ZIndex: =9
 
     Icon5_1 As icon.ArrowsUpDown:
@@ -141,16 +139,7 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =578
+        X: =568
         Y: =114
         ZIndex: =10
-
-    Label26 As label:
-        Color: =RGBA(0, 18, 107, 1)
-        FontWeight: =FontWeight.Semibold
-        Size: =12
-        Text: ="Show/Edit"
-        X: =901
-        Y: =116
-        ZIndex: =11
 
