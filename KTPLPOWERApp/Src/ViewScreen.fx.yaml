@@ -113,6 +113,7 @@ ViewScreen As screen:
     Label6_1 As label:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
+        Height: =56
         PaddingTop: =10
         Size: =12
         Text: ="Name"
@@ -155,7 +156,7 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =588
+        X: =608
         Y: =114
         ZIndex: =12
 
