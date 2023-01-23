@@ -142,7 +142,6 @@ ViewScreen As screen:
         ZIndex: =10
 
     Label28 As label:
-        Height: =52
         Text: ="        Show/Edit"
         Width: =188
         X: =902
@@ -157,6 +156,6 @@ ViewScreen As screen:
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =608
-        Y: =114
+        Y: =124
         ZIndex: =12
 
