@@ -1011,7 +1011,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =13
         Size: =10
         Text: ="Fill the required fields"
-        Visible: =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))||(Checkbox2.Value = false && IsBlank(MinPrice_value))|| (Checkbox2.Value = false && IsBlank(MaxPrice_value)) || IsBlank(Dropdown1),true,false)
+        Visible: =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))|| (Checkbox2.Value = false && IsBlank(MaxPrice_value)) || IsBlank(Dropdown1),true,false)
         Width: =362
         X: =660
         Y: =250
