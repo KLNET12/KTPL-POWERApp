@@ -104,6 +104,7 @@ ViewScreen As screen:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
         Height: =44
+        PaddingTop: =10
         Size: =12
         Text: ="Name"
         Width: =200
