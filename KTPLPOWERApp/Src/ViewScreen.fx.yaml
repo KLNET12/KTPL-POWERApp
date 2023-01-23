@@ -51,7 +51,7 @@ ViewScreen As screen:
     Gallery2_1 As gallery.variableTemplateHeightGallery:
         BorderThickness: =2
         Default: ={}
-        Height: =560
+        Height: =586
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =77
@@ -115,7 +115,7 @@ ViewScreen As screen:
         FontWeight: =FontWeight.Semibold
         PaddingTop: =10
         Size: =12
-        Text: ="Name                                                                                           Createdon                                                                                     Show/Edit"
+        Text: ="Name                                                                                              Createdon                                                                                  Show/Edit"
         Width: =1010
         X: =41
         Y: =102
@@ -139,7 +139,7 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =568
-        Y: =114
+        X: =588
+        Y: =124
         ZIndex: =10
 
