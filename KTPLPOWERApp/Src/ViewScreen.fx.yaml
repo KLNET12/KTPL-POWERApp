@@ -5,7 +5,7 @@ ViewScreen As screen:
         Height: =2
         Text: =
         Width: =1344
-        ZIndex: =5
+        ZIndex: =1
 
     Label19_3 As label:
         Fill: =RGBA(0, 0, 0, 1)
@@ -13,14 +13,14 @@ ViewScreen As screen:
         Text: =
         Width: =1344
         Y: =746
-        ZIndex: =6
+        ZIndex: =2
 
     Label20_1 As label:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =746
         Text: =
         Width: =2
-        ZIndex: =7
+        ZIndex: =3
 
     Label22_1 As label:
         Fill: =RGBA(0, 0, 0, 1)
@@ -28,7 +28,7 @@ ViewScreen As screen:
         Text: =
         Width: =2
         X: =1344
-        ZIndex: =8
+        ZIndex: =4
 
     Image5_2 As image:
         Height: =80
@@ -36,7 +36,7 @@ ViewScreen As screen:
         OnSelect: =Navigate('Home Screen')
         Width: =262
         X: =10
-        ZIndex: =9
+        ZIndex: =5
 
     Label23_1 As label:
         Align: =Align.Center
@@ -46,7 +46,7 @@ ViewScreen As screen:
         Text: ="Customer Target Pricing"
         Width: =628
         X: =362
-        ZIndex: =10
+        ZIndex: =6
 
     Gallery2_1 As gallery.variableTemplateHeightGallery:
         BorderThickness: =2
@@ -58,7 +58,7 @@ ViewScreen As screen:
         Width: =1296
         X: =26
         Y: =142
-        ZIndex: =11
+        ZIndex: =7
 
         Label5_1 As label:
             Height: =48
@@ -110,18 +110,7 @@ ViewScreen As screen:
         Width: =200
         X: =48
         Y: =98
-        ZIndex: =12
-
-    Icon5_1 As icon.ArrowsUpDown:
-        Color: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =22
-        Icon: =Icon.Sort
-        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
-        Width: =49
-        X: =628
-        Y: =114
-        ZIndex: =13
+        ZIndex: =8
 
     Label11_1 As label:
         Color: =RGBA(0, 18, 107, 1)
@@ -132,5 +121,16 @@ ViewScreen As screen:
         Width: =182
         X: =486
         Y: =98
-        ZIndex: =14
+        ZIndex: =9
+
+    Icon5_1 As icon.ArrowsUpDown:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =22
+        Icon: =Icon.Sort
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
+        Width: =49
+        X: =628
+        Y: =114
+        ZIndex: =10
 
