@@ -61,6 +61,7 @@ ViewScreen As screen:
         ZIndex: =7
 
         Label5_1 As label:
+            BorderThickness: =1
             Height: =48
             OnSelect: =Select(Parent)
             Size: =10
@@ -70,13 +71,33 @@ ViewScreen As screen:
             Y: =4
             ZIndex: =1
 
+        Label8_1 As label:
+            BorderThickness: =1
+            Height: =48
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
+            Width: =440
+            X: =428
+            Y: =4
+            ZIndex: =2
+
+        Label25 As label:
+            BorderThickness: =1
+            Height: =48
+            Text: =""
+            Width: =154
+            X: =870
+            Y: =4
+            ZIndex: =3
+
         Icon2_2 As icon.ArrowRight:
             Height: =20
             Icon: =Icon.ArrowRight
             OnSelect: |
                 =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
             Width: =25
-            X: =868
+            X: =908
             Y: =17
             ZIndex: =4
 
@@ -85,19 +106,9 @@ ViewScreen As screen:
             Icon: =Icon.Edit
             OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
             Width: =25
-            X: =908
+            X: =988
             Y: =18
             ZIndex: =5
-
-        Label8_1 As label:
-            Height: =48
-            OnSelect: =Select(Parent)
-            Size: =10
-            Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
-            Width: =146
-            X: =502
-            Y: =4
-            ZIndex: =6
 
     Label6_1 As label:
         Align: =Align.Center
@@ -119,7 +130,7 @@ ViewScreen As screen:
         Size: =12
         Text: ="         Createdon"
         Width: =182
-        X: =486
+        X: =426
         Y: =98
         ZIndex: =9
 
@@ -130,7 +141,16 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
-        X: =628
+        X: =578
         Y: =114
         ZIndex: =10
+
+    Label26 As label:
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =12
+        Text: ="Show/Edit"
+        X: =901
+        Y: =106
+        ZIndex: =11
 
