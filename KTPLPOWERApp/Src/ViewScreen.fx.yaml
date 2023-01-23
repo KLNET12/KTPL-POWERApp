@@ -57,7 +57,7 @@ ViewScreen As screen:
         TemplateSize: =77
         Width: =1296
         X: =26
-        Y: =142
+        Y: =112
         ZIndex: =7
 
         Label5_1 As label:
@@ -119,7 +119,7 @@ ViewScreen As screen:
         Text: ="Name"
         Width: =418
         X: =26
-        Y: =102
+        Y: =72
         ZIndex: =8
 
     Label11_1 As label:
@@ -138,14 +138,14 @@ ViewScreen As screen:
         Text: ="Createdon"
         Width: =214
         X: =460
-        Y: =106
+        Y: =76
         ZIndex: =10
 
     Label28 As label:
         Text: ="        Show/Edit"
         Width: =188
         X: =902
-        Y: =106
+        Y: =76
         ZIndex: =11
 
     Icon5_1 As icon.ArrowsUpDown:
@@ -156,6 +156,6 @@ ViewScreen As screen:
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =618
-        Y: =124
+        Y: =94
         ZIndex: =12
 
