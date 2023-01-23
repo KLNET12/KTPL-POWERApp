@@ -133,10 +133,20 @@ ViewScreen As screen:
         ZIndex: =9
 
     Label27 As label:
+        Height: =52
         Text: ="Createdon"
+        Width: =214
         X: =460
         Y: =106
         ZIndex: =10
+
+    Label28 As label:
+        Height: =52
+        Text: ="Show/Edit"
+        Width: =188
+        X: =902
+        Y: =106
+        ZIndex: =11
 
     Icon5_1 As icon.ArrowsUpDown:
         Color: =RGBA(0, 0, 0, 1)
@@ -146,12 +156,6 @@ ViewScreen As screen:
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
         Width: =49
         X: =588
-        Y: =124
-        ZIndex: =11
-
-    Label28 As label:
-        Text: ="Show/Edit"
-        X: =902
-        Y: =106
+        Y: =114
         ZIndex: =12
 
