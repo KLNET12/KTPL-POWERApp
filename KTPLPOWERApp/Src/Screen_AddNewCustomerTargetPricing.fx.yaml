@@ -686,8 +686,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
                 If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
             OnSelect: |
-                =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
-                If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+                =
             SearchFields: =["Product_Description","Search_Description","Product_Code"]
             SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Search_Description","Product_Code")
             SelectMultiple: =false
@@ -738,11 +737,12 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =10
 
         Decoded_CB As checkbox:
-            Default: =Decoded
+            Default: |
+                =If(ProductList_CB.Selected.Decoded="1",true,false)
             DisplayMode: =DisplayMode.Disabled
             Height: =46
-            OnCheck: =Set(Decoded,true)
-            OnUncheck: =Set(Decoded,false)
+            OnCheck: =
+            OnUncheck: =
             Size: =0
             Text: =Decoded
             Width: =74
@@ -751,10 +751,10 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =11
 
         NonRefiil_CB As checkbox:
-            Default: =NonRefill
+            Default: =If(ProductList_CB.Selected.NRF="1",true,false)
             DisplayMode: =DisplayMode.Disabled
-            OnCheck: =Set(NonRefill,true)
-            OnUncheck: =Set(NonRefill,false)
+            OnCheck: =
+            OnUncheck: =
             Size: =0
             Text: =NonRefill
             Width: =78
@@ -812,8 +812,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =If(IsBlank(ProductList_CB),Notify("Product is Required",NotificationType.Error),
                 
-                If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error),
-                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))&& !IsBlank(MaxPrice_value) && !IsBlank(Dropdown1),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false})))));Reset(ProductList_CB);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Checkbox2)
+                If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error),If(Checkbox2.Value=false && IsBlank(MinPrice_value),Notify("Min Price is Required",NotificationType.Error),
+                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}))))));Reset(ProductList_CB);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Checkbox2)
             Width: =74
             X: =1277
             Y: =208
@@ -953,7 +953,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             PaddingRight: =7
             PaddingTop: =20
             Text: ="*"
-            Visible: =false
+            Visible: =If(Checkbox2.Value=true,false,true)
             Width: =22
             X: =632
             Y: =135
@@ -1011,14 +1011,14 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =13
         Size: =10
         Text: ="Fill the required fields"
-        Visible: =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))|| (Checkbox2.Value = false && IsBlank(MaxPrice_value)) || IsBlank(Dropdown1),true,false)
+        Visible: =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id))|| (Checkbox2.Value = false && IsBlank(MaxPrice_value)) ||(Checkbox2.Value = false && IsBlank(MinPrice_value)) || IsBlank(Dropdown1),true,false)
         Width: =362
         X: =660
         Y: =250
         ZIndex: =43
 
     TextInput8 As text:
-        Default: =Text(DateValue(_dateSelected),"dd/mm/yyyy")
+        Default: =If(_dateSelected=Today(),Text(DateValue(_dateSelected),"dd/mm/yyyy"),Text(DateAdd(DateValue(_dateSelected),90,Days),"dd/mm/yyyy"))
         Height: =18
         OnSelect: =Set(showDate,true)
         PaddingBottom: =1
@@ -1159,26 +1159,25 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =163
         ZIndex: =51
 
-    Checkbox2 As checkbox:
-        Height: =46
-        OnCheck: =
-        PaddingBottom: =9
-        PaddingLeft: =3
-        PaddingRight: =3
-        PaddingTop: =6
-        Text: =""
-        Width: =90
-        X: =912
-        Y: =150
-        ZIndex: =52
-
     Label24 As label:
         Height: =36
         PaddingBottom: =10
         Size: =10
-        Text: ="flag"
+        Text: ="Enquiry"
         Width: =63
         X: =916
         Y: =138
+        ZIndex: =52
+
+    Checkbox2 As checkbox:
+        Height: =74
+        OnCheck: =
+        PaddingBottom: =9
+        PaddingLeft: =15
+        PaddingTop: =30
+        Text: =""
+        Width: =102
+        X: =900
+        Y: =123
         ZIndex: =53
 

@@ -79,7 +79,7 @@
         "Name": "Rectangle1_1",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 322,
+        "PublishOrderIndex": 329,
         "Rules": [
           {
             "Category": "Design",
@@ -281,7 +281,7 @@
         "Name": "LblMonthSelected",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 323,
+        "PublishOrderIndex": 330,
         "Rules": [
           {
             "Category": "Data",
@@ -632,7 +632,7 @@
         "Name": "iconPrevMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 324,
+        "PublishOrderIndex": 331,
         "Rules": [
           {
             "Category": "Data",
@@ -977,7 +977,7 @@
         "Name": "iconNextMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 325,
+        "PublishOrderIndex": 332,
         "Rules": [
           {
             "Category": "Data",
@@ -1320,7 +1320,7 @@
         "Name": "TodayIcon",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 326,
+        "PublishOrderIndex": 333,
         "Rules": [
           {
             "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 329,
+            "PublishOrderIndex": 335,
             "Rules": [
               {
                 "Category": "Design",
@@ -1661,7 +1661,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 330,
+            "PublishOrderIndex": 336,
             "Rules": [
               {
                 "Category": "Data",
@@ -2001,7 +2001,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 328,
+        "PublishOrderIndex": 334,
         "Rules": [
           {
             "Category": "Data",
@@ -2234,7 +2234,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 332,
+            "PublishOrderIndex": 338,
             "Rules": [
               {
                 "Category": "Design",
@@ -2349,7 +2349,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 333,
+            "PublishOrderIndex": 339,
             "Rules": [
               {
                 "Category": "Data",
@@ -2611,7 +2611,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\nIf(_dateSelected> DateAdd(Today(),90),Notify(\"You can only select date within upcoming 90 days\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n",
+                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\nIf(_dateSelected> DateAdd(Today(),182.5),Notify(\"You can only select date within upcoming 6 month\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -2689,7 +2689,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 334,
+            "PublishOrderIndex": 340,
             "Rules": [
               {
                 "Category": "Data",
@@ -2921,7 +2921,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 331,
+        "PublishOrderIndex": 337,
         "Rules": [
           {
             "Category": "Data",
@@ -3215,7 +3215,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 335,
+        "PublishOrderIndex": 341,
         "Rules": [
           {
             "Category": "Data",
@@ -3406,7 +3406,7 @@
         "Name": "FrameShadow",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 336,
+        "PublishOrderIndex": 343,
         "Rules": [
           {
             "Category": "Data",
@@ -3642,7 +3642,7 @@
         "Name": "lblYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 337,
+        "PublishOrderIndex": 344,
         "Rules": [
           {
             "Category": "Data",
@@ -4022,7 +4022,7 @@
         "Name": "lblMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 338,
+        "PublishOrderIndex": 345,
         "Rules": [
           {
             "Category": "Data",
@@ -4461,11 +4461,11 @@
         "Name": "ddYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 339,
+        "PublishOrderIndex": 346,
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "//[\"1980\",\"1981\",\"1982\",\"1983\",\"1984\",\"1985\",\"1986\",\"1987\",\"1988\",\"1989\",\"1990\",\"1991\",\"1992\",\"1993\",\"1994\",\"1995\",\"1996\",\"1997\",\"1998\",\"1999\",\"2000\",\"2001\",\"2002\",\"2003\",\"2004\",\"2005\",\"2006\",\"2007\",\"2008\",\"2009\",\"2010\",\"2011\",\"2012\",\"2013\",\"2014\",\"2015\",\"2016\",\"2017\",\"2018\",\"2019\",\"2020\",\"2021\",\"2022\"]\r\nIf(Year(Today())=Year(DateAdd(Today(),90)),[Year(Today())],[Year(Today()),Year(DateAdd(Today(),90))])",
+            "InvariantScript": "//[\"1980\",\"1981\",\"1982\",\"1983\",\"1984\",\"1985\",\"1986\",\"1987\",\"1988\",\"1989\",\"1990\",\"1991\",\"1992\",\"1993\",\"1994\",\"1995\",\"1996\",\"1997\",\"1998\",\"1999\",\"2000\",\"2001\",\"2002\",\"2003\",\"2004\",\"2005\",\"2006\",\"2007\",\"2008\",\"2009\",\"2010\",\"2011\",\"2012\",\"2013\",\"2014\",\"2015\",\"2016\",\"2017\",\"2018\",\"2019\",\"2020\",\"2021\",\"2022\"]\r\nIf(Year(Today())=Year(DateAdd(Today(),182.5)),[Year(Today())],[Year(Today()),Year(DateAdd(Today(),182.5))])",
             "NameMap": "{\"Value\":\"Value\"}",
             "Property": "Items",
             "RuleProviderType": "Unknown"
@@ -4891,7 +4891,7 @@
         "Name": "ddMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 340,
+        "PublishOrderIndex": 347,
         "Rules": [
           {
             "Category": "Data",
@@ -5308,7 +5308,7 @@
         "Name": "btnSetYearMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 341,
+        "PublishOrderIndex": 348,
         "Rules": [
           {
             "Category": "Data",
@@ -5642,7 +5642,7 @@
         "Name": "SetDefaultTimer",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 342,
+        "PublishOrderIndex": 349,
         "Rules": [
           {
             "Category": "Data",
@@ -5897,7 +5897,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 327,
+        "PublishOrderIndex": 342,
         "Rules": [
           {
             "Category": "Design",
@@ -5979,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638101243143460396",
+    "LastModifiedTimestamp": "638101299524495226",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6075,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638101243143460396",
+  "LastModifiedTimestamp": "638101299524495226",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

@@ -12,7 +12,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =598
         X: =511
         Y: =2
-        ZIndex: =2
+        ZIndex: =1
 
     Gallery2 As gallery.variableTemplateHeightGallery:
         Default: ={}
@@ -22,7 +22,7 @@ Screen_ViewCustomerTargetPricing As screen:
         TemplateSize: =77
         Width: =466
         Y: =156
-        ZIndex: =5
+        ZIndex: =2
 
         Label5 As label:
             Height: =68
@@ -69,10 +69,11 @@ Screen_ViewCustomerTargetPricing As screen:
         Height: =350
         Item: =Gallery2.Selected
         OnSuccess: =NewForm(Form2);
+        Visible: =false
         Width: =878
         X: =467
         Y: =113
-        ZIndex: =6
+        ZIndex: =3
 
         "'Customer Lead Id_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -1151,7 +1152,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =280
         X: =1079
         Y: =688
-        ZIndex: =10
+        ZIndex: =4
 
     Image5 As image:
         Height: =80
@@ -1159,7 +1160,7 @@ Screen_ViewCustomerTargetPricing As screen:
         OnSelect: =Navigate('Home Screen')
         Width: =276
         Y: =2
-        ZIndex: =11
+        ZIndex: =5
 
     Label6 As label:
         Color: =RGBA(0, 18, 107, 1)
@@ -1169,7 +1170,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =122
         X: =11
         Y: =95
-        ZIndex: =12
+        ZIndex: =6
 
     BTN_Activate As button:
         DisplayMode: =If(Label18.Text ="Active" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
@@ -1182,7 +1183,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =300
         X: =477
         Y: =688
-        ZIndex: =13
+        ZIndex: =7
 
     BTN_Deactivate As button:
         DisplayMode: =If(Label18.Text ="Inactive" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
@@ -1195,7 +1196,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =280
         X: =791
         Y: =688
-        ZIndex: =14
+        ZIndex: =8
 
     Icon5 As icon.ArrowsUpDown:
         Color: =RGBA(0, 0, 0, 1)
@@ -1206,7 +1207,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =49
         X: =280
         Y: =108
-        ZIndex: =17
+        ZIndex: =9
 
     Label11 As label:
         Color: =RGBA(0, 18, 107, 1)
@@ -1217,18 +1218,93 @@ Screen_ViewCustomerTargetPricing As screen:
         Width: =134
         X: =166
         Y: =95
-        ZIndex: =18
+        ZIndex: =10
 
     Label18 As label:
         Text: =DataCardValue20.Selected.Value
         Visible: =false
         X: =477
         Y: =725
-        ZIndex: =19
+        ZIndex: =11
 
     Button4 As button:
         OnSelect: =Navigate(ViewScreen)
         Text: ="Button"
         X: =1206
-        ZIndex: =20
+        ZIndex: =12
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Items: ='D365-Product Details_V'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Width: =924
+        X: =382
+        Y: =60
+        ZIndex: =13
+
+        Title2 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Search_Description
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle2 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.NRF
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title2.Y + Title2.Height + 2
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Decoded
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle2.Y + Subtitle2.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
 
