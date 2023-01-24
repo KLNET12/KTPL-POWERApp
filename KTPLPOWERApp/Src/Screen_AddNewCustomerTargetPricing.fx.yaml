@@ -1187,12 +1187,12 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingBottom: =8
         Text: =ProductList_CB.Selected.Bottle
         X: =43
-        Y: =210
+        Y: =200
         ZIndex: =54
 
     Label29 As label:
         Text: =ProductList_CB.Selected.Barcode
         X: =150
-        Y: =208
+        Y: =198
         ZIndex: =55
 
