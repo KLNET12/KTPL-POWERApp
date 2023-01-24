@@ -1162,10 +1162,11 @@ Screen_AddNewCustomerTargetPricing As screen:
     Label24 As label:
         Height: =37
         PaddingBottom: =10
+        PaddingTop: =7
         Size: =10
         Text: ="Enquiry"
         Width: =126
-        X: =894
+        X: =892
         Y: =137
         ZIndex: =52
 
