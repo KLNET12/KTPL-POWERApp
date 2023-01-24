@@ -1165,7 +1165,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =10
         Text: ="Enquiry"
         Width: =126
-        X: =896
+        X: =894
         Y: =137
         ZIndex: =52
 
