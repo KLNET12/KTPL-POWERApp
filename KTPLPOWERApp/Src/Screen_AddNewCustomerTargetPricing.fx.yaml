@@ -810,7 +810,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =23
             Icon: =Icon.Add
             OnSelect: |-
-                =If(IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Notify("Product is Required",NotificationType.Error),
+                =If(IsBlank(ProductList_CB.Selected.Search_Description),Notify("Product is Required",NotificationType.Error),
                 If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error),If(Checkbox2.Value=false && IsBlank(MinPrice_value),Notify("Min Price is Required",NotificationType.Error),
                 If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,'De-Coded':Decoded_CB.Text,'Non-Refill':NonRefiil_CB.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false}))))));Reset(ProductList_CB);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Checkbox2)
             Width: =74
