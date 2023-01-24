@@ -1160,13 +1160,13 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =51
 
     Label24 As label:
-        Height: =36
+        Height: =37
         PaddingBottom: =10
         Size: =10
         Text: ="Enquiry"
-        Width: =63
-        X: =916
-        Y: =138
+        Width: =126
+        X: =896
+        Y: =137
         ZIndex: =52
 
     Checkbox2 As checkbox:
