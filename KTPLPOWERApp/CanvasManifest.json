@@ -95,9 +95,9 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "380da81b-78d1-4598-bdc8-66b8009f8cb1",
-    "Id": "62b2fbe3-01e4-4109-8c8e-6794eb393e32",
+    "Id": "330e955d-08e7-4524-b039-8971dbc049b0",
     "InstrumentationKey": "",
-    "Name": "CTP(V)",
+    "Name": "CTP(V).msapp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {

@@ -745,6 +745,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =
             Size: =0
             Text: =Decoded
+            Visible: =false
             Width: =74
             X: =171
             Y: =194
@@ -757,6 +758,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnUncheck: =
             Size: =0
             Text: =NonRefill
+            Visible: =false
             Width: =78
             X: =63
             Y: =192
@@ -878,7 +880,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Decoded_Lbl As label:
             Height: =18
             Size: =10
-            Text: ="Non-Refill"
+            Text: ="Bottle"
             Width: =123
             X: =38
             Y: =189
@@ -887,7 +889,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         "'Non-refill_lbl' As label":
             Height: =18
             Size: =10
-            Text: ="De-Coded"
+            Text: ="Barcode"
             Width: =169
             X: =151
             Y: =190
@@ -916,7 +918,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Size: =10
             Text: ="Currency"
             Width: =231
-            X: =976
+            X: =986
             Y: =148
             ZIndex: =28
 
@@ -1017,7 +1019,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =43
 
     TextInput8 As text:
-        Default: =If(_dateSelected=Today(),Text(DateValue(_dateSelected),"dd/mm/yyyy"),Text(DateAdd(DateValue(_dateSelected),90,Days),"dd/mm/yyyy"))
+        Default: =Text(DateAdd(DateValue(_dateSelected),90,Days),"dd/mm/yyyy")
         Height: =18
         OnSelect: =Set(showDate,true)
         PaddingBottom: =1
@@ -1180,4 +1182,17 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =900
         Y: =123
         ZIndex: =53
+
+    Label26 As label:
+        PaddingBottom: =8
+        Text: =ProductList_CB.Selected.Bottle
+        X: =43
+        Y: =210
+        ZIndex: =54
+
+    Label29 As label:
+        Text: =ProductList_CB.Selected.Barcode
+        X: =150
+        Y: =208
+        ZIndex: =55
 
