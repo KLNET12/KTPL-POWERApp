@@ -2224,36 +2224,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Add_Icon.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Add_Icon.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen_AddNewCustomerTargetPricing",
-                "type": "Screen_AddNewCustomerTargetPricing.Add_Icon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Add_Icon.AccessibleLabel"
                 }
               ],
@@ -2278,6 +2248,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Add_Icon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen_AddNewCustomerTargetPricing.Add_Icon.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen_AddNewCustomerTargetPricing",
+                "type": "Screen_AddNewCustomerTargetPricing.Add_Icon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
