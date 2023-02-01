@@ -78,7 +78,7 @@ ViewScreen As screen:
             Size: =10
             Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
             Width: =440
-            X: =428
+            X: =438
             Y: =4
             ZIndex: =2
 
@@ -87,7 +87,7 @@ ViewScreen As screen:
             Height: =49
             Text: =""
             Width: =154
-            X: =870
+            X: =890
             Y: =4
             ZIndex: =3
 
@@ -97,7 +97,7 @@ ViewScreen As screen:
             OnSelect: |
                 =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
             Width: =25
-            X: =908
+            X: =928
             Y: =17
             ZIndex: =4
 
@@ -106,7 +106,7 @@ ViewScreen As screen:
             Icon: =Icon.Edit
             OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
             Width: =25
-            X: =988
+            X: =1008
             Y: =18
             ZIndex: =5
 

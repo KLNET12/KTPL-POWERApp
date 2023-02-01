@@ -1304,7 +1304,7 @@ Screen_ViewCustomerTargetPricing As screen:
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Width: =924
-        X: =382
+        X: =442
         Y: =60
         ZIndex: =13
 
