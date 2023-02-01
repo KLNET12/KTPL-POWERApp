@@ -55,8 +55,8 @@ ViewScreen As screen:
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
         TemplateSize: =53
-        Width: =1228
-        X: =26
+        Width: =1214
+        X: =40
         Y: =112
         ZIndex: =7
 
@@ -114,12 +114,12 @@ ViewScreen As screen:
             ZIndex: =5
 
         Label30 As label:
-            Fill: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
             Height: =1
             Text: ="Text"
-            Width: =1217
-            X: =1
-            Y: =53
+            Width: =1199
+            Y: =52
             ZIndex: =6
 
     Label6_1 As label:
