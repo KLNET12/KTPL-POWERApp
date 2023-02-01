@@ -60,6 +60,25 @@ ViewScreen As screen:
         Y: =112
         ZIndex: =7
 
+        Icon2_2 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.ArrowRight
+            OnSelect: |
+                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
+            Width: =25
+            X: =928
+            Y: =17
+            ZIndex: =1
+
+        Icon2_3 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.Edit
+            OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
+            Width: =25
+            X: =1008
+            Y: =18
+            ZIndex: =2
+
         Label5_1 As label:
             BorderThickness: =1
             Height: =49
@@ -69,7 +88,7 @@ ViewScreen As screen:
             Width: =427
             X: =1
             Y: =4
-            ZIndex: =1
+            ZIndex: =3
 
         Label8_1 As label:
             BorderThickness: =1
@@ -80,7 +99,7 @@ ViewScreen As screen:
             Width: =440
             X: =438
             Y: =4
-            ZIndex: =2
+            ZIndex: =4
 
         Label25 As label:
             BorderThickness: =1
@@ -89,25 +108,6 @@ ViewScreen As screen:
             Width: =154
             X: =890
             Y: =4
-            ZIndex: =3
-
-        Icon2_2 As icon.ArrowRight:
-            Height: =20
-            Icon: =Icon.ArrowRight
-            OnSelect: |
-                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
-            Width: =25
-            X: =928
-            Y: =17
-            ZIndex: =4
-
-        Icon2_3 As icon.ArrowRight:
-            Height: =20
-            Icon: =Icon.Edit
-            OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
-            Width: =25
-            X: =1008
-            Y: =18
             ZIndex: =5
 
     Label6_1 As label:
