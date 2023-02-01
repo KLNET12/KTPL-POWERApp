@@ -99,7 +99,7 @@ ViewScreen As screen:
             Size: =10
             Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
             Width: =440
-            X: =428
+            X: =438
             Y: =4
             ZIndex: =4
 
@@ -114,6 +114,7 @@ ViewScreen As screen:
             ZIndex: =5
 
         Label30 As label:
+            BorderThickness: =1
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =1
