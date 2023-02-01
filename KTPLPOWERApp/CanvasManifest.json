@@ -116,6 +116,7 @@
     "Screen_AddNewCustomerTargetPricing",
     "Screen_ViewCustomerTargetPricing",
     "EditScreen",
-    "ViewScreen"
+    "ViewScreen",
+    "Screen1"
   ]
 }

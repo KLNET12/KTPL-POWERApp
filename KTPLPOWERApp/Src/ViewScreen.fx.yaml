@@ -81,6 +81,7 @@ ViewScreen As screen:
 
         Label5_1 As label:
             BorderThickness: =1
+            DisplayMode: =DisplayMode.View
             Height: =49
             OnSelect: =Select(Parent)
             Size: =10
@@ -92,6 +93,7 @@ ViewScreen As screen:
 
         Label8_1 As label:
             BorderThickness: =1
+            DisplayMode: =DisplayMode.View
             Height: =49
             OnSelect: =Select(Parent)
             Size: =10
@@ -103,12 +105,22 @@ ViewScreen As screen:
 
         Label25 As label:
             BorderThickness: =1
+            DisplayMode: =DisplayMode.View
             Height: =49
             Text: =""
             Width: =154
             X: =870
             Y: =4
             ZIndex: =5
+
+        Label30 As label:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            Text: ="Text"
+            Width: =1217
+            X: =1
+            Y: =53
+            ZIndex: =6
 
     Label6_1 As label:
         Color: =RGBA(0, 18, 107, 1)
