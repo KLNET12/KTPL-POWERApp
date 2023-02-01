@@ -54,7 +54,7 @@ ViewScreen As screen:
         Height: =586
         Items: =SortByColumns( Filter('Customer Target Pricing','Customer Lead Id'.Lead=[@ModelDrivenFormIntegration].Item.Lead),varSortColumn,varSortDirection)
         Layout: =Layout.Vertical
-        TemplateSize: =77
+        TemplateSize: =53
         Width: =1296
         X: =26
         Y: =112
