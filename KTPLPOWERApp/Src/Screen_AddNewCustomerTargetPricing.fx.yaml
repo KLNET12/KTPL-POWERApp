@@ -1196,9 +1196,3 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =198
         ZIndex: =55
 
-    Label33 As label:
-        Text: =TextInput3
-        X: =731
-        Y: =590
-        ZIndex: =56
-
