@@ -3574,6 +3574,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.ContactDataStore"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.ContactDataStore",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ContactDataStore",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.fieldedit"
                 }
               ],
