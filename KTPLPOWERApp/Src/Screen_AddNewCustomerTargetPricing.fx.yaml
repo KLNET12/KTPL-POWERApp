@@ -1206,7 +1206,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label32 As label:
         Height: =58
-        Text: =LeadDataStore.'Parent Contact for lead'.Contact
+        Text: =GUID(LeadDataStore.'Parent Contact for lead'.Contact)
         Width: =485
         X: =647
         Y: =598
