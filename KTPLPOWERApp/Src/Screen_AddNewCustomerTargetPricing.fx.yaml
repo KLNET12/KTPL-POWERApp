@@ -1204,3 +1204,11 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =558
         ZIndex: =56
 
+    Label32 As label:
+        Height: =58
+        Text: =LeadDataStore.'Parent Contact for lead'.Contact
+        Width: =485
+        X: =647
+        Y: =598
+        ZIndex: =57
+
