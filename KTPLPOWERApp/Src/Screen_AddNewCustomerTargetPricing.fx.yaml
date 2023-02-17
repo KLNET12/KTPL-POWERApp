@@ -472,7 +472,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     SaveButton As button:
         Height: =26
         OnSelect: |
-            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),ABV:Value(Last(FirstN(Products,Value)).'Alc %'),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record Saved Sucessfully!",NotificationType.Success);
+            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),'ABV (ntz_abv)':Value(Label35.Text),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record Saved Sucessfully!",NotificationType.Success);
             
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false ));
@@ -814,7 +814,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =If(IsBlank(ProductList_CB.Selected.Search_Description),Notify("Product is Required",NotificationType.Error) && Reset(ProductList_CB),
                 If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error) && Reset(MaxPrice_value),
-                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false})))));If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
+                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false})))));Set(ALCtext,ALC_value.Text);If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
             Width: =74
             X: =1277
             Y: =208
@@ -1204,11 +1204,10 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =558
         ZIndex: =56
 
-    Label32 As label:
-        Height: =58
-        Text: ="GUID" & First([@ModelDrivenFormIntegration].Data).ItemId
-        Width: =485
-        X: =647
-        Y: =598
+    Label35 As label:
+        Text: =ALCtext
+        Visible: =false
+        X: =1072
+        Y: =669
         ZIndex: =57
 

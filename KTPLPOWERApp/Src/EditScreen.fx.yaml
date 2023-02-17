@@ -479,7 +479,7 @@ EditScreen As screen:
         ABV_DataCard1_1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_alc"
-            Default: =ThisItem.ABV
+            Default: =ThisItem.'ABV (ntz_alc)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
             Fill: =RGBA(0, 0, 0, 0)
