@@ -1206,7 +1206,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Label32 As label:
         Height: =58
-        Text: ="GUID" & GUID(ContactDataStore.parent_contactid.Contact)
+        Text: ="GUID" & First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))).'Full Name'
         Width: =485
         X: =647
         Y: =598
