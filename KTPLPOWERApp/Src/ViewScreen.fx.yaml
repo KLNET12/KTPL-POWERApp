@@ -60,25 +60,6 @@ ViewScreen As screen:
         Y: =112
         ZIndex: =7
 
-        Icon2_2 As icon.ArrowRight:
-            Height: =20
-            Icon: =Icon.ArrowRight
-            OnSelect: |
-                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
-            Width: =25
-            X: =908
-            Y: =17
-            ZIndex: =1
-
-        Icon2_3 As icon.ArrowRight:
-            Height: =20
-            Icon: =Icon.Edit
-            OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
-            Width: =25
-            X: =988
-            Y: =18
-            ZIndex: =2
-
         Label5_1 As label:
             BorderThickness: =1
             DisplayMode: =DisplayMode.View
@@ -89,7 +70,7 @@ ViewScreen As screen:
             Width: =427
             X: =1
             Y: =4
-            ZIndex: =3
+            ZIndex: =1
 
         Label8_1 As label:
             BorderThickness: =1
@@ -101,7 +82,7 @@ ViewScreen As screen:
             Width: =440
             X: =438
             Y: =4
-            ZIndex: =4
+            ZIndex: =2
 
         Label25 As label:
             BorderThickness: =1
@@ -111,7 +92,7 @@ ViewScreen As screen:
             Width: =154
             X: =870
             Y: =4
-            ZIndex: =5
+            ZIndex: =3
 
         Label30 As label:
             BorderThickness: =1
@@ -121,6 +102,25 @@ ViewScreen As screen:
             Text: ="Text"
             Width: =1199
             Y: =52
+            ZIndex: =4
+
+        Icon2_2 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.ArrowRight
+            OnSelect: |
+                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
+            Width: =25
+            X: =908
+            Y: =17
+            ZIndex: =5
+
+        Icon2_3 As icon.ArrowRight:
+            Height: =20
+            Icon: =Icon.Edit
+            OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
+            Width: =25
+            X: =988
+            Y: =18
             ZIndex: =6
 
     Label6_1 As label:
