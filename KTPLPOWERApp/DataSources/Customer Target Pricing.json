@@ -38,6 +38,7 @@
       "ntz_customertargetpricing_SyncErrors": "Sync Errors",
       "ntz_customertargetpricingid": "Customer Target Pricing",
       "ntz_decoded": "Barcode",
+      "ntz_description": "Descriptions",
       "ntz_expirydate": "Expiry Date",
       "ntz_litres": "Lt/Btl",
       "ntz_maxprice": "Max Price (ntz_maxprice)",
@@ -48,6 +49,7 @@
       "ntz_productcode": "Item No",
       "ntz_quantity": "Quantity",
       "ntz_quantityrequired": "Qty old",
+      "ntz_source": "Source",
       "ntz_variant": "Variant",
       "overriddencreatedon": "Record Created On",
       "owningbusinessunit": "Owning Business Unit",
@@ -75,6 +77,30 @@
       "9e98e686-6b06-4c93-bf75-0403eedd34cc": "Customer Target Pricing Associated View",
       "feb2b8dd-0062-4d62-a316-599a912acf8c": "Customer Target Pricing Lookup View"
     }
+  },
+  {
+    "DisplayName": "Source",
+    "Name": "cr585_source",
+    "OptionSetInfoNameMapping": {
+      "224000000": "Email",
+      "224000001": "Phone Call",
+      "224000002": "Teams",
+      "224000003": "WhatsApp",
+      "224000004": "Other",
+      "224000005": "LinkedIn"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ntz_source",
+        "OptionSetReferenceEntityName": "Customer Target Pricing"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "ntz_source",
+    "RelatedEntityName": "Customer Target Pricing",
+    "Type": "OptionSetInfo"
   },
   {
     "DisplayName": "Barcode (Customer Target Pricing)",

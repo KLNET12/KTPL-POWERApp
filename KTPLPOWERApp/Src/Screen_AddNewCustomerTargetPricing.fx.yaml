@@ -189,9 +189,9 @@ Screen_AddNewCustomerTargetPricing As screen:
         Group2 As group:
             Height: =5
             Width: =5
-            X: =40
-            Y: =40
-            ZIndex: =17
+            X: =60
+            Y: =60
+            ZIndex: =18
 
             TextInput2 As text:
                 BorderThickness: =1
@@ -285,7 +285,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: ="Edit "
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =53
-                X: =1130
+                X: =1220
                 ZIndex: =12
 
             Icon3 As icon.Trash:
@@ -295,8 +295,22 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: ="Delete"
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =53
-                X: =1199
+                X: =1269
                 ZIndex: =16
+
+            sources As text:
+                BorderThickness: =1
+                Default: =ThisItem.Source
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                Height: =20
+                OnChange: =If(Int(sources)<0,Reset(sources),false)
+                OnSelect: =Select(Parent)
+                Size: =10
+                Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
+                Width: =100
+                X: =1120
+                Y: =4
+                ZIndex: =17
 
     Container3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =53
@@ -470,16 +484,16 @@ Screen_AddNewCustomerTargetPricing As screen:
             ZIndex: =24
 
     SaveButton As button:
-        Height: =26
+        Height: =17
         OnSelect: |
-            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),'ABV (ntz_abv)':Value(Label35.Text),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl')}));Notify("Record Saved Sucessfully!",NotificationType.Success);
+            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),'ABV (ntz_abv)':Value(Label35.Text),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl'),Descriptions:descriptions.Text}));Notify("Record Saved Sucessfully!",NotificationType.Success);
             
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false ));
         Text: ="Save"
-        Width: =200
-        X: =1162
-        Y: =276
+        Width: =106
+        X: =1254
+        Y: =282
         ZIndex: =5
 
     Label3 As label:
@@ -814,7 +828,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnSelect: |-
                 =If(IsBlank(ProductList_CB.Selected.Search_Description),Notify("Product is Required",NotificationType.Error) && Reset(ProductList_CB),
                 If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error) && Reset(MaxPrice_value),
-                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false})))));Set(ALCtext,ALC_value.Text);If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
+                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false,Source:sourcelabel.Text})))));Set(ALCtext,ALC_value.Text);If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
             Width: =74
             X: =1277
             Y: =208
@@ -1064,7 +1078,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     Container1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Height: =15
-        Width: =1099
+        Width: =1210
         X: =33
         Y: =282
         ZIndex: =48
@@ -1125,6 +1139,16 @@ Screen_AddNewCustomerTargetPricing As screen:
             Text: ="Currency"
             X: =949
             ZIndex: =6
+
+        source As label:
+            BorderThickness: =1
+            FocusedBorderThickness: =1
+            Height: =15
+            Size: =8
+            Text: ="Source"
+            Width: =110
+            X: =1099
+            ZIndex: =7
 
     Import_Btn As button:
         Height: =10
@@ -1210,4 +1234,108 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =1072
         Y: =669
         ZIndex: =57
+
+    Form3 As form:
+        DataSource: ='Customer Target Pricing'
+        DefaultMode: =FormMode.New
+        Height: =28
+        Width: =690
+        X: =576
+        Y: =107
+        ZIndex: =58
+
+        Descriptions_DataCard2 As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ntz_description"
+            Default: =ThisItem.Descriptions
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_description")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =53
+            Required: =false
+            Update: =descriptions.Text
+            Width: =690
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey31 As label:
+                Height: =15
+                Size: =12
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                Y: =12
+                ZIndex: =1
+
+            descriptions As text:
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =21
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =574
+                X: =113
+                Y: =7
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =descriptions.Y + descriptions.Height
+                ZIndex: =3
+
+            StarVisible28 As label:
+                Align: =Align.Center
+                Height: =DataCardKey31.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey31.Y
+                ZIndex: =4
+
+    Dropdown2 As dropdown:
+        Height: =22
+        Items: =Choices(Source)
+        X: =689
+        Y: =83
+        ZIndex: =59
+
+    Label31 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 18, 107, 1)
+        Text: ="Source"
+        X: =538
+        Y: =72
+        ZIndex: =60
+
+    sourcelabel As label:
+        Text: =Dropdown2.Selected.Value
+        X: =657
+        Y: =669
+        ZIndex: =61
+
+    Label33 As label:
+        Height: =37
+        Text: =""
+        Width: =94
+        X: =1254
+        Y: =104
+        ZIndex: =62
 
