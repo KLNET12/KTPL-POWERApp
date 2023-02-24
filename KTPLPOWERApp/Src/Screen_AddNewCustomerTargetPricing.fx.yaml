@@ -1327,6 +1327,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     sourcelabel As label:
         Text: =Dropdown2.Selected.Value
+        Visible: =false
         X: =657
         Y: =669
         ZIndex: =61
