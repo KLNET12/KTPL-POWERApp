@@ -1264,7 +1264,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Size: =12
                 Text: =Parent.DisplayName
                 Visible: =false
-                Width: =Parent.Width - 60
+                Width: =113
                 Wrap: =false
                 Y: =12
                 ZIndex: =1
@@ -1273,7 +1273,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =22
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -1316,7 +1316,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Height: =15
                 Text: |-
                     ="Description:"
-                Width: =630
+                Width: =113
                 Y: =12
                 ZIndex: =5
 
