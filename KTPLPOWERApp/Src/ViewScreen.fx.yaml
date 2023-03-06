@@ -80,7 +80,7 @@ ViewScreen As screen:
             Size: =10
             Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
             Width: =250
-            X: =628
+            X: =688
             Y: =4
             ZIndex: =2
 
@@ -110,7 +110,7 @@ ViewScreen As screen:
             OnSelect: |
                 =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
             Width: =25
-            X: =908
+            X: =1058
             Y: =17
             ZIndex: =5
 
@@ -119,7 +119,7 @@ ViewScreen As screen:
             Icon: =Icon.Edit
             OnSelect: =Navigate(EditScreen);Set(IsEdit,true)
             Width: =25
-            X: =988
+            X: =1138
             Y: =18
             ZIndex: =6
 
@@ -162,16 +162,22 @@ ViewScreen As screen:
         Height: =52
         Text: ="Createdon"
         Width: =214
-        X: =670
+        X: =730
         Y: =76
         ZIndex: =10
 
     Label28 As label:
         Text: ="        Show/Edit"
         Width: =188
-        X: =902
+        X: =1072
         Y: =76
         ZIndex: =11
+
+    Label37 As label:
+        Text: ="Source"
+        X: =480
+        Y: =80
+        ZIndex: =12
 
     Icon5_1 As icon.ArrowsUpDown:
         Color: =RGBA(0, 0, 0, 1)
@@ -182,11 +188,5 @@ ViewScreen As screen:
         Width: =49
         X: =838
         Y: =94
-        ZIndex: =12
-
-    Label37 As label:
-        Text: ="Source"
-        X: =480
-        Y: =80
         ZIndex: =13
 
