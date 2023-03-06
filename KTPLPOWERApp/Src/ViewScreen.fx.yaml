@@ -186,7 +186,7 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=SortOrder.Ascending,SortOrder.Descending,SortOrder.Ascending));
         Width: =49
-        X: =838
+        X: =788
         Y: =94
         ZIndex: =13
 
