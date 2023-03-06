@@ -74,7 +74,6 @@ CustomCalendar As CanvasComponent:
             PressedFill: =Title1_1.Fill
             Size: =7
             Text: =ThisItem.Value
-            VerticalAlign: =Middle
             Width: =80
             Wrap: =false
             X: |-
@@ -139,7 +138,7 @@ CustomCalendar As CanvasComponent:
             HoverColor: =Title2_4.Color
             HoverFill: =Title2_4.Fill
             OnSelect: |
-                =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
+                =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
                 Set(showDate,false);
                 If(_dateSelected< Today(),Notify("You can not selected this date as its been already passed",NotificationType.Error);
                 Set(_dateSelected,Blank()));
@@ -151,11 +150,10 @@ CustomCalendar As CanvasComponent:
             PressedFill: =Title2_4.Fill
             Size: =7
             TabIndex: =0
-            Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
-            VerticalAlign: =Middle
+            Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
             Visible: |-
                 =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
-                 !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
+                 !(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth)
             Width: =35
             Wrap: =false
             X: =12
@@ -195,9 +193,9 @@ CustomCalendar As CanvasComponent:
         OnTimerStart: |-
             =Set(_YMvisible,false);
             Set(_dateSelected, CustomCalendar.DefaultDate);
-            Set(_firstDayOfMonth, DateAdd(CustomCalendar.DefaultDate, 1 - Day(CustomCalendar.DefaultDate), Days));
-            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days))
+            Set(_firstDayOfMonth, DateAdd(CustomCalendar.DefaultDate, 1 - Day(CustomCalendar.DefaultDate), TimeUnit.Days));
+            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
         PressedBorderColor: =SetDefaultTimer.Fill
         PressedColor: =SetDefaultTimer.Fill
         PressedFill: =SetDefaultTimer.Color
@@ -218,9 +216,9 @@ CustomCalendar As CanvasComponent:
         Icon: =Icon.ChevronLeft
         OnSelect: |-
             =/*changes month view to previous month*/
-            Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, Months));
-            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+            Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
             /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
             If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth))
         PaddingBottom: =5
@@ -246,10 +244,10 @@ CustomCalendar As CanvasComponent:
         Icon: =Icon.ChevronRight
         OnSelect: |-
             =/*changes month view to next month*/
-            Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, Months));
-            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
+            Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));
+            Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
             /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
-            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+            Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
             If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth))
         PaddingBottom: =5
         PaddingLeft: =5
@@ -310,9 +308,9 @@ CustomCalendar As CanvasComponent:
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
                 =Set(_dateSelected, Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1));
-                Set(_firstDayOfMonth, DateAdd(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1), 1 - Day(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1)), Days));
-                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+                Set(_firstDayOfMonth, DateAdd(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1), 1 - Day(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1)), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                 Set(_YMvisible,false)
             PressedBorderColor: =btnSetYearMonth.Fill
             PressedColor: =btnSetYearMonth.Fill

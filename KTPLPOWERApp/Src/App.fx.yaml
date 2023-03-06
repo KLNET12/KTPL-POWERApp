@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))));Set(varSortColumn,"createdon");Set(varSortDirection,Descending);Set(ContactDataStore,First(Filter(Contacts,Contact=GUID([@ModelDrivenFormIntegration].Item.Lead))))
+    OnStart: =Set(LeadDataStore,First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))));Set(varSortColumn,"createdon");Set(varSortDirection,SortOrder.Descending);Set(ContactDataStore,First(Filter(Contacts,Contact=GUID([@ModelDrivenFormIntegration].Item.Lead))))
     StartScreen: =
 
     ModelDrivenFormIntegration As hostControl.ModelDrivenFormHostControlVariant:

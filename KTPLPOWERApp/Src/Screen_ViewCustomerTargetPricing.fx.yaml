@@ -128,7 +128,7 @@ Screen_ViewCustomerTargetPricing As screen:
 
             TextInput6 As text:
                 Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 Size: =10
                 Width: =245
@@ -167,7 +167,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -236,7 +236,7 @@ Screen_ViewCustomerTargetPricing As screen:
             DateValue2 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Text(DateValue(Parent.Default),"dd/mm/yyyy")
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 EndYear: =Year(Today())+100
                 Height: =22
                 IsEditable: =true
@@ -338,7 +338,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -409,7 +409,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -478,7 +478,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Format: =TextFormat.Number
                 Height: =22
                 PaddingLeft: =5
@@ -549,7 +549,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -756,7 +756,7 @@ Screen_ViewCustomerTargetPricing As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -1238,7 +1238,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =6
 
     BTN_Activate As button:
-        DisplayMode: =If(Label18.Text ="Active" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
+        DisplayMode: =If(Label18.Text ="Active" || IsBlank(Label18.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Active});
@@ -1251,7 +1251,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ZIndex: =7
 
     BTN_Deactivate As button:
-        DisplayMode: =If(Label18.Text ="Inactive" || IsBlank(Label18.Text) ,DisplayMode.Disabled,Edit)
+        DisplayMode: =If(Label18.Text ="Inactive" || IsBlank(Label18.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
@@ -1268,7 +1268,7 @@ Screen_ViewCustomerTargetPricing As screen:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =18
         Icon: =Icon.Sort
-        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=SortOrder.Ascending,SortOrder.Descending,SortOrder.Ascending));
         Width: =49
         X: =280
         Y: =108

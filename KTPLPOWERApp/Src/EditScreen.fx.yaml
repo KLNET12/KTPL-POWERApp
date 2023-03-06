@@ -49,7 +49,7 @@ EditScreen As screen:
         ZIndex: =14
 
     BTN_Activate_1 As button:
-        DisplayMode: =If(Label18_1.Text ="Active" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,Edit)
+        DisplayMode: =If(Label18_1.Text ="Active" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Active});
@@ -62,7 +62,7 @@ EditScreen As screen:
         ZIndex: =15
 
     BTN_Deactivate_1 As button:
-        DisplayMode: =If(Label18_1.Text ="Inactive" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,Edit)
+        DisplayMode: =If(Label18_1.Text ="Inactive" || IsBlank(Label18_1.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
         Height: =30
         OnSelect: |-
             =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{Status:'Status (Customer Target Pricing)'.Inactive});Set(IsEdit,false);
@@ -156,7 +156,7 @@ EditScreen As screen:
 
             TextInput6_1 As text:
                 Default: =First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))).Name
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 Size: =10
                 Width: =245
@@ -195,7 +195,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -264,7 +264,7 @@ EditScreen As screen:
             DateValue2_1 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Text(DateValue(Parent.Default),"dd/mm/yyyy")
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 EndYear: =Year(Today())+100
                 Height: =22
                 IsEditable: =true
@@ -366,7 +366,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -437,7 +437,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -506,7 +506,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Format: =TextFormat.Number
                 Height: =22
                 PaddingLeft: =5
@@ -577,7 +577,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -645,7 +645,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 IsSearchable: =false
                 Items: =Choices('Barcode (Customer Target Pricing)')
@@ -715,7 +715,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 IsSearchable: =false
                 Items: =Choices('Bottle (Customer Target Pricing)')
@@ -786,7 +786,7 @@ EditScreen As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =22
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5

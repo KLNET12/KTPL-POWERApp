@@ -166,7 +166,7 @@ ViewScreen As screen:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =17
         Icon: =Icon.Sort
-        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=Ascending,Descending,Ascending));
+        OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=SortOrder.Ascending,SortOrder.Descending,SortOrder.Ascending));
         Width: =49
         X: =618
         Y: =94

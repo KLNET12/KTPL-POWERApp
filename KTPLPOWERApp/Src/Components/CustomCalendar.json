@@ -79,7 +79,7 @@
         "Name": "Rectangle1_1",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 352,
+        "PublishOrderIndex": 357,
         "Rules": [
           {
             "Category": "Design",
@@ -281,7 +281,7 @@
         "Name": "LblMonthSelected",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 353,
+        "PublishOrderIndex": 358,
         "Rules": [
           {
             "Category": "Data",
@@ -632,7 +632,7 @@
         "Name": "iconPrevMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 354,
+        "PublishOrderIndex": 359,
         "Rules": [
           {
             "Category": "Data",
@@ -822,7 +822,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "/*changes month view to previous month*/\r\nSet(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, Months));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));\r\n/*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/\r\nIf(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth))",
+            "InvariantScript": "/*changes month view to previous month*/\r\nSet(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));\r\n/*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/\r\nIf(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth))",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -977,7 +977,7 @@
         "Name": "iconNextMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 355,
+        "PublishOrderIndex": 360,
         "Rules": [
           {
             "Category": "Data",
@@ -1167,7 +1167,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "/*changes month view to next month*/\r\nSet(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, Months));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));\r\n/*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));\r\nIf(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth))",
+            "InvariantScript": "/*changes month view to next month*/\r\nSet(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));\r\n/*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));\r\nIf(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth))",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -1320,7 +1320,7 @@
         "Name": "TodayIcon",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 356,
+        "PublishOrderIndex": 361,
         "Rules": [
           {
             "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 359,
+            "PublishOrderIndex": 364,
             "Rules": [
               {
                 "Category": "Design",
@@ -1661,7 +1661,7 @@
             "Name": "Title1_1",
             "Parent": "WeekdayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 360,
+            "PublishOrderIndex": 365,
             "Rules": [
               {
                 "Category": "Data",
@@ -1797,7 +1797,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Middle",
+                "InvariantScript": "VerticalAlign.Middle",
                 "Property": "VerticalAlign",
                 "RuleProviderType": "Unknown"
               },
@@ -2001,7 +2001,7 @@
         "Name": "WeekdayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 358,
+        "PublishOrderIndex": 363,
         "Rules": [
           {
             "Category": "Data",
@@ -2234,7 +2234,7 @@
             "Name": "galleryTemplate2_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 362,
+            "PublishOrderIndex": 367,
             "Rules": [
               {
                 "Category": "Design",
@@ -2349,7 +2349,7 @@
             "Name": "Title2_4",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 363,
+            "PublishOrderIndex": 368,
             "Rules": [
               {
                 "Category": "Data",
@@ -2365,7 +2365,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "Day(DateAdd(_firstDayInView,ThisItem.Value,Days))",
+                "InvariantScript": "Day(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))",
                 "Property": "Text",
                 "RuleProviderType": "Unknown"
               },
@@ -2389,7 +2389,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ \r\n !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)",
+                "InvariantScript": "/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ \r\n !(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth)",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
@@ -2485,7 +2485,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Middle",
+                "InvariantScript": "VerticalAlign.Middle",
                 "Property": "VerticalAlign",
                 "RuleProviderType": "Unknown"
               },
@@ -2611,7 +2611,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\nIf(_dateSelected> DateAdd(Today(),182.5),Notify(\"You can only select date within upcoming 6 month\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n",
+                "InvariantScript": "Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));\r\nSet(showDate,false);\r\nIf(_dateSelected< Today(),Notify(\"You can not selected this date as its been already passed\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\nIf(_dateSelected> DateAdd(Today(),182.5),Notify(\"You can only select date within upcoming 6 month\",NotificationType.Error);\r\nSet(_dateSelected,Blank()));\r\n",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -2689,7 +2689,7 @@
             "Name": "Subcircle1_1",
             "Parent": "MonthDayGallery",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 364,
+            "PublishOrderIndex": 369,
             "Rules": [
               {
                 "Category": "Data",
@@ -2921,7 +2921,7 @@
         "Name": "MonthDayGallery",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 361,
+        "PublishOrderIndex": 366,
         "Rules": [
           {
             "Category": "Data",
@@ -3215,7 +3215,7 @@
         "Name": "Frame",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 365,
+        "PublishOrderIndex": 370,
         "Rules": [
           {
             "Category": "Data",
@@ -3406,7 +3406,7 @@
         "Name": "FrameShadow",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 366,
+        "PublishOrderIndex": 371,
         "Rules": [
           {
             "Category": "Data",
@@ -3642,7 +3642,7 @@
         "Name": "lblYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 367,
+        "PublishOrderIndex": 372,
         "Rules": [
           {
             "Category": "Data",
@@ -4022,7 +4022,7 @@
         "Name": "lblMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 368,
+        "PublishOrderIndex": 373,
         "Rules": [
           {
             "Category": "Data",
@@ -4461,7 +4461,7 @@
         "Name": "ddYear",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 369,
+        "PublishOrderIndex": 374,
         "Rules": [
           {
             "Category": "Data",
@@ -4891,7 +4891,7 @@
         "Name": "ddMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 370,
+        "PublishOrderIndex": 375,
         "Rules": [
           {
             "Category": "Data",
@@ -5308,7 +5308,7 @@
         "Name": "btnSetYearMonth",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 371,
+        "PublishOrderIndex": 376,
         "Rules": [
           {
             "Category": "Data",
@@ -5534,7 +5534,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Set(_dateSelected, Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1));\r\nSet(_firstDayOfMonth, DateAdd(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1), 1 - Day(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1)), Days));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));\r\nSet(_YMvisible,false)",
+            "InvariantScript": "Set(_dateSelected, Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1));\r\nSet(_firstDayOfMonth, DateAdd(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1), 1 - Day(Date(Value(ddYear.SelectedText.Value),Value(ddMonth.SelectedText.Value),1)), TimeUnit.Days));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));\r\nSet(_YMvisible,false)",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -5642,7 +5642,7 @@
         "Name": "SetDefaultTimer",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 372,
+        "PublishOrderIndex": 377,
         "Rules": [
           {
             "Category": "Data",
@@ -5844,7 +5844,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Set(_YMvisible,false);\r\nSet(_dateSelected, CustomCalendar.DefaultDate);\r\nSet(_firstDayOfMonth, DateAdd(CustomCalendar.DefaultDate, 1 - Day(CustomCalendar.DefaultDate), Days));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days))",
+            "InvariantScript": "Set(_YMvisible,false);\r\nSet(_dateSelected, CustomCalendar.DefaultDate);\r\nSet(_firstDayOfMonth, DateAdd(CustomCalendar.DefaultDate, 1 - Day(CustomCalendar.DefaultDate), TimeUnit.Days));\r\nSet(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));\r\nSet(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))",
             "Property": "OnTimerStart",
             "RuleProviderType": "Unknown"
           }
@@ -5897,7 +5897,7 @@
         "Name": "YearMonthPicker",
         "Parent": "CustomCalendar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 357,
+        "PublishOrderIndex": 362,
         "Rules": [
           {
             "Category": "Design",
@@ -5979,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638128068216361959",
+    "LastModifiedTimestamp": "638136698350572158",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6055,7 +6055,7 @@
       "Name": "DefaultDate",
       "PropertyDataTypeKey": "DateTime",
       "Tooltip": "DefaultSelected Date",
-      "Type": "{\"Version\":\"1.328\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.329\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -6064,7 +6064,7 @@
       "Name": "SelectedDate",
       "PropertyDataTypeKey": "DateTime",
       "Tooltip": "selected date",
-      "Type": "{\"Version\":\"1.328\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.329\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -6075,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638128068216361959",
+  "LastModifiedTimestamp": "638136698350572158",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

@@ -186,6 +186,20 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =308
         ZIndex: =3
 
+        sources_1 As text:
+            BorderThickness: =1
+            Default: =ThisItem.Description
+            DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
+            Height: =20
+            OnChange: =If(Int(sources_1)<0,Reset(sources_1),false)
+            OnSelect: =Select(Parent)
+            Size: =10
+            Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
+            Width: =130
+            X: =1100
+            Y: =4
+            ZIndex: =18
+
         Group2 As group:
             Height: =5
             Width: =5
@@ -196,7 +210,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             TextInput2 As text:
                 BorderThickness: =1
                 Default: =ThisItem.ProductDescription
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =20
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -209,7 +223,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             TextInput5 As text:
                 BorderThickness: =1
                 Default: =ThisItem.ProductCode
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.Disabled
                 Height: =20
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -222,14 +236,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             TextInput12 As text:
                 BorderThickness: =1
                 Default: =ThisItem.CustomerMinPrice
-                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
                 Format: =TextFormat.Number
                 Height: =20
                 OnChange: =If(Int(TextInput12)<0,Reset(TextInput12),false)
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =150
+                Width: =120
                 X: =509
                 Y: =4
                 ZIndex: =8
@@ -237,41 +251,41 @@ Screen_AddNewCustomerTargetPricing As screen:
             TextInput13 As text:
                 BorderThickness: =1
                 Default: =ThisItem.CustomerMaxPrice
-                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
                 Height: =20
                 OnChange: =If(Int(TextInput13)<0,Reset(TextInput13),false)
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =150
-                X: =661
+                Width: =120
+                X: =631
                 Y: =4
                 ZIndex: =9
 
             TextInput14 As text:
                 BorderThickness: =1
                 Default: =ThisItem.'Customer Currency'
-                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
                 Height: =20
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =150
-                X: =965
+                Width: =120
+                X: =875
                 Y: =4
                 ZIndex: =10
 
             TextInput15 As text:
                 BorderThickness: =1
                 Default: =ThisItem.QtyRequired
-                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
                 Height: =20
                 OnChange: =If(Int(TextInput15)<0,Reset(TextInput15),false)
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =150
-                X: =813
+                Width: =120
+                X: =753
                 Y: =4
                 ZIndex: =11
 
@@ -301,14 +315,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             sources As text:
                 BorderThickness: =1
                 Default: =ThisItem.Source
-                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ThisItem.editfield,DisplayMode.Edit,DisplayMode.Disabled)
                 Height: =20
                 OnChange: =If(Int(sources)<0,Reset(sources),false)
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =100
-                X: =1120
+                X: =1000
                 Y: =4
                 ZIndex: =17
 
@@ -495,6 +509,306 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =1254
         Y: =282
         ZIndex: =5
+
+    ProductList_CB As combobox:
+        DisplayFields: =["Search_Description"]
+        Height: =22
+        Items: ='D365-Product Details_V'
+        OnChange: |
+            =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
+            If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
+        OnSelect: |
+            =
+        SearchFields: =["Product_Description","Search_Description","Product_Code"]
+        SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Search_Description","Product_Code")
+        SelectMultiple: =false
+        Size: =10
+        Width: =486
+        X: =14
+        Y: =163
+        ZIndex: =6
+
+    "'Product _Code' As text":
+        Default: =ProductList_CB.Selected.Product_Code
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =277
+        Y: =207
+        ZIndex: =7
+
+    ALC_value As text:
+        Default: =ProductList_CB.Selected.Product_Alc
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =669
+        Y: =207
+        ZIndex: =8
+
+    Carton_Quantity_vlaue As text:
+        Default: =ProductList_CB.Selected.Product_UOM_Qty
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =860
+        Y: =207
+        ZIndex: =9
+
+    Variant_value As text:
+        Default: =ProductList_CB.Selected.Product_Variant
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =1057
+        Y: =207
+        ZIndex: =10
+
+    Decoded_CB As checkbox:
+        Default: |
+            =If(ProductList_CB.Selected.Decoded="1",true,false)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =46
+        OnCheck: =
+        OnUncheck: =
+        Size: =0
+        Text: =Decoded
+        Visible: =false
+        Width: =74
+        X: =171
+        Y: =194
+        ZIndex: =11
+
+    NonRefiil_CB As checkbox:
+        Default: =If(ProductList_CB.Selected.NRF="1",true,false)
+        DisplayMode: =DisplayMode.Disabled
+        OnCheck: =
+        OnUncheck: =
+        Size: =0
+        Text: =NonRefill
+        Visible: =false
+        Width: =78
+        X: =63
+        Y: =192
+        ZIndex: =12
+
+    MinPrice_value As text:
+        Default: =""
+        Format: =TextFormat.Number
+        Height: =22
+        OnChange: =If(Int(MinPrice_value)<0,Reset(MinPrice_value),false)
+        Size: =10
+        Width: =200
+        X: =505
+        Y: =163
+        ZIndex: =13
+
+    MaxPrice_value As text:
+        Default: =
+        Format: =TextFormat.Number
+        Height: =22
+        OnChange: =If(Int(MaxPrice_value)<0,Reset(MaxPrice_value),false)
+        Size: =10
+        Width: =200
+        X: =712
+        Y: =163
+        ZIndex: =14
+
+    Currency_value As text:
+        Default: |
+            =First(Filter(Currencies,'Transaction Currency'= LeadDataStore.Currency.'Transaction Currency')).'Currency Name'
+        FontWeight: =FontWeight.Lighter
+        Height: =22
+        Size: =10
+        Width: =185
+        X: =979
+        Y: =163
+        ZIndex: =15
+
+    Quantity_value As text:
+        Default: =""
+        Format: =TextFormat.Number
+        Height: =22
+        OnChange: =If(Int(Quantity_value)<0,Reset(Quantity_value),false)
+        Size: =10
+        Width: =180
+        X: =1180
+        Y: =163
+        ZIndex: =16
+
+    Add_Icon As icon.Add:
+        Height: =23
+        Icon: =Icon.Add
+        OnSelect: |-
+            =If(IsBlank(ProductList_CB.Selected.Search_Description),Notify("Product is Required",NotificationType.Error) && Reset(ProductList_CB),
+            If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error) && Reset(MaxPrice_value),
+            If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false,Source:sourcelabel.Text,Description:descriptions.Text})))));Set(ALCtext,ALC_value.Text);If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
+        Width: =74
+        X: =1277
+        Y: =208
+        ZIndex: =17
+
+    Prodcut_lbl As label:
+        Height: =30
+        PaddingTop: =12
+        Size: =10
+        Text: ="Product"
+        Width: =486
+        X: =14
+        Y: =137
+        ZIndex: =18
+
+    Label4_26 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Text: ="*"
+        Width: =41
+        X: =99
+        Y: =141
+        ZIndex: =19
+
+    Productcode_lbl As label:
+        Height: =18
+        Size: =10
+        Text: ="Product Code"
+        Width: =210
+        X: =303
+        Y: =190
+        ZIndex: =20
+
+    ALC_lbl As label:
+        Height: =18
+        Size: =10
+        Text: ="Alc %"
+        Width: =117
+        X: =657
+        Y: =187
+        ZIndex: =21
+
+    CQ_Label As label:
+        Height: =18
+        Size: =10
+        Text: ="Carton Quantity"
+        Width: =222
+        X: =862
+        Y: =190
+        ZIndex: =22
+
+    Varient_label As label:
+        Height: =18
+        Size: =10
+        Text: ="Varient"
+        Width: =214
+        X: =1096
+        Y: =190
+        ZIndex: =23
+
+    Decoded_Lbl As label:
+        Height: =18
+        Size: =10
+        Text: ="Bottle"
+        Width: =123
+        X: =38
+        Y: =189
+        ZIndex: =24
+
+    "'Non-refill_lbl' As label":
+        Height: =18
+        Size: =10
+        Text: ="Barcode"
+        Width: =169
+        X: =151
+        Y: =190
+        ZIndex: =25
+
+    MinPrice_lbl As label:
+        Height: =24
+        Size: =10
+        Text: ="Min Price"
+        Width: =231
+        X: =515
+        Y: =143
+        ZIndex: =26
+
+    Maxprice_lbl As label:
+        Height: =32
+        Size: =10
+        Text: =" Max Price"
+        Width: =230
+        X: =735
+        Y: =139
+        ZIndex: =27
+
+    Currency_lbl As label:
+        Height: =14
+        Size: =10
+        Text: ="Currency"
+        Width: =231
+        X: =986
+        Y: =148
+        ZIndex: =28
+
+    Label4_36 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =20
+        PaddingLeft: =4
+        PaddingRight: =10
+        PaddingTop: =15
+        Text: ="*"
+        Width: =28
+        X: =1081
+        Y: =141
+        ZIndex: =29
+
+    Quantity_lbl As label:
+        Height: =15
+        Size: =10
+        Text: ="Quantity"
+        Width: =174
+        X: =1174
+        Y: =149
+        ZIndex: =30
+
+    Label4_38 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =27
+        PaddingBottom: =3
+        PaddingLeft: =4
+        PaddingRight: =7
+        PaddingTop: =20
+        Text: ="*"
+        Visible: =false
+        Width: =22
+        X: =632
+        Y: =135
+        ZIndex: =31
+
+    Litres_Value As text:
+        Default: =ProductList_CB.Selected.Product_Net_Volume
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Width: =187
+        X: =478
+        Y: =207
+        ZIndex: =32
+
+    Litres_lbl As label:
+        Height: =18
+        Size: =10
+        Text: ="Lt/Btl"
+        Width: =172
+        X: =482
+        Y: =190
+        ZIndex: =33
 
     Label3 As label:
         Color: =RGBA(255, 0, 0, 1)
@@ -685,313 +999,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =1366
         ZIndex: =38
 
-    Group1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =38
-
-        ProductList_CB As combobox:
-            DisplayFields: =["Search_Description"]
-            Height: =22
-            Items: ='D365-Product Details_V'
-            OnChange: |
-                =If(ProductList_CB.Selected.Barcode = "Coded",Set(Decoded,true),Set(Decoded,false));
-                If(ProductList_CB.Selected.Bottle = "REF",Set(NonRefill,true),Set(NonRefill,false));
-            OnSelect: |
-                =
-            SearchFields: =["Product_Description","Search_Description","Product_Code"]
-            SearchItems: =Search('D365-Product Details_V',ProductList_CB.SearchText,"Product_Description","Search_Description","Product_Code")
-            SelectMultiple: =false
-            Size: =10
-            Width: =486
-            X: =14
-            Y: =163
-            ZIndex: =6
-
-        "'Product _Code' As text":
-            Default: =ProductList_CB.Selected.Product_Code
-            DisplayMode: =DisplayMode.Disabled
-            Height: =22
-            Size: =10
-            Width: =187
-            X: =277
-            Y: =207
-            ZIndex: =7
-
-        ALC_value As text:
-            Default: =ProductList_CB.Selected.Product_Alc
-            DisplayMode: =DisplayMode.Disabled
-            Height: =22
-            Size: =10
-            Width: =187
-            X: =669
-            Y: =207
-            ZIndex: =8
-
-        Carton_Quantity_vlaue As text:
-            Default: =ProductList_CB.Selected.Product_UOM_Qty
-            DisplayMode: =DisplayMode.Disabled
-            Height: =22
-            Size: =10
-            Width: =187
-            X: =860
-            Y: =207
-            ZIndex: =9
-
-        Variant_value As text:
-            Default: =ProductList_CB.Selected.Product_Variant
-            DisplayMode: =DisplayMode.Disabled
-            Height: =22
-            Size: =10
-            Width: =187
-            X: =1057
-            Y: =207
-            ZIndex: =10
-
-        Decoded_CB As checkbox:
-            Default: |
-                =If(ProductList_CB.Selected.Decoded="1",true,false)
-            DisplayMode: =DisplayMode.Disabled
-            Height: =46
-            OnCheck: =
-            OnUncheck: =
-            Size: =0
-            Text: =Decoded
-            Visible: =false
-            Width: =74
-            X: =171
-            Y: =194
-            ZIndex: =11
-
-        NonRefiil_CB As checkbox:
-            Default: =If(ProductList_CB.Selected.NRF="1",true,false)
-            DisplayMode: =DisplayMode.Disabled
-            OnCheck: =
-            OnUncheck: =
-            Size: =0
-            Text: =NonRefill
-            Visible: =false
-            Width: =78
-            X: =63
-            Y: =192
-            ZIndex: =12
-
-        MinPrice_value As text:
-            Default: =""
-            Format: =TextFormat.Number
-            Height: =22
-            OnChange: =If(Int(MinPrice_value)<0,Reset(MinPrice_value),false)
-            Size: =10
-            Width: =200
-            X: =505
-            Y: =163
-            ZIndex: =13
-
-        MaxPrice_value As text:
-            Default: =
-            Format: =TextFormat.Number
-            Height: =22
-            OnChange: =If(Int(MaxPrice_value)<0,Reset(MaxPrice_value),false)
-            Size: =10
-            Width: =200
-            X: =712
-            Y: =163
-            ZIndex: =14
-
-        Currency_value As text:
-            Default: |
-                =First(Filter(Currencies,'Transaction Currency'= LeadDataStore.Currency.'Transaction Currency')).'Currency Name'
-            FontWeight: =FontWeight.Lighter
-            Height: =22
-            Size: =10
-            Width: =185
-            X: =979
-            Y: =163
-            ZIndex: =15
-
-        Quantity_value As text:
-            Default: =""
-            Format: =TextFormat.Number
-            Height: =22
-            OnChange: =If(Int(Quantity_value)<0,Reset(Quantity_value),false)
-            Size: =10
-            Width: =180
-            X: =1180
-            Y: =163
-            ZIndex: =16
-
-        Add_Icon As icon.Add:
-            Height: =23
-            Icon: =Icon.Add
-            OnSelect: |-
-                =If(IsBlank(ProductList_CB.Selected.Search_Description),Notify("Product is Required",NotificationType.Error) && Reset(ProductList_CB),
-                If(Checkbox2.Value=false && IsBlank(MaxPrice_value),Notify("Max Price is Required",NotificationType.Error) && Reset(MaxPrice_value),
-                If(Checkbox2.Value=false && Value(MinPrice_value.Text)>Value(MaxPrice_value.Text),Notify("Max price can not be less then Min Price",NotificationType.Error),If(!IsBlank(LookUp('D365-Product Details_V',Product_Id=ProductList_CB.Selected.Product_Id)),Collect(Products,{ProductDescription:ProductList_CB.Selected.Product_Description,ProductCode:'Product _Code'.Text,'Alc %':ALC_value.Text,'Carton Quantity':Carton_Quantity_vlaue.Text,Varient:Variant_value.Text,Bottle:Label26.Text,Barcode:Label29.Text,CustomerMinPrice:MinPrice_value.Text,CustomerMaxPrice:MaxPrice_value.Text,'Customer Currency':Dropdown1.Selected.'Currency Code',QtyRequired:Quantity_value.Text, 'Lt/Btl':Litres_Value.Text,editfield:false,Source:sourcelabel.Text})))));Set(ALCtext,ALC_value.Text);If(Checkbox2.Value=true && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value),If(Checkbox2.Value = false && !IsBlank(MaxPrice_value) && !IsBlank(ProductList_CB.Selected.Search_Description),Reset(ProductList_CB) && Reset(MaxPrice_value) && Reset(Quantity_value)))
-            Width: =74
-            X: =1277
-            Y: =208
-            ZIndex: =17
-
-        Prodcut_lbl As label:
-            Height: =30
-            PaddingTop: =12
-            Size: =10
-            Text: ="Product"
-            Width: =486
-            X: =14
-            Y: =137
-            ZIndex: =18
-
-        Label4_26 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 0, 0, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =32
-            Text: ="*"
-            Width: =41
-            X: =99
-            Y: =141
-            ZIndex: =19
-
-        Productcode_lbl As label:
-            Height: =18
-            Size: =10
-            Text: ="Product Code"
-            Width: =210
-            X: =303
-            Y: =190
-            ZIndex: =20
-
-        ALC_lbl As label:
-            Height: =18
-            Size: =10
-            Text: ="Alc %"
-            Width: =117
-            X: =657
-            Y: =187
-            ZIndex: =21
-
-        CQ_Label As label:
-            Height: =18
-            Size: =10
-            Text: ="Carton Quantity"
-            Width: =222
-            X: =862
-            Y: =190
-            ZIndex: =22
-
-        Varient_label As label:
-            Height: =18
-            Size: =10
-            Text: ="Varient"
-            Width: =214
-            X: =1096
-            Y: =190
-            ZIndex: =23
-
-        Decoded_Lbl As label:
-            Height: =18
-            Size: =10
-            Text: ="Bottle"
-            Width: =123
-            X: =38
-            Y: =189
-            ZIndex: =24
-
-        "'Non-refill_lbl' As label":
-            Height: =18
-            Size: =10
-            Text: ="Barcode"
-            Width: =169
-            X: =151
-            Y: =190
-            ZIndex: =25
-
-        MinPrice_lbl As label:
-            Height: =24
-            Size: =10
-            Text: ="Min Price"
-            Width: =231
-            X: =515
-            Y: =143
-            ZIndex: =26
-
-        Maxprice_lbl As label:
-            Height: =32
-            Size: =10
-            Text: =" Max Price"
-            Width: =230
-            X: =735
-            Y: =139
-            ZIndex: =27
-
-        Currency_lbl As label:
-            Height: =14
-            Size: =10
-            Text: ="Currency"
-            Width: =231
-            X: =986
-            Y: =148
-            ZIndex: =28
-
-        Label4_36 As label:
-            Color: =RGBA(255, 0, 0, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =20
-            PaddingLeft: =4
-            PaddingRight: =10
-            PaddingTop: =15
-            Text: ="*"
-            Width: =28
-            X: =1081
-            Y: =141
-            ZIndex: =29
-
-        Quantity_lbl As label:
-            Height: =15
-            Size: =10
-            Text: ="Quantity"
-            Width: =174
-            X: =1174
-            Y: =149
-            ZIndex: =30
-
-        Label4_38 As label:
-            Align: =Align.Right
-            Color: =RGBA(255, 0, 0, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =27
-            PaddingBottom: =3
-            PaddingLeft: =4
-            PaddingRight: =7
-            PaddingTop: =20
-            Text: ="*"
-            Visible: =false
-            Width: =22
-            X: =632
-            Y: =135
-            ZIndex: =31
-
-        Litres_Value As text:
-            Default: =ProductList_CB.Selected.Product_Net_Volume
-            DisplayMode: =DisplayMode.Disabled
-            Height: =22
-            Width: =187
-            X: =478
-            Y: =207
-            ZIndex: =32
-
-        Litres_lbl As label:
-            Height: =18
-            Size: =10
-            Text: ="Lt/Btl"
-            Width: =172
-            X: =482
-            Y: =190
-            ZIndex: =33
-
     Rightborder As rectangle:
         BorderThickness: =
         Fill: =RGBA(0, 0, 0, 1)
@@ -1033,7 +1040,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         ZIndex: =43
 
     TextInput8 As text:
-        Default: =Text(DateAdd(DateValue(_dateSelected),90,Days),"dd/mm/yyyy")
+        Default: =Text(DateAdd(DateValue(_dateSelected),90,TimeUnit.Days),"dd/mm/yyyy")
         Height: =18
         OnSelect: =Set(showDate,true)
         PaddingBottom: =1
@@ -1108,7 +1115,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Min Price"
-            Width: =152
+            Width: =120
             X: =492
             ZIndex: =3
 
@@ -1118,8 +1125,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Max Price"
-            Width: =152
-            X: =644
+            Width: =120
+            X: =613
             ZIndex: =4
 
         Label16 As label:
@@ -1128,7 +1135,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Quantity"
-            X: =798
+            Width: =120
+            X: =734
             ZIndex: =5
 
         Label17 As label:
@@ -1137,7 +1145,8 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Currency"
-            X: =949
+            Width: =120
+            X: =855
             ZIndex: =6
 
         source As label:
@@ -1146,9 +1155,19 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Source"
-            Width: =110
-            X: =1099
+            Width: =100
+            X: =975
             ZIndex: =7
+
+        Label17_1 As label:
+            BorderThickness: =1
+            FocusedBorderThickness: =1
+            Height: =15
+            Size: =8
+            Text: ="Description"
+            Width: =135
+            X: =1075
+            ZIndex: =8
 
     Import_Btn As button:
         Height: =10
@@ -1350,4 +1369,42 @@ Screen_AddNewCustomerTargetPricing As screen:
         X: =1254
         Y: =104
         ZIndex: =62
+
+    desc As text:
+        Default: =descriptions
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =1066
+        Y: =249
+        ZIndex: =63
+
+    desc_1 As text:
+        Default: =Dropdown2.SelectedText.Value
+        DisplayMode: =DisplayMode.Disabled
+        Height: =22
+        Size: =10
+        Width: =187
+        X: =281
+        Y: =251
+        ZIndex: =64
+
+    Productcode_lbl_1 As label:
+        Height: =18
+        Size: =10
+        Text: ="Source"
+        Width: =210
+        X: =281
+        Y: =232
+        ZIndex: =65
+
+    Productcode_lbl_2 As label:
+        Height: =18
+        Size: =10
+        Text: ="Description"
+        Width: =210
+        X: =1067
+        Y: =230
+        ZIndex: =66
 
