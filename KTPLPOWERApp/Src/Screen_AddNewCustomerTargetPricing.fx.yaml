@@ -1400,14 +1400,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =230
         ZIndex: =65
 
-    Label32 As label:
-        Height: =44
-        Text: =TextInput8
-        Width: =413
-        X: =552
-        Y: =432
-        ZIndex: =66
-
     CustomCalendar_1 As CustomCalendar:
         Height: =166
         Visible: =showDate
