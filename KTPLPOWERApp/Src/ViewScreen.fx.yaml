@@ -67,7 +67,7 @@ ViewScreen As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Name
-            Width: =427
+            Width: =411
             X: =1
             Y: =4
             ZIndex: =1
@@ -79,8 +79,8 @@ ViewScreen As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: =Text(DateValue(ThisItem.'Created On'),"dd/mm/yyy")
-            Width: =440
-            X: =438
+            Width: =250
+            X: =628
             Y: =4
             ZIndex: =2
 
@@ -123,6 +123,18 @@ ViewScreen As screen:
             Y: =18
             ZIndex: =6
 
+        Label5_2 As label:
+            BorderThickness: =1
+            DisplayMode: =DisplayMode.View
+            Height: =51
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Source
+            Width: =161
+            X: =435
+            Y: =2
+            ZIndex: =7
+
     Label6_1 As label:
         Color: =RGBA(0, 18, 107, 1)
         FontWeight: =FontWeight.Semibold
@@ -150,7 +162,7 @@ ViewScreen As screen:
         Height: =52
         Text: ="Createdon"
         Width: =214
-        X: =460
+        X: =670
         Y: =76
         ZIndex: =10
 
@@ -168,7 +180,13 @@ ViewScreen As screen:
         Icon: =Icon.Sort
         OnSelect: =Set(varSortColumn,"createdon");Set(varSortDirection,If(varSortDirection=SortOrder.Ascending,SortOrder.Descending,SortOrder.Ascending));
         Width: =49
-        X: =618
+        X: =838
         Y: =94
         ZIndex: =12
+
+    Label37 As label:
+        Text: ="Source"
+        X: =480
+        Y: =80
+        ZIndex: =13
 
