@@ -500,7 +500,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     SaveButton As button:
         Height: =17
         OnSelect: |
-            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput7),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),'ABV (ntz_abv)':Value(Label35.Text),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl'),Descriptions:descriptions.Text}));Notify("Record Saved Sucessfully!",NotificationType.Success);
+            =If(IsBlank(TextInput2),Notify("Please add the data into temporary source first",NotificationType.Error),ForAll(Sequence(CountRows(Products)),Patch('Customer Target Pricing',Defaults('Customer Target Pricing'),{Contact:First(Filter(Contacts,Contact=GUID(First([@ModelDrivenFormIntegration].Data).ItemId))),'Customer Lead Id':First(Filter(Leads,Lead=GUID([@ModelDrivenFormIntegration].Item.Lead))),'Expiry Date':DateValue(TextInput8),Description:Last(FirstN(Products,Value)).ProductDescription,'Item No':Last(FirstN(Products,Value)).ProductCode,'Btl/Ctn':Last(FirstN(Products,Value)).'Carton Quantity',Variant:Last(FirstN(Products,Value)).Varient,'Min Price (ntz_minprice)':Value(Last(FirstN(Products,Value)).CustomerMinPrice),'Max Price (ntz_maxprice)':Value(Last(FirstN(Products,Value)).CustomerMaxPrice),Currency:Dropdown1.Selected.'Currency Code',Quantity:Value(Last(FirstN(Products,Value)).QtyRequired),'ABV (ntz_abv)':Value(Label35.Text),Barcode:If("Coded"  in Last(FirstN(Products,Value)).Barcode,'Barcode (Customer Target Pricing)'.Coded,'Barcode (Customer Target Pricing)'.DeCoded),Bottle:If("REF" in Last(FirstN(Products,Value)).Bottle,'Bottle (Customer Target Pricing)'.Refill,'Bottle (Customer Target Pricing)'.'Non Refill'),'Lt/Btl':Value(Last(FirstN(Products,Value)).'Lt/Btl'),Descriptions:descriptions.Text}));Notify("Record Saved Sucessfully!",NotificationType.Success);
             
             
             Clear(Products);ResetForm(Form1);NewForm(Form1);Reset(ProductList_CB);Reset('Product _Code');Reset(ALC_value);Reset(Carton_Quantity_vlaue);Reset(Variant_value);Reset(MinPrice_value);Reset(MaxPrice_value);Reset(Quantity_value);Reset(Decoded_CB);Reset(NonRefiil_CB);Set(Decoded, false );Set(NonRefill, false ));
@@ -1020,14 +1020,6 @@ Screen_AddNewCustomerTargetPricing As screen:
         Y: =768
         ZIndex: =41
 
-    CustomCalendar_1 As CustomCalendar:
-        Height: =166
-        Visible: =showDate
-        Width: =342
-        X: =1022
-        Y: =24
-        ZIndex: =42
-
     Label10 As label:
         Color: =RGBA(255, 0, 0, 1)
         Height: =13
@@ -1037,7 +1029,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =362
         X: =660
         Y: =250
-        ZIndex: =43
+        ZIndex: =42
 
     TextInput8 As text:
         Default: =Text(DateAdd(DateValue(_dateSelected),90,TimeUnit.Days),"dd/mm/yyyy")
@@ -1048,7 +1040,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =284
         X: =1066
         Y: =26
-        ZIndex: =44
+        ZIndex: =43
 
     Logo_1 As image:
         DisplayMode: =DisplayMode.View
@@ -1057,7 +1049,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         OnSelect: =Navigate('Home Screen',ScreenTransition.Cover)
         PaddingTop: =0.00
         Width: =276
-        ZIndex: =45
+        ZIndex: =44
 
     Label9 As label:
         Height: =80
@@ -1068,7 +1060,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =0
         Text: =""
         Width: =276
-        ZIndex: =46
+        ZIndex: =45
 
     Label7 As label:
         Color: =RGBA(0, 18, 107, 1)
@@ -1080,7 +1072,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =271
         X: =1066
         Y: =13
-        ZIndex: =47
+        ZIndex: =46
 
     Container1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
@@ -1088,7 +1080,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =1210
         X: =33
         Y: =282
-        ZIndex: =48
+        ZIndex: =47
 
         Label12 As label:
             BorderThickness: =1
@@ -1179,7 +1171,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =250
         X: =305
         Y: =690
-        ZIndex: =49
+        ZIndex: =48
 
     Label21 As label:
         FontWeight: =FontWeight.Bold
@@ -1189,7 +1181,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =368
         X: =11
         Y: =546
-        ZIndex: =50
+        ZIndex: =49
 
     Dropdown1 As dropdown:
         Height: =22
@@ -1201,7 +1193,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =185
         X: =979
         Y: =163
-        ZIndex: =51
+        ZIndex: =50
 
     Label24 As label:
         Height: =37
@@ -1212,7 +1204,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =126
         X: =892
         Y: =137
-        ZIndex: =52
+        ZIndex: =51
 
     Checkbox2 As checkbox:
         Height: =74
@@ -1224,20 +1216,20 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =102
         X: =900
         Y: =123
-        ZIndex: =53
+        ZIndex: =52
 
     Label26 As label:
         PaddingBottom: =8
         Text: =ProductList_CB.Selected.Bottle
         X: =43
         Y: =200
-        ZIndex: =54
+        ZIndex: =53
 
     Label29 As label:
         Text: =ProductList_CB.Selected.Barcode
         X: =150
         Y: =198
-        ZIndex: =55
+        ZIndex: =54
 
     Label34 As label:
         Height: =32
@@ -1245,14 +1237,14 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =444
         X: =703
         Y: =558
-        ZIndex: =56
+        ZIndex: =55
 
     Label35 As label:
         Text: =ALCtext
         Visible: =false
         X: =1072
         Y: =669
-        ZIndex: =57
+        ZIndex: =56
 
     Form3 As form:
         DataSource: ='Customer Target Pricing'
@@ -1261,7 +1253,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =690
         X: =576
         Y: =107
-        ZIndex: =58
+        ZIndex: =57
 
         Descriptions_DataCard2 As typedDataCard.textualMultiLineEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -1270,7 +1262,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_description")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =53
+            Height: =57
             Required: =false
             Update: =descriptions.Text
             Width: =690
@@ -1300,7 +1292,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =574
+                Width: =577
                 X: =113
                 Y: =7
                 ZIndex: =2
@@ -1344,7 +1336,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Items: =Choices(Source)
         X: =689
         Y: =83
-        ZIndex: =59
+        ZIndex: =58
 
     Label31 As label:
         Align: =Align.Center
@@ -1353,14 +1345,14 @@ Screen_AddNewCustomerTargetPricing As screen:
             ="Source:"
         X: =538
         Y: =72
-        ZIndex: =60
+        ZIndex: =59
 
     sourcelabel As label:
         Text: =Dropdown2.Selected.Value
         Visible: =false
         X: =657
         Y: =669
-        ZIndex: =61
+        ZIndex: =60
 
     Label33 As label:
         Height: =37
@@ -1368,7 +1360,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =94
         X: =1254
         Y: =104
-        ZIndex: =62
+        ZIndex: =61
 
     desc As text:
         Default: =descriptions
@@ -1378,7 +1370,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =187
         X: =1066
         Y: =249
-        ZIndex: =63
+        ZIndex: =62
 
     desc_1 As text:
         Default: =Dropdown2.SelectedText.Value
@@ -1388,7 +1380,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =187
         X: =281
         Y: =251
-        ZIndex: =64
+        ZIndex: =63
 
     Productcode_lbl_1 As label:
         Height: =18
@@ -1397,7 +1389,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =210
         X: =281
         Y: =232
-        ZIndex: =65
+        ZIndex: =64
 
     Productcode_lbl_2 As label:
         Height: =18
@@ -1406,5 +1398,21 @@ Screen_AddNewCustomerTargetPricing As screen:
         Width: =210
         X: =1067
         Y: =230
+        ZIndex: =65
+
+    Label32 As label:
+        Height: =44
+        Text: =TextInput8
+        Width: =413
+        X: =552
+        Y: =432
         ZIndex: =66
+
+    CustomCalendar_1 As CustomCalendar:
+        Height: =166
+        Visible: =showDate
+        Width: =342
+        X: =1022
+        Y: =24
+        ZIndex: =67
 
