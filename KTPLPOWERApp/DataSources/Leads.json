@@ -222,6 +222,7 @@
       "msdyn_sequencetarget_lead_msdyn_target": "Sequence Targets",
       "need": "Need",
       "ntz_customertargetpricingapp": "Customer Target Pricing app",
+      "ntz_guid": "GUID",
       "ntz_lead_ntz_customertargetpricing_CustomerLeadId": "Customer Target Pricing",
       "numberofemployees": "No. of Employees",
       "onholdtime": "On Hold Time (Minutes)",

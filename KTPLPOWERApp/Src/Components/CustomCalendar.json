@@ -5979,7 +5979,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638136698350572158",
+    "LastModifiedTimestamp": "638149660699848251",
     "Name": "CustomCalendar",
     "Rules": [
       {
@@ -6055,7 +6055,7 @@
       "Name": "DefaultDate",
       "PropertyDataTypeKey": "DateTime",
       "Tooltip": "DefaultSelected Date",
-      "Type": "{\"Version\":\"1.329\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -6064,7 +6064,7 @@
       "Name": "SelectedDate",
       "PropertyDataTypeKey": "DateTime",
       "Tooltip": "selected date",
-      "Type": "{\"Version\":\"1.329\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -6075,7 +6075,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638136698350572158",
+  "LastModifiedTimestamp": "638149660699848251",
   "Name": "839baf53ea1543f795c43431334252fa",
   "OverridableProperties": {},
   "TemplateOriginalName": "4b9ea0f7b9fd4f1e999fb13e97e11899",

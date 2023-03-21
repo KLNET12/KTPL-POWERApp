@@ -451,7 +451,7 @@ Screen_ViewCustomerTargetPricing As screen:
         ABV_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_alc"
-            Default: =ThisItem.'ABV (ntz_alc)'
+            Default: =ThisItem.ntz_alc
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
             Fill: =RGBA(0, 0, 0, 0)
@@ -867,7 +867,7 @@ Screen_ViewCustomerTargetPricing As screen:
         "'Max Price_DataCard6' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_maxprice"
-            Default: =ThisItem.'Max Price (ntz_maxprice)'
+            Default: =ThisItem.'Max Price'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_maxprice")
             Fill: =RGBA(0, 0, 0, 0)
@@ -936,7 +936,7 @@ Screen_ViewCustomerTargetPricing As screen:
         "'Min Price_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_minprice"
-            Default: =ThisItem.'Min Price (ntz_minprice)'
+            Default: =ThisItem.'Min Price'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_minprice")
             Fill: =RGBA(0, 0, 0, 0)

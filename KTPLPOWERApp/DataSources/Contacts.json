@@ -273,6 +273,7 @@
       "msdyn_sequencetarget_contact_msdyn_target": "Sequence Targets",
       "nickname": "Nickname",
       "ntz_contact_ntz_customertargetpricing_Contact": "Customer Target Pricing",
+      "ntz_guid": "GUID",
       "numberofchildren": "No. of Children",
       "onholdtime": "On Hold Time (Minutes)",
       "opportunity_customer_contacts": "Opportunities (opportunity_customer_contacts)",
