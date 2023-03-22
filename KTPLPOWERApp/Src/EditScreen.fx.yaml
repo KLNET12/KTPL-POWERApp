@@ -84,7 +84,7 @@ EditScreen As screen:
     "'submit Button_1' As button":
         Height: =30
         OnSelect: |-
-            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{'Min Price (ntz_minprice)':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price (ntz_maxprice)':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
+            =Patch('Customer Target Pricing',First(Filter('Customer Target Pricing','Customer Target Pricing'= Gallery2_1.Selected.'Customer Target Pricing')),{'Min Price':Int(DataCardValue14_1),Quantity:Int(DataCardValue26_1),'Max Price':Int(DataCardValue35_1)});Notify("Record Updated Successfully!");
         Text: ="Submit"
         Visible: =If(IsEdit,true,false)
         Width: =280
@@ -479,9 +479,9 @@ EditScreen As screen:
         ABV_DataCard1_1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ntz_alc"
-            Default: =ThisItem.ntz_alc
+            Default: =ThisItem.ntz_abv
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_alc")
+            DisplayName: =DataSourceInfo([@'Customer Target Pricing'],DataSourceInfo.DisplayName,"ntz_abv")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
