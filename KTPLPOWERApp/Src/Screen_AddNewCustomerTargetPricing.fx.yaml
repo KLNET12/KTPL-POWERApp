@@ -36,6 +36,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =39
             Required: =true
             Update: =
+            Visible: =false
             Width: =552
             X: =1
             Y: =0
@@ -73,6 +74,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =32
             Required: =false
             Update: =
+            Visible: =false
             Width: =644
             X: =0
             Y: =1
@@ -1105,8 +1107,8 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Container1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
-        Height: =15
-        Width: =1210
+        Height: =17
+        Width: =969
         X: =33
         Y: =282
         ZIndex: =47
@@ -1176,6 +1178,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Source"
+            Visible: =false
             Width: =100
             X: =975
             ZIndex: =7
@@ -1186,6 +1189,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Description"
+            Visible: =false
             Width: =135
             X: =1075
             ZIndex: =8
@@ -1294,6 +1298,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =57
             Required: =false
             Update: =descriptions.Text
+            Visible: =false
             Width: =690
             X: =0
             Y: =0
@@ -1363,6 +1368,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     Dropdown2 As dropdown:
         Height: =22
         Items: =Choices(Source)
+        Visible: =false
         X: =689
         Y: =83
         ZIndex: =58
@@ -1372,6 +1378,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Color: =RGBA(0, 18, 107, 1)
         Text: |-
             ="Source:"
+        Visible: =false
         X: =538
         Y: =72
         ZIndex: =59
@@ -1396,6 +1403,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         DisplayMode: =DisplayMode.Disabled
         Height: =22
         Size: =10
+        Visible: =false
         Width: =187
         X: =1066
         Y: =249
@@ -1406,6 +1414,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         DisplayMode: =DisplayMode.Disabled
         Height: =22
         Size: =10
+        Visible: =false
         Width: =187
         X: =281
         Y: =251
@@ -1415,6 +1424,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =18
         Size: =10
         Text: ="Source"
+        Visible: =false
         Width: =210
         X: =281
         Y: =232
@@ -1424,6 +1434,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =18
         Size: =10
         Text: ="Description"
+        Visible: =false
         Width: =210
         X: =1067
         Y: =230
