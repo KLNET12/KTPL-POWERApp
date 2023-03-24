@@ -108,7 +108,7 @@ ViewScreen As screen:
             Height: =20
             Icon: =Icon.ArrowRight
             OnSelect: |
-                =ViewForm(Form2);Set(IsEdit,false);Navigate(EditScreen)
+                =ViewForm(Form2_1);Set(IsEdit,false);Navigate(EditScreen)
             Width: =25
             X: =1058
             Y: =17
