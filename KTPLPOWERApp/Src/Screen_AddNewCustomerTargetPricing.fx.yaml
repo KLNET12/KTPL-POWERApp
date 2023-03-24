@@ -196,7 +196,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             OnChange: =If(Int(sources_1)<0,Reset(sources_1),false)
             OnSelect: =Select(Parent)
             Size: =10
-            Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
+            Visible: =If(IsBlank(ThisItem.ProductCode),false,false)
             Width: =130
             X: =1100
             Y: =4
@@ -217,7 +217,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =339
+                Width: =347
                 X: =16
                 Y: =4
                 ZIndex: =1
@@ -231,7 +231,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =150
-                X: =357
+                X: =366
                 Y: =4
                 ZIndex: =2
 
@@ -245,8 +245,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =120
-                X: =509
+                Width: =152
+                X: =518
                 Y: =4
                 ZIndex: =8
 
@@ -259,8 +259,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =120
-                X: =631
+                Width: =152
+                X: =667
                 Y: =4
                 ZIndex: =9
 
@@ -272,8 +272,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =120
-                X: =875
+                Width: =100
+                X: =974
                 Y: =4
                 ZIndex: =10
 
@@ -286,8 +286,8 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnSelect: =Select(Parent)
                 Size: =10
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
-                Width: =120
-                X: =753
+                Width: =150
+                X: =825
                 Y: =4
                 ZIndex: =11
 
@@ -301,7 +301,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: ="Edit "
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =53
-                X: =1220
+                X: =1148
                 ZIndex: =12
 
             Icon3 As icon.Trash:
@@ -311,7 +311,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 Tooltip: ="Delete"
                 Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
                 Width: =53
-                X: =1269
+                X: =1197
                 ZIndex: =16
 
             sources As text:
@@ -322,7 +322,7 @@ Screen_AddNewCustomerTargetPricing As screen:
                 OnChange: =If(Int(sources)<0,Reset(sources),false)
                 OnSelect: =Select(Parent)
                 Size: =10
-                Visible: =If(IsBlank(ThisItem.ProductCode),false,true)
+                Visible: =If(IsBlank(ThisItem.ProductCode),false,false)
                 Width: =100
                 X: =1000
                 Y: =4
@@ -685,6 +685,7 @@ Screen_AddNewCustomerTargetPricing As screen:
 
     Prodcut_lbl As label:
         Height: =30
+        PaddingBottom: =7
         PaddingTop: =12
         Size: =10
         Text: ="Product"
@@ -700,7 +701,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =32
         Text: ="*"
         Width: =41
-        X: =99
+        X: =72
         Y: =141
         ZIndex: =19
 
@@ -794,7 +795,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =15
         Text: ="*"
         Width: =28
-        X: =973
+        X: =955
         Y: =141
         ZIndex: =29
 
@@ -862,7 +863,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="*"
         Visible: =If(Checkbox2.Value=true,false,true)
         Width: =26
-        X: =728
+        X: =719
         Y: =150
         ZIndex: =35
 
@@ -1110,7 +1111,7 @@ Screen_AddNewCustomerTargetPricing As screen:
     Container1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Height: =15
-        Width: =1099
+        Width: =1050
         X: =33
         Y: =282
         ZIndex: =47
@@ -1169,6 +1170,7 @@ Screen_AddNewCustomerTargetPricing As screen:
             Height: =15
             Size: =8
             Text: ="Currency"
+            Width: =100
             X: =949
             ZIndex: =6
 
