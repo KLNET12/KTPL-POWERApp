@@ -632,8 +632,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         OnChange: =If(Int(MinPrice_value)<0,Reset(MinPrice_value),false)
         Size: =10
-        Width: =200
-        X: =505
+        Width: =100
+        X: =523
         Y: =163
         ZIndex: =13
 
@@ -643,8 +643,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         OnChange: =If(Int(MaxPrice_value)<0,Reset(MaxPrice_value),false)
         Size: =10
-        Width: =200
-        X: =712
+        Width: =100
+        X: =658
         Y: =163
         ZIndex: =14
 
@@ -654,6 +654,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         FontWeight: =FontWeight.Lighter
         Height: =22
         Size: =10
+        Visible: =false
         Width: =185
         X: =979
         Y: =163
@@ -665,8 +666,8 @@ Screen_AddNewCustomerTargetPricing As screen:
         Height: =22
         OnChange: =If(Int(Quantity_value)<0,Reset(Quantity_value),false)
         Size: =10
-        Width: =180
-        X: =1180
+        Width: =100
+        X: =1072
         Y: =163
         ZIndex: =16
 
@@ -762,7 +763,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =10
         Text: ="Min Price"
         Width: =231
-        X: =515
+        X: =524
         Y: =143
         ZIndex: =26
 
@@ -771,7 +772,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =10
         Text: =" Max Price"
         Width: =230
-        X: =735
+        X: =654
         Y: =139
         ZIndex: =27
 
@@ -780,7 +781,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Size: =10
         Text: ="Currency"
         Width: =231
-        X: =986
+        X: =887
         Y: =148
         ZIndex: =28
 
@@ -793,16 +794,17 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =15
         Text: ="*"
         Width: =28
-        X: =1081
+        X: =973
         Y: =141
         ZIndex: =29
 
     Quantity_lbl As label:
         Height: =15
+        PaddingBottom: =7
         Size: =10
         Text: ="Quantity"
         Width: =174
-        X: =1174
+        X: =1066
         Y: =149
         ZIndex: =30
 
@@ -860,7 +862,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         Text: ="*"
         Visible: =If(Checkbox2.Value=true,false,true)
         Width: =26
-        X: =845
+        X: =728
         Y: =150
         ZIndex: =35
 
@@ -1221,19 +1223,19 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
-        Width: =185
-        X: =979
+        Width: =125
+        X: =898
         Y: =163
         ZIndex: =50
 
     Label24 As label:
         Height: =37
-        PaddingBottom: =10
+        PaddingBottom: =15
         PaddingTop: =10
         Size: =10
         Text: ="Enquiry"
         Width: =126
-        X: =892
+        X: =802
         Y: =137
         ZIndex: =51
 
@@ -1245,7 +1247,7 @@ Screen_AddNewCustomerTargetPricing As screen:
         PaddingTop: =30
         Text: =""
         Width: =102
-        X: =900
+        X: =792
         Y: =123
         ZIndex: =52
 
