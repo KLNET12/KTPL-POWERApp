@@ -1,0 +1,224 @@
+Calendar As screen:
+    OnVisible: |
+        =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Fill: =Color.SkyBlue
+        Height: =76
+        Items: =Calendar.WeekdaysShort()
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =71
+        WrapCount: =7
+        Y: =163
+        ZIndex: =1
+
+        Title7 As label:
+            Align: =Align.Center
+            Color: =Color.Red
+            Height: =70
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =90
+            ZIndex: =1
+
+    "Gallery7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Height: =576
+        Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(varCurrentDate))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        WrapCount: =7
+        Y: =239
+        ZIndex: =1
+
+        Title5 As label:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderThickness: =0.5
+            Color: |-
+                =If(
+                    Month(ThisItem.Value) <> Month(varCurrentDate),
+                    ColorFade(
+                        Self.Fill,
+                        -15%),
+                   Color.Gray    )
+            Fill: |
+                =If(
+                    ThisItem.Value = Today(),
+                    ColorFade(
+                        RGBA(
+                            58,
+                            150,
+                            221,
+                            1
+                        ),
+                        80%
+                    ),
+                    Color.AliceBlue
+                )
+            Height: =96
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =Day(ThisItem.Value)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =91
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        "Gallery13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            Height: =46
+            Items: =Filter('Bookable Resource Bookings',ThisItem.Value in Text('Start Time') && varusername = Resource.Username)
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =40
+            Width: =91.42857142857143
+            Y: =50
+            ZIndex: =1
+
+            Button22 As button:
+                Align: =Align.Justify
+                Height: =36
+                OnSelect: =Navigate('Booking Screen')
+                Size: =24
+                Text: ="B"
+                Width: =91.42857142857143
+                ZIndex: =1
+
+    Label18 As label:
+        Align: =Align.Center
+        Color: =RGBA(241, 244, 249, 1)
+        Fill: =RGBA(77, 77, 77, 1)
+        Height: =84
+        Size: =21
+        Text: =Text(varCurrentDate, "mmmm yyyy")
+        Width: =640
+        ZIndex: =2
+
+    MenuLeftNav_5 As MenuLeftNav:
+        Height: =MenuLeftNav_5.MenuHeight
+        Width: =MenuLeftNav_5.MenuWidth
+        ZIndex: =2
+
+    Label19 As label:
+        Align: =Align.Center
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =75
+        Size: =21
+        Text: ="Bookings"
+        Width: =640
+        Y: =88
+        ZIndex: =3
+
+    Button15 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =73
+        OnSelect: =Set(varCurrentDate,Date(Year(varCurrentDate),Month(varCurrentDate)-1,1))
+        Size: =24
+        Text: ="Prev"
+        Width: =112
+        Y: =88
+        ZIndex: =4
+
+    Button15_1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =73
+        OnSelect: =Set(varCurrentDate,Date(Year(varCurrentDate),Month(varCurrentDate)+1,1))
+        Size: =24
+        Text: ="Next"
+        Width: =112
+        X: =112
+        Y: =88
+        ZIndex: =5
+
+    Button16 As button:
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =73
+        OnSelect: =Navigate('Booking Screen')
+        Size: =24
+        Text: ="Bookings"
+        Width: =167
+        X: =472
+        Y: =88
+        ZIndex: =6
+
+    Label24 As label:
+        Fill: =RGBA(141, 198, 63, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =varusername
+        Width: =342
+        X: =298
+        Y: =938
+        ZIndex: =8
+
+    Label25 As label:
+        Fill: =RGBA(141, 198, 63, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Bookable Resource:"
+        Width: =298
+        Y: =938
+        ZIndex: =9
+
+    MenuLeftNav_8 As MenuLeftNav:
+        Height: =MenuLeftNav_8.MenuHeight
+        Width: =MenuLeftNav_8.MenuWidth
+        Y: =10
+        ZIndex: =10
+
+    Timer1_14 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =11
+
+    Button19 As button:
+        Fill: =RGBA(0, 18, 107, 1)
+        Height: =84
+        OnSelect: =Navigate('Weekly Calendar')
+        Size: =24
+        Text: ="Weekly Calender"
+        Width: =168
+        X: =472
+        ZIndex: =12
+

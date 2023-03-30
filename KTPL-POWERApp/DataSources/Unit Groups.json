@@ -1,0 +1,110 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "uomschedules",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "uomschedule",
+    "MaxGetRowsCount": 500,
+    "Name": "Unit Groups",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "baseuomname": "Base Unit name",
+      "contract_detail_unit_of_measure_schedule": "Contract Lines",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "description": "Description",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_uomschedule_msdyn_actual_UnitSchedule": "Actuals",
+      "msdyn_uomschedule_msdyn_estimateline_UnitSchedule": "Estimate Lines",
+      "msdyn_uomschedule_msdyn_expense_UnitGroup": "Expenses",
+      "msdyn_uomschedule_msdyn_invoicelinetransaction_UnitSchedule": "Invoice Line Details",
+      "msdyn_uomschedule_msdyn_journalline_UnitSchedule": "Journal Lines",
+      "msdyn_uomschedule_msdyn_opportunitylinetransaction_UnitSchedule": "Opportunity Line Details",
+      "msdyn_uomschedule_msdyn_orderlinetransaction_UnitSchedule": "Project Contract Line Details",
+      "msdyn_uomschedule_msdyn_quotelinetransaction_UnitSchedule": "Quote Line Detail",
+      "msdyn_uomschedule_msdyn_resourcecategorypricelevel_UnitSchedule": "Role Prices",
+      "msdyn_uomschedule_msdyn_transactioncategory_UnitGroup": "Transaction Categories",
+      "msdyn_uomschedule_msdyn_transactioncategorypricelevel_UnitSchedule": "Transaction Category Prices",
+      "msdyn_uomschedule_msdyn_transactiontype_UnitGroup": "Transaction Types",
+      "name": "Name",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "unit_of_measure_schedule_conversions": "Units",
+      "unit_of_measure_schedule_product_price_level": "Price List Items",
+      "unit_of_measurement_schedule_products": "Products",
+      "UoMSchedule_AsyncOperations": "System Jobs",
+      "UoMSchedule_BulkDeleteFailures": "Bulk Delete Failures",
+      "uomschedule_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "uomschedule_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "UoMSchedule_SyncErrors": "Sync Errors",
+      "uomscheduleid": "Unit Group",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Unit Groups",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Unit Groups (Views)",
+    "Name": "_uomschedule_views",
+    "RelatedEntityName": "Unit Groups",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000010014100": "All Unit Groups",
+      "2d013a3a-07cd-4163-8208-8e8e605492f4": "Unit Groups Lookup View",
+      "8d3b02fc-77fd-4687-a38d-9b88d56687fb": "Unit Groups Advanced Find View",
+      "99cfafe9-082e-4003-85bd-c3a96c94175f": "Unit Groups Associated View",
+      "c9881afb-c922-11de-bfee-002481165e4a": "Active Unit Groups",
+      "c9881afc-c922-11de-bfee-002481165e4a": "Inactive Unit Groups"
+    }
+  },
+  {
+    "DisplayName": "Status (Unit Groups)",
+    "Name": "uomschedule_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Unit Groups"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Unit Groups",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Unit Groups)",
+    "Name": "uomschedule_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Unit Groups"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Unit Groups",
+    "Type": "OptionSetInfo"
+  }
+]

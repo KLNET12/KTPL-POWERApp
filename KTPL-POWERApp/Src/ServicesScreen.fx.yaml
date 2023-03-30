@@ -1,0 +1,133 @@
+ServicesScreen As screen:
+    OnVisible: |
+        =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =987
+        Items: =Filter('Work Order Service Tasks', 'Work Order'.'Work Order Number' = Gallery1.Selected.'Work Order'.'Work Order Number')
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =232
+        Y: =149
+        ZIndex: =1
+
+        Title4 As label:
+            Height: =87
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =543
+            X: =97
+            Y: =16
+            ZIndex: =1
+
+        Subtitle2 As label:
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Work Order'.'Work Order Number'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =172
+            X: =375
+            Y: =134
+            ZIndex: =2
+
+        Separator16 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label17 As label:
+            Height: =56
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Work Order Number:"
+            Width: =296
+            X: =84
+            Y: =118
+            ZIndex: =6
+
+        Checkbox1 As checkbox:
+            Default: =If(ThisItem.'% Complete'=100,true,false)
+            DisplayMode: =DisplayMode.View
+            Height: =85
+            Size: =21
+            Text: =ThisItem.'% Complete'
+            Width: =70
+            Y: =61
+            ZIndex: =7
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(187, 221, 140, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =72
+        Size: =21
+        Text: |-
+            ="Services for WO #" & Gallery1.Selected.'Work Order'.'Work Order Number'
+        Width: =640
+        Y: =77
+        ZIndex: =2
+
+    Component1_14 As Component1:
+        Height: =70
+        ZIndex: =3
+
+    Icon3_1 As icon.ArrowLeft:
+        Height: =70
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(UpdateBooking)
+        Width: =80
+        X: =560
+        ZIndex: =4
+
+    MenuLeftNav_18 As MenuLeftNav:
+        Height: =MenuLeftNav_18.MenuHeight
+        Width: =MenuLeftNav_18.MenuWidth
+        Y: =10
+        ZIndex: =5
+
+    Timer1_13 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =6
+

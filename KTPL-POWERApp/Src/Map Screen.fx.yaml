@@ -1,0 +1,210 @@
+"'Map Screen' As screen":
+    Fill: =RGBA(255, 255, 217, 1)
+    OnVisible: |
+        =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =1066
+        Items: =Gallery1.Selected.'Work Order'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =1066
+        Y: =70
+        ZIndex: =1
+
+        Separator11 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        "Map3 As 'Map (preview)'.pcfdataset":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CurrentLocation: =false
+            CurrentLocationLatitude: =Location.Latitude
+            CurrentLocationLongitude: =Location.Longitude
+            DefaultLatitude: =ThisItem.Latitude
+            DefaultLocation: =true
+            DefaultLongitude: =ThisItem.Longitude
+            DefaultZoomLevel: =14
+            DisplayMode: =DisplayMode.Edit
+            Height: =865
+            InfoCards: ='Microsoft.Map.InfoCards'.OnClick
+            Items: =Filter('Work Orders', 'WO Number'= Gallery1.Selected.'Work Order'.'WO Number')
+            ItemsAddresses: =
+            ItemsLatitudes: ="msdyn_latitude"
+            ItemsLongitudes: ="msdyn_longitude"
+            MapStyle: ='Microsoft.Map.MapStyle'.Road
+            OnSelect: =
+            PinColor: =RGBA(29, 114, 169, 1)
+            RouteMaintainOrder: =false
+            RouteOptimization: ='Microsoft.Map.RouteOptimization'.Distance
+            RouteWaypoints_Items: =First('Work Orders')
+            SatelliteView: =false
+            ShapeDrawing: =false
+            ShowRoutePins: =true
+            UseRouting: =true
+            Width: =640
+            X: =0
+            Y: =112
+            ZIndex: =6
+
+            msdyn_address11 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_address1"
+                FieldName: ="msdyn_address1"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =7
+
+            msdyn_address21 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_address2"
+                FieldName: ="msdyn_address2"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =2
+                ZIndex: =8
+
+            msdyn_address31 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_address3"
+                FieldName: ="msdyn_address3"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =3
+                ZIndex: =9
+
+            msdyn_city1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_city"
+                FieldName: ="msdyn_city"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =4
+                ZIndex: =10
+
+            msdyn_country1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_country"
+                FieldName: ="msdyn_country"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =5
+                ZIndex: =11
+
+            msdyn_postalcode1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_postalcode"
+                FieldName: ="msdyn_postalcode"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =6
+                ZIndex: =12
+
+            msdyn_stateorprovince1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_stateorprovince"
+                FieldName: ="msdyn_stateorprovince"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =7
+                ZIndex: =13
+
+            msdyn_latitude1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_latitude"
+                FieldName: ="msdyn_latitude"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =8
+                ZIndex: =14
+
+            msdyn_longitude1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_longitude"
+                FieldName: ="msdyn_longitude"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =9
+                ZIndex: =15
+
+        Button11 As button:
+            Height: =88
+            OnSelect: |-
+                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1' &ThisItem.'Street 2'& ThisItem.'Street 3'," ","+")& ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+            Size: =24
+            Text: ="Get Directions"
+            Width: =640
+            Y: =977
+            ZIndex: =8
+
+        Label5 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =87
+            OnSelect: =Select(Parent)
+            Size: =23
+            Text: |-
+                ="Location for Work Order No. :  " & ThisItem.'Work Order Number'
+            Width: =640
+            Y: =9
+            ZIndex: =9
+
+    Component1_12 As Component1:
+        Height: =70
+        ZIndex: =3
+
+    Icon17 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(UpdateBooking)
+        X: =576
+        Y: =3
+        ZIndex: =4
+
+    Label10 As label:
+        Align: =Align.Center
+        Fill: =RGBA(255, 255, 219, 1)
+        Height: =1041
+        OnSelect: =
+        Size: =21
+        Text: ="No Work Order Related to this booking"
+        Visible: =If(CountRows(Gallery2.AllItems)<=0, true, false)
+        Width: =640
+        Y: =93
+        ZIndex: =5
+
+    MenuLeftNav_14 As MenuLeftNav:
+        Height: =MenuLeftNav_14.MenuHeight
+        Width: =MenuLeftNav_14.MenuWidth
+        Y: =10
+        ZIndex: =6
+
+    Timer1_11 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =7
+

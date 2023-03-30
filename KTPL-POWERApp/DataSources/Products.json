@@ -1,0 +1,406 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "products",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "product",
+    "MaxGetRowsCount": 500,
+    "Name": "Products",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "campaignproduct_association": "Campaigns",
+      "competitorproduct_association": "Competitors",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "currentcost": "Current Cost",
+      "currentcost_base": "Current Cost (Base)",
+      "defaultuomid": "Default Unit",
+      "defaultuomscheduleid": "Unit Group",
+      "description": "Description",
+      "entityimage": "Entity Image",
+      "entityimageid": "EntityImageId",
+      "exchangerate": "Exchange Rate",
+      "hierarchypath": "Hierarchy Path",
+      "importsequencenumber": "Import Sequence Number",
+      "iskit": "Is Kit",
+      "isreparented": "Is Reparented",
+      "isstockitem": "Stock Item",
+      "leadproduct_association": "Leads",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_converttocustomerasset": "Convert to Customer Asset",
+      "msdyn_defaultvendor": "Default Vendor",
+      "msdyn_fieldserviceproducttype": "Field Service Product Type",
+      "msdyn_gdproptout": "GDPR Optout",
+      "msdyn_product_msdyn_actual_Product": "Actuals",
+      "msdyn_product_msdyn_agreementbookingproduct_Product": "Agreement Booking Products",
+      "msdyn_product_msdyn_agreementbookingservice_Service": "Agreement Booking Services",
+      "msdyn_product_msdyn_agreementinvoiceproduct_Product": "Agreement Invoice Products",
+      "msdyn_product_msdyn_customerasset_Product": "Customer Assets",
+      "msdyn_product_msdyn_estimateline_Product": "Estimate Lines",
+      "msdyn_product_msdyn_fact_Product": "Facts",
+      "msdyn_product_msdyn_fieldcomputation_ProductId": "Field Computations",
+      "msdyn_product_msdyn_fieldservicepricelistitem_ProductService": "Field Service Price List Items",
+      "msdyn_product_msdyn_fieldservicesetting": "Field Service Settings",
+      "msdyn_product_msdyn_incidenttypeproduct_Product": "Incident Type Products",
+      "msdyn_product_msdyn_incidenttyperecommendationresult_ProductService": "Incident Type Suggestion Results",
+      "msdyn_product_msdyn_incidenttypeservice_Service": "Incident Type Services",
+      "msdyn_product_msdyn_inventoryadjustmentproduct_Product": "Inventory Adjustment Products",
+      "msdyn_product_msdyn_inventoryjournal_Product": "Inventory Journals",
+      "msdyn_product_msdyn_invoicelinetransaction_Product": "Invoice Line Details",
+      "msdyn_product_msdyn_journalline_Product": "Journal Lines",
+      "msdyn_product_msdyn_opportunitylinetransaction_Product": "Opportunity Line Details",
+      "msdyn_product_msdyn_orderinvoicingproduct_Product": "Order Invoicing Products",
+      "msdyn_product_msdyn_orderlinetransaction_Product": "Project Contract Line Details",
+      "msdyn_product_msdyn_productinventory_Product": "Product Inventory",
+      "msdyn_product_msdyn_purchaseorderproduct_Product": "Purchase Order Products",
+      "msdyn_product_msdyn_quotebookingproduct_Product": "Quote Booking Products",
+      "msdyn_product_msdyn_quotebookingservice_Service": "Quote Booking Services",
+      "msdyn_product_msdyn_quoteinvoicingproduct_Product": "Quote Invoicing Products",
+      "msdyn_product_msdyn_quotelinetransaction_Product": "Quote Line Detail",
+      "msdyn_product_msdyn_rmaproduct_Product": "RMA Products",
+      "msdyn_product_msdyn_rtvproduct_Product": "RTV Products",
+      "msdyn_product_msdyn_workorderproduct_Product": "Work Order Products",
+      "msdyn_product_msdyn_workorderservice_Service": "Work Order Services",
+      "msdyn_purchasename": "Purchase Name",
+      "msdyn_taxable": "Taxable",
+      "msdyn_TransactionCategory": "Transaction Category",
+      "msdyn_upccode": "UPC Code",
+      "name": "Name",
+      "opportunity_products": "Opportunity Lines",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "parentproductid": "Parent",
+      "price": "List Price",
+      "price_base": "List Price (Base)",
+      "pricelevelid": "Default Price List",
+      "processid": "Process Id",
+      "Product_Annotation": "Notes",
+      "Product_AsyncOperations": "System Jobs",
+      "Product_BulkDeleteFailures": "Bulk Delete Failures",
+      "product_connections1": "Connections (product_connections1)",
+      "product_connections2": "Connections (product_connections2)",
+      "product_contract_line_items": "Contract Lines",
+      "Product_DynamicProperty": "Properties",
+      "Product_DynamicPropertyAssociation": "Property Associations",
+      "product_entitlement_association": "Entitlements",
+      "product_entitlementtemplate_association": "Entitlement Templates",
+      "product_incidents": "Cases",
+      "product_invoice_details": "Invoice Lines",
+      "product_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "product_order_details": "Order Lines",
+      "product_parent_product": "Products",
+      "product_price_levels": "Price List Items",
+      "product_principalobjectattributeaccess": "Field Sharing",
+      "Product_ProcessSessions": "Process Sessions",
+      "Product_ProductAssociation_AssocProd": "Product Associations (Product_ProductAssociation_AssocProd)",
+      "Product_ProductAssociation_Prod": "Product Associations (Product_ProductAssociation_Prod)",
+      "product_ProductSubstitute_productid": "Product Relationships (product_ProductSubstitute_productid)",
+      "product_ProductSubstitute_substitutedproductid": "Product Relationships (product_ProductSubstitute_substitutedproductid)",
+      "product_quote_details": "Quote Lines",
+      "Product_SharepointDocumentLocation": "Document Locations",
+      "Product_SyncErrors": "Sync Errors",
+      "productid": "Product",
+      "productnumber": "Product ID",
+      "productsalesliterature_association": "Sales Literature",
+      "productstructure": "Product Structure",
+      "producttypecode": "Product Type",
+      "producturl": "URL",
+      "quantitydecimal": "Decimals Supported",
+      "quantityonhand": "Quantity On Hand",
+      "size": "Size",
+      "stageid": "(Deprecated) Stage Id",
+      "standardcost": "Standard Cost",
+      "standardcost_base": "Standard Cost (Base)",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "stockvolume": "Stock Volume",
+      "stockweight": "Stock Weight",
+      "subjectid": "Subject",
+      "suppliername": "Supplier Name",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "validfromdate": "Valid From",
+      "validtodate": "Valid To",
+      "vendorid": "Vendor ID",
+      "vendorname": "Vendor",
+      "vendorpartnumber": "Vendor Name",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Products",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Products (Views)",
+    "Name": "_product_views",
+    "RelatedEntityName": "Products",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666a00": "Product Advanced Find View",
+      "04e73647-b32a-406b-8f81-3017311dac20": "Retired Products, Families & Bundles",
+      "06377234-f167-47e7-bd5e-f7cc61b82f99": "Active Product Bundles",
+      "18b841eb-8738-4bcb-9a59-af7f906e73b4": "Kit Product Lookup View",
+      "19d7f2e0-e427-40fb-85e8-53e7cef2b166": "Product Family Lookup View",
+      "2ba93c16-e1e3-45cc-a9ae-83d9ec18ff9c": "Product Suggestions",
+      "2bf8e3b8-0030-e311-974a-00155da8fa1b": "Active Products (Field Service Product Type is Inventory or Non Inventory)",
+      "2c824b6f-3b48-e111-93b3-000c2959f9b8": "Active Services (Field Service Product Type is a Service)",
+      "2f13d083-c17f-46dc-b40e-8a4603c0711c": "Retired Product Bundles",
+      "3a9d8564-6a47-e111-93b3-000c2959f9b8": "Product (Field Service Product Type is not a Service)",
+      "44aeb57e-840f-4026-b898-24b261493c3c": "All Products, Families & Bundles",
+      "58afc3c5-8add-4552-98cb-473bc8f75619": "Active Products Lookup View",
+      "62e2ac64-0230-e311-974a-00155da8fa1b": "Inactive Services (Field Service Product Type is Inventory or Non Inventory)",
+      "637d30fc-5ae1-e111-bbe0-000c2959f9b8": "Active Products (Field Service Product Type is Inventory)",
+      "65cd6af4-ff0f-e311-974a-00155da8fa1b": "Active Services (Field Service Product Type is Service)",
+      "6abca607-018d-4042-a8a7-56a6a1190483": "Products With Price List",
+      "89a80f99-f388-412a-add2-d75c6acd930f": "Bundle Product Lookup View",
+      "8ba625b2-6a2a-4735-bab2-0c74ae8442a4": "Product Lookup View",
+      "9084dda0-1101-4339-8f19-aea4d5b6b474": "Entitlement Products",
+      "a066d18a-8a4a-44ee-b78e-9a870dc799dd": "Active Products, Families & Bundles",
+      "a6c39ba9-ee07-4587-98a7-c23cb1ef496e": "Draft Products, Families & Bundles",
+      "af259750-0010-e311-974a-00155da8fa1b": "Active Products (Field Service Product Type is not a Service)",
+      "bcc509ee-1444-4a95-aed2-128efd85ffd5": "Products in Parent Price List",
+      "ccf8b615-db4d-e811-8148-000d3a061a01": "Active Products (Field Service)",
+      "dd35464e-bb9d-4575-9270-ba09db4244c1": "Bundle Lookup View",
+      "eab4cded-a39f-4b21-b06a-49a45bfa47fd": "All Product Bundles",
+      "ebf28110-7cc8-46f9-8d3f-c7d81c60ccc1": "Product Bundle Associated View",
+      "f8de15f4-4c76-4a21-94c9-a38fcafdb73d": "Product Associated View",
+      "f96027ce-5a35-48ac-8ac9-9d7235c3fa98": "All Products (Field Service)",
+      "fc9c9aa7-16d8-4ef7-a540-2604464efac1": "Draft Product Bundles"
+    }
+  },
+  {
+    "DisplayName": "Is Reparented (Products)",
+    "Name": "isreparented",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isreparented",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isreparented",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Field Service Product Type",
+    "Name": "msdyn_fieldserviceproducttype",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Inventory",
+      "690970001": "Non-Inventory",
+      "690970002": "Service"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_fieldserviceproducttype",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_fieldserviceproducttype",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Convert to Customer Asset (Products)",
+    "Name": "msdyn_product_msdyn_converttocustomerasset",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_converttocustomerasset",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_converttocustomerasset",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "GDPR Optout (Products)",
+    "Name": "msdyn_product_msdyn_gdproptout",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_gdproptout",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_gdproptout",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Taxable (Products)",
+    "Name": "msdyn_product_msdyn_taxable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_taxable",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_taxable",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Kit (Products)",
+    "Name": "product_iskit",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "iskit",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "iskit",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Stock Item (Products)",
+    "Name": "product_isstockitem",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isstockitem",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isstockitem",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Product Structure (Products)",
+    "Name": "product_productstructure",
+    "OptionSetInfoNameMapping": {
+      "1": "Product",
+      "2": "Product Family",
+      "3": "Product Bundle"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "productstructure",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "productstructure",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Product Type (Products)",
+    "Name": "product_producttypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Sales Inventory",
+      "2": "Miscellaneous Charges",
+      "3": "Services",
+      "4": "Flat Fees"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "producttypecode",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "producttypecode",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Products)",
+    "Name": "product_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Retired",
+      "2": "Draft",
+      "3": "Under Revision"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Products)",
+    "Name": "product_statuscode",
+    "OptionSetInfoNameMapping": {
+      "0": "Draft",
+      "1": "Active",
+      "2": "Retired",
+      "3": "Under Revision"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  }
+]

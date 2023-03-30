@@ -1,0 +1,156 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_agreementbookingdates",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_agreementbookingdate",
+    "Name": "Agreement Booking Dates",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_agreement": "Agreement",
+      "msdyn_agreementbookingdate_ActivityPointers": "Activities",
+      "msdyn_agreementbookingdate_Annotations": "Notes",
+      "msdyn_agreementbookingdate_Appointments": "Appointments",
+      "msdyn_agreementbookingdate_AsyncOperations": "System Jobs",
+      "msdyn_agreementbookingdate_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_agreementbookingdate_chats": "Teams chats",
+      "msdyn_agreementbookingdate_connections1": "Connections (msdyn_agreementbookingdate_connections1)",
+      "msdyn_agreementbookingdate_connections2": "Connections (msdyn_agreementbookingdate_connections2)",
+      "msdyn_agreementbookingdate_DuplicateBaseRecord": "Duplicate Records (msdyn_agreementbookingdate_DuplicateBaseRecord)",
+      "msdyn_agreementbookingdate_DuplicateMatchingRecord": "Duplicate Records (msdyn_agreementbookingdate_DuplicateMatchingRecord)",
+      "msdyn_agreementbookingdate_Emails": "Email Messages",
+      "msdyn_agreementbookingdate_Faxes": "Faxes",
+      "msdyn_agreementbookingdate_Letters": "Letters",
+      "msdyn_agreementbookingdate_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_agreementbookingdate_msdyn_approvals": "Project Service Approvals",
+      "msdyn_agreementbookingdate_msdyn_bookingalerts": "Booking Alerts",
+      "msdyn_agreementbookingdate_msdyn_ocliveworkitems": "Conversations",
+      "msdyn_agreementbookingdate_msdyn_ocoutboundmessages": "Outbound messages",
+      "msdyn_agreementbookingdate_msdyn_ocsessions": "Sessions",
+      "msdyn_agreementbookingdate_msfp_alerts": "Customer Voice alert",
+      "msdyn_agreementbookingdate_msfp_surveyinvites": "Customer Voice survey invites",
+      "msdyn_agreementbookingdate_msfp_surveyresponses": "Customer Voice survey responses",
+      "msdyn_agreementbookingdate_PhoneCalls": "Phone Calls",
+      "msdyn_agreementbookingdate_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_agreementbookingdate_ProcessSession": "Process Sessions",
+      "msdyn_agreementbookingdate_QueueItems": "Queue Items",
+      "msdyn_agreementbookingdate_RecurringAppointmentMasters": "Recurring Appointments",
+      "msdyn_agreementbookingdate_ServiceAppointments": "Service Activities",
+      "msdyn_agreementbookingdate_SharePointDocumentLocations": "Document Locations",
+      "msdyn_agreementbookingdate_SocialActivities": "Social Activities",
+      "msdyn_agreementbookingdate_SyncErrors": "Sync Errors",
+      "msdyn_agreementbookingdate_Tasks": "Tasks",
+      "msdyn_agreementbookingdateid": "Agreement Booking Date",
+      "msdyn_bookingdate": "Booking Date",
+      "msdyn_bookingsetup": "Booking Setup",
+      "msdyn_earliestdate": "Earliest Date",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_latestdate": "Latest Date",
+      "msdyn_msdyn_agreementbookingdate_bookableresourcebooking_AgreementBookingDate": "Bookable Resource Bookings",
+      "msdyn_msdyn_agreementbookingdate_msdyn_workorderdetailsgenerationqueue_AgreementBookingDate": "Work Order Details Generation Queue (Deprecated)",
+      "msdyn_name": "Name",
+      "msdyn_postponegenerationuntil": "Postpone Generation Until",
+      "msdyn_processstartedon": "Process Started On",
+      "msdyn_resource": "Resource",
+      "msdyn_revision": "Revision",
+      "msdyn_status": "Status (msdyn_status)",
+      "msdyn_workorder": "Work Order",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Agreement Booking Dates",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Agreement Booking Dates (Views)",
+    "Name": "_msdyn_agreementbookingdate_views",
+    "RelatedEntityName": "Agreement Booking Dates",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2f2f77b3-f679-4bc1-89d9-6c1dbdb30453": "Agreement Booking Date Lookup View",
+      "5cd91a3c-4a26-452b-a365-d32694947cea": "Agreement Booking Date Associated View",
+      "74942ffc-4420-4217-93e0-7bcb800d042e": "Inactive Agreement Booking Dates",
+      "91983c67-0891-476b-8622-98222815bcbe": "Agreement Booking Date Advanced Find View",
+      "e1a307ec-db93-49e2-959b-7f15a57f4fd6": "Active Agreement Booking Dates"
+    }
+  },
+  {
+    "DisplayName": "Status (Agreement Booking Dates)",
+    "Name": "msdyn_agreementbookingdate_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Agreement Booking Dates"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Agreement Booking Dates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Agreement Booking Dates)",
+    "Name": "msdyn_agreementbookingdate_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Agreement Booking Dates"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Agreement Booking Dates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Agreement Booking Status",
+    "Name": "msdyn_agreementbookingstatus",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Active",
+      "690970001": "Processed",
+      "690970002": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_status",
+        "OptionSetReferenceEntityName": "Agreement Booking Dates"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_status",
+    "RelatedEntityName": "Agreement Booking Dates",
+    "Type": "OptionSetInfo"
+  }
+]

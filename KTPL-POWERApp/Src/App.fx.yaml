@@ -1,0 +1,80 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(varCurrentDate,Date(Year(Today()),Month(Today()),1));
+        ClearCollect(colMenu,Table(
+            {
+                MenuLabel: "Home",
+                MenuIcon: Icon.Home,
+                MenuScreenNavigate: DashBoard,
+                MenuID: 1,
+                SubMenu: Table(
+                    
+                )
+            },
+            {
+                MenuLabel: "My Work",
+                MenuIcon: Icon.Currency,
+                //MenuScreenNavigate: App.ActiveScreen,
+                MenuID: 2,
+                SubMenu: Table(
+                    {
+                        MenuLabel: "Bookings",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: 'Booking Screen',
+                        MenuID: 1
+                    },
+                     {
+                        MenuLabel: "Activities",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: Activity,
+                        MenuID: 2
+                    },
+                     {
+                        MenuLabel: "Work Orders",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: WorkOrder,
+                        MenuID: 3
+                    },
+                     {
+                        MenuLabel: "Products",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: product,
+                        MenuID: 4
+                    }
+                )
+            },
+            {
+                MenuLabel: "Customers",
+                MenuIcon: Icon.DocumentPDF,
+               // MenuScreenNavigate: App.ActiveScreen,
+                MenuID: 3,
+                SubMenu: Table(
+                    {
+                        MenuLabel: "Accounts",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate:Account,
+                        MenuID: 1
+                    },
+                    {
+                        MenuLabel: "Contacts",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: Contact,
+                        MenuID: 2
+                    }
+                )
+            },
+            {
+                MenuLabel: "Time Entries",
+                MenuIcon: Icon.Home,
+              MenuScreenNavigate: TimeEntrydetails,
+                MenuID: 1,
+                SubMenu: Table(
+                   
+                )
+            }
+        
+        )
+        );
+    StartScreen: =
+

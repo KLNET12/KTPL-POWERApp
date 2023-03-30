@@ -1,0 +1,289 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_resourcerequirements",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_resourcerequirement",
+    "MaxGetRowsCount": 500,
+    "Name": "Resource Requirements",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_allocationmethod": "Allocation Method",
+      "msdyn_AppointmentRequirementId": "Appointment Requirement",
+      "msdyn_BookingSetupMetadataId": "Booking Setup Metadata",
+      "msdyn_calendarid": "Calendar Id",
+      "msdyn_city": "City",
+      "msdyn_costprice": "Cost Price",
+      "msdyn_costprice_base": "Cost Price (Base)",
+      "msdyn_country": "Country/Region",
+      "msdyn_duration": "Duration",
+      "msdyn_effort": "Effort",
+      "msdyn_fromdate": "From Date",
+      "msdyn_fulfilledduration": "Fulfilled Duration",
+      "msdyn_fulfilledhours": "Fulfilled Hours (Deprecated)",
+      "msdyn_hours": "Hours (Deprecated)",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_isprimary": "Is Primary",
+      "msdyn_istemplate": "Is Template",
+      "msdyn_latitude": "Latitude",
+      "msdyn_longitude": "Longitude",
+      "msdyn_msdyn_resourcerequirement_msdyn_requirementcharacteristic_RequirementSystemUse": "Requirement Characteristics (msdyn_msdyn_resourcerequirement_msdyn_requirementcharacteristic_RequirementSystemUse)",
+      "msdyn_msdyn_resourcerequirement_msdyn_workorderincident_ResourceRequirement": "Work Order Incidents",
+      "msdyn_name": "Name",
+      "msdyn_percentage": "Percentage",
+      "msdyn_pooltype": "Pool Type",
+      "msdyn_Priority": "Priority",
+      "msdyn_projectid": "Project",
+      "msdyn_proposedduration": "Proposed Duration",
+      "msdyn_quantity": "Quantity (Deprecated in v3.0)",
+      "msdyn_remainingduration": "Remaining Duration",
+      "msdyn_requeststatus": "Request Status",
+      "msdyn_requirementgroupcontrolviewid": "Requirement Group Control View Id",
+      "msdyn_requirementgroupid": "Requirement Group",
+      "msdyn_requirementrelationshipid": "Requirement Relationship",
+      "msdyn_resourcerequirement_Annotations": "Notes",
+      "msdyn_resourcerequirement_AsyncOperations": "System Jobs",
+      "msdyn_resourcerequirement_bookableresource": "Bookable Resources",
+      "msdyn_resourcerequirement_bookableresourcebooking_ResourceRequirement": "Bookable Resource Bookings",
+      "msdyn_resourcerequirement_bookableresourcebookingheader_ResourceRequirement": "Bookable Resource Booking Headers (msdyn_resourcerequirement_bookableresourcebookingheader_ResourceRequirement)",
+      "msdyn_resourcerequirement_bookingheader": "Bookable Resource Booking Headers (msdyn_resourcerequirement_bookingheader)",
+      "msdyn_resourcerequirement_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_resourcerequirement_characteristicreq": "Competency Requirements",
+      "msdyn_resourcerequirement_details": "Resource Requirement Details",
+      "msdyn_resourcerequirement_DuplicateBaseRecord": "Duplicate Records (msdyn_resourcerequirement_DuplicateBaseRecord)",
+      "msdyn_resourcerequirement_DuplicateMatchingRecord": "Duplicate Records (msdyn_resourcerequirement_DuplicateMatchingRecord)",
+      "msdyn_resourcerequirement_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_resourcerequirement_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_resourcerequirement_ProcessSession": "Process Sessions",
+      "msdyn_resourcerequirement_projectteam": "Project Team Members",
+      "msdyn_resourcerequirement_request": "Resource Requests",
+      "msdyn_resourcerequirement_requirementcharacteristic_resourcerequirement": "Requirement Characteristics (msdyn_resourcerequirement_requirementcharacteristic_resourcerequirement)",
+      "msdyn_resourcerequirement_requirementdependency_dependentrequirement": "Requirement Dependencies (msdyn_resourcerequirement_requirementdependency_dependentrequirement)",
+      "msdyn_resourcerequirement_requirementdependency_resourcerequirement": "Requirement Dependencies (msdyn_resourcerequirement_requirementdependency_resourcerequirement)",
+      "msdyn_resourcerequirement_requirementorganizationunit_ResourceRequirement": "Requirement Organization Units",
+      "msdyn_resourcerequirement_requirementresourcecategory_resourcerequirement": "Requirement Resource Category",
+      "msdyn_resourcerequirement_requirementresourcepreference_ResourceRequirement": "Requirement Resource Preferences",
+      "msdyn_resourcerequirement_SyncErrors": "Sync Errors",
+      "msdyn_resourcerequirement_systemuser": "Users",
+      "msdyn_resourcerequirementid": "Resource Requirement",
+      "msdyn_resourcetype": "Resource Type",
+      "msdyn_roleid": "Role (Deprecated)",
+      "msdyn_serviceappointment": "Service Activity",
+      "msdyn_sortoptions": "Sort Options",
+      "msdyn_stateorprovince": "State/Province",
+      "msdyn_Status": "Status (msdyn_Status)",
+      "msdyn_templaterequirementid": "Template Requirement Id",
+      "msdyn_Territory": "Territory",
+      "msdyn_timefrompromised": "Time From Promised",
+      "msdyn_TimeGroup": "Fulfillment Preference",
+      "msdyn_timetopromised": "Time To Promised",
+      "msdyn_timewindowend": "Time Window End",
+      "msdyn_timewindowstart": "Time Window Start",
+      "msdyn_timezonefortimewindow": "Timezone for time window",
+      "msdyn_todate": "To Date",
+      "msdyn_type": "Type",
+      "msdyn_workhourtemplate": "Work Hour Template",
+      "msdyn_worklocation": "Work Location",
+      "msdyn_WorkOrder": "Work Order",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Resource Requirements",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Resource Requirements (Views)",
+    "Name": "_msdyn_resourcerequirement_views",
+    "RelatedEntityName": "Resource Requirements",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "007e50f5-be72-e511-80ee-00155db92d0c": "None",
+      "0be6fd06-9b6d-e711-8119-00155db92d27": "In Progress",
+      "4577f05d-dc12-e511-80c3-00155db9c701": "Fulfilled",
+      "4d7d769f-f18f-e611-8110-00155dbc5812": "Open Resource Requirements",
+      "4d7dd376-9bd3-e611-8116-00155da8401f": "Work Order Requirement Map Tooltips view",
+      "4e1b8ad4-2610-4c06-941f-6f65fa2d30f5": "Resource Requirement Advanced Find View",
+      "55d80d01-b2d8-4cc1-aee0-6b9f8d455309": "Resource Requirement Lookup View",
+      "5a904ee0-fd8f-464e-bd20-f194468a244c": "Unsubmitted",
+      "6030dd3c-dc12-e511-80c3-00155db9c701": "Submitted",
+      "6e8a1675-9b6d-e711-8119-00155db92d27": "Needs Review",
+      "887aa16c-c5cd-4447-90b5-113de222d73e": "Active Resource Requirements",
+      "8fa523b7-ed67-408a-bd04-133a83c4269a": "Inactive Resource Requirements",
+      "a2cdd543-e584-e611-810b-00155dba4601": "Unscheduled Work Order Requirements",
+      "a61e8088-c249-e611-8134-000d3a11d8c5": "Active Resource Requirements (Field Service Information)",
+      "bf8b3a60-2396-e611-8115-00155db8c802": "Open Project Requirements",
+      "dc595bae-6dd3-e611-8116-00155da8401f": "Resource Requirement Map Tooltips view",
+      "e744fbb0-dc12-e511-80c3-00155db9c701": "Proposed",
+      "ed0d90a9-00ef-409a-b0e9-7e16deb19f9a": "Resource Requirement Associated View"
+    }
+  },
+  {
+    "DisplayName": "Bookable Resource Type",
+    "Name": "msdyn_bookableresourcetype",
+    "OptionSetInfoNameMapping": {
+      "1": "Generic",
+      "2": "Contact",
+      "3": "User",
+      "4": "Equipment",
+      "5": "Account",
+      "6": "Crew",
+      "7": "Facility",
+      "8": "Pool"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_resourcetype",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "msdyn_resourcetype",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Allocation Method (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_msdyn_allocationmethod",
+    "OptionSetInfoNameMapping": {
+      "192350000": "None",
+      "192350001": "Full capacity",
+      "192350003": "Distribute evenly",
+      "192350004": "Percentage capacity",
+      "192350005": "Front load"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_allocationmethod",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_allocationmethod",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Primary (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_msdyn_isprimary",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_isprimary",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_isprimary",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Template (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_msdyn_istemplate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_istemplate",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_istemplate",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Type (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_msdyn_type",
+    "OptionSetInfoNameMapping": {
+      "192350000": "New",
+      "192350001": "Extend"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_type",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_type",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Resource Requirements)",
+    "Name": "msdyn_resourcerequirement_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Resource Requirements",
+    "Type": "OptionSetInfo"
+  }
+]

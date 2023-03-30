@@ -1,0 +1,357 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_account_forms",
+      "Namespace": "Accounts (Forms)",
+      "Values": {
+        "Account": "8448b78f-8f42-454e-8e2a-f8196b0419af",
+        "Account - Mobile": "74da4947-5d1d-4400-9f99-c6ed578211bb",
+        "account card": "b028db32-3619-48a5-ac51-cf3f947b0ef3",
+        "Account Card form": "cccff382-2b92-467e-bf1b-3db179512af8",
+        "Account for Interactive experience": "a72c7955-442b-4ea4-9499-b10cd18b4256",
+        "Account for Multisession experience": "ff49442f-8c60-4877-bdae-8fe51e6f4636",
+        "Account Hierarchy Tile Form": "69cff312-cfb6-4289-9631-249ab85d2c62",
+        "Account Quick Create": "c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+        "Account Quick Create - Field Service": "e40cb98a-e5a5-4d22-93fd-7d1f0c0cf060",
+        "Account Reference Panel": "098ae145-1567-41ec-8398-86dbaac70c9b",
+        "Account Summary Card": "894155a3-95d5-4881-b9c3-04444cef1bcc",
+        "Accounts Dashboard": "15915835-b87c-49ec-9ffc-bfac3ac44ef1",
+        "App for Outlook Account Card": "fb65cc73-181c-468b-9bb3-82ecde306991",
+        "App for Outlook Account Quick View": "76b81f10-2a08-4f1a-9454-ee38bea94eb5",
+        "Cases For Customer": "48028ae0-bf87-48c9-adf6-3dc9f29d7661",
+        "Customer profile": "e9a9c8a9-e94d-47a9-a6c3-ec37ddb83b99",
+        "In Context Form": "face3aa6-99c4-4b7e-af07-55f121cdca86",
+        "Information": "b053a39a-041a-4356-acef-ddf00182762b",
+        "Recent Cases and Entitlements": "43300723-f867-420b-ab28-976a4d12e6c4",
+        "Sales Insights": "cb430327-bcc1-416d-959d-db7592e685af",
+        "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e",
+        "TimelineWallControl - Account- Main": "6df8e8ce-7655-468c-925e-660d59aa7f4c"
+      }
+    },
+    {
+      "Kind": "default.cds_activitypointer_forms",
+      "Namespace": "Activities (Forms)",
+      "Values": {
+        "Activities Dashboard": "a4640db1-4962-4e79-92c6-690e627924d7"
+      }
+    },
+    {
+      "Kind": "default.cds_activityfileattachment_forms",
+      "Namespace": "Activity File Attachments (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_msdyn_agreementbookingdate_forms",
+      "Namespace": "Agreement Booking Dates (Forms)",
+      "Values": {
+        "Information": "b81cbfe1-a9c4-48fc-84aa-95c4184f7d83"
+      }
+    },
+    {
+      "Kind": "default.cds_appointment_forms",
+      "Namespace": "Appointments (Forms)",
+      "Values": {
+        "After Meeting": "7f58467b-ab43-447c-ab95-29deea3b1e35",
+        "Appointment": "549a8aa3-c349-4ab9-8bac-4873fa9a7a5c",
+        "Appointment Card form": "656cc4ad-235b-495b-8cb9-6174f9b09321",
+        "Appointment for Interactive experience": "230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e",
+        "Appointment quick create form.": "5895e983-598b-4834-80f9-68a4e9f4f744",
+        "Appointment Reference Panel": "4cd45c5d-29b3-48d3-997a-2bc3f8beeba8",
+        "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
+        "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
+      }
+    },
+    {
+      "Kind": "default.cds_bookableresourcebooking_forms",
+      "Namespace": "Bookable Resource Bookings (Forms)",
+      "Values": {
+        "Booking and Work Order": "c0ace4ca-f0f1-42a7-aacb-618cb8e6751a",
+        "Information": "8be6de4f-d6c3-4633-ac5d-92160e4b70bb",
+        "Reporting": "f1e15fe0-125a-45ce-8d8d-d1a7e85d0fa6",
+        "Resource Booking - Mobile (Deprecated)": "396ccc86-fa22-4351-8cc5-83d8cf209720"
+      }
+    },
+    {
+      "Kind": "default.cds_bookableresource_forms",
+      "Namespace": "Bookable Resources (Forms)",
+      "Values": {
+        "Bookable Resource - Mobile": "7be43c5d-9556-4f96-a028-6e8d0c2ff940",
+        "FS Resource Form": "af1d256e-22ca-ed11-b596-002248094ecc",
+        "Information": "3e8942a7-ff8e-4634-84ec-8ce174ab807c"
+      }
+    },
+    {
+      "Kind": "default.cds_bookingstatus_forms",
+      "Namespace": "Booking Statuses (Forms)",
+      "Values": {
+        "Information": "eb01b060-e060-42db-9764-6cdcba86da84"
+      }
+    },
+    {
+      "Kind": "default.cds_contact_forms",
+      "Namespace": "Contacts (Forms)",
+      "Values": {
+        "account contact card": "29de27bc-a257-4f29-99cf-bab4a84e688f",
+        "AI for Sales": "293c878f-f068-40a0-ae48-4297e060871c",
+        "App for Outlook Contact Card": "cdbb9298-3b2e-41f3-8f4a-0168d6b09fc4",
+        "App for Outlook Contact Quick View": "3d22ab88-96c8-4b3f-a533-d4827e2925c9",
+        "Cases for Customer": "5194a156-576a-4fa1-bf1a-abf7a41b0e8c",
+        "Contact": "1fed44d1-ae68-4a41-bd2b-f13acac4acfa",
+        "Contact - Mobile": "28b5b9b6-dfa2-45d6-8a81-3f6ba02a098a",
+        "contact card": "707fc57b-c5e6-471b-a180-e37ed28a38e2",
+        "Contact Card form": "bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf",
+        "Contact for Interactive experience": "cc760212-3eab-4009-b5c3-ea9cf6f3e141",
+        "Contact for Multisession experience": "e06af4d1-2812-45c7-a9c2-9fb73fee7bec",
+        "Contact Quick Create": "661157fe-2fc9-4eaa-835f-5bfa2f7b64f7",
+        "Contact Quick Create - Field Service": "477d15ad-60b2-4d8e-9508-b3d2b87c9868",
+        "Contact Quick Form": "bdb0ae1c-32fa-4374-b637-8dafe107bc44",
+        "Contact Reference Panel": "d880c3cf-80e2-42f3-82f9-24d040d09f17",
+        "Contacts Dashboard": "70ad8b15-e3f3-4d7d-9e4b-16cb4e51b484",
+        "Customer profile": "05ea391a-d034-43fe-849b-b4fa3213a2b2",
+        "In Context Form": "4c9c89b9-f909-4b34-8f63-b87d7ff2f0c4",
+        "Information": "894cc46a-b0cb-4ab0-8bf6-200544e46a2d",
+        "Live Persona Card Form": "449faa0e-f471-48ec-87d0-4719909546d2",
+        "Recent Cases and Entitlements": "f3b707fb-3b5f-45f9-9c6b-5e573bb5d19e",
+        "Social Profiles": "7bb87dfd-ec3e-4ed9-8e3e-5725d3067295",
+        "TimelineWallControl - Contact - Main": "986258b5-2985-4ae0-970a-5e1d108ab793",
+        "Update Contact": "26843818-6508-4afe-9342-5fae2ebf15ca"
+      }
+    },
+    {
+      "Kind": "default.cds_transactioncurrency_forms",
+      "Namespace": "Currencies (Forms)",
+      "Values": {
+        "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
+    },
+    {
+      "Kind": "default.cds_msfp_alert_forms",
+      "Namespace": "Customer Voice alert (Forms)",
+      "Values": {
+        "Information": "f5be270d-ac66-49af-8952-681fb5f99785"
+      }
+    },
+    {
+      "Kind": "default.cds_email_forms",
+      "Namespace": "Email Messages (Forms)",
+      "Values": {
+        "Bulk Email": "5e0f2e7e-df92-eb11-b1ac-00224802b8a3",
+        "Email": "0d1e47ff-12b2-4f53-9090-bee951b98cb4",
+        "Email card": "4b2778f9-e9c6-40f5-9383-42f04feb3f11",
+        "Email Card form": "e5538bb9-77ec-4d24-bc5f-8cb2d825f664",
+        "Email for Interactive experience": "1d5ad078-3edb-4edc-98c6-c0c21e3125e3",
+        "Email Reference Panel": "6661cf9b-c178-44fd-b70b-8c632bd0bfb2",
+        "Enhanced Email": "63769d04-c74f-4808-b0aa-77339e1b9191",
+        "Enhanced Email (deprecated)": "b54ca399-eaa6-45f8-83f2-c268b0021087",
+        "Information": "394ca387-4777-457c-b5ae-c7a3e632be41",
+        "Wizard": "9360ee64-5238-4334-a1de-c155d20fe63d"
+      }
+    },
+    {
+      "Kind": "default.cds_invoicedetail_forms",
+      "Namespace": "Invoice Lines (Forms)",
+      "Values": {
+        "Information": "684b159c-c312-4248-8b0f-0c164abe7d9e",
+        "InvoiceDetail": "83ffb4aa-51d5-4a12-9e08-783c67cfeb44",
+        "Project": "f03952d2-62cc-453f-97bb-d66b4adff342"
+      }
+    },
+    {
+      "Kind": "default.cds_invoice_forms",
+      "Namespace": "Invoices (Forms)",
+      "Values": {
+        "Field Service Information": "e42e464f-c249-4005-896e-cdee472d7e1e",
+        "Information": "fc4d659c-b2e6-491d-8823-bf5fb57eb739",
+        "Invoice": "ddc30f29-e6e2-463f-9e37-163b4014b27e",
+        "Invoice Quick View Form": "74f580bd-2011-4244-96c2-eb15ea46e22f",
+        "Invoices Dashboard": "a2436a11-ef49-e711-80e1-00155d342d09",
+        "Project Invoice": "a0445736-61ca-495d-8e03-855be3a56eff"
+      }
+    },
+    {
+      "Kind": "default.cds_annotation_forms",
+      "Namespace": "Notes (Forms)",
+      "Values": {
+        "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
+        "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
+      }
+    },
+    {
+      "Kind": "default.cds_phonecall_forms",
+      "Namespace": "Phone Calls (Forms)",
+      "Values": {
+        "Information": "dcfacadb-b9dd-44ff-b8a7-cd52179c92dc",
+        "Phone Call": "a91390a5-99bb-4d10-9eee-3a5c87f841f1",
+        "Phone Call Card form": "983dc188-2a05-4cfe-b907-4fbfae8c21f7",
+        "Phone Call for Interactive experience": "cdc622ea-2a17-4cc3-9605-44564d56cea7",
+        "Phone call quick create form.": "a80fb36c-353f-4310-a4cb-b8fa47d58b9b",
+        "Phone Call Reference Panel": "c466c56a-ab9d-41a3-ac68-008a60bfe67e",
+        "Phonecall card": "fbefc534-019c-472b-96d1-c3514d056297",
+        "Quick Form": "8e0b7c1e-f5a0-4e7d-b04d-4ca8d5c5ca80"
+      }
+    },
+    {
+      "Kind": "default.cds_productpricelevel_forms",
+      "Namespace": "Price List Items (Forms)",
+      "Values": {
+        "Information": "f051b13e-6f52-4e3e-8d42-a3fe78a7e3a3",
+        "Product Price List": "8325530a-a6a6-4275-9374-a65bef5ef92c"
+      }
+    },
+    {
+      "Kind": "default.cds_pricelevel_forms",
+      "Namespace": "Price Lists (Forms)",
+      "Values": {
+        "Information": "24e04567-e803-4bf0-a999-4c5192ed1f65",
+        "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
+        "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
+      }
+    },
+    {
+      "Kind": "default.cds_product_forms",
+      "Namespace": "Products (Forms)",
+      "Values": {
+        "Information": "42805efb-1f65-4ae8-91bc-618967a55c6e",
+        "Product": "a640be62-63f6-4027-90d7-48c014a7c6f3",
+        "Product family Quick Create": "fd57aeed-ab95-4a32-9c6c-61ae92d2a296",
+        "Product Hierarchy Tile Form": "44c9f1ee-9bce-4c6f-9a7f-6568be05c41c",
+        "Product Quick Create": "672e520b-6bbc-47f8-977f-228bfc6d8faf",
+        "Product Quick Create FS 5x5": "46a3bdc2-b561-4666-97a7-7de5aa831580",
+        "Project Information": "6af59e16-86c9-4ae0-94f3-3d571de2cf23"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_resourcerequirement_forms",
+      "Namespace": "Resource Requirements (Forms)",
+      "Values": {
+        "Bookings": "53b0c7a6-26f7-4720-bb50-5067fda3763c",
+        "Competencies": "96b84b17-c561-4adb-90f7-e19abf7d84b0",
+        "General": "0678ff67-40f8-4ef2-bc0d-cdb257ded9f5",
+        "Infomation": "0f18a3ed-3c7e-4724-8fa3-9273ddc97646",
+        "Information": "bc534926-8fba-4265-bada-bff18ff0872e",
+        "Others": "eb8242a4-8004-4678-95e9-0541e7d1689f"
+      }
+    },
+    {
+      "Kind": "default.cds_task_forms",
+      "Namespace": "Tasks (Forms)",
+      "Values": {
+        "Information": "b62ce022-cc0f-4c8c-bb29-21948f70dc74",
+        "Quick Form": "1fac7e2e-0b1c-4b6c-ab92-8af0f92dbdbc",
+        "Task": "16654191-19ad-48ca-9e46-c4b4fbdad76f",
+        "Task card": "e9c378d3-27a7-43fe-8075-322dcd7ff380",
+        "Task Card form": "5e9725e4-5449-4363-8c1c-5ae71767af34",
+        "Task for Interactive experience": "d5b4a1b2-de4f-4f86-8768-b0730001e7d1",
+        "Task quick create form.": "a1c8a6dc-8804-4019-9c78-7dbe86560ea1",
+        "Task Reference Panel": "81a89014-442c-44ad-9725-4077426a7fee"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_timeentry_forms",
+      "Namespace": "Time Entries (Forms)",
+      "Values": {
+        "Create Time Entry": "cbec1a7a-0301-4dbc-b715-0ea8e37b46bd",
+        "Entry Edit Form": "e1d889ba-3af0-40fb-89f3-310923b795de",
+        "Field Service Information": "6d5b41ce-e021-4a9b-8411-c315f517a122",
+        "Field Service Quick Create": "93a02d7f-8957-46c7-b0a3-882055935f20",
+        "Information": "4251998f-bd9b-4ef9-be98-ef65a0a3e23d",
+        "New Form": "f1ea1335-1885-4dc1-8ce6-ee5353d5f258",
+        "Row Edit Form": "8ab34334-fc27-4ae1-9145-e853ef15dbae",
+        "TESA Time Entry Main Form": "734bd10d-8661-4d8d-8627-591272fcc2b9",
+        "TESA Time Entry Quick Create Form": "31767fa4-93ae-43cc-824b-1c5167b8b913",
+        "Time Entry Row Edit": "186f79aa-c844-4fe4-8d15-b999677c7828",
+        "timeentrycomment": "0a527980-672f-429f-904c-7ec1a6b1ecf3"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_timeentrysetting_forms",
+      "Namespace": "Time Sources (Forms)",
+      "Values": {
+        "Information": "a3e23374-2210-4c0e-8603-ba3967ff184d"
+      }
+    },
+    {
+      "Kind": "default.cds_uomschedule_forms",
+      "Namespace": "Unit Groups (Forms)",
+      "Values": {
+        "Information": "a793fa7c-8b63-43f0-b4bc-73f75a68935a"
+      }
+    },
+    {
+      "Kind": "default.cds_uom_forms",
+      "Namespace": "Units (Forms)",
+      "Values": {
+        "Information": "02aa3f91-c4dd-47b2-b17f-5790a8b977dd",
+        "Unit of Measure Quick Create": "a19aaf8b-9e2a-4f6a-9360-498269d5b137"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452",
+        "User Information Form": "20bc9121-0a7c-46b6-9c11-5db245e8214d"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_workorderproduct_forms",
+      "Namespace": "Work Order Products (Forms)",
+      "Values": {
+        "Information": "ffdd4e22-a23a-440a-9d28-5d5224c1c01a",
+        "Work Order Product - Mobile": "70c4a13d-3787-44b0-ac74-35e25c4ce7df"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_workorderservicetask_forms",
+      "Namespace": "Work Order Service Tasks (Forms)",
+      "Values": {
+        "Information": "12a5be6b-b565-4d80-a2bc-3d4f652a3d98",
+        "Work Order Service Task - Mobile": "06a480e2-69e6-4283-8aa5-9fa17c86671f"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_workorderservice_forms",
+      "Namespace": "Work Order Services (Forms)",
+      "Values": {
+        "Information": "4155aff4-aefb-412c-83d4-3b382aa73268",
+        "Work Order Service - Mobile": "487fd9b5-37a6-49d8-bd13-ad8d6e31075a"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_workordertype_forms",
+      "Namespace": "Work Order Types (Forms)",
+      "Values": {
+        "Information": "65d7528f-b2ff-450a-9b5d-a2e46464ce04",
+        "Work Order Type Quick Create FS 5x5": "77cd0dec-da2f-4914-a57c-346271a5b720"
+      }
+    },
+    {
+      "Kind": "default.cds_msdyn_workorder_forms",
+      "Namespace": "Work Orders (Forms)",
+      "Values": {
+        "Quick Create Work Order": "e0d97cdc-4c20-4e03-bc2a-6dbc6cb1d2c2",
+        "Work Order": "6bfd1f9f-759e-459a-b752-3536e6513d25",
+        "Work Order - Customer": "c0ebdf20-f27f-4acc-8c9f-a9a202a5e917",
+        "Work Order - Mobile": "f25cecf6-2f00-4eab-aeef-d773af32e027",
+        "Work Order - Notes": "7fac7159-31a5-4869-8f2f-ee88dd6c0f3a",
+        "Work Order - Service": "613513a1-322d-4ecc-81bd-bd65640d834c",
+        "Work Order Create": "ccf0b34e-a265-4005-bd73-be6f4fe30dd7",
+        "Work Order Quick View": "79c33fb4-7126-41a8-9dff-13e4462c9b19"
+      }
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {}
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_workorderservicetasks",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_workorderservicetask",
+    "MaxGetRowsCount": 500,
+    "Name": "Work Order Service Tasks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_actualduration": "Actual Duration",
+      "msdyn_agreementbookingservicetask": "Agreement Booking Service Task",
+      "msdyn_booking": "Booking",
+      "msdyn_customerasset": "Customer Asset",
+      "msdyn_description": "Description",
+      "msdyn_estimatedduration": "Estimated Duration",
+      "msdyn_Inspection": "Inspection Template",
+      "msdyn_inspectiondefinitionid": "Inspection Template Version Id",
+      "msdyn_inspectionenabled": "Has Inspection",
+      "msdyn_inspectionresponseid": "Inspection Response Id",
+      "msdyn_inspectionresult": "Inspection Result",
+      "msdyn_inspectiontaskresult": "Result",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_lineorder": "Line Order",
+      "msdyn_name": "Name",
+      "msdyn_percentcomplete": "% Complete",
+      "msdyn_surveyboundedoutput": "SurveyControl",
+      "msdyn_tasktype": "Task Type",
+      "msdyn_workorder": "Work Order",
+      "msdyn_workorderincident": "Work Order Incident",
+      "msdyn_workorderservicetask_ActivityPointers": "Activities",
+      "msdyn_workorderservicetask_Annotations": "Notes",
+      "msdyn_workorderservicetask_Appointments": "Appointments",
+      "msdyn_workorderservicetask_AsyncOperations": "System Jobs",
+      "msdyn_workorderservicetask_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_workorderservicetask_chats": "Teams chats",
+      "msdyn_workorderservicetask_connections1": "Connections (msdyn_workorderservicetask_connections1)",
+      "msdyn_workorderservicetask_connections2": "Connections (msdyn_workorderservicetask_connections2)",
+      "msdyn_workorderservicetask_DuplicateBaseRecord": "Duplicate Records (msdyn_workorderservicetask_DuplicateBaseRecord)",
+      "msdyn_workorderservicetask_DuplicateMatchingRecord": "Duplicate Records (msdyn_workorderservicetask_DuplicateMatchingRecord)",
+      "msdyn_workorderservicetask_Emails": "Email Messages",
+      "msdyn_workorderservicetask_Faxes": "Faxes",
+      "msdyn_workorderservicetask_Letters": "Letters",
+      "msdyn_workorderservicetask_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_workorderservicetask_msdyn_approvals": "Project Service Approvals",
+      "msdyn_workorderservicetask_msdyn_bookingalerts": "Booking Alerts",
+      "msdyn_workorderservicetask_msdyn_ocliveworkitems": "Conversations",
+      "msdyn_workorderservicetask_msdyn_ocoutboundmessages": "Outbound messages",
+      "msdyn_workorderservicetask_msdyn_ocsessions": "Sessions",
+      "msdyn_workorderservicetask_msfp_alerts": "Customer Voice alert",
+      "msdyn_workorderservicetask_msfp_surveyinvites": "Customer Voice survey invites",
+      "msdyn_workorderservicetask_msfp_surveyresponses": "Customer Voice survey responses",
+      "msdyn_workorderservicetask_PhoneCalls": "Phone Calls",
+      "msdyn_workorderservicetask_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_workorderservicetask_ProcessSession": "Process Sessions",
+      "msdyn_workorderservicetask_QueueItems": "Queue Items",
+      "msdyn_workorderservicetask_RecurringAppointmentMasters": "Recurring Appointments",
+      "msdyn_workorderservicetask_ServiceAppointments": "Service Activities",
+      "msdyn_workorderservicetask_SharePointDocumentLocations": "Document Locations",
+      "msdyn_workorderservicetask_SocialActivities": "Social Activities",
+      "msdyn_workorderservicetask_SyncErrors": "Sync Errors",
+      "msdyn_workorderservicetask_Tasks": "Tasks",
+      "msdyn_workorderservicetaskid": "Work Order Service Task",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Order Service Tasks",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Work Order Service Tasks (Views)",
+    "Name": "_msdyn_workorderservicetask_views",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "063662d0-db4c-e111-93b3-000c2959f9b8": "Inspection - Work Order Service Task View",
+      "1f706b68-1496-49b5-9056-5b4515ff863d": "Work Order Service Task Advanced Find View",
+      "2f145106-bcb3-4f0f-9d02-e8c3b6bb25e8": "Inactive Work Order Service Tasks",
+      "434ab219-ec1b-ea11-a81e-000d3a06997c": "Inspection - Work Order Service Task View - Mobile",
+      "524a68d6-425f-e611-8108-000d3a146973": "Work Order Service Task View - Mobile",
+      "853304d8-897f-4f84-b721-3cb9cc5a6695": "Work Order Service Task Lookup View",
+      "9c2bcbc1-29df-44f9-81d7-39faef7f3978": "Work Order Service Task Associated View",
+      "c9fd8f4d-8184-4ddb-a31a-89e66e8e710e": "Active Work Order Service Tasks"
+    }
+  },
+  {
+    "DisplayName": "Inspection Result",
+    "Name": "msdyn_inspectionresult",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Pass",
+      "192350001": "Fail",
+      "192350002": "Partial Success",
+      "192350003": "NA"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_inspectiontaskresult",
+        "OptionSetReferenceEntityName": "Work Order Service Tasks"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_inspectiontaskresult",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Has Inspection (Work Order Service Tasks)",
+    "Name": "msdyn_msdyn_workorderservicetask_msdyn_inspectionenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_inspectionenabled",
+        "OptionSetReferenceEntityName": "Work Order Service Tasks"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_inspectionenabled",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Inspection Result (Work Order Service Tasks)",
+    "Name": "msdyn_msdyn_workorderservicetask_msdyn_inspectionresult",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Pass",
+      "100000001": "Fail",
+      "100000002": "Invalid"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_inspectionresult",
+        "OptionSetReferenceEntityName": "Work Order Service Tasks"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_inspectionresult",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Work Order Service Tasks)",
+    "Name": "msdyn_workorderservicetask_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Work Order Service Tasks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Work Order Service Tasks)",
+    "Name": "msdyn_workorderservicetask_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Work Order Service Tasks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Work Order Service Tasks",
+    "Type": "OptionSetInfo"
+  }
+]

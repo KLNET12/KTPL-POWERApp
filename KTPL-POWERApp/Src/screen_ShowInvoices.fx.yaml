@@ -1,0 +1,220 @@
+screen_ShowInvoices As screen:
+    Fill: =
+    OnVisible: |+
+        =Refresh('Work Orders');
+        Refresh(Invoices);
+        If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+        
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =972
+        Items: =If(varNav,First(Filter('Work Orders','WO Number'=varWorkId)), Gallery1.Selected.'Work Order')
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =972
+        Y: =164
+        ZIndex: =1
+
+        Separator12 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderThickness: =1
+            Fill: =RGBA(242, 241, 216, 1)
+            Height: =905
+            Items: =ThisItem.Invoices
+            Layout: =Layout.Vertical
+            OnSelect: |-
+                =Set(varInvoice,true);
+                Set(varInvoiceId, GUID(ThisItem.Invoice));
+                Navigate(screen_GenerateInvoice)
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =204
+            Y: =67
+            ZIndex: =6
+
+            Title3 As label:
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =10
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: |-
+                    ="Invoice No. :  " &ThisItem.'Invoice ID'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =612
+                X: |
+                    =0
+                Y: =20
+                ZIndex: =2
+
+            NextArrow2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Set(varInvoice,true);
+                    Set(GeneratedInvoice,ThisItem);
+                    Set(varInvoiceId, GUID(ThisItem.Invoice));
+                    Navigate(screen_GenerateInvoice)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator13 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+            Label9 As label:
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =18
+                Text: |-
+                    ="Invoice Name :  " & ThisItem.Name
+                Width: =612
+                Y: =55
+                ZIndex: =6
+
+            Label9_1 As label:
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =17
+                Text: |-
+                    ="Created On :  " & ThisItem.'Created On'
+                Width: =469
+                Y: =90
+                ZIndex: =7
+
+            Label9_2 As label:
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =17
+                Text: |-
+                    ="Type :  " & ThisItem.Type
+                Width: =469
+                Y: =125
+                ZIndex: =8
+
+            Label9_3 As label:
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =17
+                Text: |-
+                    ="Status :  " & ThisItem.Status
+                Width: =309
+                Y: =165
+                ZIndex: =9
+
+            Label9_4 As label:
+                Height: =32
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =17
+                Text: |-
+                    ="Invoice Status :  " & ThisItem.'Project Invoice Status'
+                Width: =331
+                X: =309
+                Y: =165
+                ZIndex: =10
+
+        Button9 As button:
+            Fill: =RGBA(100, 196, 151, 1)
+            Height: =67
+            OnSelect: |-
+                =Set(varInvoice,false);
+                Set(varInvoiceId,Blank());
+                Set(varWID,GUID(Gallery3.Selected.'Billing Account'.Account));
+                Navigate(screen_GenerateInvoice)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Create New Invoice"
+            Width: =640
+            ZIndex: =7
+
+    Label15 As label:
+        Align: =Align.Center
+        Fill: =RGBA(229, 255, 145, 0.81)
+        FontWeight: =FontWeight.Bold
+        Height: =97
+        Size: =23
+        Text: ="Invoices for WorkOrder No."  & If(varNav,First(Filter('Work Orders','WO Number'=varWorkId)).'Work Order Number', Gallery1.Selected.'Work Order'.'Work Order Number')
+        Width: =640
+        Y: =67
+        ZIndex: =2
+
+    Component1_11 As Component1:
+        Height: =67
+        ZIndex: =3
+
+    Icon14 As icon.ChevronLeft:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =If(!varNav,Navigate('Booking Screen'),Navigate(WorkOrder))
+        X: =576
+        Y: =1
+        ZIndex: =4
+
+    MenuLeftNav_15 As MenuLeftNav:
+        Height: =MenuLeftNav_15.MenuHeight
+        Width: =MenuLeftNav_15.MenuWidth
+        Y: =10
+        ZIndex: =5
+
+    Timer1_20 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =6
+

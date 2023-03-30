@@ -1,0 +1,274 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "pricelevels",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "pricelevel",
+    "MaxGetRowsCount": 500,
+    "Name": "Price Lists",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "begindate": "Start Date",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "description": "Description",
+      "enddate": "End Date",
+      "exchangerate": "Exchange Rate",
+      "freighttermscode": "Freight Terms",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_breakhoursbillable": "Break Hours Billable",
+      "msdyn_CopiedFromPriceLevel": "Copied From",
+      "msdyn_entity": "Entity",
+      "msdyn_module": "Context",
+      "msdyn_organizationalunit_pricelevel": "Organizational Units",
+      "msdyn_pricelevel_entitlement_PriceListToApply": "Entitlements",
+      "msdyn_pricelevel_msdyn_accountpricelist_PriceList": "Account Project Price Lists",
+      "msdyn_pricelevel_msdyn_actual_PriceList": "Actuals",
+      "msdyn_pricelevel_msdyn_agreement_PriceList": "Agreements",
+      "msdyn_pricelevel_msdyn_agreementbookingproduct_PriceList": "Agreement Booking Products",
+      "msdyn_pricelevel_msdyn_agreementbookingservice_PriceList": "Agreement Booking Services",
+      "msdyn_pricelevel_msdyn_agreementinvoiceproduct_PriceList": "Agreement Invoice Products",
+      "msdyn_pricelevel_msdyn_contactpricelist_PriceList": "Contact Price Lists",
+      "msdyn_pricelevel_msdyn_estimateline_PriceList": "Estimate Lines",
+      "msdyn_pricelevel_msdyn_fieldservicepricelistitem_PriceList": "Field Service Price List Items",
+      "msdyn_pricelevel_msdyn_invoicelinetransaction_PriceList": "Invoice Line Details",
+      "msdyn_pricelevel_msdyn_journalline_PriceList": "Journal Lines",
+      "msdyn_pricelevel_msdyn_opportunitylinetransaction_PriceList": "Opportunity Line Details",
+      "msdyn_pricelevel_msdyn_opportunitypricelist_PriceList": "Opportunity Project Price Lists",
+      "msdyn_pricelevel_msdyn_orderlinetransaction_PriceList": "Project Contract Line Details",
+      "msdyn_pricelevel_msdyn_orderpricelist_PriceList": "Project Contract Project Price Lists",
+      "msdyn_pricelevel_msdyn_projectparameterpricelist_PriceList": "Project Parameter Price Lists",
+      "msdyn_pricelevel_msdyn_projectpricelist_PriceList": "Project Price Lists",
+      "msdyn_pricelevel_msdyn_quotebookingproduct_PriceList": "Quote Booking Products",
+      "msdyn_pricelevel_msdyn_quotebookingservice_PriceList": "Quote Booking Services",
+      "msdyn_pricelevel_msdyn_quotelinetransaction_PriceList": "Quote Line Detail",
+      "msdyn_pricelevel_msdyn_quotepricelist_PriceList": "Quote Project Price Lists",
+      "msdyn_pricelevel_msdyn_resourcecategorymarkuppricelevel_PriceList": "Role Price Markup",
+      "msdyn_pricelevel_msdyn_resourcecategorypricelevel_PriceList": "Role Prices",
+      "msdyn_pricelevel_msdyn_rma_PriceList": "RMAs",
+      "msdyn_pricelevel_msdyn_rmaproduct_PriceList": "RMA Products",
+      "msdyn_pricelevel_msdyn_transactioncategorypricelevel_PriceList": "Transaction Category Prices",
+      "msdyn_pricelevel_msdyn_workorder_PriceList": "Work Orders",
+      "msdyn_pricelevel_msdyn_workorderproduct_PriceList": "Work Order Products",
+      "msdyn_pricelevel_msdyn_workorderservice_PriceList": "Work Order Services",
+      "msdyn_pricelevel_msdyn_workordertype_PriceList": "Work Order Types",
+      "msdyn_pricelevel_opportunityproduct_PriceList": "Opportunity Lines",
+      "msdyn_pricelevel_pricelevel_CopiedFromPriceLevel": "Price Lists",
+      "msdyn_pricelevel_quotedetail_PriceList": "Quote Lines",
+      "msdyn_TimeUnit": "Time Unit",
+      "name": "Name",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "paymentmethodcode": "Payment Method ",
+      "price_level_accounts": "Accounts",
+      "price_level_contacts": "Contacts",
+      "price_level_invoices": "Invoices",
+      "price_level_opportunties": "Opportunities",
+      "price_level_orders": "Orders",
+      "price_level_product_price_levels": "Price List Items",
+      "price_level_products": "Products",
+      "price_level_quotes": "Quotes",
+      "PriceLevel_AsyncOperations": "System Jobs",
+      "PriceLevel_BulkDeleteFailures": "Bulk Delete Failures",
+      "pricelevel_connections1": "Connections (pricelevel_connections1)",
+      "pricelevel_connections2": "Connections (pricelevel_connections2)",
+      "pricelevel_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "pricelevel_principalobjectattributeaccess": "Field Sharing",
+      "PriceLevel_ProcessSessions": "Process Sessions",
+      "PriceLevel_SyncErrors": "Sync Errors",
+      "pricelevelid": "Price List",
+      "PriceList_Campaigns": "Campaigns",
+      "shippingmethodcode": "Shipping Method",
+      "statecode": "Status ",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Price Lists",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Price Lists (Views)",
+    "Name": "_pricelevel_views",
+    "RelatedEntityName": "Price Lists",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "105f190f-909f-40b9-b4b5-8e0181a8424d": "Inactive Price Lists",
+      "2261e01b-b7e6-433a-8d6d-f1fd6ac9f70f": "Active Price Lists",
+      "3104d56e-46f8-e811-8160-000d3afe1701": "Sales project price list",
+      "3a736265-b902-4d09-a08b-725f6c31916e": "Price List Advanced Find View",
+      "71378653-4929-4d8b-a2ed-6172c4318220": "All Price Lists",
+      "97cfde9d-f1e9-e411-80d2-00155db9cd01": "Sales price lists",
+      "b30a155c-2f47-4146-a9e2-1b6f8eb4feee": "Price List Associated View",
+      "ee499892-35e1-4d07-a1b7-bb69fe9bfd42": "Price List Lookup View"
+    }
+  },
+  {
+    "DisplayName": "msdyn_module",
+    "Name": "msdyn_module",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Cost",
+      "192350001": "Purchase",
+      "192350002": "Sales"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_module",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_module",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Break Hours Billable (Price Lists)",
+    "Name": "msdyn_pricelevel_msdyn_breakhoursbillable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_breakhoursbillable",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_breakhoursbillable",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Price List Entity",
+    "Name": "msdyn_pricelistentity",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Organization",
+      "192350001": "Customer",
+      "192350002": "Sales document",
+      "192350003": "Project"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_entity",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_entity",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Freight Terms (Price Lists)",
+    "Name": "pricelevel_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "freighttermscode",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "freighttermscode",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Payment Method  (Price Lists)",
+    "Name": "pricelevel_paymentmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "paymentmethodcode",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "paymentmethodcode",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Shipping Method (Price Lists)",
+    "Name": "pricelevel_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shippingmethodcode",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shippingmethodcode",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status  (Price Lists)",
+    "Name": "pricelevel_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Price Lists)",
+    "Name": "pricelevel_statuscode",
+    "OptionSetInfoNameMapping": {
+      "100001": "Active",
+      "100002": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Price Lists"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Price Lists",
+    "Type": "OptionSetInfo"
+  }
+]

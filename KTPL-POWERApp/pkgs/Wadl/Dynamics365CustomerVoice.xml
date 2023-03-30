@@ -1,0 +1,124 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/microsoftformspro" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Dynamics365CustomerVoice" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Dynamics 365 Customer Voice">Use Dynamics 365 Customer Voice to quickly create and send customized surveys to keep in close contact with your customers. View responses in automatically generated reports that highlight important trends and flag outlier scores for immediate attention. Track the customer metrics that matter the most to your business to make informed decisions.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/microsoftformspro" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ProjectList_items_def_Name_def" />
+      <string name="ProjectList_items_def_ProjectId_def" />
+      <object name="ProjectList_items_def">
+        <property name="Name" type="string" />
+        <property name="ProjectId" type="string" />
+      </object>
+      <array typeRef="ProjectList_items_def" name="ProjectList" />
+      <string name="SurveyList_items_def_Name_def" />
+      <string name="SurveyList_items_def_FormId_def" />
+      <string name="SurveyList_items_def_SurveyId_def" />
+      <object name="SurveyList_items_def">
+        <property name="Name" type="string" />
+        <property name="FormId" type="string" />
+        <property name="SurveyId" type="string" />
+      </object>
+      <array typeRef="SurveyList_items_def" name="SurveyList" />
+      <object name="Object" />
+      <mapObject name="Item_dynamicProperties_def">
+        <values typeRef="Object" />
+      </mapObject>
+      <string name="Item_ItemInternalId_def" />
+      <object name="Item">
+        <property name="dynamicProperties" typeRef="Item_dynamicProperties_def" />
+        <property name="ItemInternalId" type="string" />
+      </object>
+      <object isDynamicSchema="true" name="parameters_pipeData_def" />
+      <string name="sendSurvey_responses_200_def" />
+      <string name="createSurveyInvite_responses_200_def_InvitationId_def" />
+      <string name="createSurveyInvite_responses_200_def_Invitationlink_def" />
+      <string name="createSurveyInvite_responses_200_def_Unsubscribelink_def" />
+      <object name="createSurveyInvite_responses_200_def">
+        <property name="InvitationId" type="string" />
+        <property name="Invitationlink" type="string" />
+        <property name="Unsubscribelink" type="string" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/microsoftformspro">
+    <resource path="/{connectionId}/api/sendmail/flow">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="sendSurvey" actionName="sendSurvey" siena:isDeprecated="false">
+        <doc title="Send a survey&#xA;This action sends a survey to a specified list of recipients and creates a survey invitation for each recipient." />
+        <request>
+          <param style="query" name="to" type="xs:string" required="true">
+            <doc title="Add a list of recipients this survey is sent to" />
+          </param>
+          <param style="query" name="FormId" type="xs:string" required="true">
+            <doc title="Select a survey" />
+          </param>
+          <param style="query" name="EmailTemplateId" type="xs:string" required="true">
+            <doc title="Select an email template" />
+          </param>
+          <param style="query" name="Regarding" type="xs:string">
+            <doc title="Relate this invitation by providing an entity id and entity type from this CDS in the format: entity type name, entity id" />
+          </param>
+          <param style="query" name="RecipientInfo" type="xs:string">
+            <doc title="If the recipient is from CDS, specify an entity id and entity type of the recipient to relate in the format: entity type name, entity id" />
+          </param>
+          <param style="query" name="firstName" type="xs:string">
+            <doc title="If the first name was personalized in email or used in pipe, enter the value here to replace" />
+          </param>
+          <param style="query" name="lastName" type="xs:string">
+            <doc title="If the last name was personalized in email or used in pipe, enter the value here to replace" />
+          </param>
+          <param style="header" name="ProjectId" type="xs:string" required="true">
+            <doc title="Select a project" />
+          </param>
+          <representation mediaType="application/json" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="xs:string" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/api/createinvite">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="createSurveyInvite" actionName="createSurveyInvite" siena:isDeprecated="false">
+        <doc title="Create an invitation&#xA;This action creates a survey invitation and returns a personalized invitation link." />
+        <request>
+          <param style="query" name="FormId" type="xs:string" required="true">
+            <doc title="Select a survey" />
+          </param>
+          <param style="query" name="Email" type="xs:string">
+            <doc title="The email address to identify the survey invite, Optionally enter the recipient info." />
+          </param>
+          <param style="query" name="subject" type="xs:string">
+            <doc title="Subject of the invitation" />
+          </param>
+          <param style="query" name="firstName" type="xs:string">
+            <doc title="If the first name was personalized in email or used in pipe, enter the value here to replace" />
+          </param>
+          <param style="query" name="lastName" type="xs:string">
+            <doc title="If the last name was personalized in email or used in pipe, enter the value here to replace" />
+          </param>
+          <param style="query" name="Regarding" type="xs:string">
+            <doc title="Relate this invitation by providing an entity id and entity type from this CDS in the format: entity type name, entity id" />
+          </param>
+          <param style="query" name="RecipientInfo" type="xs:string">
+            <doc title="If the recipient is from CDS, specify an entity id and entity type of the recipient to relate in the format: entity type name, entity id" />
+          </param>
+          <param style="header" name="ProjectId" type="xs:string" required="true">
+            <doc title="Select a project" />
+          </param>
+          <representation mediaType="application/json" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:createSurveyInvite_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_microsoftformspro" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

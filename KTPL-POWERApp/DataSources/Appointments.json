@@ -1,0 +1,373 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "appointments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "appointment",
+    "MaxGetRowsCount": 500,
+    "Name": "Appointments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "_regardingobjectid_value": "Regarding",
+      "{Attachments}": "Attachments ({Attachments})",
+      "activityadditionalparams": "Additional Parameters",
+      "activityid": "Appointment",
+      "activitytypecode": "Activity Type",
+      "actualdurationminutes": "Actual Duration",
+      "actualend": "Actual End",
+      "actualstart": "Actual Start",
+      "appointment_actioncard": "Action Cards",
+      "appointment_activity_mime_attachment": "Attachments (appointment_activity_mime_attachment)",
+      "Appointment_Annotation": "Notes",
+      "Appointment_AsyncOperations": "System Jobs",
+      "Appointment_BulkDeleteFailures": "Bulk Delete Failures",
+      "appointment_campaignresponse": "Campaign Responses",
+      "appointment_connections1": "Connections (appointment_connections1)",
+      "appointment_connections2": "Connections (appointment_connections2)",
+      "Appointment_DuplicateBaseRecord": "Duplicate Records (Appointment_DuplicateBaseRecord)",
+      "Appointment_DuplicateMatchingRecord": "Duplicate Records (Appointment_DuplicateMatchingRecord)",
+      "appointment_PostFollows": "Follows",
+      "appointment_PostRegardings": "Post Regarding",
+      "appointment_principalobjectattributeaccess": "Field Sharing",
+      "Appointment_ProcessSessions": "Process Sessions",
+      "Appointment_QueueItem": "Queue Items",
+      "Appointment_SyncErrors": "Sync Errors",
+      "attachmentcount": "Attachment Count",
+      "attachmenterrors": "AttachmentErrors",
+      "category": "Category",
+      "createdby_appointment": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby_appointment": "Created By (Delegate)",
+      "description": "Description",
+      "exchangerate": "Exchange Rate",
+      "formattedscheduledend": "Formatted End Date",
+      "formattedscheduledstart": "Formatted Start Date",
+      "globalobjectid": "Outlook Appointment",
+      "importsequencenumber": "Import Sequence Number",
+      "instancetypecode": "Appointment Type",
+      "isalldayevent": "All Day Event",
+      "isbilled": "Is Billed",
+      "isdraft": "IsDraft",
+      "ismapiprivate": "Is Private",
+      "isonlinemeeting": "Is Online Meeting",
+      "isregularactivity": "Is Regular Activity",
+      "isunsafe": "IsUnsafe",
+      "isworkflowcreated": "Is Workflow Created",
+      "lastonholdtime": "Last On Hold Time",
+      "location": "Location",
+      "modifiedby_appointment": "Modified By",
+      "modifiedfieldsmask": "Modified Fields Mask",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby_appointment": "Modified By (Delegate)",
+      "msdyn_appointment_bookableresourcebooking": "Bookable Resource Bookings",
+      "msdyn_appointment_msdyn_conversationinsight_conversationinsighttarget": "ConversationInsights",
+      "msdyn_appointment_msdyn_ocrecording_recordingtarget": "Recordings (msdyn_appointment_msdyn_ocrecording_recordingtarget)",
+      "msdyn_appointment_msdyn_recording_appointment_activity": "Recordings (msdyn_appointment_msdyn_recording_appointment_activity)",
+      "msdyn_appointment_msdyn_resourcerequirement": "Resource Requirements",
+      "msdyn_appointment_msdyn_transcript_transcripttarget": "Transcripts",
+      "ntzz_Bookableresource_Appointment": "Bookable resource",
+      "onholdtime": "On Hold Time (Minutes)",
+      "onlinemeetingchatid": "Online Meeting Chat Id",
+      "onlinemeetingid": "Online Meeting Id",
+      "onlinemeetingjoinurl": "Online Meeting Join Url",
+      "onlinemeetingtype": "Online Meeting Type",
+      "originalstartdate": "Original Start Date",
+      "outlookownerapptid": "Outlook Appointment Owner",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit_appointment": "Owning Business Unit",
+      "owningteam_appointment": "Owning Team",
+      "owninguser_appointment": "Owning User",
+      "prioritycode": "Priority",
+      "processid": "Process",
+      "scheduleddurationminutes": "Duration",
+      "scheduledend": "End Time",
+      "scheduledstart": "Start Time",
+      "seriesid": "Series Id",
+      "serviceid_appointment": "Service",
+      "sla_appointment_sla": "SLA",
+      "slainvokedid_appointment_sla": "Last SLA applied",
+      "slakpiinstance_appointment": "SLA KPI Instances",
+      "sortdate": "Sort Date",
+      "stageid": "(Deprecated) Process Stage",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "subcategory": "Sub-Category",
+      "subject": "Subject",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid_appointment": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Appointments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Appointments (Views)",
+    "Name": "_appointment_views",
+    "RelatedEntityName": "Appointments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "116ae565-8b51-4bdf-a51b-76a3b7cec9d6": "My Draft Appointments",
+      "56339419-5fae-4048-80b5-3278e420d375": "Appointment Advanced Find View",
+      "5b5f75f6-b585-4212-952a-b4cbb64e2627": "All Appointments",
+      "606eea12-0c33-47d3-96e1-ba1529ee8205": "My Appointments",
+      "903ae6d0-c966-eb11-89ff-000d3a272cbe": "Appointment Tooltips view",
+      "939d9171-7353-4dc7-804e-cbb31a2b2448": "My Completed Appointments",
+      "d0479533-05a4-4bd3-affc-5767379a344d": "Appointment Associated View",
+      "de2e5182-841c-43bf-8d21-46cfff36f706": "Appointment Lookup View"
+    }
+  },
+  {
+    "DisplayName": "AttachmentErrors (Appointments)",
+    "Name": "appointment_attachmenterrors",
+    "OptionSetInfoNameMapping": {
+      "0": "None",
+      "1": "The appointment was saved as a Microsoft Dynamics 365 appointment record, but not all the attachments could be saved with it. An attachment cannot be saved if it is blocked or if its file type is invalid."
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "attachmenterrors",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "attachmenterrors",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Appointment Type (Appointments)",
+    "Name": "appointment_instancetypecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Not Recurring",
+      "1": "Recurring Master",
+      "2": "Recurring Instance",
+      "3": "Recurring Exception",
+      "4": "Recurring Future Exception"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "instancetypecode",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "instancetypecode",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "All Day Event (Appointments)",
+    "Name": "appointment_isalldayevent",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isalldayevent",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isalldayevent",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Billed (Appointments)",
+    "Name": "appointment_isbilled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isbilled",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isbilled",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "IsDraft (Appointments)",
+    "Name": "appointment_isdraft",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isdraft",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isdraft",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Private (Appointments)",
+    "Name": "appointment_ismapiprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ismapiprivate",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ismapiprivate",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Workflow Created (Appointments)",
+    "Name": "appointment_isworkflowcreated",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isworkflowcreated",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isworkflowcreated",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Appointments)",
+    "Name": "appointment_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Low",
+      "1": "Normal",
+      "2": "High"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Appointments)",
+    "Name": "appointment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Open",
+      "1": "Completed",
+      "2": "Canceled",
+      "3": "Scheduled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Appointments)",
+    "Name": "appointment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Free",
+      "2": "Tentative",
+      "3": "Completed",
+      "4": "Canceled",
+      "5": "Busy",
+      "6": "Out of Office"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Online Meeting",
+    "Name": "isonlinemeeting",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isonlinemeeting",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isonlinemeeting",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Online Meeting Type",
+    "Name": "onlinemeetingtype",
+    "OptionSetInfoNameMapping": {
+      "1": "Teams Meeting"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "onlinemeetingtype",
+        "OptionSetReferenceEntityName": "Appointments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "onlinemeetingtype",
+    "RelatedEntityName": "Appointments",
+    "Type": "OptionSetInfo"
+  }
+]

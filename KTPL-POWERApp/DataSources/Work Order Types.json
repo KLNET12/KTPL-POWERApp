@@ -1,0 +1,146 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_workordertypes",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_workordertype",
+    "MaxGetRowsCount": 500,
+    "Name": "Work Order Types",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_incidentrequired": "Incident Required",
+      "msdyn_msdyn_workordertype_msdyn_actual_WorkOrderType": "Actuals",
+      "msdyn_msdyn_workordertype_msdyn_agreementbookingsetup_WorkOrderType": "Agreement Booking Setups",
+      "msdyn_msdyn_workordertype_msdyn_incidenttype_DefaultWorkOrderType": "Incident Types",
+      "msdyn_msdyn_workordertype_msdyn_quotebookingsetup_WorkOrderType": "Quote Booking Setups",
+      "msdyn_msdyn_workordertype_msdyn_workorder_WorkOrderType": "Work Orders",
+      "msdyn_msdyn_workordertype_opportunity_WorkOrderType": "Opportunities",
+      "msdyn_name": "Name",
+      "msdyn_pricelist": "Price List",
+      "msdyn_taxable": "Taxable",
+      "msdyn_workordertype_AsyncOperations": "System Jobs",
+      "msdyn_workordertype_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_workordertype_DuplicateBaseRecord": "Duplicate Records (msdyn_workordertype_DuplicateBaseRecord)",
+      "msdyn_workordertype_DuplicateMatchingRecord": "Duplicate Records (msdyn_workordertype_DuplicateMatchingRecord)",
+      "msdyn_workordertype_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_workordertype_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_workordertype_ProcessSession": "Process Sessions",
+      "msdyn_workordertype_SyncErrors": "Sync Errors",
+      "msdyn_workordertypeid": "Work Order Type",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Order Types",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Work Order Types (Views)",
+    "Name": "_msdyn_workordertype_views",
+    "RelatedEntityName": "Work Order Types",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3478e954-a32d-4e4f-b2df-c64902a2e25a": "Work Order Type Associated View",
+      "35e9d617-27b4-4a9c-8be9-4ef13a0d9851": "Inactive Work Order Types",
+      "3e7a7827-a6d8-444b-8f1e-ec3d61ebc2ca": "Work Order Type Advanced Find View",
+      "88536f02-3c15-456a-8419-350767ccd053": "Active Work Order Types",
+      "8f0514ca-d271-46cc-b531-41791c56949a": "Work Order Type Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Incident Required (Work Order Types)",
+    "Name": "msdyn_workordertype_msdyn_incidentrequired",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_incidentrequired",
+        "OptionSetReferenceEntityName": "Work Order Types"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_incidentrequired",
+    "RelatedEntityName": "Work Order Types",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Taxable (Work Order Types)",
+    "Name": "msdyn_workordertype_msdyn_taxable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_taxable",
+        "OptionSetReferenceEntityName": "Work Order Types"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_taxable",
+    "RelatedEntityName": "Work Order Types",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Work Order Types)",
+    "Name": "msdyn_workordertype_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Work Order Types"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Work Order Types",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Work Order Types)",
+    "Name": "msdyn_workordertype_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Work Order Types"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Work Order Types",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,288 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msfp_alerts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msfp_alert",
+    "MaxGetRowsCount": 500,
+    "Name": "Customer Voice alert",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "_regardingobjectid_value": "Regarding",
+      "{Attachments}": "Attachments",
+      "activityadditionalparams": "Activity Additional Parameters",
+      "activityid": "Activity",
+      "activitytypecode": "Activity Type",
+      "actualdurationminutes": "Actual Duration",
+      "actualend": "Actual End",
+      "actualstart": "Actual Start",
+      "CampaignResponse_msfp_alerts": "Campaign Responses",
+      "community": "Social Channel",
+      "createdby_msfp_alert": "Created By",
+      "createdon": "Date Created",
+      "createdonbehalfby_msfp_alert": "Created By (Delegate)",
+      "deliverylastattemptedon": "Date Delivery Last Attempted",
+      "deliveryprioritycode": "Delivery Priority",
+      "description": "Description",
+      "exchangeitemid": "Exchange Item ID",
+      "exchangerate": "Exchange Rate",
+      "exchangeweblink": "Exchange WebLink",
+      "importsequencenumber": "Import Sequence Number",
+      "instancetypecode": "Recurring Instance Type",
+      "isbilled": "Is Billed",
+      "ismapiprivate": "Is Private",
+      "isregularactivity": "Is Regular Activity",
+      "isworkflowcreated": "Is Workflow Created",
+      "lastonholdtime": "Last On Hold Time",
+      "leftvoicemail": "Left Voice Mail",
+      "modifiedby_msfp_alert": "Modified By",
+      "modifiedon": "Last Updated",
+      "modifiedonbehalfby_msfp_alert": "Modified By (Delegate)",
+      "msfp_alert_ActionCards": "Action Cards",
+      "msfp_alert_Annotations": "Notes (msfp_alert_Annotations)",
+      "msfp_alert_AsyncOperations": "System Jobs",
+      "msfp_alert_BulkDeleteFailures": "Bulk Delete Failures",
+      "msfp_alert_connections1": "Connections (msfp_alert_connections1)",
+      "msfp_alert_connections2": "Connections (msfp_alert_connections2)",
+      "msfp_alert_DuplicateBaseRecord": "Duplicate Records (msfp_alert_DuplicateBaseRecord)",
+      "msfp_alert_DuplicateMatchingRecord": "Duplicate Records (msfp_alert_DuplicateMatchingRecord)",
+      "msfp_alert_Feedback": "Feedback",
+      "msfp_alert_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msfp_alert_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msfp_alert_ProcessSession": "Process Sessions",
+      "msfp_alert_QueueItems": "Queue Items",
+      "msfp_alert_SyncErrors": "Sync Errors",
+      "msfp_alertrule": "Alert rule",
+      "msfp_assigneeemail": "Assignee email",
+      "msfp_assigneename": "Assignee name",
+      "msfp_customeremail": "Customer email",
+      "msfp_customername": "Customer name",
+      "msfp_notes": "Notes (msfp_notes)",
+      "msfp_project": "Project",
+      "msfp_questions": "Questions",
+      "msfp_reason": "Reason",
+      "msfp_resolutiondetail": "Resolution detail",
+      "msfp_resolutionsentiment": "Resolution sentiment",
+      "msfp_resolveremail": "Resolver email",
+      "msfp_resolvername": "Resolver name",
+      "msfp_satisfactionmetric": "Satisfaction metric",
+      "msfp_survey": "Survey",
+      "msfp_surveyresponse": "Survey Response",
+      "onholdtime": "On Hold Time (Minutes)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit_msfp_alert": "Owning Business Unit",
+      "owningteam_msfp_alert": "Owning Team",
+      "owninguser_msfp_alert": "Owning User",
+      "postponeactivityprocessinguntil": "Delay activity processing until",
+      "prioritycode": "Priority",
+      "processid": "Process",
+      "scheduleddurationminutes": "Scheduled Duration",
+      "scheduledend": "Due Date",
+      "scheduledstart": "Start Date",
+      "sendermailboxid_msfp_alert": "Sender's Mailbox",
+      "senton": "Date Sent",
+      "seriesid": "Series Id",
+      "serviceid_msfp_alert": "Service",
+      "sla_activitypointer_sla_msfp_alert": "SLA",
+      "slainvokedid_activitypointer_sla_msfp_alert": "Last SLA applied",
+      "sortdate": "Sort Date",
+      "stageid": "(Deprecated) Process Stage",
+      "statecode": "Activity Status",
+      "statuscode": "Status Reason",
+      "subject": "Subject",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid_msfp_alert": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Customer Voice alert",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Customer Voice alert (Views)",
+    "Name": "_msfp_alert_views",
+    "RelatedEntityName": "Customer Voice alert",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1e866f43-8c6c-43be-aa38-0f13a88799be": "My Open Customer Voice alert",
+      "21e9b186-c83f-4308-8eac-ee43d969fe1f": "Customer Voice alert Lookup View",
+      "3376a720-3b2e-42e2-9d24-e4c620b697a1": "Customer Voice alert Advanced Find View",
+      "4f23a026-26d8-4f05-8997-965c4bb1b6b4": "Closed Customer Voice alert",
+      "603663fb-9757-eb11-a812-6045bd72925e": "Customer Voice Alert",
+      "98a0ed9b-db67-4a5e-b025-2ca87627cb4c": "All Customer Voice alert",
+      "a98a104b-3b18-492f-b133-b1683e9b4d13": "Customer Voice alert Associated View"
+    }
+  },
+  {
+    "DisplayName": "Recurring Instance Type (Customer Voice alert)",
+    "Name": "msfp_alert_instancetypecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Not Recurring",
+      "1": "Recurring Master",
+      "2": "Recurring Instance",
+      "3": "Recurring Exception",
+      "4": "Recurring Future Exception"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "instancetypecode",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "instancetypecode",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Billed (Customer Voice alert)",
+    "Name": "msfp_alert_isbilled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isbilled",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isbilled",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Private (Customer Voice alert)",
+    "Name": "msfp_alert_ismapiprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ismapiprivate",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ismapiprivate",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Workflow Created (Customer Voice alert)",
+    "Name": "msfp_alert_isworkflowcreated",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isworkflowcreated",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isworkflowcreated",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Left Voice Mail (Customer Voice alert)",
+    "Name": "msfp_alert_leftvoicemail",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leftvoicemail",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "leftvoicemail",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Customer Voice alert)",
+    "Name": "msfp_alert_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Low",
+      "1": "Normal",
+      "2": "High"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Activity Status (Customer Voice alert)",
+    "Name": "msfp_alert_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Open",
+      "1": "Completed",
+      "2": "Canceled",
+      "3": "Scheduled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Customer Voice alert)",
+    "Name": "msfp_alert_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Open",
+      "2": "Completed",
+      "3": "Canceled",
+      "4": "Scheduled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Customer Voice alert"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Customer Voice alert",
+    "Type": "OptionSetInfo"
+  }
+]

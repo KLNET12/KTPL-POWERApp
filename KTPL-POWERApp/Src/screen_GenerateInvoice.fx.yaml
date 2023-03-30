@@ -1,0 +1,1356 @@
+screen_GenerateInvoice As screen:
+    Fill: =RGBA(252, 252, 232, 1)
+    OnVisible: |
+        =If(varInvoice,Set(varDisplaySummary,true);Set(varDisplayProducts,false);Set(varDisplayServices,false),Set(varEditSummary,true);Set(varEditProducts,false);Set(varEditServices,false));
+        If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    Button6 As button:
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =85
+        OnSelect: |-
+            =If(IsBlank(varInvoiceId),Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected , Currency: Currency.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value,'Bookable Resource Booking':Currency_1.Selected
+            } )),Set(GeneratedInvoice,Patch(Invoices,GeneratedInvoice, {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value,'Bookable Resource Booking':Currency_1.Selected
+            } )));
+            Set(varInvoiceId,GeneratedInvoice.Invoice);
+            Reset(Name);
+            Reset(Customer);
+            Reset('Bookable resource');
+            Reset('Invoice Date');
+            Reset(Currency);
+            Reset('Due date');
+            Reset(Type);
+            Reset(Status);
+            Reset('Price List');
+            Reset(Currency_1);
+            Reset('WO Number');
+            Notify("Invoice Generated",NotificationType.Success)
+        Size: =24
+        Text: =If(IsBlank(varInvoiceId),"Generate Invoice","Update Invoice")
+        Visible: =!varInvoice && varEditSummary
+        Width: =640
+        Y: =1051
+        ZIndex: =4
+
+    Component1_8 As Component1:
+        Height: =70
+        ZIndex: =26
+
+    Label12 As label:
+        Fill: =RGBA(247, 241, 173, 0.96)
+        Height: =70
+        Size: =21
+        Text: ="Please fill all the fields to generate the Invoice"
+        Visible: =If(IsBlank(varInvoiceId),true,false)
+        Width: =640
+        Y: =70
+        ZIndex: =27
+
+    "'Display Invoice Record' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderThickness: =1
+        Fill: =RGBA(252, 255, 204, 1)
+        Height: =926
+        Items: =Filter(Invoices, Invoice = varInvoiceId)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =964
+        Visible: =varInvoice && varDisplaySummary
+        Y: =210
+        ZIndex: =28
+
+        Separator15 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label16 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice No."
+            Width: =230
+            Y: =5
+            ZIndex: =6
+
+        Label16_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Name"
+            Width: =230
+            Y: =60
+            ZIndex: =7
+
+        Label16_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Customer"
+            Width: =230
+            Y: =115
+            ZIndex: =8
+
+        Label16_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Work Order No."
+            Width: =230
+            Y: =170
+            ZIndex: =9
+
+        Label16_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Bookable Resource"
+            Width: =230
+            Y: =225
+            ZIndex: =10
+
+        Label16_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Booking"
+            Width: =230
+            Y: =280
+            ZIndex: =11
+
+        Label16_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Due Date"
+            Width: =230
+            Y: =555
+            ZIndex: =12
+
+        Label16_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Date"
+            Width: =230
+            Y: =500
+            ZIndex: =13
+
+        Label16_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Created On"
+            Width: =230
+            Y: =445
+            ZIndex: =14
+
+        Label16_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Currency"
+            Width: =230
+            Y: =390
+            ZIndex: =15
+
+        Label16_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Price List"
+            Width: =230
+            Y: =335
+            ZIndex: =16
+
+        Label16_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Type"
+            Width: =230
+            Y: =610
+            ZIndex: =17
+
+        Label16_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Ship To"
+            Width: =230
+            Y: =665
+            ZIndex: =18
+
+        Label16_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =134
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Bill To Address"
+            Width: =230
+            Y: =720
+            ZIndex: =19
+
+        Label16_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Detail Amount"
+            Width: =230
+            Y: =854
+            ZIndex: =20
+
+        Label16_15 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Total Amount"
+            Width: =230
+            Y: =909
+            ZIndex: =21
+
+        Label16_16 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Invoice ID'
+            Width: =410
+            X: =230
+            Y: =5
+            ZIndex: =22
+
+        Label16_17 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Name
+            Width: =410
+            X: =230
+            Y: =60
+            ZIndex: =23
+
+        Label16_18 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =If(IsType(ThisItem.Customer, Accounts), AsType(ThisItem.Customer, Accounts).'Account Name', AsType(ThisItem.Customer, Contacts).'Full Name')
+            Width: =410
+            X: =230
+            Y: =115
+            ZIndex: =24
+
+        Label16_19 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Work Order'.'Work Order Number'
+            Width: =410
+            X: =230
+            Y: =170
+            ZIndex: =25
+
+        Label16_20 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bookable Resource'.Name
+            Width: =410
+            X: =230
+            Y: =225
+            ZIndex: =26
+
+        Label16_21 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bookable Resource Booking'.Name
+            Width: =410
+            X: =230
+            Y: =280
+            ZIndex: =27
+
+        Label16_22 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Price List'.Name
+            Width: =410
+            X: =230
+            Y: =335
+            ZIndex: =28
+
+        Label16_23 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Currency.'Currency Name'
+            Width: =410
+            X: =230
+            Y: =390
+            ZIndex: =29
+
+        Label16_24 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Created On'
+            Width: =410
+            X: =230
+            Y: =445
+            ZIndex: =30
+
+        Label16_25 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Invoice Date'
+            Width: =410
+            X: =230
+            Y: =500
+            ZIndex: =31
+
+        Label16_26 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Due Date'
+            Width: =410
+            X: =230
+            Y: =555
+            ZIndex: =32
+
+        Label16_27 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Type
+            Width: =410
+            X: =230
+            Y: =610
+            ZIndex: =33
+
+        Label16_28 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Ship To'
+            Width: =410
+            X: =230
+            Y: =665
+            ZIndex: =34
+
+        Label16_29 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =134
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bill To Street 1' & " " & ThisItem.'Bill To Street 2' & " " &   ThisItem.'Bill To Street 3' & " " & ThisItem.'Bill To City' & " " & ThisItem.'Bill To State/Province' & " " &  ThisItem.'Bill To Country/Region'
+            Visible: =varInvoice
+            Width: =410
+            X: =230
+            Y: =720
+            ZIndex: =35
+
+        Label16_30 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Total Detail Amount'
+            Width: =410
+            X: =230
+            Y: =854
+            ZIndex: =36
+
+        Label16_31 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Total Amount'
+            Width: =410
+            X: =230
+            Y: =909
+            ZIndex: =37
+
+    Label12_7 As label:
+        Align: =Align.Center
+        Fill: =RGBA(247, 241, 173, 0.96)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =22
+        Text: ="Invoice Details for Work Order No. " & First(Filter(Invoices, Invoice = varInvoiceId)).'Work Order'.'Work Order Number'
+        Visible: =If(IsBlank(varInvoiceId),false,true)
+        Width: =640
+        Y: =70
+        ZIndex: =29
+
+    Icon13 As icon.DockLeft:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: |-
+            =If(varInvoice,Set(varInvoice,true), Set(varInvoice,false));
+            Refresh(Invoices);
+            Refresh('Work Orders');
+            Reset(Name);
+            Reset(Customer);
+            Reset('Bookable resource');
+            Reset('Invoice Date');
+            Reset(Currency);
+            Reset('Due date');
+            Reset(Type);
+            Reset(Status);
+            Reset('Price List');
+            Reset(Currency_1);
+            Reset('WO Number');
+            Navigate(screen_ShowInvoices);
+        X: =576
+        ZIndex: =30
+
+    MenuLeftNav_16 As MenuLeftNav:
+        Height: =MenuLeftNav_16.MenuHeight
+        Width: =MenuLeftNav_16.MenuWidth
+        Y: =10
+        ZIndex: =31
+
+    Timer1_21 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =32
+
+    "'Invoice Products' As gallery.variableTemplateHeightGallery":
+        DelayItemLoading: =true
+        Fill: =RGBA(252, 255, 204, 1)
+        Height: =926
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.Product || 'Product type'='Product Type'.'Optional Bundle Product') && Not('Existing Product'.'Product Type'='Product Type (Products)'.Services))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Visible: =varDisplayProducts || varEditProducts
+        Y: =210
+        ZIndex: =36
+
+        Name_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+            Label33 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Product Name'
+                Width: =430
+                X: =200
+                ZIndex: =1
+
+            Label33_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Name:"
+                Width: =200
+                ZIndex: =2
+
+        Description_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            Label34 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Description:"
+                Width: =200
+                Y: =70
+                ZIndex: =3
+
+            Label33_2 As label:
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Description
+                Width: =430
+                X: =200
+                Y: =70
+                ZIndex: =4
+
+        Amount_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =9
+
+            Label34_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Amount:"
+                Width: =200
+                Y: =240
+                ZIndex: =7
+
+            Label33_4 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Extended Amount'
+                Width: =430
+                X: =200
+                Y: =240
+                ZIndex: =8
+
+        Rectangle3 As rectangle:
+            Height: =2
+            Width: =Parent.Width
+            Y: =310
+            ZIndex: =11
+
+        Quantity_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =11
+
+            Label34_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Quantity:"
+                Width: =200
+                Y: =170
+                ZIndex: =9
+
+            Label33_3 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Quantity
+                Width: =430
+                X: =200
+                Y: =170
+                ZIndex: =10
+
+        icon_editInvoiceProduct As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =ResetForm(form_InvoiceLine);
+                Set(varNew,false);
+                Set(varInvoiceLine,ThisItem); Navigate('screen_CreateService/Product')
+            X: =566
+            Y: =243
+            ZIndex: =14
+
+        Price_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =14
+
+            Label33_10 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Price Per Unit'
+                Width: =130
+                X: =500
+                Y: =170
+                ZIndex: =12
+
+            Label34_6 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Price per Unit:"
+                Width: =220
+                X: =280
+                Y: =170
+                ZIndex: =13
+
+    "'Invoice Services' As gallery.variableTemplateHeightGallery":
+        DelayItemLoading: =true
+        Fill: =RGBA(252, 255, 204, 1)
+        Height: =926
+        Items: |-
+            =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.'Project-based Service' 
+            || 'Existing Product'.'Product Type'='Product Type (Products)'.Services))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Visible: =varDisplayServices || varEditServices
+        Y: =210
+        ZIndex: =37
+
+        Name_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+            Label33_6 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Product Name'
+                Width: =430
+                X: =200
+                ZIndex: =1
+
+            Label33_5 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Name:"
+                Width: =200
+                ZIndex: =2
+
+        Description_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            Label34_3 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Description:"
+                Width: =200
+                Y: =70
+                ZIndex: =3
+
+            Label33_7 As label:
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Description
+                Width: =430
+                X: =200
+                Y: =70
+                ZIndex: =4
+
+        Amount_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =9
+
+            Label34_5 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Amount:"
+                Width: =200
+                Y: =240
+                ZIndex: =7
+
+            Label33_9 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Amount
+                Width: =430
+                X: =200
+                Y: =240
+                ZIndex: =8
+
+        Rectangle3_1 As rectangle:
+            Height: =2
+            Width: =630
+            Y: =310
+            ZIndex: =11
+
+        Quantity_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =11
+
+            Label34_4 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Duration:"
+                Width: =200
+                Y: =170
+                ZIndex: =9
+
+            Label33_8 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Quantity
+                Width: =430
+                X: =200
+                Y: =170
+                ZIndex: =10
+
+        icon_editInvoiceProduct_1 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =ResetForm(form_InvoiceLine);
+                Set(varNew,false);
+                Set(varInvoiceLine,ThisItem); Navigate('screen_CreateService/Product')
+            X: =566
+            Y: =243
+            ZIndex: =14
+
+        Price_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =-240
+            Y: =-130
+            ZIndex: =14
+
+            Label33_11 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Price Per Unit'
+                Width: =130
+                X: =500
+                Y: =170
+                ZIndex: =12
+
+            Label34_7 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Price per Unit:"
+                Width: =220
+                X: =280
+                Y: =170
+                ZIndex: =13
+
+    label_noDataAvailable_Products As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="No Data Available"
+        Visible: =If((varDisplayProducts || varEditProducts) && CountRows('Invoice Products'.AllItems)=0,true,false)
+        Width: =560
+        X: =Parent.Width/17
+        Y: =Parent.Height/2
+        ZIndex: =38
+
+    icon_AddInvoiceLine As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: |-
+            =ResetForm(form_InvoiceLine);
+            NewForm(form_InvoiceLine);
+            If(varEditProducts,Set(varPro,true),Set(varPro,false));
+            Set(varNew,true);
+            Navigate('screen_CreateService/Product')
+        Tooltip: =If(varEditProducts,"Add New Invoice Line Product","Add New Invoice Line Service")
+        Visible: =If(varEditProducts || varEditServices,true,false)
+        X: =487
+        Y: =2
+        ZIndex: =39
+
+    Icon22 As icon.Edit:
+        Icon: =Icon.Edit
+        OnSelect: =Set(varInvoice,false); Set(varEditSummary,true);
+        Visible: =varInvoice
+        X: =487
+        Y: =2
+        ZIndex: =40
+
+    Plicelist As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_5 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Price List"
+            Visible: =!varInvoice && varEditSummary
+            Width: =640
+            Y: =480
+            ZIndex: =11
+
+        "'Price List' As dropdown":
+            Default: =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.'Price List'.Name,GeneratedInvoice.'Price List'.Name)
+            Height: =60
+            Items: ='Price Lists'
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =480
+            ZIndex: =13
+
+    InvoiceStatus As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Status As dropdown:
+            Default: =If(IsBlank(varInvoiceId),'Project Invoice Status'.Draft,GeneratedInvoice.'Project Invoice Status')
+            Height: =60
+            Items: =Choices('Project Invoice Status')
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =900
+            ZIndex: =16
+
+        Label12_13 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =18
+            Text: ="Invoice Status"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =900
+            ZIndex: =23
+
+    Bookings As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_14 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =18
+            Text: ="Bookings"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =840
+            ZIndex: =24
+
+        Currency_1 As dropdown:
+            Default: =If(IsBlank(varInvoiceId),First(gallery_WorkOrder.Selected.'Bookable Resource Bookings').Name,GeneratedInvoice.'Bookable Resource Booking'.Name)
+            Height: =60
+            Items: =Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text)
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =840
+            ZIndex: =25
+
+    Type_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_10 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Type"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =780
+            ZIndex: =21
+
+        Type As dropdown:
+            Default: =If(IsBlank(varInvoiceId),'Type (Invoices)'.'Work based',GeneratedInvoice.Type)
+            Height: =60
+            Items: =Choices('Type (Invoices)')
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =780
+            ZIndex: =22
+
+    Duedate As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_9 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Due Date"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =720
+            ZIndex: =19
+
+        "'Due date' As datepicker":
+            DefaultDate: =If(IsBlank(varInvoiceId),Today(),GeneratedInvoice.'Due Date')
+            Height: =60
+            Size: =24
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =720
+            ZIndex: =20
+
+    Invoicedate As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_8 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Invoice Date"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =660
+            ZIndex: =17
+
+        "'Invoice Date' As datepicker":
+            DefaultDate: =If(IsBlank(varInvoiceId),Today(),GeneratedInvoice.'Invoice Date')
+            Height: =60
+            Size: =24
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =660
+            ZIndex: =18
+
+    TotalAmount As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_11 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Total Amount"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =600
+            ZIndex: =1
+
+        Label28 As label:
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Size: =21
+            Text: =If(IsBlank(varInvoiceId),Value(0),First(Filter(Invoices,Invoice=GeneratedInvoice.Invoice)).'Total Amount')
+            Visible: =!varInvoice && varEditSummary
+            Width: =457
+            X: =183
+            Y: =600
+            ZIndex: =2
+
+    Currency_ As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_6 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Currency"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =540
+            ZIndex: =3
+
+        Currency As dropdown:
+            Default: |
+                =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.Currency.'Currency Name',GeneratedInvoice.Currency.'Currency Name')
+            DisabledFill: =RGBA(26, 26, 26, 1)
+            DisplayMode: =If(IsBlank(varInvoiceId),DisplayMode.Edit,DisplayMode.View)
+            Height: =60
+            Items: =Currencies
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =540
+            ZIndex: =14
+
+    BookableResource As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_4 As label:
+            BorderThickness: =1
+            Height: =65
+            PaddingLeft: =10
+            Size: =18
+            Text: |-
+                ="Bookable
+                Resource"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =415
+            ZIndex: =9
+
+        "'Bookable resource' As dropdown":
+            Default: =If(IsBlank(varInvoiceId),First(Filter('Bookable Resources', Username = TextInput2.Text)).Name,GeneratedInvoice.'Bookable Resource'.Name)
+            Height: =65
+            Items: =First(Filter('Bookable Resources', Username = TextInput2.Text))
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =415
+            ZIndex: =10
+
+    "'Workorder number' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_3 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Workorder"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =355
+            ZIndex: =8
+
+        "'WO Number' As dropdown":
+            Default: =If(IsBlank(varInvoiceId),First(Filter('Work Orders','WO Number' = varWorkId)).'Work Order Number',GeneratedInvoice.'Work Order'.'Work Order Number')
+            Height: =60
+            Items: =First(Filter('Work Orders','WO Number' = varWorkId))
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =355
+            ZIndex: =15
+
+    Customer_ As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_2 As label:
+            BorderThickness: =1
+            Height: =60
+            PaddingLeft: =10
+            Size: =19
+            Text: ="Customer"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =295
+            ZIndex: =7
+
+        Customer As dropdown:
+            Default: =If(IsBlank(varInvoiceId),First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account)).'Account Name',If(IsType(GeneratedInvoice.Customer, Accounts), AsType(GeneratedInvoice.Customer, Accounts).'Account Name', AsType(GeneratedInvoice.Customer, Contacts).'Full Name'))
+            Height: =60
+            Items: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account))
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =458
+            X: =182
+            Y: =295
+            ZIndex: =12
+
+    Name_ As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Label12_1 As label:
+            BorderThickness: =2
+            Height: =60
+            PaddingLeft: =10
+            Size: =20
+            Text: ="Name"
+            Visible: =!varInvoice && varEditSummary
+            Width: =182
+            Y: =235
+            ZIndex: =5
+
+        Name As text:
+            Default: =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.'Work Order Number',GeneratedInvoice.Name)
+            Height: =60
+            HintText: ="Name"
+            Size: =21
+            Visible: =!varInvoice && varEditSummary
+            Width: =457
+            X: =182
+            Y: =235
+            ZIndex: =6
+
+    label_noDataAvailable_Services As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="No Data Available"
+        Visible: =If((varDisplayServices || varEditServices) && CountRows('Invoice Services'.AllItems)=0,true,false)
+        Width: =560
+        X: =Parent.Width/17
+        Y: =Parent.Height/2
+        ZIndex: =41
+
+    Tabs As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        button_Summary As button:
+            Height: =70
+            OnSelect: =If(varInvoice,Set(varDisplaySummary,true);Set(varDisplayProducts,false);Set(varDisplayServices,false),Set(varEditSummary,true);Set(varEditProducts,false);Set(varEditServices,false))
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Summary"
+            Width: =Parent.Width/3
+            Y: =140
+            ZIndex: =33
+
+        button_Products As button:
+            Height: =70
+            OnSelect: |-
+                =If(IsBlank(varInvoiceId),Notify("Please Generate the Invoice First",NotificationType.Warning),
+                If(varInvoice,Set(varDisplaySummary,false);Set(varDisplayProducts,true);Set(varDisplayServices,false),Set(varEditSummary,false);Set(varEditProducts,true);Set(varEditServices,false)))
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Products"
+            Width: =Parent.Width/3
+            X: =213
+            Y: =140
+            ZIndex: =34
+
+        button_Services As button:
+            Height: =70
+            OnSelect: =If(IsBlank(varInvoiceId),Notify("Please Generate the Invoice First",NotificationType.Warning),If(varInvoice,Set(varDisplaySummary,false);Set(varDisplayProducts,false);Set(varDisplayServices,true),Set(varEditSummary,false);Set(varEditProducts,false);Set(varEditServices,true)))
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Services"
+            Width: =Parent.Width/3
+            X: =427
+            Y: =140
+            ZIndex: =35
+

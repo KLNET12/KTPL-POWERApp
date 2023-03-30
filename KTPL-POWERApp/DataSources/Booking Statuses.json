@@ -1,0 +1,211 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "bookingstatuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "bookingstatus",
+    "MaxGetRowsCount": 500,
+    "Name": "Booking Statuses",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "bookingstatus_AsyncOperations": "System Jobs",
+      "bookingstatus_bookableresourcebooking_BookingStatus": "Bookable Resource Bookings",
+      "bookingstatus_BulkDeleteFailures": "Bulk Delete Failures",
+      "bookingstatus_DuplicateBaseRecord": "Duplicate Records (bookingstatus_DuplicateBaseRecord)",
+      "bookingstatus_DuplicateMatchingRecord": "Duplicate Records (bookingstatus_DuplicateMatchingRecord)",
+      "bookingstatus_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "bookingstatus_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "bookingstatus_ProcessSession": "Process Sessions",
+      "BookingStatus_SyncErrors": "Sync Errors",
+      "bookingstatusid": "Booking Status",
+      "createdbyname": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfbyname": "Created By (Delegate)",
+      "description": "Description",
+      "exchangerate": "ExchangeRate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedbyname": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfbyname": "Modified By (Delegate)",
+      "msdyn_bookingstatus_bookableresourcebookingheader_bookingstatusid": "Bookable Resource Booking Headers",
+      "msdyn_bookingstatus_msdyn_bookingsetupmetadata_DefaultBookingCanceledStatus": "Booking Setup Metadata Records (msdyn_bookingstatus_msdyn_bookingsetupmetadata_DefaultBookingCanceledStatus)",
+      "msdyn_bookingstatus_msdyn_bookingsetupmetadata_DefaultBookingCommittedStatus": "Booking Setup Metadata Records (msdyn_bookingstatus_msdyn_bookingsetupmetadata_DefaultBookingCommittedStatus)",
+      "msdyn_bookingstatus_msdyn_bookingtimestamp_BookingStatus": "Booking Timestamps",
+      "msdyn_bookingstatus_msdyn_fieldservicesetting_DefaultCanceledBookingStatus": "Field Service Settings (msdyn_bookingstatus_msdyn_fieldservicesetting_DefaultCanceledBookingStatus)",
+      "msdyn_bookingstatus_msdyn_fieldservicesetting_DefaultScheduledBookingStatus": "Field Service Settings (msdyn_bookingstatus_msdyn_fieldservicesetting_DefaultScheduledBookingStatus)",
+      "msdyn_bookingstatus_msdyn_resourceassignment_bookingstatusid": "Resource Assignments",
+      "msdyn_bookingstatus_msdyn_timeentry_BookingStatus": "Time Entries",
+      "msdyn_committype": "Commit Type",
+      "msdyn_fieldservicestatus": "Field Service Status",
+      "msdyn_imageurl": "Image Url",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_serviceappointmentstatus": "ServiceAppointment Status",
+      "msdyn_statuscolor": "Status Color",
+      "name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "status": "Status (status)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Booking Statuses",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Booking Statuses (Views)",
+    "Name": "_bookingstatus_views",
+    "RelatedEntityName": "Booking Statuses",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1b11b197-72ea-41d2-8e88-e9c0aa9231cb": "Booking Status filtered by Field Service Status",
+      "57716ad8-785f-416f-8a48-1577cd84425e": "Booking Status Lookup View",
+      "7d373f85-693d-4fca-a884-3bf535310977": "Booking Status Associated View",
+      "7d7218d4-c289-483b-82a5-1fd7ffc3161c": "Inactive Booking Statuses",
+      "93bd4308-6eaf-eb11-8237-000d3a9e4595": "Completed Booking Status View",
+      "b5a8b93a-09d0-42c6-b084-4674a15a71e5": "Booking Status Advanced Find View",
+      "d9ae0aba-727c-4e3c-9613-e28628ba5309": "Active Booking Statuses"
+    }
+  },
+  {
+    "DisplayName": "Status (Booking Statuses)_1",
+    "Name": "bookingstatus_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Booking Statuses)",
+    "Name": "bookingstatus_status",
+    "OptionSetInfoNameMapping": {
+      "1": "Proposed",
+      "2": "Committed",
+      "3": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "status",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "status",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Booking Statuses)",
+    "Name": "bookingstatus_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Booking System Status",
+    "Name": "msdyn_bookingsystemstatus",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Scheduled",
+      "690970001": "Traveling",
+      "690970002": "On Break",
+      "690970003": "In Progress",
+      "690970004": "Completed",
+      "690970005": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_fieldservicestatus",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_fieldservicestatus",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "msdyn_committype",
+    "Name": "msdyn_committype",
+    "OptionSetInfoNameMapping": {
+      "192350000": "None",
+      "192350001": "Hard Book",
+      "192350002": "Soft Book",
+      "192350003": "Proposed",
+      "192350004": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_committype",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_committype",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Service Appointment Status",
+    "Name": "msdyn_serviceappointmentstatus",
+    "OptionSetInfoNameMapping": {
+      "10": "No Show",
+      "3": "Pending",
+      "4": "Reserved",
+      "6": "In Progress",
+      "7": "Arrived",
+      "8": "Completed",
+      "9": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_serviceappointmentstatus",
+        "OptionSetReferenceEntityName": "Booking Statuses"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_serviceappointmentstatus",
+    "RelatedEntityName": "Booking Statuses",
+    "Type": "OptionSetInfo"
+  }
+]

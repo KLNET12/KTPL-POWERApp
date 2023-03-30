@@ -1,0 +1,161 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "activityfileattachments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "activityfileattachment",
+    "MaxGetRowsCount": 500,
+    "Name": "Activity File Attachments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "_parentid_value": "Parent",
+      "activityfileattachment_AsyncOperations": "System Jobs",
+      "activityfileattachment_BulkDeleteFailures": "Bulk Delete Failures",
+      "activityfileattachment_DuplicateBaseRecord": "Duplicate Records (activityfileattachment_DuplicateBaseRecord)",
+      "activityfileattachment_DuplicateMatchingRecord": "Duplicate Records (activityfileattachment_DuplicateMatchingRecord)",
+      "activityfileattachment_FileAttachments": "FileAttachments",
+      "activityfileattachment_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "activityfileattachment_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "activityfileattachment_ProcessSession": "Process Sessions",
+      "activityfileattachment_SyncErrors": "Sync Errors",
+      "activityfileattachmentid": "Activity File Attachment",
+      "componentidunique": "Row id unique",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "filecontent": "File Content",
+      "filename": "Name",
+      "importsequencenumber": "Import Sequence Number",
+      "ismanaged": "Is Managed",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "overwritetime": "Record Overwrite Time",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "solutionid": "Solution",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Activity File Attachments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Activity File Attachments (Views)",
+    "Name": "_activityfileattachment_views",
+    "RelatedEntityName": "Activity File Attachments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {}
+  },
+  {
+    "DisplayName": "Object Type",
+    "Name": "activityfileattachment_objectcode",
+    "OptionSetInfoNameMapping": {
+      "8000": "Post",
+      "8005": "Post Comment"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "objecttypecode",
+        "OptionSetReferenceEntityName": "Activity File Attachments"
+      }
+    },
+    "OptionSetTypeKey": "EntityNameType",
+    "RelatedColumnInvariantName": "objecttypecode",
+    "RelatedEntityName": "Activity File Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Component State",
+    "Name": "componentstate",
+    "OptionSetInfoNameMapping": {
+      "0": "Published",
+      "1": "Unpublished",
+      "2": "Deleted",
+      "3": "Deleted Unpublished"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "Activity File Attachments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "componentstate",
+    "RelatedEntityName": "Activity File Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Activity File Attachments)",
+    "Name": "cr6d5_activityfileattachment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Activity File Attachments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Activity File Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Activity File Attachments)",
+    "Name": "cr6d5_activityfileattachment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Activity File Attachments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Activity File Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Component Managed",
+    "Name": "ismanaged",
+    "OptionSetInfoNameMapping": {
+      "0": "Unmanaged",
+      "1": "Managed"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Activity File Attachments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ismanaged",
+    "RelatedEntityName": "Activity File Attachments",
+    "Type": "OptionSetInfo"
+  }
+]

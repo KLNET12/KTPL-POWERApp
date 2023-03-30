@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "4cb89190-b4c3-4aa3-a2dd-4a3a0d7d4816",
+    "Name": "RealTimeReportFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "8b113db0-21cd-ed11-b596-002248094ecc"
+  }
+]

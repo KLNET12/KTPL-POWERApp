@@ -1,0 +1,223 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_workorderservices",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_workorderservice",
+    "MaxGetRowsCount": 500,
+    "Name": "Work Order Services",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_additionalcost": "Additional Cost",
+      "msdyn_additionalcost_base": "Additional Cost (Base)",
+      "msdyn_agreementbookingservice": "Agreement Booking Service",
+      "msdyn_booking": "Booking",
+      "msdyn_calculatedunitamount": "Calculated Unit Amount",
+      "msdyn_calculatedunitamount_base": "Calculated Unit Amount (Base)",
+      "msdyn_commissioncosts": "Commission Costs",
+      "msdyn_commissioncosts_base": "Commission Costs (Base)",
+      "msdyn_customerasset": "Customer Asset",
+      "msdyn_description": "Description",
+      "msdyn_disableentitlement": "Disable Entitlement",
+      "msdyn_discountamount": "Discount Amount",
+      "msdyn_discountamount_base": "Discount Amount (Base)",
+      "msdyn_discountpercent": "Discount %",
+      "msdyn_duration": "Duration",
+      "msdyn_durationtobill": "Duration To Bill",
+      "msdyn_entitlement": "Entitlement",
+      "msdyn_estimatecalculatedunitamount": "Estimate Calculated Unit Amount",
+      "msdyn_estimatecalculatedunitamount_base": "Estimate Calculated Unit Amount (Base)",
+      "msdyn_estimatediscountamount": "Estimate Discount Amount",
+      "msdyn_estimatediscountamount_base": "Estimate Discount Amount (Base)",
+      "msdyn_estimatediscountpercent": "Estimate Discount %",
+      "msdyn_estimateduration": "Estimate Duration",
+      "msdyn_estimatesubtotal": "Estimate Subtotal",
+      "msdyn_estimatesubtotal_base": "Estimate Subtotal (Base)",
+      "msdyn_estimatetotalamount": "Estimate Total Amount",
+      "msdyn_estimatetotalamount_base": "Estimate Total Amount (Base)",
+      "msdyn_estimatetotalcost": "Estimate Total Cost",
+      "msdyn_estimatetotalcost_base": "Estimate Total Cost (Base)",
+      "msdyn_estimateunitamount": "Estimate Unit Amount",
+      "msdyn_estimateunitamount_base": "Estimate Unit Amount (Base)",
+      "msdyn_estimateunitcost": "Estimate Unit Cost",
+      "msdyn_estimateunitcost_base": "Estimate Unit Cost (Base)",
+      "msdyn_internaldescription": "Internal Description",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_lineorder": "Line Order",
+      "msdyn_linestatus": "Line Status",
+      "msdyn_minimumchargeamount": "Minimum Charge Amount",
+      "msdyn_minimumchargeamount_base": "Minimum Charge Amount (Base)",
+      "msdyn_minimumchargeduration": "Minimum Charge Duration",
+      "msdyn_msdyn_workorderservice_invoicedetail": "Invoice Lines",
+      "msdyn_name": "Name",
+      "msdyn_pricelist": "Price List",
+      "msdyn_service": "Service",
+      "msdyn_subtotal": "Subtotal",
+      "msdyn_subtotal_base": "Subtotal (Base)",
+      "msdyn_taxable": "Taxable",
+      "msdyn_totalamount": "Total Amount",
+      "msdyn_totalamount_base": "Total Amount (Base)",
+      "msdyn_totalcost": "Total Cost",
+      "msdyn_totalcost_base": "Total Cost (Base)",
+      "msdyn_unit": "Unit",
+      "msdyn_unitamount": "Unit Amount",
+      "msdyn_unitamount_base": "Unit Amount (Base)",
+      "msdyn_unitcost": "Unit Cost",
+      "msdyn_unitcost_base": "Unit Cost (Base)",
+      "msdyn_workorder": "Work Order",
+      "msdyn_workorderincident": "Work Order Incident",
+      "msdyn_workorderservice_ActivityPointers": "Activities",
+      "msdyn_workorderservice_Annotations": "Notes",
+      "msdyn_workorderservice_Appointments": "Appointments",
+      "msdyn_workorderservice_AsyncOperations": "System Jobs",
+      "msdyn_workorderservice_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_workorderservice_chats": "Teams chats",
+      "msdyn_workorderservice_connections1": "Connections (msdyn_workorderservice_connections1)",
+      "msdyn_workorderservice_connections2": "Connections (msdyn_workorderservice_connections2)",
+      "msdyn_workorderservice_DuplicateBaseRecord": "Duplicate Records (msdyn_workorderservice_DuplicateBaseRecord)",
+      "msdyn_workorderservice_DuplicateMatchingRecord": "Duplicate Records (msdyn_workorderservice_DuplicateMatchingRecord)",
+      "msdyn_workorderservice_Emails": "Email Messages",
+      "msdyn_workorderservice_Faxes": "Faxes",
+      "msdyn_workorderservice_Letters": "Letters",
+      "msdyn_workorderservice_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_workorderservice_msdyn_approvals": "Project Service Approvals",
+      "msdyn_workorderservice_msdyn_bookingalerts": "Booking Alerts",
+      "msdyn_workorderservice_msdyn_ocliveworkitems": "Conversations",
+      "msdyn_workorderservice_msdyn_ocoutboundmessages": "Outbound messages",
+      "msdyn_workorderservice_msdyn_ocsessions": "Sessions",
+      "msdyn_workorderservice_msfp_alerts": "Customer Voice alert",
+      "msdyn_workorderservice_msfp_surveyinvites": "Customer Voice survey invites",
+      "msdyn_workorderservice_msfp_surveyresponses": "Customer Voice survey responses",
+      "msdyn_workorderservice_PhoneCalls": "Phone Calls",
+      "msdyn_workorderservice_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_workorderservice_ProcessSession": "Process Sessions",
+      "msdyn_workorderservice_QueueItems": "Queue Items",
+      "msdyn_workorderservice_RecurringAppointmentMasters": "Recurring Appointments",
+      "msdyn_workorderservice_ServiceAppointments": "Service Activities",
+      "msdyn_workorderservice_SharePointDocumentLocations": "Document Locations",
+      "msdyn_workorderservice_SocialActivities": "Social Activities",
+      "msdyn_workorderservice_SyncErrors": "Sync Errors",
+      "msdyn_workorderservice_Tasks": "Tasks",
+      "msdyn_workorderserviceid": "Work Order Service",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Order Services",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Work Order Services (Views)",
+    "Name": "_msdyn_workorderservice_views",
+    "RelatedEntityName": "Work Order Services",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "011bc293-cddb-48ac-b266-54dc4f33678a": "Work Order Service Lookup View",
+      "0312a55e-e22c-4afb-abff-4bdbf5cfd601": "Active Work Order Services",
+      "0f6c0454-4949-4fd7-81ad-708eb890152a": "Inactive Work Order Services",
+      "637fd9ff-b25b-e111-b0e5-000c2959f9b8": "Custom Work Order Service View",
+      "78fd04b7-7875-4f44-9974-0fcbabe985ca": "Work Order Service Associated View",
+      "c2e683ab-3d5f-e611-8108-000d3a146973": "Work Order Service View - Mobile",
+      "f3569dd3-f4db-40ef-8f73-11ae61c9da0a": "Work Order Service Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Disable Entitlement (Work Order Services)",
+    "Name": "msdyn_msdyn_workorderservice_msdyn_disableentitlement",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_disableentitlement",
+        "OptionSetReferenceEntityName": "Work Order Services"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_disableentitlement",
+    "RelatedEntityName": "Work Order Services",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Taxable (Work Order Services)",
+    "Name": "msdyn_workorderservice_msdyn_taxable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_taxable",
+        "OptionSetReferenceEntityName": "Work Order Services"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_taxable",
+    "RelatedEntityName": "Work Order Services",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Work Order Services)",
+    "Name": "msdyn_workorderservice_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Work Order Services"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Work Order Services",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Work Order Services)",
+    "Name": "msdyn_workorderservice_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Work Order Services"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Work Order Services",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,440 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "invoices",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "invoice",
+    "MaxGetRowsCount": 500,
+    "Name": "Invoices",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_customerid_value": "Customer",
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "billto_city": "Bill To City",
+      "billto_composite": "Bill To Address",
+      "billto_country": "Bill To Country/Region",
+      "billto_fax": "Bill To Fax",
+      "billto_line1": "Bill To Street 1",
+      "billto_line2": "Bill To Street 2",
+      "billto_line3": "Bill To Street 3",
+      "billto_name": "Bill To Name",
+      "billto_postalcode": "Bill To ZIP/Postal Code",
+      "billto_stateorprovince": "Bill To State/Province",
+      "billto_telephone": "Bill To Phone",
+      "bpf_invoice_msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d": "Invoice Process",
+      "contactinvoices_association": "Contacts",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "datedelivered": "Date Delivered",
+      "description": "Description",
+      "discountamount": "Invoice Discount Amount",
+      "discountamount_base": "Invoice Discount Amount (Base)",
+      "discountpercentage": "Invoice Discount (%)",
+      "duedate": "Due Date",
+      "emailaddress": "Email Address",
+      "entityimage": "Entity Image",
+      "entityimageid": "EntityImageId",
+      "exchangerate": "Exchange Rate",
+      "freightamount": "Freight Amount",
+      "freightamount_base": "Freight Amount (Base)",
+      "importsequencenumber": "Import Sequence Number",
+      "Invoice_ActivityPointers": "Activities",
+      "Invoice_Annotation": "Notes",
+      "Invoice_Appointments": "Appointments",
+      "Invoice_AsyncOperations": "System Jobs",
+      "Invoice_BulkDeleteFailures": "Bulk Delete Failures",
+      "invoice_chats": "Teams chats",
+      "invoice_connections1": "Connections (invoice_connections1)",
+      "invoice_connections2": "Connections (invoice_connections2)",
+      "invoice_details": "Invoice Lines",
+      "Invoice_Emails": "Email Messages",
+      "Invoice_Faxes": "Faxes",
+      "Invoice_Letters": "Letters",
+      "Invoice_MailboxTrackingFolder": "Mailbox Auto Tracking Folders",
+      "invoice_msdyn_approvals": "Project Service Approvals",
+      "invoice_msdyn_bookingalerts": "Booking Alerts",
+      "invoice_msdyn_ocliveworkitems": "Conversations",
+      "invoice_msdyn_ocoutboundmessages": "Outbound messages",
+      "invoice_msdyn_ocsessions": "Sessions",
+      "invoice_msfp_alerts": "Customer Voice alert",
+      "invoice_msfp_surveyinvites": "Customer Voice survey invites",
+      "invoice_msfp_surveyresponses": "Customer Voice survey responses",
+      "Invoice_Phonecalls": "Phone Calls",
+      "invoice_principalobjectattributeaccess": "Field Sharing",
+      "Invoice_ProcessSessions": "Process Sessions",
+      "Invoice_RecurringAppointmentMasters": "Recurring Appointments",
+      "Invoice_ServiceAppointments": "Service Activities",
+      "Invoice_SocialActivities": "Social Activities",
+      "Invoice_SyncErrors": "Sync Errors",
+      "Invoice_Tasks": "Tasks",
+      "invoiceid": "Invoice",
+      "invoicenumber": "Invoice ID",
+      "ispricelocked": "Prices Locked",
+      "lastbackofficesubmit": "Last Submitted to Back Office",
+      "lastonholdtime": "Last On Hold Time",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_amountdue": "Amount Due",
+      "msdyn_amountdue_base": "Amount Due (Base)",
+      "msdyn_billtocontactname": "Bill To Contact Name",
+      "msdyn_hascorrections": "Has Corrections",
+      "msdyn_invoice_msdyn_actual_Invoice": "Actuals",
+      "msdyn_invoice_msdyn_agreementinvoicedate_Invoice": "Agreement Invoice Dates",
+      "msdyn_invoice_msdyn_contractlineinvoiceschedule_Invoice": "Project Contract Line Invoice Schedules",
+      "msdyn_invoice_msdyn_invoicelinetransaction_Invoice": "Invoice Line Details",
+      "msdyn_invoice_msdyn_orderinvoicingdate_Invoice": "Order Invoicing Dates",
+      "msdyn_invoice_msdyn_orderinvoicingsetupdate_Invoice": "Order Invoicing Setup Dates",
+      "msdyn_invoice_msdyn_paymentdetail_Invoice": "Payment Detail",
+      "msdyn_invoicedate": "Invoice Date",
+      "msdyn_ordertype": "Type",
+      "msdyn_playbookinstance_invoice": "Playbooks",
+      "msdyn_projectinvoicestatus": "Project Invoice Status",
+      "name": "Name",
+      "new_BookableResource": "Bookable Resource",
+      "new_BookableResourceBooking": "Bookable Resource Booking",
+      "new_WorkOrder": "Work Order",
+      "onholdtime": "On Hold Time (Minutes)",
+      "opportunityid": "Opportunity",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "paymenttermscode": "Payment Terms",
+      "pricelevelid": "Price List",
+      "pricingerrorcode": "Pricing Error ",
+      "prioritycode": "Priority",
+      "processid": "Process Id",
+      "salesorderid": "Contract",
+      "shippingmethodcode": "Shipping Method",
+      "shipto_city": "Ship To City",
+      "shipto_composite": "Ship To Address",
+      "shipto_country": "Ship To Country/Region",
+      "shipto_fax": "Ship To Fax",
+      "shipto_freighttermscode": "Ship To Freight Terms",
+      "shipto_line1": "Ship To Street 1",
+      "shipto_line2": "Ship To Street 2",
+      "shipto_line3": "Ship To Street 3",
+      "shipto_name": "Ship To Name",
+      "shipto_postalcode": "Ship To ZIP/Postal Code",
+      "shipto_stateorprovince": "Ship To State/Province",
+      "shipto_telephone": "Ship To Phone",
+      "skippricecalculation": "Skip Price Calculation",
+      "sla_invoice_sla": "SLA",
+      "slainvokedid_invoice_sla": "Last SLA applied",
+      "slakpiinstance_invoice": "SLA KPI Instances",
+      "stageid": "(Deprecated) Stage Id",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "totalamount": "Total Amount",
+      "totalamount_base": "Total Amount (Base)",
+      "totalamountlessfreight": "Total Pre-Freight Amount",
+      "totalamountlessfreight_base": "Total Pre-Freight Amount (Base)",
+      "totaldiscountamount": "Total Discount Amount",
+      "totaldiscountamount_base": "Total Discount Amount (Base)",
+      "totallineitemamount": "Total Detail Amount",
+      "totallineitemamount_base": "Total Detail Amount (Base)",
+      "totallineitemdiscountamount": "Total Line Item Discount Amount",
+      "totallineitemdiscountamount_base": "Total Line Item Discount Amount (Base)",
+      "totaltax": "Total Tax",
+      "totaltax_base": "Total Tax (Base)",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "willcall": "Ship To"
+    },
+    "PreferredName": "Invoices",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Invoices (Views)",
+    "Name": "_invoice_views",
+    "RelatedEntityName": "Invoices",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666600": "Invoice Advanced Find View",
+      "03837675-ed49-e711-80e1-00155d342d09": "Active Invoices",
+      "0e685a6c-e75f-4580-a4a4-86d497235c0c": "My Connections",
+      "11000ffa-e390-4949-a229-c33045cdedc8": "All Project Service Invoices",
+      "13f8fe30-844d-e811-8147-000d3a0601ba": "My Service-Maintenance Based Invoices",
+      "185e29de-5c32-42ef-a637-3605e445faf5": "My Invoices",
+      "344d1185-a122-4cc3-b64b-869f938efb17": "All Invoices (344d1185-a122-4cc3-b64b-869f938efb17)",
+      "4821cace-8735-4258-9071-8fa19f94a3c1": "Closed Project Service Invoices",
+      "53154ea8-3d6e-421d-8b0b-a2f9d2369dcf": "Recent Project Service Invoices",
+      "5457bfe0-ccc4-4376-a68a-11d978482be1": "My Project Service Invoices",
+      "591fb0c2-a3d8-4198-acc2-9e173818f4bc": "My Project Service Invoice Connections",
+      "812c3a80-3f34-405b-b807-516173149340": "Closed Invoices",
+      "a49cd195-5af0-4f8b-a833-9a5bcbdd44fc": "Invoice Lookup View",
+      "a84eb3ff-6dc5-4f57-bbf0-7b664c11fb62": "Invoice Associated View",
+      "c3cbdc27-ac48-4891-9387-8c2876749678": "Active Project Service Invoices",
+      "c500a3f4-6ced-e611-8117-00155de25f07": "Project Service Invoices",
+      "c5855a93-23b8-ed11-83fe-002248094ecc": "All Invoices (c5855a93-23b8-ed11-83fe-002248094ecc)",
+      "ce3f5dda-834d-e811-8147-000d3a0601ba": "All Service-Maintenance Based Invoices",
+      "e186e469-aabb-e611-80d6-00155db0be3a": "Recent Invoices"
+    }
+  },
+  {
+    "DisplayName": "Prices Locked (Invoices)",
+    "Name": "invoice_ispricelocked",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ispricelocked",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ispricelocked",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Payment Terms (Invoices)",
+    "Name": "invoice_paymenttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Net 30",
+      "2": "2% 10, Net 30",
+      "3": "Net 45",
+      "4": "Net 60"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "paymenttermscode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "paymenttermscode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Invoices)",
+    "Name": "invoice_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Shipping Method (Invoices)",
+    "Name": "invoice_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Airborne",
+      "2": "DHL",
+      "3": "FedEx",
+      "4": "UPS",
+      "5": "Postal Mail",
+      "6": "Full Load",
+      "7": "Will Call"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shippingmethodcode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shippingmethodcode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ship To Freight Terms (Invoices)",
+    "Name": "invoice_shipto_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Default Value"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shipto_freighttermscode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shipto_freighttermscode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Invoices)",
+    "Name": "invoice_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Closed (deprecated)",
+      "2": "Paid",
+      "3": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Invoices)",
+    "Name": "invoice_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "New",
+      "100001": "Complete",
+      "100002": "Partial",
+      "100003": "Canceled",
+      "2": "Partially Shipped",
+      "3": "Canceled (deprecated)",
+      "4": "Billed",
+      "5": "Booked (applies to services)",
+      "6": "Installed (applies to services)",
+      "7": "Paid in Full (deprecated)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ship To (Invoices)",
+    "Name": "invoice_willcall",
+    "OptionSetInfoNameMapping": {
+      "0": "Address",
+      "1": "Will Call"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "willcall",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "willcall",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Has Corrections (Invoices)",
+    "Name": "msdyn_invoice_msdyn_hascorrections",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_hascorrections",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_hascorrections",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Type (Invoices)",
+    "Name": "msdyn_invoice_msdyn_ordertype",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Item based",
+      "192350001": "Work based",
+      "690970002": "Service-Maintenance Based"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_ordertype",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_ordertype",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Project Invoice Status",
+    "Name": "msdyn_projectinvoicestatus",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Draft",
+      "192350001": "In Review",
+      "192350002": "Confirmed",
+      "192350003": "Invoice Paid"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_projectinvoicestatus",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_projectinvoicestatus",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "SkipPriceCalculation Option Set",
+    "Name": "qooi_skippricecalculation",
+    "OptionSetInfoNameMapping": {
+      "0": "DoPriceCalcAlways",
+      "1": "SkipPriceCalcOnRetrieve"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "skippricecalculation",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "skippricecalculation",
+    "RelatedEntityName": "Invoices",
+    "Type": "OptionSetInfo"
+  }
+]

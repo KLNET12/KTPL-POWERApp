@@ -1,0 +1,158 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "productpricelevels",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "productpricelevel",
+    "MaxGetRowsCount": 500,
+    "Name": "Price List Items",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "amount": "Amount",
+      "amount_base": "Amount (Base)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "discounttypeid": "Discount List",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "percentage": "Percentage",
+      "pricelevelid": "Price List",
+      "pricingmethodcode": "Pricing Method",
+      "processid": "Process Id",
+      "productid": "Product",
+      "ProductPriceLevel_AsyncOperations": "System Jobs",
+      "ProductPriceLevel_BulkDeleteFailures": "Bulk Delete Failures",
+      "productpricelevel_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "productpricelevel_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "ProductPriceLevel_ProcessSessions": "Process Sessions",
+      "ProductPriceLevel_SyncErrors": "Sync Errors",
+      "productpricelevelid": "Product Price List",
+      "quantitysellingcode": "Quantity Selling Option",
+      "roundingoptionamount": "Rounding Amount",
+      "roundingoptionamount_base": "Rounding Amount (Base)",
+      "roundingoptioncode": "Rounding Option",
+      "roundingpolicycode": "Rounding Policy",
+      "stageid": "(Deprecated) Stage Id",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "uomid": "Unit",
+      "uomscheduleid": "Unit Schedule ID",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Price List Items",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Price List Items (Views)",
+    "Name": "_productpricelevel_views",
+    "RelatedEntityName": "Price List Items",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "19103072-cd05-42c7-b174-f981d33b8beb": "Extended Product Price List - Products",
+      "213f0620-2e6e-420b-b506-83ad4b3f439b": "All Product Price Lists",
+      "94e39ea5-938f-45a8-aa4d-e7d2b349acbb": "Suggestions Grid Query",
+      "9ee21b43-10a0-4c1b-b8d4-8a7bbad16b48": "Product Price List Associated View",
+      "ab4877e9-6d01-4d28-84c3-be7564c1bb09": "All Price List Items",
+      "be653221-c406-4dd1-bc80-52ec2420bdba": "Price List Items in Entity Price List",
+      "f4d79a29-8f34-40e3-8802-bb631ee8eace": "Product Price List - Products",
+      "f872aa73-b433-4e5c-91f1-1e3ca07d9ae6": "Product Price Levels Advanced Find View",
+      "f89e7f79-8829-4433-b4cc-b1c1e2829a95": "Product Price List - Price List"
+    }
+  },
+  {
+    "DisplayName": "Pricing Method (Price List Items)",
+    "Name": "productpricelevel_pricingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Currency Amount",
+      "2": "Percent of List",
+      "3": "Percent Markup - Current Cost",
+      "4": "Percent Margin - Current Cost",
+      "5": "Percent Markup - Standard Cost",
+      "6": "Percent Margin - Standard Cost"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "pricingmethodcode",
+        "OptionSetReferenceEntityName": "Price List Items"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "pricingmethodcode",
+    "RelatedEntityName": "Price List Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Quantity Selling Option (Price List Items)",
+    "Name": "productpricelevel_quantitysellingcode",
+    "OptionSetInfoNameMapping": {
+      "1": "No Control",
+      "2": "Whole",
+      "3": "Whole and Fractional"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "quantitysellingcode",
+        "OptionSetReferenceEntityName": "Price List Items"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "quantitysellingcode",
+    "RelatedEntityName": "Price List Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Rounding Option (Price List Items)",
+    "Name": "productpricelevel_roundingoptioncode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ends in",
+      "2": "Multiple of"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "roundingoptioncode",
+        "OptionSetReferenceEntityName": "Price List Items"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "roundingoptioncode",
+    "RelatedEntityName": "Price List Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Rounding Policy (Price List Items)",
+    "Name": "productpricelevel_roundingpolicycode",
+    "OptionSetInfoNameMapping": {
+      "1": "None",
+      "2": "Up",
+      "3": "Down",
+      "4": "To Nearest"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "roundingpolicycode",
+        "OptionSetReferenceEntityName": "Price List Items"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "roundingpolicycode",
+    "RelatedEntityName": "Price List Items",
+    "Type": "OptionSetInfo"
+  }
+]

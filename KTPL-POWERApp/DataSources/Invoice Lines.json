@@ -1,0 +1,439 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "invoicedetails",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "invoicedetail",
+    "MaxGetRowsCount": 500,
+    "Name": "Invoice Lines",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "actualdeliveryon": "Delivered On",
+      "baseamount": "Amount",
+      "baseamount_base": "Amount (Base)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "description": "Description",
+      "exchangerate": "Exchange Rate",
+      "extendedamount": "Extended Amount",
+      "extendedamount_base": "Extended Amount (Base)",
+      "importsequencenumber": "Import Sequence Number",
+      "InvoiceDetail_AsyncOperations": "System Jobs",
+      "InvoiceDetail_BulkDeleteFailures": "Bulk Delete Failures",
+      "InvoiceDetail_Dynamicpropertyinstance": "Property Instances",
+      "invoicedetail_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "invoicedetail_parent_invoicedetail": "Invoice Lines (invoicedetail_parent_invoicedetail)",
+      "invoicedetail_parentref_invoicedetail": "Invoice Lines (invoicedetail_parentref_invoicedetail)",
+      "invoicedetail_principalobjectattributeaccess": "Field Sharing",
+      "InvoiceDetail_ProcessSessions": "Process Sessions",
+      "InvoiceDetail_SyncErrors": "Sync Errors",
+      "invoicedetailid": "Invoice Product",
+      "invoicedetailname": "Name",
+      "invoiceid": "Invoice ID",
+      "iscopied": "Copied",
+      "ispriceoverridden": "Pricing",
+      "isproductoverridden": "Select Product",
+      "lineitemnumber": "Line Item Number",
+      "manualdiscountamount": "Manual Discount",
+      "manualdiscountamount_base": "Manual Discount (Base)",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_agreement": "Agreement",
+      "msdyn_agreementinvoiceproduct": "Agreement Invoice Product",
+      "msdyn_billingmethod": "Billing Method",
+      "msdyn_chargeableamount": "Chargeable Amount",
+      "msdyn_chargeableamount_base": "Chargeable Amount (Base)",
+      "msdyn_complimentaryamount": "Complimentary Amount",
+      "msdyn_complimentaryamount_base": "Complimentary Amount (Base)",
+      "msdyn_contractline": "(Deprecated) Project Contract Line",
+      "msdyn_contractlineamount": "Contract Line Amount",
+      "msdyn_contractlineamount_base": "Contract Line Amount (Base)",
+      "msdyn_currency": "Currency (msdyn_currency)",
+      "msdyn_invoicedetail_msdyn_invoicelinetransactio": "Invoice Line Details",
+      "msdyn_invoicedtilldate": "Amount Previously Invoiced",
+      "msdyn_invoicedtilldate_base": "Amount Previously Invoiced (Base)",
+      "msdyn_lineorder": "Line Order",
+      "msdyn_linetype": "Line Type",
+      "msdyn_nonchargeableamount": "Non Chargeable Amount",
+      "msdyn_nonchargeableamount_base": "Non Chargeable Amount (Base)",
+      "msdyn_OrderInvoicingProduct": "Order Invoicing Product",
+      "msdyn_Project": "Project",
+      "msdyn_workorderid": "Work Order",
+      "msdyn_workorderproductid": "Work Order Product",
+      "msdyn_workorderserviceid": "Work Order Service",
+      "overriddencreatedon": "Record Created On",
+      "owningteam": "Owning Team",
+      "parentbundleid": "Parent Bundle",
+      "parentbundleidref_invoicedetail": "Parent bundle product",
+      "priceperunit": "Price Per Unit",
+      "priceperunit_base": "Price Per Unit (Base)",
+      "pricingerrorcode": "Pricing Error ",
+      "productassociationid": "Bundle Item Association",
+      "productdescription": "Write-In Product",
+      "productid": "Existing Product",
+      "productname": "Product Name",
+      "productnumber": "Product Number",
+      "producttypecode": "Product type",
+      "propertyconfigurationstatus": "Property Configuration",
+      "quantity": "Quantity",
+      "quantitybackordered": "Quantity Back Ordered",
+      "quantitycancelled": "Quantity Canceled",
+      "quantityshipped": "Quantity Shipped",
+      "SalesOrderDetailId": "Order Product Id",
+      "salesrepid": "Salesperson",
+      "sequencenumber": "Sequence Number",
+      "shippingtrackingnumber": "Shipment Tracking Number",
+      "shipto_city": "Ship To City",
+      "shipto_country": "Ship To Country/Region",
+      "shipto_fax": "Ship To Fax",
+      "shipto_freighttermscode": "Freight Terms",
+      "shipto_line1": "Ship To Street 1",
+      "shipto_line2": "Ship To Street 2",
+      "shipto_line3": "Ship To Street 3",
+      "shipto_name": "Ship To Name",
+      "shipto_postalcode": "Ship To ZIP/Postal Code",
+      "shipto_stateorprovince": "Ship To State/Province",
+      "shipto_telephone": "Ship To Phone",
+      "skippricecalculation": "Skip Price Calculation",
+      "tax": "Tax",
+      "tax_base": "Tax (Base)",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency (transactioncurrencyid)",
+      "uomid": "Unit",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "volumediscountamount": "Volume Discount",
+      "volumediscountamount_base": "Volume Discount (Base)",
+      "willcall": "Ship To"
+    },
+    "PreferredName": "Invoice Lines",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Invoice Lines (Views)",
+    "Name": "_invoicedetail_views",
+    "RelatedEntityName": "Invoice Lines",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0565abdd-523d-e511-80e7-00155db9450c": "Project Invoice Lines",
+      "18a4d4a8-8127-438a-8df7-3811b8bf28c4": "Invoice products Add Products",
+      "2d8ccc5a-b679-e411-80cf-00155db9b402": "Invoice Lines",
+      "3c16727c-9bda-4a84-84c6-94cf2f50840e": "Invoice Product Inline Edit View: Bundle Products",
+      "7ee3fde0-8d7f-e611-8110-00155de25f03": "Field Service Order Based Lines",
+      "94fe2287-73dd-4a24-914c-45795a0e8f6c": "Invoice Detail Lookup View",
+      "966f79a8-5200-4dab-bafd-6de1947ee181": "Invoice Product Associated View",
+      "a1faa578-24af-4ed6-b36d-47842e7e9b1e": "Invoice Product Inline Edit View",
+      "d10ab36c-6eee-413c-81a7-04e940b4a0bf": "Invoice Detail Advanced Find View",
+      "dadb0a47-6a7c-e511-80e5-00155de28203": "Product Invoice Lines",
+      "f21fde42-e003-427b-86f6-4a0162ce8744": "All Invoice Products"
+    }
+  },
+  {
+    "DisplayName": "Invoice Is Price Locked (Invoice Lines)",
+    "Name": "invoicedetail_invoiceispricelocked",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "invoiceispricelocked",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "invoiceispricelocked",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Invoice Status (Invoice Lines)",
+    "Name": "invoicedetail_invoicestatecode",
+    "OptionSetInfoNameMapping": {},
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "invoicestatecode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "invoicestatecode",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Copied (Invoice Lines)",
+    "Name": "invoicedetail_iscopied",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "iscopied",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "iscopied",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Pricing (Invoice Lines)",
+    "Name": "invoicedetail_ispriceoverridden",
+    "OptionSetInfoNameMapping": {
+      "0": "Use Default",
+      "1": "Override Price"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ispriceoverridden",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ispriceoverridden",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Select Product (Invoice Lines)",
+    "Name": "invoicedetail_isproductoverridden",
+    "OptionSetInfoNameMapping": {
+      "0": "Existing",
+      "1": "Write In"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isproductoverridden",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isproductoverridden",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Freight Terms (Invoice Lines)",
+    "Name": "invoicedetail_shipto_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "FOB",
+      "2": "No Charge"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shipto_freighttermscode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shipto_freighttermscode",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ship To (Invoice Lines)",
+    "Name": "invoicedetail_willcall",
+    "OptionSetInfoNameMapping": {
+      "0": "Address",
+      "1": "Will Call"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "willcall",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "willcall",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Billing Method",
+    "Name": "msdyn_billingmethod",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Time and Material",
+      "192350001": "Fixed Price"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_billingmethod",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_billingmethod",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Line Type",
+    "Name": "msdyn_linetype",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Project Service Line",
+      "690970001": "Field Service Line"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_linetype",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_linetype",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Pricing Error ",
+    "Name": "qooi_pricingerrorcode",
+    "OptionSetInfoNameMapping": {
+      "0": "None",
+      "1": "Detail Error",
+      "10": "Missing UOM",
+      "11": "Product Not In Price Level",
+      "12": "Missing Price Level Amount",
+      "13": "Missing Price Level Percentage",
+      "14": "Missing Price",
+      "15": "Missing Current Cost",
+      "16": "Missing Standard Cost",
+      "17": "Invalid Price Level Amount",
+      "18": "Invalid Price Level Percentage",
+      "19": "Invalid Price",
+      "2": "Missing Price Level",
+      "20": "Invalid Current Cost",
+      "21": "Invalid Standard Cost",
+      "22": "Invalid Rounding Policy",
+      "23": "Invalid Rounding Option",
+      "24": "Invalid Rounding Amount",
+      "25": "Price Calculation Error",
+      "26": "Invalid Discount Type",
+      "27": "Discount Type Invalid State",
+      "28": "Invalid Discount",
+      "29": "Invalid Quantity",
+      "3": "Inactive Price Level",
+      "30": "Invalid Pricing Precision",
+      "31": "Missing Product Default UOM",
+      "32": "Missing Product UOM Schedule ",
+      "33": "Inactive Discount Type",
+      "34": "Invalid Price Level Currency",
+      "35": "Price Attribute Out Of Range",
+      "36": "Base Currency Attribute Overflow",
+      "37": "Base Currency Attribute Underflow",
+      "38": "Transaction currency is not set for the product price list item",
+      "4": "Missing Quantity",
+      "5": "Missing Unit Price",
+      "6": "Missing Product",
+      "7": "Invalid Product",
+      "8": "Missing Pricing Code",
+      "9": "Invalid Pricing Code"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "pricingerrorcode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "pricingerrorcode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "pricingerrorcode",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "SkipPriceCalculation Option Set_1",
+    "Name": "qooidetail_skippricecalculation",
+    "OptionSetInfoNameMapping": {
+      "0": "DoPriceCalcAlways",
+      "1": "SkipPriceCalcOnCreate",
+      "2": "SkipPriceCalcOnUpdate",
+      "3": "SkipPriceCalcOnUpSert"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "skippricecalculation",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "skippricecalculation",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Product Type",
+    "Name": "qooiproduct_producttype",
+    "OptionSetInfoNameMapping": {
+      "1": "Product",
+      "2": "Bundle",
+      "3": "Required Bundle Product",
+      "4": "Optional Bundle Product",
+      "5": "Project-based Service"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "producttypecode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "producttypecode",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Properties Configuration",
+    "Name": "qooiproduct_propertiesconfigurationstatus",
+    "OptionSetInfoNameMapping": {
+      "0": "Edit",
+      "1": "Rectify",
+      "2": "Not Configured"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "propertyconfigurationstatus",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "propertyconfigurationstatus",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  }
+]

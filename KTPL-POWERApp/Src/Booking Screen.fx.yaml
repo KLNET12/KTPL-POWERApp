@@ -1,0 +1,219 @@
+"'Booking Screen' As screen":
+    OnVisible: |
+        =Refresh('Bookable Resource Bookings');
+        If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature); Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    Label1 As label:
+        Fill: =RGBA(187, 221, 140, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =72
+        Size: =21
+        Text: ="                              Bookings"
+        Width: =640
+        Y: =70
+        ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        DelayItemLoading: =true
+        Height: =923
+        Items: =If(Dropdown3.Selected.Value = "My Active Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Active Bookable Resource Bookings'),If(Dropdown3.Selected.Value = "My Inprogress Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'In Progress Booking'), If(Dropdown3.Selected.Value = "My Completed Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Completed Booking'),Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text))))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(UpdateBooking)
+        TemplatePadding: =4
+        TemplateSize: =326
+        Y: =213
+        ZIndex: =2
+
+        Title1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                =Text("Workorder Number:  ") & ThisItem.'Resource Requirement'.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =508
+            Y: =5
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("Start Date & Time :  "& ThisItem.'Start Time')
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =100
+            ZIndex: =4
+
+        Body1_1 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("End Date & Time :  "& ThisItem.'End Time')
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =132
+            ZIndex: =5
+
+        Rectangle1 As rectangle:
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =632
+            Y: =299
+            ZIndex: =6
+
+        Label2 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Duration :  " & ThisItem.Duration & " mins")
+            Width: =264
+            Y: =170
+            ZIndex: =7
+
+        Label2_1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Status :  " & ThisItem.'Booking Status'.Name)
+            Width: =632
+            Y: =205
+            ZIndex: =8
+
+        Label2_2 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Type :  " & ThisItem.'Booking Type')
+            Width: =318
+            X: =1
+            Y: =240
+            ZIndex: =9
+
+        Icon1 As icon.ChevronRight:
+            Height: =73
+            Icon: =Icon.Edit
+            OnSelect: =Select(Parent)
+            Width: =54
+            X: =558
+            Y: =11
+            ZIndex: =10
+
+        Label2_12 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text("Resource :  " & ThisItem.Resource.Name)
+            Width: =318
+            X: =1
+            Y: =74
+            ZIndex: =11
+
+        Label13 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                ="Booking Name : " & ThisItem.Name
+            Width: =560
+            Y: =42
+            ZIndex: =12
+
+        Icon10 As icon.Add:
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Set(varNav,false);
+                Navigate(screen_ShowInvoices)
+            Tooltip: ="Create Invoice"
+            X: =553
+            Y: =139
+            ZIndex: =13
+
+    Dropdown3 As dropdown:
+        Height: =72
+        Items: =["My Active Bookings","My Inprogress Bookings","My Completed Bookings"]
+        Size: =21
+        Width: =640
+        Y: =141
+        ZIndex: =3
+
+    Component1_2 As Component1:
+        Height: =70
+        ZIndex: =4
+
+    Icon3 As icon.ArrowLeft:
+        Height: =70
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(DashBoard)
+        Width: =80
+        X: =560
+        ZIndex: =5
+
+    MenuLeftNav_1 As MenuLeftNav:
+        ExpandMenuByDefault: =false
+        Height: =1136
+        Width: =MenuLeftNav_1.MenuWidth
+        ZIndex: =7
+
+    Button17 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =68
+        OnSelect: =Navigate([@Calendar])
+        Size: =24
+        Text: ="Calender View"
+        Width: =247
+        X: =392
+        Y: =70
+        ZIndex: =8
+
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        Y: =72
+        ZIndex: =9
+

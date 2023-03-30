@@ -1,0 +1,338 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_workorders",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_workorder",
+    "MaxGetRowsCount": 500,
+    "Name": "Work Orders",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "bpf_msdyn_workorder_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b": "CFS - IoT Alert Process Flow",
+      "bpf_msdyn_workorder_msdyn_bpf_989e9b1857e24af18787d5143b67523b": "Case to Work Order Business Process",
+      "bpf_msdyn_workorder_msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39": "Work Order Business Process",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_address1": "Street 1",
+      "msdyn_address2": "Street 2",
+      "msdyn_address3": "Street 3",
+      "msdyn_addressname": "Address Name",
+      "msdyn_agreement": "Agreement",
+      "msdyn_autonumbering": "Auto-Numbering",
+      "msdyn_billingaccount": "Billing Account",
+      "msdyn_bookingsummary": "Booking Summary",
+      "msdyn_childindex": "Child Index",
+      "msdyn_city": "City",
+      "msdyn_closedby": "Closed By",
+      "msdyn_completedon": "Completed On",
+      "msdyn_country": "Country/Region",
+      "msdyn_customerasset": "Primary Incident Customer Asset",
+      "msdyn_datewindowend": "Date Window End",
+      "msdyn_datewindowstart": "Date Window Start",
+      "msdyn_estimatesubtotalamount": "Estimate Subtotal Amount",
+      "msdyn_estimatesubtotalamount_base": "Estimate Subtotal Amount (Base)",
+      "msdyn_firstarrivedon": "First Arrived On",
+      "msdyn_followupnote": "Follow Up Note (Deprecated)",
+      "msdyn_followuprequired": "Follow Up Required (Deprecated)",
+      "msdyn_FunctionalLocation": "Functional Location",
+      "msdyn_instructions": "Instructions",
+      "msdyn_internalflags": "Internal Flags",
+      "msdyn_IoTAlert": "IoT Alert",
+      "msdyn_isfollowup": "Is FollowUp (Deprecated)",
+      "msdyn_ismobile": "Is Mobile",
+      "msdyn_latitude": "Latitude",
+      "msdyn_longitude": "Longitude",
+      "msdyn_mapcontrol": "This field should only be used to load the custom map control",
+      "msdyn_msdyn_workorder_bookableresourcebooking_WorkOrder": "Bookable Resource Bookings",
+      "msdyn_msdyn_workorder_invoicedetail": "Invoice Lines",
+      "msdyn_msdyn_workorder_msdyn_actual_WorkOrder": "Actuals",
+      "msdyn_msdyn_workorder_msdyn_agreementbookingdate_WorkOrder": "Agreement Booking Dates",
+      "msdyn_msdyn_workorder_msdyn_inventoryjournal_AllocatedToWorkOrder": "Inventory Journals",
+      "msdyn_msdyn_workorder_msdyn_iotalert_Workorder": "IoT Alerts",
+      "msdyn_msdyn_workorder_msdyn_payment_WorkOrder": "Payments",
+      "msdyn_msdyn_workorder_msdyn_paymentdetail_Workorder": "Payment Detail",
+      "msdyn_msdyn_workorder_msdyn_purchaseorder_WorkOrder": "Purchase Orders",
+      "msdyn_msdyn_workorder_msdyn_purchaseorderproduct_AssociateToWorkOrder": "Purchase Order Products",
+      "msdyn_msdyn_workorder_msdyn_purchaseorderreceiptproduct_AssociateToWorkOrder": "Purchase Order Receipt Products",
+      "msdyn_msdyn_workorder_msdyn_requirementcharacteristic_WorkOrder": "Requirement Characteristics",
+      "msdyn_msdyn_workorder_msdyn_requirementresourcepreference_WorkOrder": "Requirement Resource Preferences",
+      "msdyn_msdyn_workorder_msdyn_resourcerequirement_WorkOrder": "Resource Requirements",
+      "msdyn_msdyn_workorder_msdyn_rma_WorkOrder": "RMAs",
+      "msdyn_msdyn_workorder_msdyn_rtv_WorkOrder": "RTVs",
+      "msdyn_msdyn_workorder_msdyn_rtvproduct_WorkOrder": "RTV Products",
+      "msdyn_msdyn_workorder_msdyn_timeentry_WorkOrder": "Time Entries",
+      "msdyn_msdyn_workorder_msdyn_workorder_ParentWorkOrder": "Work Orders",
+      "msdyn_msdyn_workorder_msdyn_workordercharacteristic_WorkOrder": "Work Order Characteristics (Deprecated)",
+      "msdyn_msdyn_workorder_msdyn_workorderincident_WorkOrder": "Work Order Incidents",
+      "msdyn_msdyn_workorder_msdyn_workorderproduct_WorkOrder": "Work Order Products",
+      "msdyn_msdyn_workorder_msdyn_workorderresolution_WorkOrder": "Work Order Resolutions",
+      "msdyn_msdyn_workorder_msdyn_workorderresourcerestriction_WorkOrder": "Resource Restrictions (Deprecated)",
+      "msdyn_msdyn_workorder_msdyn_workorderservice_WorkOrder": "Work Order Services",
+      "msdyn_msdyn_workorder_msdyn_workorderservicetask_WorkOrder": "Work Order Service Tasks",
+      "msdyn_name": "Work Order Number",
+      "msdyn_opportunityid": "Opportunity",
+      "msdyn_parentworkorder_msdyn_workorder": "Parent Work Order",
+      "msdyn_phoneNumber": "Customer Phone Number",
+      "msdyn_postalcode": "Postal Code",
+      "msdyn_preferredresource": "Preferred Resource (Deprecated)",
+      "msdyn_pricelist": "Price List",
+      "msdyn_primaryincidentdescription": "Primary Incident Description",
+      "msdyn_primaryincidentestimatedduration": "Primary Incident Estimated Duration",
+      "msdyn_primaryincidenttype": "Primary Incident Type",
+      "msdyn_PrimaryResolution": "Primary Resolution",
+      "msdyn_priority": "Priority",
+      "msdyn_reportedbycontact": "Reported By Contact",
+      "msdyn_serviceaccount": "Service Account",
+      "msdyn_servicerequest": "Case",
+      "msdyn_serviceterritory": "Service Territory",
+      "msdyn_stateorprovince": "State Or Province",
+      "msdyn_substatus": "Substatus",
+      "msdyn_subtotalamount": "Subtotal Amount",
+      "msdyn_subtotalamount_base": "Subtotal Amount (Base)",
+      "msdyn_SupportContact": "Support Contact",
+      "msdyn_systemstatus": "System Status",
+      "msdyn_taxable": "Taxable",
+      "msdyn_taxcode": "Sales Tax Code",
+      "msdyn_timeclosed": "Closed On",
+      "msdyn_timefrompromised": "Time From Promised",
+      "msdyn_timegroup": "Fulfillment Preference",
+      "msdyn_timegroupdetailselected": "Time Group Detail Selected (Deprecated)",
+      "msdyn_timetopromised": "Time To Promised",
+      "msdyn_timewindowend": "Time Window End",
+      "msdyn_timewindowstart": "Time Window Start",
+      "msdyn_totalamount": "Total Amount",
+      "msdyn_totalamount_base": "Total Amount (Base)",
+      "msdyn_totalestimatedduration": "Total Estimated Duration",
+      "msdyn_totalsalestax": "Total Sales Tax",
+      "msdyn_totalsalestax_base": "Total Sales Tax (Base)",
+      "msdyn_workhourtemplate": "Work Hour Template",
+      "msdyn_worklocation": "Work Location",
+      "msdyn_workorder_ActivityPointers": "Activities",
+      "msdyn_workorder_Annotations": "Notes",
+      "msdyn_workorder_Appointments": "Appointments",
+      "msdyn_workorder_AsyncOperations": "System Jobs",
+      "msdyn_workorder_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_workorder_chats": "Teams chats",
+      "msdyn_workorder_connections1": "Connections (msdyn_workorder_connections1)",
+      "msdyn_workorder_connections2": "Connections (msdyn_workorder_connections2)",
+      "msdyn_workorder_DuplicateBaseRecord": "Duplicate Records (msdyn_workorder_DuplicateBaseRecord)",
+      "msdyn_workorder_DuplicateMatchingRecord": "Duplicate Records (msdyn_workorder_DuplicateMatchingRecord)",
+      "msdyn_workorder_Emails": "Email Messages",
+      "msdyn_workorder_Faxes": "Faxes",
+      "msdyn_workorder_Letters": "Letters",
+      "msdyn_workorder_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_workorder_msdyn_approvals": "Project Service Approvals",
+      "msdyn_workorder_msdyn_bookingalerts": "Booking Alerts",
+      "msdyn_workorder_msdyn_ocliveworkitems": "Conversations",
+      "msdyn_workorder_msdyn_ocoutboundmessages": "Outbound messages",
+      "msdyn_workorder_msdyn_ocsessions": "Sessions",
+      "msdyn_workorder_msfp_alerts": "Customer Voice alert",
+      "msdyn_workorder_msfp_surveyinvites": "Customer Voice survey invites",
+      "msdyn_workorder_msfp_surveyresponses": "Customer Voice survey responses",
+      "msdyn_workorder_PhoneCalls": "Phone Calls",
+      "msdyn_workorder_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_workorder_ProcessSession": "Process Sessions",
+      "msdyn_workorder_QueueItems": "Queue Items",
+      "msdyn_workorder_RecurringAppointmentMasters": "Recurring Appointments",
+      "msdyn_workorder_ServiceAppointments": "Service Activities",
+      "msdyn_workorder_SharePointDocumentLocations": "Document Locations",
+      "msdyn_workorder_SocialActivities": "Social Activities",
+      "msdyn_workorder_SyncErrors": "Sync Errors",
+      "msdyn_workorder_Tasks": "Tasks",
+      "msdyn_workorderarrivaltimekpiid": "Work Order Arrival Time KPI",
+      "msdyn_workorderid": "WO Number",
+      "msdyn_workorderresolutionkpiid": "Work Order Resolution KPI",
+      "msdyn_workordersummary": "Work Order Summary",
+      "msdyn_workordertype": "Work Order Type",
+      "new_invoice_WorkOrder_msdyn_workorder": "Invoices",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "processid": "Process Id",
+      "stageid": "Stage Id",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Orders",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Work Orders (Views)",
+    "Name": "_msdyn_workorder_views",
+    "RelatedEntityName": "Work Orders",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "15476636-9244-466e-ae0b-487f0a91a31c": "Work Order Associated View",
+      "23a90f98-dc5d-e611-810b-00155dbd6a1d": "Work orders for IoT Alerts",
+      "253d8517-1cb8-ed11-83fe-002248094ecc": "All Work Order",
+      "45feda5a-40fc-eb11-94f0-000d3a1f6a54": "Work Order Welcome Card View",
+      "6e3c6748-2aee-4691-8966-19d39a04c9f4": "Work Order Advanced Find View",
+      "7758375b-7016-e411-9c30-00155da8fa1b": "Active Work Orders this fiscal period",
+      "c0c4fd32-f265-497d-bfae-546c88d5bb3b": "Work Order Lookup View",
+      "c4398499-b242-e111-9bb9-00155d28960b": "Unscheduled Work Orders",
+      "d928c332-8c65-43fc-95b2-5df41d2fa558": "Inactive Work Orders",
+      "d978c540-4718-e211-aea8-000c2959f9b8": "Work Order Without Cancelled View",
+      "fce37246-eba1-4e92-bb9d-f8cb3ec38e3f": "Active Work Orders"
+    }
+  },
+  {
+    "DisplayName": "Follow Up Required (Deprecated) (Work Orders)",
+    "Name": "msdyn_workorder_msdyn_followuprequired",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_followuprequired",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_followuprequired",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is FollowUp (Deprecated) (Work Orders)",
+    "Name": "msdyn_workorder_msdyn_isfollowup",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_isfollowup",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_isfollowup",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Mobile (Work Orders)",
+    "Name": "msdyn_workorder_msdyn_ismobile",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_ismobile",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_ismobile",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Taxable (Work Orders)",
+    "Name": "msdyn_workorder_msdyn_taxable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_taxable",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_taxable",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Work Orders)",
+    "Name": "msdyn_workorder_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Work Orders)",
+    "Name": "msdyn_workorder_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "WO System Status",
+    "Name": "msdyn_wosystemstatus",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Unscheduled",
+      "690970001": "Scheduled",
+      "690970002": "In Progress",
+      "690970003": "Completed",
+      "690970004": "Posted",
+      "690970005": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_systemstatus",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_systemstatus",
+    "RelatedEntityName": "Work Orders",
+    "Type": "OptionSetInfo"
+  }
+]

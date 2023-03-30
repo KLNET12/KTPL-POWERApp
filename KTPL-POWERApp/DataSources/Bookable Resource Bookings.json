@@ -1,0 +1,452 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "bookableresourcebookings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "bookableresourcebooking",
+    "MaxGetRowsCount": 500,
+    "Name": "Bookable Resource Bookings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "bookableresourcebooking_ActivityPointers": "Activities",
+      "bookableresourcebooking_Annotations": "Notes",
+      "bookableresourcebooking_Appointments": "Appointments",
+      "bookableresourcebooking_AsyncOperations": "System Jobs",
+      "bookableresourcebooking_BulkDeleteFailures": "Bulk Delete Failures",
+      "bookableresourcebooking_BulkOperations": "Quick Campaigns",
+      "bookableresourcebooking_CampaignActivities": "Campaign Activities",
+      "bookableresourcebooking_CampaignResponses": "Campaign Responses",
+      "bookableresourcebooking_chats": "Teams chats",
+      "bookableresourcebooking_DuplicateBaseRecord": "Duplicate Records (bookableresourcebooking_DuplicateBaseRecord)",
+      "bookableresourcebooking_DuplicateMatchingRecord": "Duplicate Records (bookableresourcebooking_DuplicateMatchingRecord)",
+      "bookableresourcebooking_Emails": "Email Messages",
+      "bookableresourcebooking_Faxes": "Faxes",
+      "bookableresourcebooking_IncidentResolutions": "Case Resolutions",
+      "bookableresourcebooking_Letters": "Letters",
+      "bookableresourcebooking_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "bookableresourcebooking_msdyn_approvals": "Project Service Approvals",
+      "bookableresourcebooking_msdyn_bookingalerts": "Booking Alerts",
+      "bookableresourcebooking_msdyn_ocliveworkitems": "Conversations",
+      "bookableresourcebooking_msdyn_ocoutboundmessages": "Outbound messages",
+      "bookableresourcebooking_msdyn_ocsessions": "Sessions",
+      "bookableresourcebooking_msfp_alerts": "Customer Voice alert",
+      "bookableresourcebooking_msfp_surveyinvites": "Customer Voice survey invites",
+      "bookableresourcebooking_msfp_surveyresponses": "Customer Voice survey responses",
+      "bookableresourcebooking_OpportunityCloses": "Opportunity Close Activities",
+      "bookableresourcebooking_OrderCloses": "Order Close Activities",
+      "bookableresourcebooking_PhoneCalls": "Phone Calls",
+      "bookableresourcebooking_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "bookableresourcebooking_ProcessSession": "Process Sessions",
+      "bookableresourcebooking_QuoteCloses": "Quote Close Activities",
+      "bookableresourcebooking_RecurringAppointmentMasters": "Recurring Appointments",
+      "bookableresourcebooking_ServiceAppointments": "Service Activities",
+      "bookableresourcebooking_SocialActivities": "Social Activities",
+      "BookableResourceBooking_SyncErrors": "Sync Errors",
+      "bookableresourcebooking_Tasks": "Tasks",
+      "bookableresourcebookingid": "Bookable Resource Booking",
+      "BookingStatus": "Booking Status",
+      "bookingtype": "Booking Type",
+      "createdbyname": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfbyname": "Created By (Delegate)",
+      "duration": "Duration",
+      "endtime": "End Time",
+      "exchangerate": "ExchangeRate",
+      "Header": "Header",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedbyname": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfbyname": "Modified By (Delegate)",
+      "msdyn_acceptcascadecrewchanges": "Accept Cascade Crew Changes",
+      "msdyn_actualarrivaltime": "Actual Arrival Time",
+      "msdyn_actualtravelduration": "Actual Travel Duration",
+      "msdyn_agreementbookingdate": "Agreement Booking Date",
+      "msdyn_allowoverlapping": "Allow Overlapping",
+      "msdyn_AppointmentBookingId": "Appointment Booking",
+      "msdyn_basetravelduration": "Base Travel Duration",
+      "msdyn_bookableresourcebooking_msdyn_bookingjournal_Booking": "Booking Journal",
+      "msdyn_bookableresourcebooking_msdyn_bookingtimestamp_Booking": "Booking Timestamps",
+      "msdyn_bookableresourcebooking_msdyn_geofence_bookableresourcebookingid": "Geofences",
+      "msdyn_bookableresourcebooking_msdyn_purchaseorder_Booking": "Purchase Orders",
+      "msdyn_bookableresourcebooking_msdyn_purchaseorderproduct_AssociateToBooking": "Purchase Order Products",
+      "msdyn_bookableresourcebooking_msdyn_purchaseorderreceiptproduct_AssociateToBooking": "Purchase Order Receipt Products",
+      "msdyn_bookableresourcebooking_msdyn_rtv_Booking": "RTVs",
+      "msdyn_bookableresourcebooking_msdyn_timeentry_BookableResourceBooking": "Time Entries",
+      "msdyn_bookableresourcebooking_msdyn_workorderproduct_Booking": "Work Order Products",
+      "msdyn_bookableresourcebooking_msdyn_workorderservice_Booking": "Work Order Services",
+      "msdyn_bookableresourcebooking_msdyn_workorderservicetask_Booking": "Work Order Service Tasks",
+      "msdyn_bookableresourcebookingquicknote_bookableresourcebooking": "Bookable Resource Booking Quick Notes",
+      "msdyn_bookingmethod": "Booking Method",
+      "msdyn_BookingSetupMetadataId": "Booking Setup Metadata",
+      "msdyn_cascadecrewchanges": "Cascade Crew Changes",
+      "msdyn_Crew": "Crew",
+      "msdyn_crewmembertype": "Crew Member Type",
+      "msdyn_effort": "Capacity",
+      "msdyn_estimatedarrivaltime": "Estimated Arrival Time",
+      "msdyn_estimatedtravelduration": "Estimated Travel Duration",
+      "msdyn_internalflags": "Internal Flags (msdyn_internalflags)",
+      "msdyn_latitude": "Latitude",
+      "msdyn_longitude": "Longitude",
+      "msdyn_milestraveled": "Miles Traveled",
+      "msdyn_offlinetimestamp": "Offline Timestamp",
+      "msdyn_preventtimestampcreation": "Prevent Timestamp Creation",
+      "msdyn_projectid": "Project",
+      "msdyn_projectteamid": "Project Team Member",
+      "msdyn_quickNoteAction": "Quick note actions",
+      "msdyn_reportview": "reportview",
+      "msdyn_requirementgroupid": "Requirement Group",
+      "msdyn_requirementgroupset": "Requirement Group Set",
+      "msdyn_resourcecategoryid": "Resource Category",
+      "msdyn_resourcegroup": "Resource Group",
+      "msdyn_ResourceRequirement": "Resource Requirement",
+      "msdyn_serviceappointment": "Service Activity",
+      "msdyn_signature": "Signature",
+      "msdyn_slottext": "Slot Text",
+      "msdyn_timegroupdetailselected": "Time Group Detail Selected",
+      "msdyn_totalbillableduration": "Total Billable Duration",
+      "msdyn_totalbreakduration": "Total Break Duration",
+      "msdyn_totalcost": "Total Cost",
+      "msdyn_totalcost_base": "Total Cost (Base)",
+      "msdyn_totaldurationinprogress": "Total Duration In Progress",
+      "msdyn_traveltimecalculationtype": "Travel Time Calculation",
+      "msdyn_traveltimerescheduling": "Travel Time Rescheduling (Deprecated)",
+      "msdyn_ursinternalflags": "Internal Flags (msdyn_ursinternalflags)",
+      "msdyn_worklocation": "Work Location",
+      "msdyn_workorder": "Work Order",
+      "name": "Name",
+      "new_estimatedtimeofexit": "Estimated Time of Exit",
+      "new_invoice_BookableResourceBooking_bookabler": "Invoices",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "processid": "Process Id",
+      "Resource": "Resource",
+      "stageid": "(Deprecated) Stage Id",
+      "starttime": "Start Time",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Bookable Resource Bookings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Bookable Resource Bookings (Views)",
+    "Name": "_bookableresourcebooking_views",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "036b9451-60b4-4219-9238-5c8a576b6774": "Bookable Resource Booking Advanced Find View",
+      "0497032c-4fb7-ed11-83fe-002248041aba": "Completed Booking",
+      "19b30838-9bd3-e611-8116-00155da8401f": "Work Order Booking Map Tooltips view",
+      "4073baca-cc5f-e611-8109-000d3a146973": "Bookings",
+      "48b9bae0-c5db-e511-80f2-000d3a10dc9c": "Schedule Board Core Slot Tooltip Field Layout",
+      "54398353-d05f-e611-8109-000d3a146973": "Resource Booking View - Mobile",
+      "5cbb3968-c7db-e511-80f2-000d3a10dc9c": "Schedule Board Slot Tooltip Field Layout",
+      "5e97b27e-8ae9-4b14-89fe-3d5ad7ccec9c": "Active Bookable Resource Bookings",
+      "797dc632-c7db-e511-80f2-000d3a10dc9c": "Resource Booking List View (Field Service Information)",
+      "8190212c-2cfd-4268-8730-3134a7967ea6": "Customer Service Schedule Board Details Pane Layout",
+      "8af53d0e-07fe-49d4-bbba-ca524dd6551b": "Active Resource Bookings (Field Service Information)",
+      "9a6de510-22cf-e711-8122-000d3a29ec0b": "Resource Bookings for Time Entries Import",
+      "9b2c044a-2553-43f0-a816-9ffe35475f85": "Bookable Resource Booking Associated View",
+      "9d85e033-4db7-ed11-83fe-002248041aba": "In Progress Booking",
+      "b74d2e1a-37cb-4da9-aa06-156cbf7bc3dd": "Inactive Bookable Resource Bookings",
+      "c218571e-468c-4271-815f-811c72c2f338": "Bookable Resource Booking Lookup View",
+      "ca1718be-c7db-e511-80f2-000d3a10dc9c": "Schedule Board Details Pane Field Layout",
+      "ef022954-d283-e811-8149-000d3af7de0e": "Bookings View",
+      "f314986c-c5db-e511-80f2-000d3a10dc9c": "Schedule Board Core Details Pane Field Layout",
+      "f97ef23e-6ed3-e611-8116-00155da8401f": "Booking Map Tooltips view",
+      "fbc907ec-c6db-e511-80f2-000d3a10dc9c": "Active Resource Bookings This Fiscal Period",
+      "fdecf0ff-8aa5-e811-814a-000d3a39eb79": "My Bookings for Today"
+    }
+  },
+  {
+    "DisplayName": "Booking Type (Bookable Resource Bookings)",
+    "Name": "bookableresourcebooking_bookingtype",
+    "OptionSetInfoNameMapping": {
+      "1": "Solid",
+      "2": "Liquid"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "bookingtype",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "bookingtype",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Bookable Resource Bookings)",
+    "Name": "bookableresourcebooking_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Bookable Resource Bookings)",
+    "Name": "bookableresourcebooking_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Accept Cascade Crew Changes (Bookable Resource Bookings)",
+    "Name": "msdyn_bookableresourcebooking_msdyn_acceptcascadecrewchanges",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_acceptcascadecrewchanges",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_acceptcascadecrewchanges",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Allow Overlapping (Bookable Resource Bookings)",
+    "Name": "msdyn_bookableresourcebooking_msdyn_allowoverlapping",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_allowoverlapping",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_allowoverlapping",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Cascade Crew Changes (Bookable Resource Bookings)",
+    "Name": "msdyn_bookableresourcebooking_msdyn_cascadecrewchanges",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_cascadecrewchanges",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_cascadecrewchanges",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Prevent Timestamp Creation (Bookable Resource Bookings)",
+    "Name": "msdyn_bookableresourcebooking_msdyn_preventtimestampcreation",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_preventtimestampcreation",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_preventtimestampcreation",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Travel Time Rescheduling (Deprecated) (Bookable Resource Bookings)",
+    "Name": "msdyn_bookableresourcebooking_msdyn_traveltimerescheduling",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_traveltimerescheduling",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_traveltimerescheduling",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Crew Member Type",
+    "Name": "msdyn_crewmembertype",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Leader",
+      "192350001": "Member",
+      "192350002": "None"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_crewmembertype",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_crewmembertype",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "quicknote type",
+    "Name": "msdyn_quicknote_type",
+    "OptionSetInfoNameMapping": {
+      "100000000": "none",
+      "100000001": "text",
+      "100000002": "photo",
+      "100000003": "video",
+      "100000004": "audio",
+      "100000005": "file"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_quickNoteAction",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_quickNoteAction",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Resource Schedule Source",
+    "Name": "msdyn_resourceschedulesource",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Resource Scheduling Optimization",
+      "690970001": "Schedule Board",
+      "690970002": "Mobile",
+      "690970003": "Manual",
+      "690970004": "Schedule Assistant",
+      "690970005": "System - Agreement Schedule"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_bookingmethod",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_bookingmethod",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Travel Time Type",
+    "Name": "msdyn_traveltimetype",
+    "OptionSetInfoNameMapping": {
+      "192350000": "Bing Maps without historical traffic",
+      "192350001": "Bing Maps with historical traffic",
+      "192350002": "Custom Map Provider",
+      "192350003": "Approximate"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_traveltimecalculationtype",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_traveltimecalculationtype",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Work Location",
+    "Name": "msdyn_worklocation",
+    "OptionSetInfoNameMapping": {
+      "690970000": "Onsite",
+      "690970001": "Facility",
+      "690970002": "Location Agnostic"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_worklocation",
+        "OptionSetReferenceEntityName": "Bookable Resource Bookings"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "msdyn_worklocation",
+        "OptionSetReferenceEntityName": "Resource Requirements"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "msdyn_worklocation",
+        "OptionSetReferenceEntityName": "Work Orders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_worklocation",
+    "RelatedEntityName": "Bookable Resource Bookings",
+    "Type": "OptionSetInfo"
+  }
+]

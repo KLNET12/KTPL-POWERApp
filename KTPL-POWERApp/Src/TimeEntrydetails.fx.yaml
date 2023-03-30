@@ -1,0 +1,214 @@
+TimeEntrydetails As screen:
+    OnVisible: |
+        =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+        );)
+
+    "Gallery1_1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        DelayItemLoading: =true
+        Height: =923
+        Items: =If(Dropdown3_1.Selected.Value = "My Active Time Entries" ,Filter(Filter('Time Entries','Bookable Resource'.Username = TextInput2.Text), 'Time Entries (Views)'.'Active Time Entries'),If(Dropdown3_1.Selected.Value = "My Rejected Time Entries" ,Filter(Filter('Time Entries','Bookable Resource'.Username = TextInput2.Text), 'Time Entries (Views)'.'My Rejected Time Entries'), If(Dropdown3_1.Selected.Value = "My Approved Time Entries" ,Filter(Filter('Time Entries','Bookable Resource'.Username = TextInput2.Text), 'Time Entries (Views)'.'Approved Time'),If(Dropdown3_1.Selected.Value = "My Weekly Time Entries" ,Filter(Filter('Time Entries','Bookable Resource'.Username = TextInput2.Text), 'Time Entries (Views)'.'My Weekly Time Entries'),Filter('Time Entries','Bookable Resource'.Username = TextInput2.Text)))))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =415
+        Visible: =If(Connection.Connected,true,false)
+        Y: =213
+        ZIndex: =1
+
+        Title1_1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                =Text("Workorder Number:  ") & ThisItem.'Work Order'.'Work Order Number'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =508
+            Y: =9
+            ZIndex: =2
+
+        Body1_2 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("Start Date & Time :  "& ThisItem.Start)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =45
+            ZIndex: =4
+
+        Body1_3 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("End Date & Time :  "& ThisItem.End)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =83
+            ZIndex: =5
+
+        Rectangle1_1 As rectangle:
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =632
+            Y: =406
+            ZIndex: =6
+
+        Label2_3 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Duration :  " & ThisItem.Duration & " mins")
+            Width: =264
+            Y: =127
+            ZIndex: =7
+
+        Label2_4 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Bookable Resource :  " & ThisItem.'Bookable Resource'.Name)
+            Width: =528
+            Y: =161
+            ZIndex: =8
+
+        Label2_5 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Entry Status :  " & ThisItem.'Entry Status')
+            Width: =318
+            Y: =247
+            ZIndex: =9
+
+        Label2_13 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Type :  " & ThisItem.Type)
+            Width: =318
+            X: =1
+            Y: =209
+            ZIndex: =10
+
+        Icon9 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: =Navigate('Update Entry');Set(guidvar,ThisItem.'Time Entry')
+            X: =554
+            Y: =217
+            ZIndex: =11
+
+        Label2_16 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Description :  " & ThisItem.Description)
+            Width: =528
+            X: =1
+            Y: =289
+            ZIndex: =12
+
+        Label2_17 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Status :  " & ThisItem.'Booking Status'.Name)
+            Width: =528
+            X: =1
+            Y: =330
+            ZIndex: =13
+
+    Dropdown3_1 As dropdown:
+        Height: =72
+        Items: =["My Active Time Entries","My Rejected Time Entries","My Approved Time Entries", "My Weekly Time Entries"]
+        Size: =21
+        Width: =640
+        Y: =141
+        ZIndex: =2
+
+    Component1_5 As Component1:
+        Height: =70
+        ZIndex: =3
+
+    Label7 As label:
+        Align: =Align.Center
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =70
+        Size: =21
+        Text: ="Time Entries"
+        Width: =640
+        Y: =70
+        ZIndex: =4
+
+    Icon4 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(DashBoard)
+        X: =576
+        ZIndex: =5
+
+    Icon8 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =Navigate('Add Entry')
+        X: =576
+        Y: =76
+        ZIndex: =6
+
+    MenuLeftNav_3 As MenuLeftNav:
+        ExpandMenu: =true
+        ExpandMenuByDefault: =false
+        Height: =MenuLeftNav_3.MenuHeight
+        Visible: =true
+        Width: =MenuLeftNav_3.MenuWidth
+        Y: =10
+        ZIndex: =7
+
+    Timer1_3 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =66
+        OnTimerEnd: |
+            =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+            If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
+            );)
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =8
+

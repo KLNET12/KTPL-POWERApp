@@ -1,0 +1,246 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "phonecalls",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "phonecall",
+    "MaxGetRowsCount": 500,
+    "Name": "Phone Calls",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "_regardingobjectid_value": "Regarding",
+      "{Attachments}": "Attachments",
+      "activityadditionalparams": "Additional Parameters",
+      "activityid": "Phone Call",
+      "activitytypecode": "Activity Type",
+      "actualdurationminutes": "Duration",
+      "actualend": "Actual End",
+      "actualstart": "Actual Start",
+      "category": "Category",
+      "createdby_phonecall": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby_phonecall": "Created By (Delegate)",
+      "description": "Description",
+      "directioncode": "Direction",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "isbilled": "Is Billed",
+      "isregularactivity": "Is Regular Activity",
+      "isworkflowcreated": "Is Workflow Created",
+      "lastonholdtime": "Last On Hold Time",
+      "leftvoicemail": "Left Voice Mail",
+      "modifiedby_phonecall": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby_phonecall": "Modified By (Delegate)",
+      "msdyn_phonecall_msdyn_conversationinsight_conversationinsighttarget": "ConversationInsights",
+      "msdyn_phonecall_msdyn_ocrecording_recordingtarget": "Recordings (msdyn_phonecall_msdyn_ocrecording_recordingtarget)",
+      "msdyn_phonecall_msdyn_recording_phone_call_activity": "Recordings (msdyn_phonecall_msdyn_recording_phone_call_activity)",
+      "msdyn_phonecall_msdyn_transcript_transcripttarget": "Transcripts",
+      "ntzz_Bookableresource_PhoneCall": "Bookable resource",
+      "onholdtime": "On Hold Time (Minutes)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit_phonecall": "Owning Business Unit",
+      "owningteam_phonecall": "Owning Team",
+      "owninguser_phonecall": "Owning User",
+      "phonecall_actioncard": "Action Cards",
+      "PhoneCall_Annotation": "Notes",
+      "PhoneCall_AsyncOperations": "System Jobs",
+      "PhoneCall_BulkDeleteFailures": "Bulk Delete Failures",
+      "phonecall_campaignresponse": "Campaign Responses",
+      "phonecall_connections1": "Connections (phonecall_connections1)",
+      "phonecall_connections2": "Connections (phonecall_connections2)",
+      "PhoneCall_DuplicateBaseRecord": "Duplicate Records (PhoneCall_DuplicateBaseRecord)",
+      "PhoneCall_DuplicateMatchingRecord": "Duplicate Records (PhoneCall_DuplicateMatchingRecord)",
+      "phonecall_PostFollows": "Follows",
+      "phonecall_PostRegardings": "Post Regarding",
+      "phonecall_principalobjectattributeaccess": "Field Sharing",
+      "PhoneCall_ProcessSessions": "Process Sessions",
+      "PhoneCall_QueueItem": "Queue Items",
+      "PhoneCall_SyncErrors": "Sync Errors",
+      "phonenumber": "Phone Number",
+      "prioritycode": "Priority",
+      "processid": "Process",
+      "scheduleddurationminutes": "Scheduled Duration",
+      "scheduledend": "Due",
+      "scheduledstart": "Start Date",
+      "serviceid_phonecall": "Service",
+      "sla_phonecall_sla": "SLA",
+      "slainvokedid_phonecall_sla": "Last SLA applied",
+      "slakpiinstance_phonecall": "SLA KPI Instances",
+      "sortdate": "Sort Date",
+      "stageid": "(Deprecated) Process Stage",
+      "statecode": "Activity Status",
+      "statuscode": "Status Reason",
+      "subcategory": "Sub-Category",
+      "subject": "Subject",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid_phonecall": "Currency",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Phone Calls",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Phone Calls (Views)",
+    "Name": "_phonecall_views",
+    "RelatedEntityName": "Phone Calls",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "04f1599c-09e1-40d5-a493-b25165f2c3c3": "Phone Call Associated View",
+      "316aed39-ab40-45e4-8463-68714f01af80": "Phone Call Advanced Find View",
+      "65f927d1-8cf1-4639-97d4-7b6388fb26d2": "My Phone Calls",
+      "b65900d5-7d55-4ac9-bc6a-33c24b458b05": "My Completed Phone Calls",
+      "d4a3e33d-16d2-41fd-91aa-14cfbf88633a": "Phone Call Lookup View",
+      "f6a2f891-6846-4b21-b922-712695afd65c": "All Phone Calls"
+    }
+  },
+  {
+    "DisplayName": "Direction (Phone Calls)",
+    "Name": "phonecall_directioncode",
+    "OptionSetInfoNameMapping": {
+      "0": "Incoming",
+      "1": "Outgoing"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "directioncode",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "directioncode",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Billed (Phone Calls)",
+    "Name": "phonecall_isbilled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isbilled",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isbilled",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Workflow Created (Phone Calls)",
+    "Name": "phonecall_isworkflowcreated",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isworkflowcreated",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isworkflowcreated",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Left Voice Mail (Phone Calls)",
+    "Name": "phonecall_leftvoicemail",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leftvoicemail",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "leftvoicemail",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Phone Calls)",
+    "Name": "phonecall_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Low",
+      "1": "Normal",
+      "2": "High"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Activity Status (Phone Calls)",
+    "Name": "phonecall_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Open",
+      "1": "Completed",
+      "2": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Phone Calls)",
+    "Name": "phonecall_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Open",
+      "2": "Made",
+      "3": "Canceled",
+      "4": "Received"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Phone Calls",
+    "Type": "OptionSetInfo"
+  }
+]
